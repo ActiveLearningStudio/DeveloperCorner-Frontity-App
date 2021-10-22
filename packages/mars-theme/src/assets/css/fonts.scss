@@ -1,0 +1,176 @@
+$rubik: "rubic";
+$Open-Sans: "Open Sans";
+
+@font-face {
+  font-family: $rubik;
+  src: url("../fonts/Rubik-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $rubik;
+  src: url("../fonts/Rubik-LightItalic.ttf");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $rubik;
+  src: url("../fonts/Rubik-Medium.ttf");
+
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $rubik;
+  src: url("../fonts/Rubik-MediumItalic.ttf");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $rubik;
+  src: url("../fonts/Rubik-SemiBold.ttf");
+  // src: url('../fonts/Rubik-SemiBold.eot?#iefix') format('embedded-opentype'),
+  //     url('../fonts/Rubik-SemiBold.woff2') format('woff2'),
+  //     url('../fonts/Rubik-SemiBold.woff') format('woff'),
+  //     url('../fonts/Rubik-SemiBold.ttf') format('truetype'),
+  //     url('../fonts/Rubik-SemiBold.svg#Rubik-SemiBold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $rubik;
+  src: url("../fonts/Rubik-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $rubik;
+  src: url("../fonts/Rubik-Black.ttf");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $rubik;
+  src: url("../fonts/Rubik-SemiBoldItalic.ttf");
+
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $rubik;
+  src: url("../fonts/Rubik-BlackItalic.ttf");
+  // src: url('../fonts/Rubik-BlackItalic.eot?#iefix') format('embedded-opentype'),
+  //     url('../fonts/Rubik-BlackItalic.woff2') format('woff2'),
+  //     url('../fonts/Rubik-BlackItalic.woff') format('woff'),
+  //     url('../fonts/Rubik-BlackItalic.ttf') format('truetype'),
+  //     url('../fonts/Rubik-BlackItalic.svg#Rubik-BlackItalic') format('svg');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $rubik;
+  src: url("../fonts/Rubik-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $rubik;
+  src: url("../fonts/Rubik-BoldItalic.ttf");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $rubik;
+  src: url("../fonts/Rubik-ExtraBold.ttf");
+
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $rubik;
+  src: url("../fonts/Rubik-ExtraBoldItalic.ttf");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $rubik;
+  src: url("../fonts/Rubik-Italic.ttf");
+
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* halvetica */
+
+@font-face {
+  font-family: $Open-Sans;
+  src: url("../fonts/OpenSans-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $Open-Sans;
+  src: url("../fonts/OpenSans-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $Open-Sans;
+  src: url("../fonts/OpenSans-Regular.ttf");
+
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $Open-Sans;
+  src: url("../fonts/OpenSans-Italic.ttf");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $Open-Sans;
+  src: url("../fonts/OpenSans-BoldItalic.ttf");
+  // src: url('../fonts/OpenSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+  //     url('../fonts/OpenSans-BoldItalic.woff2') format('woff2'),
+  //     url('../fonts/OpenSans-BolItalic.woff') format('woff'),
+  //     url('../fonts/OpenSans-BoldItalic.ttf') format('truetype'),
+  //     url('../fonts/OpenSans-Italic.svg#OpenSans-Italic') format('svg');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}

@@ -1,0 +1,88 @@
+/* @import '../../assets/css/color.scss'; */
+.header .Navbar {
+  background-color: #ffffff;
+}
+.header .Navbar #responsive-navbar-nav {
+  justify-content: flex-end !important;
+}
+.header .Navbar .nav-link {
+  margin-left: 40px;
+  font-family: rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #084892 !important;
+}
+@media screen and (max-width: 1024px) {
+  .header .Navbar .nav-link {
+    margin-left: 20px;
+  }
+}
+.header-login a {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #084892;
+}
+.donate-btn {
+  /* font-weight: bold; */
+  height: 46px;
+  width: 136px;
+  background: #084892 !important;
+  border: none;
+  color: #fff !important;
+  min-height: 36px;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 18px;
+  padding: 0 32px;
+  box-shadow: 0 2px 6px 1px rgb(8 72 146 / 16%);
+  font-size: 16px;
+  font-family: "rubic";
+  font-weight: 700 !important;
+}
+.footer-area {
+  background-repeat: no-repeat;
+  padding: 20px;
+  clear: both;
+}
+.footer-area .footer-content-area {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  .footer-area .footer-content-area {
+    flex-direction: column;
+  }
+}
+.footer-area .footer-content-area .footer-links {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.footer-area .footer-content-area .footer-links a {
+  font-family: rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 25px;
+}
+.bottom-footer {
+  padding: 19px 0;
+  text-align: center;
+  background: #1f4071;
+}
+.bottom-footer p {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+}

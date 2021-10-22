@@ -1,0 +1,280 @@
+p {
+  color: rgb(81, 81, 81);
+  font-size: 16px;
+}
+.hero-section {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 101px;
+}
+@media screen and (max-width: 767px) {
+  .hero-section {
+    height: auto;
+  }
+}
+.hero-section .hero-text {
+  width: 1148px;
+  margin: auto;
+}
+.hero-section .hero-text h1 {
+  color: #ffb124;
+}
+@media screen and (max-width: 1100px) {
+  .hero-section .hero-text {
+    padding: 30px 20px;
+    width: 100%;
+  }
+}
+.General-Discussion-container {
+  max-width: 1148px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+}
+@media screen and (max-width: 1069px) {
+  .General-Discussion-container {
+    padding: 0 20px;
+  }
+}
+.General-Discussion-container .general-section {
+  width: 877px;
+  margin-bottom: 101px;
+}
+@media screen and (max-width: 767px) {
+  .General-Discussion-container .general-section {
+    width: 100%;
+  }
+}
+.General-Discussion-container .general-section .nav-header {
+  max-width: 268px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+.General-Discussion-container .general-section .nav-header a {
+  color: rgb(81, 81, 81);
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  font-size: 16px;
+}
+.General-Discussion-container .general-section .nav-header a:hover {
+  color: #084892 !important;
+}
+
+.General-Discussion-container .general-section .nav-header .cursor {
+  cursor: pointer;
+}
+.General-Discussion-container .general-section .update {
+  max-width: 685px;
+  display: flex;
+  border: 1px solid #959595;
+  box-sizing: border-box;
+  border-radius: 25px;
+  justify-content: space-between;
+  padding: 12px 45px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.General-Discussion-container .general-section .update p {
+  margin-bottom: 0px !important;
+  font-family: "Open Sans";
+  font-size: 18px;
+}
+.General-Discussion-container .general-section .update a {
+  color: rgb(8, 72, 146);
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 767px) {
+  .General-Discussion-container .general-section .update {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 12px 15px;
+  }
+}
+.General-Discussion-container .general-section .table-blog {
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 767px) {
+  .General-Discussion-container .general-section .table-blog {
+    width: 100%;
+    overflow-y: scroll;
+  }
+}
+.General-Discussion-container .general-section .table-blog .table-heading {
+  margin-bottom: 10px;
+}
+.General-Discussion-container .general-section .table-blog .table-heading p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgb(81, 81, 81) !important;
+}
+.General-Discussion-container .general-section .table-blog .table {
+  border: 1px solid #959595;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.General-Discussion-container .general-section .table-blog .table thead {
+  background: #e5e5e5;
+  height: 50px;
+}
+.General-Discussion-container
+  .general-section
+  .table-blog
+  .table
+  thead
+  tr
+  :not(:first-child) {
+  text-align: center;
+}
+.General-Discussion-container .general-section .table-blog .table tbody tr {
+  height: 50px;
+  padding: 14px 15px;
+}
+.General-Discussion-container
+  .general-section
+  .table-blog
+  .table
+  tbody
+  tr
+  :not(:first-child) {
+  text-align: center;
+}
+.General-Discussion-container .general-section .table-blog .table tbody td {
+  color: #084892;
+}
+.General-Discussion-container
+  .general-section
+  .table-blog
+  .table
+  tbody
+  tr
+  td
+  .started {
+  padding-top: 11.5px;
+  display: flex;
+}
+.General-Discussion-container
+  .general-section
+  .table-blog
+  .table
+  tbody
+  tr
+  td
+  .last-post {
+  display: flex;
+  justify-content: center;
+  padding-top: 11.5px;
+}
+.General-Discussion-container .general-section .login .login-forum {
+  border: 1px solid #959595;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 30px 50px;
+  margin-top: 10px;
+}
+.General-Discussion-container .general-section .login .login-forum button {
+  background: #084892;
+  border: none;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 36px;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 18px;
+  padding: 0 32px;
+  box-shadow: 0 2px 6px 1px rgb(8 72 146 / 16%);
+  font-size: 14px;
+  font-family: "rubic";
+  font-weight: 500;
+  width: 143px;
+}
+@media screen and (max-width: 767px) {
+  .General-Discussion-container .general-section .login .login-forum {
+    padding: 30px 10px;
+  }
+}
+.General-Discussion-container .general-section .login .login-forum form {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 767px) {
+  .General-Discussion-container .general-section .login .login-forum form {
+    max-width: 100%;
+  }
+}
+.General-Discussion-container
+  .general-section
+  .login
+  .login-forum
+  form
+  .form-name {
+  padding: 0 0 5px 22px;
+}
+.General-Discussion-container .general-section .login .login-forum form input {
+  margin-bottom: 16px;
+  height: 45px;
+  border: 1px solid #515151;
+  box-sizing: border-box;
+  box-shadow: -3px 5px 10px rgba(229, 238, 255, 0.35);
+  border-radius: 25px;
+  outline: none;
+  padding-left: 22px;
+}
+.General-Discussion-container .general-section .login .login-forum form label {
+  margin: 4px 0 47px;
+  display: flex;
+  text-align: center;
+  height: 25px;
+  padding-left: 22px;
+}
+.General-Discussion-container
+  .general-section
+  .login
+  .login-forum
+  form
+  label
+  .checked {
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+  border: 2px solid #084892;
+}
+.General-Discussion-container .archives-section {
+  border-left: 1px solid #084892;
+  padding-left: 30px;
+}
+.General-Discussion-container .archives-section h2 {
+  color: #084892;
+}
+@media screen and (max-width: 1069px) {
+  .General-Discussion-container .archives-section {
+    margin-bottom: 70px;
+  }
+}
+.General-Discussion-container .archives-section .archives-link {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+.General-Discussion-container .archives-section .archives-link a {
+  color: rgb(8, 72, 146);
+  padding-bottom: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.General-Discussion-container .archives-section .archives-link .spase {
+  padding-bottom: 10px;
+  cursor: pointer;
+}
