@@ -1,12 +1,9 @@
 import ContainerIndex from "../containers/index";
-import { BrowserRouter } from "react-router-dom";
-import bootstrapCss from "bootstrap/dist/css/bootstrap.min.css";
+import React from "react";
 function App() {
   return (
     <div>
-      <BrowserRouter>
-        <ContainerIndex />
-      </BrowserRouter>
+      <ContainerIndex />
     </div>
   );
 }

@@ -14,10 +14,11 @@ const settings = {
         theme: {
           menu: [
             ["Home", "/"],
-            ["Nature", "/category/nature/"],
-            ["Travel", "/category/travel/"],
-            ["Japan", "/tag/japan/"],
-            ["About Us", "/about-us/"],
+            ["CurrikiArchitecture", "/currikiArchitecture"],
+            ["DatabaseSchema", "/databaseSchema"],
+            ["currikiforum", "/currikiforum"],
+            ["generaldiscussion", "/generaldiscussion"],
+            ["currikiPlatform", "/CurrikiPLatform"],
           ],
           featured: {
             showOnList: false,

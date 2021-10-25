@@ -3,7 +3,7 @@ import image from "@frontity/html2react/processors/image";
 import iframe from "@frontity/html2react/processors/iframe";
 import link from "@frontity/html2react/processors/link";
 // import Theme from "./raja";
-import Theme from "./containers/index";
+import Theme from "../src/App/App";
 const marsTheme = {
   name: "@frontity/mars-theme",
   roots: {
