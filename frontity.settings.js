@@ -19,6 +19,8 @@ const settings = {
             ["currikiforum", "/currikiforum"],
             ["generaldiscussion", "/generaldiscussion"],
             ["currikiPlatform", "/CurrikiPLatform"],
+            ["BusinessProduct", "/businessProduct"],
+            ["Providers", "/providers"],
           ],
           featured: {
             showOnList: false,
