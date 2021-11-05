@@ -18,7 +18,7 @@ function index() {
             color="#FFB124"
             text="Curriki’s Architecture/Components"
           /> */}
-          <h1>Curriki’s Architecture/Components</h1>
+          <h1>Curriki User Manual</h1>
         </div>
       </Banner>
       <div className="text-section">
