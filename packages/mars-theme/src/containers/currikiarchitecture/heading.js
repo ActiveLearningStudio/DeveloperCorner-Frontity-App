@@ -1,5 +1,6 @@
 import React from "react";
-function Heading({ Scrollspy }) {
+import { connect } from "frontity";
+function Heading({ Scrollspy, state }) {
   return (
     <>
       <div className="heading-contaner">
@@ -24,7 +25,7 @@ function Heading({ Scrollspy }) {
             <div className="heading">
               <p>1.</p>
 
-              <p>Documentation Home</p>
+              <p>{state.source.author[1].name}</p>
             </div>
           </a>
           <a href="#headings2">
@@ -61,4 +62,4 @@ function Heading({ Scrollspy }) {
   );
 }
 
-export default Heading;
+export default connect(Heading);

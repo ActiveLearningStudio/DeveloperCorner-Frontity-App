@@ -29,8 +29,8 @@ const Header = () => {
                   id="collasible-nav-dropdown"
                   color="#285AA5"
                 >
-                  <NavDropdown.Item href="/currikiarchitecture">
-                    Curriki Architecture
+                  <NavDropdown.Item href="/documentation">
+                    Curriki Documentation
                   </NavDropdown.Item>
                   <NavDropdown.Item href="/databaseschemas">
                     Database Schemas

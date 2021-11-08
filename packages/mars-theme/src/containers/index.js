@@ -18,7 +18,7 @@ const Index = ({ state }) => {
       <Header />
 
       {state.router.link === "/" && <Home />}
-      {state.router.link === "/currikiarchitecture/" && <CurrikiArchitecture />}
+      {state.router.link === "/documentation/" && <CurrikiArchitecture />}
       {state.router.link === "/databaseschemas/" && <DatabaseSchema />}
       {state.router.link === "/deployingthecurrikiplatfrom/" && (
         <CurrikiPLatform />
