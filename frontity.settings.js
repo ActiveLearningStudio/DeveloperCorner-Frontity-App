@@ -13,12 +13,9 @@ const settings = {
       state: {
         theme: {
           menu: [
-            ["Home", "/"],
-            ["Currikidocs", "/docs"],
-            ["DatabaseSchema", "/databaseSchema"],
-            ["currikiforum", "/currikiforum"],
-            ["generaldiscussion", "/generaldiscussion"],
-            ["currikiPlatform", "/CurrikiPLatform"],
+            ["Currikidocs", "/documentation"],
+            ["DatabaseSchema", "/databaseSchemas"],
+            ["currikiPlatform", "/deployingthecurrikiplatfrom"],
             ["BusinessProduct", "/businessProduct"],
             ["Providers", "/providers"],
           ],
