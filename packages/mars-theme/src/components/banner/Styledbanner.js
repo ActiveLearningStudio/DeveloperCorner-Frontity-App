@@ -2,11 +2,11 @@ import React from "react";
 import { styled } from "frontity";
 import heroImg from "../../assets/images/hero-section.png";
 
-const Banner = () => {
+const Banner = ({ title }) => {
   return (
     <Section>
       <Container>
-        <Heading>Providers</Heading>
+        <Heading>{title}</Heading>
       </Container>
     </Section>
   );

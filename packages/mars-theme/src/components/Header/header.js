@@ -1,14 +1,11 @@
 import React from "react";
 import { Global, css, connect } from "frontity";
 import bootstrapCss from "bootstrap/dist/css/bootstrap.min.css";
-// import patternFly from "../../../../../node_modules/patternfly/dist/css/patternfly.css";
 import { Button } from "react-bootstrap";
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import Brand from "../../assets/images/curriki_new_logo.png";
-// import hearticon from "../../assets/images/Vector.png";
 import usericon from "../../assets/images/UserCircle1.png";
 import Link from "./link";
-// import Button from "../../../../../node_modules/curriki-design-system/dist/utils/Buttons/buttons";
 import HeaderCss from "./styles.css";
 const Header = ({ state }) => {
   console.log(state.theme.menu);

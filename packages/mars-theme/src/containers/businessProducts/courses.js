@@ -76,6 +76,7 @@ const Title = styled.h2`
 const CardContent = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 `;
 const Card = styled.div`
   width: 340px;

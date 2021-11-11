@@ -18,6 +18,7 @@ const settings = {
             ["currikiPlatform", "/deployingthecurrikiplatfrom"],
             ["BusinessProduct", "/businessProduct"],
             ["Providers", "/providers"],
+            ["Ourmission", "/ourmission"],
           ],
           featured: {
             showOnList: false,

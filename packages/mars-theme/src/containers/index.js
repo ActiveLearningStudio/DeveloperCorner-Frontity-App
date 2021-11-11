@@ -10,6 +10,7 @@ import DatabaseSchema from "./databaseschemas/index";
 import CurrikiForum from "./currikiforum/index";
 import CurrikiPLatform from "./deployingthecurrikiplatfrom/index";
 import BusinessProduct from "./businessProducts/index";
+import Ourmission from "./Ourmission/index";
 import Providers from "./providers/index";
 const Index = ({ state }) => {
   return (
@@ -28,6 +29,8 @@ const Index = ({ state }) => {
       {state.router.link === "/currikiforum/" && <CurrikiForum />}
       {state.router.link === "/businessproduct/" && <BusinessProduct />}
       {state.router.link === "/providers/" && <Providers />}
+      {state.router.link === "/ourmission/" && <Ourmission />}
+
       <Footer />
     </>
   );
