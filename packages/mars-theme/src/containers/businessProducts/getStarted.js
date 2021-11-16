@@ -1,41 +1,45 @@
 import React from "react";
 import { styled, connect } from "frontity";
+import { Container } from "react-bootstrap";
+import PrimaryButton from "../../StyledComponent/PrimaryButton";
 import GetPic from "../../assets/images/Companies.png";
 const GetStarted = () => {
   return (
-    <StyleDiv>
-      <div>
-        <h2>
-          Curriki has turnkey tool for you to{" "}
-          <span> create,manage and deliver</span>
-          interativve training content to employees, at scale
-        </h2>
-        <button>Get Started</button>
-      </div>
-      <img src={GetPic} alt="Get started picture" />
-    </StyleDiv>
+    <Container>
+      <StyleDiv>
+        <div>
+          <h2>
+            Curriki has turnkey tool for you to{" "}
+            <span> create,manage and deliver </span>
+            interativve training content to employes, at scale
+          </h2>
+          <Button title="Get Started">Get Started</Button>
+        </div>
+        <img src={GetPic} alt="Get started picture" />
+      </StyleDiv>
+    </Container>
   );
 };
 
 export default connect(GetStarted);
 const StyleDiv = styled.div`
   display: flex;
+  padding: 20px 0px;
 
   div {
     margin-top: 50px;
     h2 {
+      font-family: Rubik;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 38px;
       color: #084892;
       margin-bottom: 3rem;
       span {
         color: rgb(255, 177, 36);
       }
     }
-    button {
-      background: #084892;
-      color: #fff;
-      border-radius: 50px;
-      border: none !important;
-      padding: 5px 20px;
-    }
   }
 `;
+const Button = styled(PrimaryButton)``;

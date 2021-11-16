@@ -31,19 +31,22 @@ const Content = styled.div`
   justify-content: space-between;
 `;
 const Heading = styled.h2`
-color: #fff;
-  font-weight: bold;
-  font-family;rubic;
-  span{
+  cfont-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  color: #ffffff;
+  span {
     color: rgb(255, 177, 36);
   }
 `;
 const Button = styled.button`
   background-color: #084892 !important;
-  color: #fff !important;
-  border-color: #fff;
-
-  font-weight: bold !important;
-  padding: 2px 30px;
-  border-radius: 32px !important;
+  width: 155px;
+  height: 45px;
+  color: #fff;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  border-radius: 25px;
 `;

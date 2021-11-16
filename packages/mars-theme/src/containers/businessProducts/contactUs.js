@@ -1,6 +1,7 @@
 import React from "react";
 import { styled } from "frontity";
 import { Formik, Field } from "formik";
+import { Container } from "react-bootstrap";
 import ContactImage from "../../assets/images/Hero-background.png";
 const ContactUs = () => {
   return (
@@ -124,10 +125,20 @@ const Paradiv = styled.div`
 `;
 const InnerDiv = styled.div`
   h2 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 43px;
     color: #084892;
     margin-bottom: 10px;
   }
   p {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
     color: #515151;
   }
 `;
@@ -152,16 +163,13 @@ const FormDiv = styled.div`
     button {
       margin-top: 20px;
       width: 150px;
-      background: #082862;
-      border-radius: 50px;
+      background: #084892;
+      border: 1px solid #084892;
       color: #fff;
-      border: none;
+      font-family: rubic;
+      box-shadow: 0px 10px 20px -5px rgba (8, 72, 146, 0.35);
+      border-radius: 25px;
       margin-bottom: 4rem;
     }
   }
-`;
-const Container = styled.div`
-  max-width: 1440px;
-  margin: auto;
-  padding: 20px 110px;
 `;

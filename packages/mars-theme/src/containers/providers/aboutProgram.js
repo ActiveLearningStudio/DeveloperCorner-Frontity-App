@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "frontity";
+import { Container } from "react-bootstrap";
 import backgroundPic from "../../assets/images/Group153.png";
 import plusicon from "../../assets/images/PLUS.svg";
 import HandImg from "../../assets/images/Group330.png";
@@ -18,7 +19,7 @@ const AboutProgram = () => {
                 <img src={HandImg} alt="" />
               </LeftCol>
               <RightCol>
-                <h3>WHy become a provider</h3>
+                <h3>Why become a provider</h3>
                 <p>
                   <img src={plusicon} alt="" />
                   <span>Expanded your existing offerings</span>
@@ -85,9 +86,18 @@ const Background = styled.div`
 `;
 const Heading = styled.div`
   display: flex;
+  align-items: center;
   margin-top: 250px;
   h2 {
     margin-right: 10px;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
     color: #084892;
   }
 `;
@@ -95,13 +105,17 @@ const Content = styled.div``;
 const InnerDIv = styled.div`
   margin-top: 30px;
   display: flex;
-
   align-items: center;
 `;
 const LeftCol = styled.div``;
 const RightCol = styled.div`
   margin-left: 8rem;
   h3 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
     color: #084892;
   }
   p {
@@ -110,13 +124,13 @@ const RightCol = styled.div`
       hight: 12px;
     }
     span {
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 25px;
+      color: #515151;
       margin-left: 10px;
     }
   }
-`;
-
-const Container = styled.div`
-  max-width: 1440px;
-  margin: auto;
-  padding: 0px 110px;
 `;

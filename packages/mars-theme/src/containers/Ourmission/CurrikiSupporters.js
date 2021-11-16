@@ -11,19 +11,37 @@ const CurrikiSupporters = () => {
   return (
     <Section>
       <Container>
-        <Heading>
-          Curriki suporters are some of the world's leading technology companies
-          and foundations
+        <Content>
+          <HeadingContent>
+            <Heading>
+              <span>Curriki suporters</span> are some of the world's leading
+            </Heading>
+            <Heading> technology companies and foundations</Heading>
+          </HeadingContent>
           <Foundations>
-            <img src={SusanImg} alt="" />
-            <img src={Foundation} alt="" />
-            <img src={Charles} alt="" />
-            <img src={Foundation} alt="" />
-            <img src={Oracle} alt="" />
-            <img src={ATT} alt="" />
-            <img src={AWS} alt="" />
+            <Div>
+              <img src={SusanImg} alt="" />
+            </Div>
+            <Div>
+              <img src={Foundation} alt="" />
+            </Div>
+            <Div>
+              <img src={Charles} alt="" />
+            </Div>
+            <Div>
+              <img src={Foundation} alt="" />
+            </Div>
+            <Div>
+              <img src={Oracle} alt="" />
+            </Div>
+            <Div>
+              <img src={ATT} alt="" />
+            </Div>
+            <Div>
+              <img src={AWS} alt="" />
+            </Div>
           </Foundations>
-        </Heading>
+        </Content>
       </Container>
     </Section>
   );
@@ -31,10 +49,32 @@ const CurrikiSupporters = () => {
 
 export default CurrikiSupporters;
 const Section = styled.div``;
-
-const Heading = styled.h2``;
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+const HeadingContent = styled.h2`
+  text-align: center;
+  margin-bottom: 50px;
+`;
+const Heading = styled.h2`
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+  color: #f8af2c;
+  span {
+    color: #ffb124;
+  }
+`;
 const Foundations = styled.div`
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
+`;
+const Div = styled.div`
+  margin-right: 30px;
+  margin-bottom: 70px;
 `;

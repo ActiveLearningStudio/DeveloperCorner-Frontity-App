@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "frontity";
+import { Container } from "react-bootstrap";
 import artificial from "../../assets/images/image9.png";
 import framework from "../../assets/images/image40.png";
 import xconnect from "../../assets/images/image41.png";
@@ -18,9 +19,9 @@ const LearningProvider = () => {
             <img src={artificial} alt="" />
           </LeftCol>
           <RightCol>
-            <p>
+            <Paragraph>
               <b>ArticialChart</b>
-            </p>
+            </Paragraph>
             <p>
               It has survived not only five centuries, but also the leap into
               electronic typesetting, remaining essentially unchanged. It was
@@ -43,9 +44,9 @@ const LearningProvider = () => {
             <img src={framework} alt="" />
           </LeftCol>
           <RightCol>
-            <p>
+            <Paragraph>
               <b>Framework</b>
-            </p>
+            </Paragraph>
             <p>
               t is a long established fact that a reader will be distracted by
               the readable content of a page when looking at its layout. The
@@ -66,9 +67,9 @@ const LearningProvider = () => {
             <img src={xconnect} alt="" />
           </LeftCol>
           <RightCol>
-            <p>
+            <Paragraph>
               <b>Connect Life solutions</b>
-            </p>
+            </Paragraph>
             <p>
               It has survived not only five centuries, but also the leap into
               electronic typesetting, remaining essentially unchanged. It was
@@ -91,9 +92,9 @@ const LearningProvider = () => {
             <img src={layer} alt="" />
           </LeftCol>
           <RightCol>
-            <p>
+            <Paragraph>
               <b>iDesign</b>
-            </p>
+            </Paragraph>
             <p>
               It has survived not only five centuries, but also the leap into
               electronic typesetting, remaining essentially unchanged. It was
@@ -120,10 +121,16 @@ export default LearningProvider;
 
 const Section = styled.div``;
 const Heading = styled.h2`
-  text-align: center;
   margin-top: 40px;
   color: #084892;
   margin-bottom: 60px;
+  font-family: Rubic;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 43px;
+  text-align: center;
+  color: #084892;
   span {
     color: rgb(255, 177, 36);
   }
@@ -138,11 +145,25 @@ const Card = styled.div`
   margin-bottom: 40px;
 `;
 const LeftCol = styled.div``;
+const Paragraph = styled.p`
+  font-family: Rubic;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #515151;
+  font-weight: bold;
+`;
 const RightCol = styled.div`
   margin-left: 20px;
-`;
-const Container = styled.div`
-  max-width: 1440px;
-  margin: auto;
-  padding: 0px 110px;
+  p {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #515151;
+  }
+  a {
+    color: #084892;
+  }
 `;

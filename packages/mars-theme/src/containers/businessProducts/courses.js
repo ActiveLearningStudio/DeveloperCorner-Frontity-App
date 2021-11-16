@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "frontity";
+import { Container } from "react-bootstrap";
 import plusicon from "../../assets/images/PLUS.svg";
 import image1 from "../../assets/images/image1.png";
 import image2 from "../../assets/images/image2.png";
@@ -67,11 +68,18 @@ const Section = styled.div`
 `;
 const SectionTitle = styled.div`
   display: flex;
-  margin-bottom: 0.75rem;
+  align-items: center;
+  margin-bottom: 1rem;
 `;
 const Title = styled.h2`
   margin-right: 15px;
   color: #084892;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  text-transform: uppercase;
 `;
 const CardContent = styled.div`
   display: flex;
@@ -91,20 +99,27 @@ const Card = styled.div`
     color: #084892;
   }
   p {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
     color: #515151;
   }
   a {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-decoration-line: underline;
     color: #084892;
-    font-weight: bold;
   }
 `;
 const Footer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
-`;
-const Container = styled.div`
-  max-width: 1440px;
-  margin: auto;
-  padding: 0px 110px;
 `;

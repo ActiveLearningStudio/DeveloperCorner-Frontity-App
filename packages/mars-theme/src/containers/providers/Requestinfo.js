@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "frontity";
+import { Container } from "react-bootstrap";
 import globeImg from "../../assets/images/providers.png";
 const Requestinfo = () => {
   return (
@@ -43,6 +44,11 @@ const Content = styled.div`
 
 const Leftcol = styled.div`
   h2 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
     color: #084892;
     margin-bottom: 2rem;
     span {
@@ -50,11 +56,21 @@ const Leftcol = styled.div`
     }
   }
   h3 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 30px;
     color: #084892;
     margin-bottom: 1rem;
   }
   p {
-    color: #515151;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #464646;
     margin-bottom: 2rem;
   }
   button {
@@ -67,8 +83,3 @@ const Leftcol = styled.div`
 `;
 
 const Rightcol = styled.div``;
-const Container = styled.div`
-  max-width: 1440px;
-  margin: auto;
-  padding: 0px 110px;
-`;

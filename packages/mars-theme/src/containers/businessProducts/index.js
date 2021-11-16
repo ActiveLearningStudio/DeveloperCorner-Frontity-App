@@ -1,25 +1,19 @@
 import React from "react";
 import { Global, css, styled } from "frontity";
-import Banner from "../../components/banner/index";
 import GetStarted from "./getStarted";
 import Features from "./features";
 import Creating from "./Creating";
 import ContactUs from "./contactUs";
 import Courses from "./courses";
+import Banner from "../../components/banner/Styledbanner";
 import featurePic from "../../assets/images/Group153.png";
 import externalCss from "./style.css";
 const Index = () => {
   return (
     <>
       <Global styles={css(externalCss)} />
-      <Banner className="hero-section">
-        <div className="hero-text">
-          <h1>Business</h1>
-        </div>
-      </Banner>
-      <Container>
-        <GetStarted />
-      </Container>
+      <Banner title="Business Product" />
+      <GetStarted />
       <Features />
       <Creating />
       <Courses />

@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "frontity";
+import { Container } from "react-bootstrap";
 import plusicon from "../../assets/images/PLUS.svg";
 import resume1 from "../../assets/images/resume1.svg";
 import resume2 from "../../assets/images/resume2.svg";
@@ -158,6 +159,11 @@ const Heading = styled.div`
   h2 {
     margin-right: 10px;
     color: #084892;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
   }
 `;
 const Content = styled.div`
@@ -180,6 +186,11 @@ const Span = styled.span`
 `;
 const Cardbody = styled.div`
   h3 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
     color: #084892;
   }
   p {
@@ -189,6 +200,8 @@ const Cardbody = styled.div`
     }
     span {
       margin-left: 10px;
+      font-family: Open Sans;
+      color: #515151;
     }
   }
 `;
@@ -199,9 +212,4 @@ const LeftCol = styled.div`
 const RightCol = styled.div`
   display: flex;
   justify-content: space-between;
-`;
-const Container = styled.div`
-  max-width: 1440px;
-  margin: auto;
-  padding: 0px 110px;
 `;

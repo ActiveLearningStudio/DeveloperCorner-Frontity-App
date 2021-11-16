@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "frontity";
+import { Container } from "react-bootstrap";
 import StartedImg from "../../assets/images/Trynow1.svg";
 const Creating = () => {
   return (
@@ -32,14 +33,26 @@ const StyleDiv = styled.div`
 `;
 const Content = styled.div`
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 const LeftDiv = styled.div`
   h2 {
-    color: #ffb124;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 43px;
+    color: #f8af2c;
     margin-bottom: 1rem;
   }
   p {
-    color: #fff;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #ffffff;
     margin-bottom: 2rem;
   }
   button {
@@ -47,13 +60,8 @@ const LeftDiv = styled.div`
     border: 1px solid #fff;
     color: #fff;
     padding: 5px 40px;
-    border-radius: 50px;
+    border-radius: 25px;
     font-weight: bold;
   }
 `;
 const RightDiv = styled.div``;
-const Container = styled.div`
-  max-width: 1440px;
-  margin: auto;
-  padding: 60px 110px 0px 110px;
-`;

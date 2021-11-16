@@ -1,5 +1,6 @@
 import React from "react";
 import { css, styled } from "frontity";
+import { Container } from "react-bootstrap";
 import featurePic from "../../assets/images/Group153.png";
 import MoneyPic from "../../assets/images/Group29.png";
 const Features = () => {
@@ -80,15 +81,20 @@ const OuterDiv = styled.div`
     margin-left: 7rem;
     flex-direction: column;
     h2 {
+      font-family: Rubik;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 30px;
       color: #084892;
     }
     p {
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
       color: #515151;
     }
   }
-`;
-const Container = styled.div`
-  max-width: 1440px;
-  margin: auto;
-  padding: 0px 110px;
 `;

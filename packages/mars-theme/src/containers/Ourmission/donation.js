@@ -11,24 +11,27 @@ const Donation = () => {
         <Content>
           <LeftCol>
             <Heading>
-              Your donation supports our non profit mission, which is to bring
-              free and open technolgy tool in every school, collge and non
-              profit organization
+              Your donation <span>supports our non profit mission,</span> which
+              is to bring free and open technolgy tool in every school, collge
+              and non profit organization
             </Heading>
 
             <Innerdiv>
-              <img src={plusicon} alt="" />
+              <div>
+                <img src={plusicon} alt="" />
 
-              <Paragraph>
-                if contributing by check please send your tax exept donation ot
-                Curriki, 20660 Stevens Creek blvd #332, Cupertino, CA 95014
-              </Paragraph>
-
-              <p>CUrriki non profit taX ID#203478467</p>
+                <Paragraph>
+                  if contributing by check please send your tax exept donation
+                  ot Curriki, 20660 Stevens Creek blvd #332, Cupertino, CA 95014
+                </Paragraph>
+              </div>
+              <p>Curriki non profit taX ID#203478467</p>
             </Innerdiv>
             <Innerdiv>
-              <img src={plusicon} alt="" />
-              <Paragraph>If you would like to pay by credit card</Paragraph>
+              <div>
+                <img src={plusicon} alt="" />
+                <Paragraph>If you would like to pay by credit card</Paragraph>
+              </div>
             </Innerdiv>
             <button>CLICK HERE</button>
           </LeftCol>
@@ -51,17 +54,47 @@ const Content = styled.div`
 `;
 const LeftCol = styled.div`
   button {
+    width: 185px;
+    height: 45px;
     background: #084892;
     color: #fff;
-    border-radius: 50px;
-    border: none !important;
-    padding: 5px 20px;
+    border: 1px solid #084892;
+    box-shadow: 0px 10px 20px -5px rgba (8, 72, 146, 0.35);
+    border-radius: 25px;
+    margin-top: 10px;
   }
 `;
-const Paragraph = styled.div``;
+const Paragraph = styled.div`
+  margin-left: 20px;
+  margin-bottom: 20px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+`;
 const RightCol = styled.div``;
 const Innerdiv = styled.div`
   display: flex;
+  flex-direction: column;
+  div {
+    display: flex;
+    align-items: flex-start;
+  }
+  p {
+    margin-left: 38px;
+  }
 `;
-const Heading = styled.h2``;
+const Heading = styled.h2`
+  font-family: Rubic;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  color: #084892;
+  margin-bottom: 40px;
+  span {
+    color: #ffb124;
+  }
+`;
 const Para1 = styled.div``;
