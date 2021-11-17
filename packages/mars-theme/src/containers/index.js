@@ -12,6 +12,7 @@ import CurrikiPLatform from "./deployingthecurrikiplatfrom/index";
 import BusinessProduct from "./businessProducts/index";
 import Ourmission from "./Ourmission/index";
 import Providers from "./providers/index";
+import SupportLearning from "./SuportLearning/index";
 const Index = ({ state }) => {
   return (
     <>
@@ -30,6 +31,7 @@ const Index = ({ state }) => {
       {state.router.link === "/businessproduct/" && <BusinessProduct />}
       {state.router.link === "/providers/" && <Providers />}
       {state.router.link === "/ourmission/" && <Ourmission />}
+      {state.router.link === "/supportlearning/" && <SupportLearning />}
 
       <Footer />
     </>

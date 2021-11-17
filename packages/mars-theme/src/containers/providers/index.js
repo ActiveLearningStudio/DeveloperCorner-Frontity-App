@@ -8,7 +8,7 @@ import Certification from "./certification";
 const Index = () => {
   return (
     <>
-      <Banner title="Providers" />
+      <Banner title="Providers" subheading="" para="" />
       <Requestinfo />
       <AboutProgram />
       <LearningProvider />

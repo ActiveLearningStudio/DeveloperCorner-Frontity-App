@@ -19,6 +19,7 @@ const settings = {
             ["BusinessProduct", "/businessProduct"],
             ["Providers", "/providers"],
             ["Ourmission", "/ourmission"],
+            ["SupportLearning", "/supportlearning"],
           ],
           featured: {
             showOnList: false,
