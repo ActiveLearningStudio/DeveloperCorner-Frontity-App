@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "frontity";
+import { styled, css } from "frontity";
 import { Container } from "react-bootstrap";
 import StyledHeading from "../../StyledComponent/StyledHeading";
 import backgroundPic from "../../assets/images/Group153.png";
@@ -7,6 +7,9 @@ import plusicon from "../../assets/images/PLUS.svg";
 import CardImg from "../../assets/images/Rectangle10.png";
 import vectorpc from "../../assets/images/vectorpc.png";
 import pcimage from "../../assets/images/Rectangle109.png";
+import AnnouncmentImg from "../../assets/images/Group563.png";
+import RectImg from "../../assets/images/Rectangle110.png";
+import Cardbackground from "../../assets/images/Rectangle09.png";
 
 const Roadmap = () => {
   return (
@@ -21,7 +24,320 @@ const Roadmap = () => {
         </HeadingContent>
         <CardContent>
           <Card>
-            <CardHead>
+            <CardHead
+              css={css`
+                background: linear-gradient(
+                    0deg,
+                    rgba(40, 90, 165, 0.75),
+                    rgba(40, 90, 165, 0.75)
+                  ),
+                  url("${CardImg}");
+              `}
+            >
+              <div>
+                <img src={vectorpc} alt="" />
+              </div>
+            </CardHead>
+            <CardHeading>CONTENT CLEARING HOUSE</CardHeading>
+            <Paragraph>
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour, or randomised words which don't look even
+              slightly believable. If you are going to use a passage of Lorem
+              Ipsum, you need to be sure there isn't anything embarrassing
+              hidden in the middle of text.
+            </Paragraph>
+            <CardBottom>
+              <CardHeading>Ask:</CardHeading>
+              <Bottom>
+                <img src={plusicon} alt="" />
+
+                <Para>Introduction ot content publisher</Para>
+              </Bottom>
+              <Bottom>
+                <img src={plusicon} alt="" />
+
+                <Para>Introduction ot content publisher</Para>
+              </Bottom>
+            </CardBottom>
+          </Card>
+          <Card>
+            <CardHead
+              css={css`
+                background: linear-gradient(
+                    0deg,
+                    rgba(40, 90, 165, 0.75),
+                    rgba(40, 90, 165, 0.75)
+                  ),
+                  url("${pcimage}");
+              `}
+            >
+              <div>
+                <img src={AnnouncmentImg} alt="" />
+              </div>
+            </CardHead>
+            <CardHeading>CONTENT CLEARING HOUSE</CardHeading>
+            <Paragraph>
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour, or randomised words which don't look even
+              slightly believable. If you are going to use a passage of Lorem
+              Ipsum, you need to be sure there isn't anything embarrassing
+              hidden in the middle of text.
+            </Paragraph>
+            <CardBottom>
+              <CardHeading>Ask:</CardHeading>
+              <Bottom>
+                <img src={plusicon} alt="" />
+
+                <Para>Introduction ot content publisher</Para>
+              </Bottom>
+              <Bottom>
+                <img src={plusicon} alt="" />
+
+                <Para>Introduction ot content publisher</Para>
+              </Bottom>
+            </CardBottom>
+          </Card>
+          <Card>
+            <CardHead
+              css={css`
+                background: linear-gradient(
+                    0deg,
+                    rgba(40, 90, 165, 0.75),
+                    rgba(40, 90, 165, 0.75)
+                  ),
+                  url("${Cardbackground}");
+              `}
+            >
+              <div>
+                <img src={AnnouncmentImg} alt="" />
+              </div>
+            </CardHead>
+            <CardHeading>CONTENT CLEARING HOUSE</CardHeading>
+            <Paragraph>
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour, or randomised words which don't look even
+              slightly believable. If you are going to use a passage of Lorem
+              Ipsum, you need to be sure there isn't anything embarrassing
+              hidden in the middle of text.
+            </Paragraph>
+            <CardBottom>
+              <CardHeading>Ask:</CardHeading>
+              <Bottom>
+                <img src={AnnouncmentImg} alt="" />
+
+                <Para>Introduction ot content publisher</Para>
+              </Bottom>
+              <Bottom>
+                <img src={plusicon} alt="" />
+
+                <Para>Introduction ot content publisher</Para>
+              </Bottom>
+            </CardBottom>
+          </Card>
+          <Card>
+            <CardHead
+              css={css`
+                background: linear-gradient(
+                    0deg,
+                    rgba(40, 90, 165, 0.75),
+                    rgba(40, 90, 165, 0.75)
+                  ),
+                  url("${RectImg}");
+              `}
+            >
+              <div>
+                <img src={AnnouncmentImg} alt="" />
+              </div>
+            </CardHead>
+            <CardHeading>CONTENT CLEARING HOUSE</CardHeading>
+            <Paragraph>
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour, or randomised words which don't look even
+              slightly believable. If you are going to use a passage of Lorem
+              Ipsum, you need to be sure there isn't anything embarrassing
+              hidden in the middle of text.
+            </Paragraph>
+            <CardBottom>
+              <CardHeading>Ask:</CardHeading>
+              <Bottom>
+                <img src={plusicon} alt="" />
+
+                <Para>Introduction ot content publisher</Para>
+              </Bottom>
+              <Bottom>
+                <img src={plusicon} alt="" />
+
+                <Para>Introduction ot content publisher</Para>
+              </Bottom>
+            </CardBottom>
+          </Card>
+          <Card>
+            <CardHead
+              css={css`
+                background: linear-gradient(
+                    0deg,
+                    rgba(40, 90, 165, 0.75),
+                    rgba(40, 90, 165, 0.75)
+                  ),
+                  url("${CardImg}");
+              `}
+            >
+              <div>
+                <img src={vectorpc} alt="" />
+              </div>
+            </CardHead>
+            <CardHeading>CONTENT CLEARING HOUSE</CardHeading>
+            <Paragraph>
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour, or randomised words which don't look even
+              slightly believable. If you are going to use a passage of Lorem
+              Ipsum, you need to be sure there isn't anything embarrassing
+              hidden in the middle of text.
+            </Paragraph>
+            <CardBottom>
+              <CardHeading>Ask:</CardHeading>
+              <Bottom>
+                <img src={plusicon} alt="" />
+
+                <Para>Introduction ot content publisher</Para>
+              </Bottom>
+              <Bottom>
+                <img src={plusicon} alt="" />
+
+                <Para>Introduction ot content publisher</Para>
+              </Bottom>
+            </CardBottom>
+          </Card>
+          <Card>
+            <CardHead
+              css={css`
+                background: linear-gradient(
+                    0deg,
+                    rgba(40, 90, 165, 0.75),
+                    rgba(40, 90, 165, 0.75)
+                  ),
+                  url("${pcimage}");
+              `}
+            >
+              <div>
+                <img src={AnnouncmentImg} alt="" />
+              </div>
+            </CardHead>
+            <CardHeading>CONTENT CLEARING HOUSE</CardHeading>
+            <Paragraph>
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour, or randomised words which don't look even
+              slightly believable. If you are going to use a passage of Lorem
+              Ipsum, you need to be sure there isn't anything embarrassing
+              hidden in the middle of text.
+            </Paragraph>
+            <CardBottom>
+              <CardHeading>Ask:</CardHeading>
+              <Bottom>
+                <img src={plusicon} alt="" />
+
+                <Para>Introduction ot content publisher</Para>
+              </Bottom>
+              <Bottom>
+                <img src={plusicon} alt="" />
+
+                <Para>Introduction ot content publisher</Para>
+              </Bottom>
+            </CardBottom>
+          </Card>
+          <Card>
+            <CardHead
+              css={css`
+                background: linear-gradient(
+                    0deg,
+                    rgba(40, 90, 165, 0.75),
+                    rgba(40, 90, 165, 0.75)
+                  ),
+                  url("${Cardbackground}");
+              `}
+            >
+              <div>
+                <img src={AnnouncmentImg} alt="" />
+              </div>
+            </CardHead>
+            <CardHeading>CONTENT CLEARING HOUSE</CardHeading>
+            <Paragraph>
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour, or randomised words which don't look even
+              slightly believable. If you are going to use a passage of Lorem
+              Ipsum, you need to be sure there isn't anything embarrassing
+              hidden in the middle of text.
+            </Paragraph>
+            <CardBottom>
+              <CardHeading>Ask:</CardHeading>
+              <Bottom>
+                <img src={AnnouncmentImg} alt="" />
+
+                <Para>Introduction ot content publisher</Para>
+              </Bottom>
+              <Bottom>
+                <img src={plusicon} alt="" />
+
+                <Para>Introduction ot content publisher</Para>
+              </Bottom>
+            </CardBottom>
+          </Card>
+          <Card>
+            <CardHead
+              css={css`
+                background: linear-gradient(
+                    0deg,
+                    rgba(40, 90, 165, 0.75),
+                    rgba(40, 90, 165, 0.75)
+                  ),
+                  url("${RectImg}");
+              `}
+            >
+              <div>
+                <img src={AnnouncmentImg} alt="" />
+              </div>
+            </CardHead>
+            <CardHeading>CONTENT CLEARING HOUSE</CardHeading>
+            <Paragraph>
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour, or randomised words which don't look even
+              slightly believable. If you are going to use a passage of Lorem
+              Ipsum, you need to be sure there isn't anything embarrassing
+              hidden in the middle of text.
+            </Paragraph>
+            <CardBottom>
+              <CardHeading>Ask:</CardHeading>
+              <Bottom>
+                <img src={plusicon} alt="" />
+
+                <Para>Introduction ot content publisher</Para>
+              </Bottom>
+              <Bottom>
+                <img src={plusicon} alt="" />
+
+                <Para>Introduction ot content publisher</Para>
+              </Bottom>
+            </CardBottom>
+          </Card>
+          <Card>
+            <CardHead
+              css={css`
+                background: linear-gradient(
+                    0deg,
+                    rgba(40, 90, 165, 0.75),
+                    rgba(40, 90, 165, 0.75)
+                  ),
+                  url("${CardImg}");
+              `}
+            >
               <div>
                 <img src={vectorpc} alt="" />
               </div>
@@ -103,7 +419,6 @@ const Card = styled.div`
 `;
 
 const CardHead = styled.div`
-  background: url("${CardImg}");
   width: 340px;
   height: 340px;
   border-radius: 5px;

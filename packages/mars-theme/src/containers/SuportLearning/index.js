@@ -1,6 +1,7 @@
 import React from "react";
 import Banner from "../../components/banner/Styledbanner";
 import GetInvolved from "./GetInvolved";
+import LearnImpact from "./LearnImpact";
 import Roadmap from "./Roadmap";
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
       />
       <GetInvolved />
       <Roadmap />
+      <LearnImpact />
     </>
   );
 };

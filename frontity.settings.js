@@ -20,6 +20,8 @@ const settings = {
             ["Providers", "/providers"],
             ["Ourmission", "/ourmission"],
             ["SupportLearning", "/supportlearning"],
+            ["PrivacyPolicy", "/privacypolicy"],
+            ["TermsCondition", "/termscondition"],
           ],
           featured: {
             showOnList: false,

@@ -13,6 +13,8 @@ import BusinessProduct from "./businessProducts/index";
 import Ourmission from "./Ourmission/index";
 import Providers from "./providers/index";
 import SupportLearning from "./SuportLearning/index";
+import PrivacyPage from "./PolicyPrivacy/index";
+import Terms from "./termsCondition/index";
 const Index = ({ state }) => {
   return (
     <>
@@ -32,6 +34,8 @@ const Index = ({ state }) => {
       {state.router.link === "/providers/" && <Providers />}
       {state.router.link === "/ourmission/" && <Ourmission />}
       {state.router.link === "/supportlearning/" && <SupportLearning />}
+      {state.router.link === "/privacypolicy/" && <PrivacyPage />}
+      {state.router.link === "/termscondition/" && <Terms />}
 
       <Footer />
     </>

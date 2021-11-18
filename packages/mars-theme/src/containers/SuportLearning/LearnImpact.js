@@ -5,21 +5,21 @@ import PrimaryButton from "../../StyledComponent/PrimaryButton";
 import StyledPara from "../../StyledComponent/StyledPara";
 import StyledHeading from "../../StyledComponent/StyledHeading";
 import plusicon from "../../assets/images/PLUS.svg";
-const GetInvolved = () => {
+const LearnImpact = () => {
   return (
     <Container>
       <Content>
         <HeadingContent>
           <Topheading>
-            <Heading>Get invloved</Heading>
+            <Heading>LEARN</Heading>
             <img src={plusicon} alt="" />
           </Topheading>
 
-          <Subheading>Find an iniative</Subheading>
+          <Subheading>OUR IMPACT</Subheading>
         </HeadingContent>
         <InnerContent>
           <LeftCol>
-            <Colheading>In-Kind Services</Colheading>
+            <Colheading>Curriki suites release notes</Colheading>
             <Paragraph>
               There are many variations of passages of Lorem Ipsum available,
               but the majority have suffered alteration in some form, by
@@ -31,7 +31,7 @@ const GetInvolved = () => {
             <Button>contact us</Button>
           </LeftCol>
           <RightCol>
-            <Colheading>Making Donation</Colheading>
+            <Colheading>See the impact we make</Colheading>
             <Paragraph>
               There are many variations of passages of Lorem Ipsum available,
               but the majority have suffered alteration in some form, by
@@ -48,10 +48,9 @@ const GetInvolved = () => {
   );
 };
 
-export default GetInvolved;
-
+export default LearnImpact;
 const Content = styled.div`
-  padding: 80px 0px 0px 0px;
+  padding: 50px 0px 80px 0px;
 `;
 const HeadingContent = styled.div``;
 const Topheading = styled.div`
@@ -106,12 +105,13 @@ const Paragraph = styled.p`
   margin-bottom: 80px;
 `;
 const Button = styled.button`
-  padding: 5px 40px;
+  width: 337px;
+  height: 45px;
   background: #084892;
-  color: #fff;
-  text-transform: uppercase;
-  border: 1px solid #084892;
   box-shadow: 0px 10px 20px -5px rgb(8 72 146 / 35%);
   border-radius: 25px;
   font-weight: bold;
+  color: #fff;
+  border: 1px solid #084892;
+  text-transform: uppercase;
 `;
