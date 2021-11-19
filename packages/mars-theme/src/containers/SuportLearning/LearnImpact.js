@@ -52,7 +52,11 @@ export default LearnImpact;
 const Content = styled.div`
   padding: 50px 0px 80px 0px;
 `;
-const HeadingContent = styled.div``;
+const HeadingContent = styled.div`
+  @media screen and (max-width: 576px) {
+    padding: 0px 20px;
+  }
+`;
 const Topheading = styled.div`
   display: flex;
   align-items: center;
@@ -90,6 +94,9 @@ const InnerContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: 576px) {
+    padding: 0px 20px;
+  }
 `;
 const LeftCol = styled.div``;
 const RightCol = styled.div``;
@@ -100,13 +107,17 @@ const Paragraph = styled.p`
   font-size: 18px;
   line-height: 25px;
   color: #515151;
-  width: 500px;
-  height: 100px;
-  margin-bottom: 80px;
+  max-width: 99%;
+  margin-bottom: 50px;
+  @media screen and (max-width: 1200px) {
+    margin-bottom: 60px;
+  }
+  @media screen and (max-width: 992px) {
+    margin-bottom: 40px;
+  }
 `;
 const Button = styled.button`
-  width: 337px;
-  height: 45px;
+  padding: 8px 80px;
   background: #084892;
   box-shadow: 0px 10px 20px -5px rgb(8 72 146 / 35%);
   border-radius: 25px;
@@ -114,4 +125,10 @@ const Button = styled.button`
   color: #fff;
   border: 1px solid #084892;
   text-transform: uppercase;
+  @media screen and (max-width: 768px) {
+    padding: 8px 60px;
+  }
+  @media screen and (max-width: 576px) {
+    padding: 8px 40px;
+  }
 `;

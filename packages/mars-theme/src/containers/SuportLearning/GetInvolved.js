@@ -53,7 +53,11 @@ export default GetInvolved;
 const Content = styled.div`
   padding: 80px 0px 0px 0px;
 `;
-const HeadingContent = styled.div``;
+const HeadingContent = styled.div`
+  @media screen and (max-width: 576px) {
+    padding: 0px 20px;
+  }
+`;
 const Topheading = styled.div`
   display: flex;
   align-items: center;
@@ -91,6 +95,9 @@ const InnerContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: 576px) {
+    padding: 0px 20px;
+  }
 `;
 const LeftCol = styled.div``;
 const RightCol = styled.div``;
@@ -101,9 +108,14 @@ const Paragraph = styled.p`
   font-size: 18px;
   line-height: 25px;
   color: #515151;
-  width: 500px;
-  height: 100px;
-  margin-bottom: 80px;
+  max-width: 99%;
+  margin-bottom: 60px;
+  @media screen and (max-width: 1200px) {
+    margin-bottom: 60px;
+  }
+  @media screen and (max-width: 992px) {
+    margin-bottom: 40px;
+  }
 `;
 const Button = styled.button`
   padding: 5px 40px;
@@ -114,4 +126,7 @@ const Button = styled.button`
   box-shadow: 0px 10px 20px -5px rgb(8 72 146 / 35%);
   border-radius: 25px;
   font-weight: bold;
+  @media screen and (max-width: 576px) {
+    margin-bottom: 30px;
+  }
 `;

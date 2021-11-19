@@ -92,6 +92,10 @@ const LeftCol = styled.div`
     border: none !important;
     padding: 5px 20px;
     margin-top: 10px;
+    @media screen and (max-width: 992px) {
+      width: 200px;
+      height: 40px;
+    }
   }
 `;
 const RightCol = styled.div`

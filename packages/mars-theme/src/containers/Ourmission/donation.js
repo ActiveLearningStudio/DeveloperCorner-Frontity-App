@@ -50,7 +50,10 @@ const Section = styled.div``;
 
 const Content = styled.div`
   display: flex;
-  padding: 80px 0px;
+  padding: 40px 0px;
+  @media screen and (max-width: 1200px) {
+    padding: 20px 0px;
+  }
 `;
 const LeftCol = styled.div`
   button {
@@ -73,7 +76,11 @@ const Paragraph = styled.div`
   font-size: 18px;
   line-height: 25px;
 `;
-const RightCol = styled.div``;
+const RightCol = styled.div`
+  @media screen and (max-width: 1200px) {
+    overflow: hidden;
+  }
+`;
 const Innerdiv = styled.div`
   display: flex;
   flex-direction: column;

@@ -73,6 +73,12 @@ const Foundations = styled.div`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  @media screen and (max-width: 1200px) {
+    padding: 0px 100px;
+  }
+  @media screen and (max-width: 992px) {
+    padding: 0px 150px;
+  }
 `;
 const Div = styled.div`
   margin-right: 30px;

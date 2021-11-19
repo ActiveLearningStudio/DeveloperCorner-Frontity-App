@@ -375,12 +375,16 @@ export default Roadmap;
 const Section = styled.div`
   background: url("${backgroundPic}");
   background-repeat: no-repeat;
+  background-size: contain;
   width: 100%;
   margin-top: -40px;
 `;
 
 const HeadingContent = styled.div`
   padding-top: 200px;
+  @media screen and (max-width: 576px) {
+    padding: 120px 20px 0 20px;
+  }
 `;
 const TopHeading = styled.div`
   display: flex;
@@ -408,14 +412,32 @@ const Subheading = styled.h3`
 const CardContent = styled.div`
   display: flex;
   flex-wrap: wrap;
+
+  @media screen and (max-width: 1200px) {
+    padding: 0px 100px;
+  }
+  @media screen and (max-width: 992px) {
+    padding: 0px 40px !important;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0px 44px !important;
+  }
+  @media screen and (max-width: 576px) {
+    padding: 0px 60px !important;
+  }
 `;
 const Card = styled.div`
   width: 340px;
-  height: 740px;
   border-radius: 5px;
   background: #fff;
   margin-right: 25px;
   margin-bottom: 25px;
+  @media screen and (max-width: 992px) {
+    width: 278px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 340px;
+  }
 `;
 
 const CardHead = styled.div`
@@ -425,6 +447,12 @@ const CardHead = styled.div`
   div {
     text-align: center;
     padding-top: 120px;
+  }
+  @media screen and (max-width: 992px) {
+    width: 278px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 340px;
   }
 `;
 const CardHeading = styled.h5`
