@@ -74,12 +74,28 @@ const Leftcol = styled.div`
     margin-bottom: 2rem;
   }
   button {
+    width: 359px;
+    height: 38px;
     background: #084892;
+    box-shadow: 0px 10px 20px -5px rgba(8, 72, 146, 0.35);
+    border-radius: 25px;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
     border: none;
     color: #fff;
-    border-radius: 50px;
-    padding: 3px 35px;
+    border-radius: 25px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    padding-bottom: 100px !important;
   }
 `;
 
-const Rightcol = styled.div``;
+const Rightcol = styled.div`
+  @media screen and (max-width: 992px) {
+    overflow: hidden;
+  }
+`;

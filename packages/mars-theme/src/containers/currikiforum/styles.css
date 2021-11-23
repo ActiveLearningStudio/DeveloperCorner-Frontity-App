@@ -59,6 +59,10 @@
   width: 118px;
   justify-content: space-between;
 }
+.main-container .forum-section .forum-header .forum-nav a.active {
+  color: #084892;
+  text-decoration: none;
+}
 @media screen and (max-width: 767px) {
   .main-container .forum-section .forum-header .forum-nav {
     margin-bottom: 25px;
@@ -88,10 +92,12 @@
   width: 45px;
   height: 45px;
   background-color: #084892;
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 25px;
+  border: 1px solid #084892;
+  padding: 10px;
 }
 .main-container .forum-section .forum-header .forum-search .search-btn svg {
   color: #fff;
@@ -143,10 +149,10 @@
   min-height: 36px;
   border: none;
   box-sizing: border-box;
-  border-radius: 18px;
-  padding: 0 32px;
+  border-radius: 25px;
+  padding: 0 40px;
   box-shadow: 0 2px 6px 1px rgb(8 72 146 / 16%);
-  font-size: 14px;
+  font-size: 16px;
   font-family: "rubic";
   font-weight: bold;
 }
@@ -181,12 +187,12 @@
   min-height: 36px;
   border: none;
   box-sizing: border-box;
-  border-radius: 18px;
-  padding: 0 32px;
-  box-shadow: 0 2px 6px 1px rgb(8 72 146 / 16%);
-  font-size: 14px;
+  padding: 13px 45px;
+  box-shadow: 0px 10px 20px -5px rgba(8, 72, 146, 0.35);
+  font-size: 16px;
+  border-radius: 25px;
   font-family: "rubic";
-  font-weight: 500;
+  font-weight: 700;
 }
 .main-container .login-section .login-forum form .form-name {
   padding: 0 0 5px 22px;

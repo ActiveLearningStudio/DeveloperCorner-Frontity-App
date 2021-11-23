@@ -113,6 +113,7 @@ const ContactUs = () => {
 export default ContactUs;
 const Section = styled.div`
   position: relative;
+  margin-top: 60px;
   img {
     width: 100%;
     position: absolute;

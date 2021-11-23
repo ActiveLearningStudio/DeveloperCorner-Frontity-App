@@ -64,7 +64,6 @@ const Courses = () => {
 export default Courses;
 const Section = styled.div`
   margin-top: 50px;
-  height: 620px;
 `;
 const SectionTitle = styled.div`
   display: flex;
@@ -85,6 +84,9 @@ const CardContent = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  @media screen and (max-width: 1202px) {
+    padding: 20px 90px;
+  }
 `;
 const Card = styled.div`
   width: 340px;
@@ -116,6 +118,9 @@ const Card = styled.div`
     align-items: center;
     text-decoration-line: underline;
     color: #084892;
+  }
+  @media screen and (max-width: 1202px) {
+    margin-bottom: 30px;
   }
 `;
 const Footer = styled.div`

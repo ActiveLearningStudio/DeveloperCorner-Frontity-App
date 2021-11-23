@@ -82,12 +82,9 @@ const Login = () => {
                   {/* <Headings className="" color="#515151" headingType="body2" text="Keep me signed in" /> */}
                   <p>Keep me signed in</p>
                 </label>
-                <button primary type="submit" text="Login" width="143px">
+                <button type="submit" text="Login">
                   Login
                 </button>
-                {/* <button type="submit" disabled={isSubmitting}>
-             Submit
-           </button> */}
               </form>
             )}
           </Formik>

@@ -161,14 +161,18 @@ const Heading = styled.div`
     color: #084892;
     font-family: Rubik;
     font-style: normal;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 32px;
     line-height: 38px;
+    color: #084892;
   }
 `;
 const Content = styled.div`
   padding: 60px;
   margin-bottom: 40px;
+  @media screen and (max-width: 992px) {
+    padding: 20px;
+  }
 `;
 const Card = styled.div`
 display:flex

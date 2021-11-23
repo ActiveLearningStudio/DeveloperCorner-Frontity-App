@@ -31,7 +31,7 @@ const LearningProvider = () => {
               Lorem Ipsum.
             </p>
             <p>
-              <b>Certified Services</b>System integration, cloud hosting,Custom
+              <b>Certified Services:</b>System integration, cloud hosting,Custom
               deveopment
             </p>
             <p>
@@ -54,7 +54,7 @@ const LearningProvider = () => {
               distribution of letters, as opposed to using 'Content here,
             </p>
             <p>
-              <b>Certified Services</b>System integration, cloud hosting,Custom
+              <b>Certified Services:</b>System integration, cloud hosting,Custom
               deveopment
             </p>
             <p>
@@ -79,7 +79,7 @@ const LearningProvider = () => {
               Lorem Ipsum.
             </p>
             <p>
-              <b>Certified Services</b>System integration, cloud hosting,Custom
+              <b>Certified Services:</b>System integration, cloud hosting,Custom
               deveopment
             </p>
             <p>
@@ -104,7 +104,7 @@ const LearningProvider = () => {
               Lorem Ipsum.
             </p>
             <p>
-              <b>Certified Services</b>System integration, cloud hosting,Custom
+              <b>Certified Services:</b>System integration, cloud hosting,Custom
               deveopment
             </p>
             <p>
@@ -134,6 +134,9 @@ const Heading = styled.h2`
   span {
     color: rgb(255, 177, 36);
   }
+  @media screen and (max-width: 768px) {
+    margin-top: 350px;
+  }
 `;
 const Card = styled.div`
   box-shadow: 0px 2px 25px 5px rgba(81, 81, 81, 0.1);
@@ -143,6 +146,9 @@ const Card = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 40px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 const LeftCol = styled.div``;
 const Paragraph = styled.p`

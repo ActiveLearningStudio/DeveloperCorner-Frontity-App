@@ -12,6 +12,6 @@ const Button = styled.button`
   font-family: rubik;
   color: #fff;
   border: 1px solid #084892;
-  box-shadow: 0px 10px 20px -5px  rgba(8, 72, 146, 0.35);
+  box-shadow: 0px 10px 20px -5px rgb(8 72 146 / 35%);
   border-radius: 25px;
 `;

@@ -15,7 +15,9 @@ const GetStarted = () => {
           </h2>
           <Button title="Get Started">Get Started</Button>
         </div>
-        <img src={GetPic} alt="Get started picture" />
+        <InnerDiv>
+          <img src={GetPic} alt="Get started picture" />
+        </InnerDiv>
       </StyleDiv>
     </Container>
   );
@@ -43,3 +45,8 @@ const StyleDiv = styled.div`
   }
 `;
 const Button = styled(PrimaryButton)``;
+const InnerDiv = styled.div`
+  @media screen and (max-width: 992px) {
+    overflow: hidden;
+  }
+`;

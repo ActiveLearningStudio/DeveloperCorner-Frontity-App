@@ -26,8 +26,11 @@ const Section = styled.div`
   padding: 50px;
 `;
 const Heading = styled.h2`
-  color: rgb(255, 177, 36);
-  font-weight: bold;
+  
+  font-weight: 500;
+  font-size:49px;
+  line-height:58px;
+  color:#FFB124;
   font-family;rubic;
 `;
 

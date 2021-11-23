@@ -12,7 +12,7 @@ const Forums = () => {
       <div className="forum-section">
         <div className="forum-header">
           <div className="forum-nav">
-            <a>Home</a>
+            <a class="active">Home</a>
             <img src={Arrow} alt="arrow" />
             <a>Forums</a>
           </div>

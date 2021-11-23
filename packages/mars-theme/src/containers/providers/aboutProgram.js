@@ -106,6 +106,9 @@ const InnerDIv = styled.div`
   margin-top: 30px;
   display: flex;
   align-items: center;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 const LeftCol = styled.div``;
 const RightCol = styled.div`
@@ -132,5 +135,10 @@ const RightCol = styled.div`
       color: #515151;
       margin-left: 10px;
     }
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 30px;
+    margin-left: 0px;
   }
 `;
