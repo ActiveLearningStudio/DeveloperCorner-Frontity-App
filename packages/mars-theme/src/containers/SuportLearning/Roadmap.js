@@ -420,19 +420,10 @@ const CardContent = styled.div`
     padding: 0px 40px !important;
   }
   @media screen and (max-width: 768px) {
-    padding: 0px 100px !important;
+    padding: 0px 44px !important;
   }
-  @media screen and (max-width: 576px) {
-    padding: 0px 80px !important;
-  }
-  @media screen and (max-width: 480px) {
-    padding: 0px 40px !important;
-  }
-  @media screen and (max-width: 430px) {
-    padding: 0px 10px !important;
-  }
-  @media screen and (max-width: 380px) {
-    padding: 0px 0px !important;
+  @media screen and (max-width: 767px) {
+    padding: 0px !important;
   }
 `;
 const Card = styled.div`
@@ -445,7 +436,7 @@ const Card = styled.div`
     width: 278px;
   }
   @media screen and (max-width: 767px) {
-    width: 340px;
+    width: 520px;
   }
 `;
 
@@ -453,6 +444,8 @@ const CardHead = styled.div`
   width: 340px;
   height: 340px;
   border-radius: 5px;
+  background-repeat: no-repeat;
+  background-size: cover !important;
   div {
     text-align: center;
     padding-top: 120px;
@@ -461,7 +454,7 @@ const CardHead = styled.div`
     width: 278px;
   }
   @media screen and (max-width: 767px) {
-    width: 340px;
+    width: 520px;
   }
 `;
 const CardHeading = styled.h5`
