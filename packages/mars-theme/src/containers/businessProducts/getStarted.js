@@ -44,9 +44,17 @@ const StyleDiv = styled.div`
     }
   }
 `;
-const Button = styled(PrimaryButton)``;
+const Button = styled(PrimaryButton)`
+  @media screen and (max-width: 991px) {
+    margin-top: 50px;
+  }
+`;
 const InnerDiv = styled.div`
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 1200px) {
     overflow: hidden;
+    margin-top: 0px;
+  }
+  @media screen and (max-width: 991px) {
+    display: none;
   }
 `;

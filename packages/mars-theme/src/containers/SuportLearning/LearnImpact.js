@@ -94,8 +94,8 @@ const InnerContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media screen and (max-width: 576px) {
-    padding: 0px 20px;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
   }
 `;
 const LeftCol = styled.div``;

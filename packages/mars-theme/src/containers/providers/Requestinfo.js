@@ -96,6 +96,6 @@ const Leftcol = styled.div`
 
 const Rightcol = styled.div`
   @media screen and (max-width: 992px) {
-    overflow: hidden;
+    display: none;
   }
 `;
