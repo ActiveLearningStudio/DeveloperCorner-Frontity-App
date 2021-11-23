@@ -170,18 +170,26 @@ const Heading = styled.div`
 const Content = styled.div`
   padding: 60px;
   margin-bottom: 40px;
-  @media screen and (max-width: 992px) {
-    padding: 20px;
-  }
 `;
 const Card = styled.div`
 display:flex
 flex-direction:column;
 justify-content:space-between;
+@media screen and (max-width: 991px) {
+padding:0 70px;
+}
 
 `;
 const ImageDiv = styled.div`
   text-align: right;
+  @media screen and (max-width: 991px) {
+    margin-top:50px
+    padding-right:50px;
+  }
+  @media screen and (max-width: 768px) {
+    text-align:center;
+    padding:0;
+    }
 `;
 const Span = styled.span`
   color: rgb(255, 177, 36);
@@ -201,6 +209,7 @@ const Cardbody = styled.div`
     img {
       width: 12px;
       height: 12px;
+      
     }
     span {
       margin-left: 10px;
@@ -212,8 +221,16 @@ const Cardbody = styled.div`
 const LeftCol = styled.div`
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 768px) {
+  flex-direction:column;
+  text-align:center;
+  }
 `;
 const RightCol = styled.div`
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 768px) {
+    flex-direction:column;
+    text-align:center;
+    }
 `;
