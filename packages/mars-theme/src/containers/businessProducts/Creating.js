@@ -62,6 +62,9 @@ const LeftDiv = styled.div`
     padding: 5px 40px;
     border-radius: 25px;
     font-weight: bold;
+    @media screen and (max-width: 991px) {
+      margin-bottom: 20px;
+    }
   }
 `;
 const RightDiv = styled.div``;
