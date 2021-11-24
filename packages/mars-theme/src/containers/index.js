@@ -15,7 +15,6 @@ import Providers from "./providers/index";
 import SupportLearning from "./SuportLearning/index";
 import PrivacyPage from "./PolicyPrivacy/index";
 import Terms from "./termsCondition/index";
-import Nav from "./homepage";
 const Index = ({ state }) => {
   return (
     <>
@@ -23,7 +22,7 @@ const Index = ({ state }) => {
       <Header />
 
       {state.router.link === "/" && <Home />}
-      {state.router.link === "/documentation/" && <CurrikiArchitecture />}
+      {state.router.link === "/architecture/" && <CurrikiArchitecture />}
       {state.router.link === "/databaseschemas/" && <DatabaseSchema />}
       {state.router.link === "/deployingthecurrikiplatfrom/" && (
         <CurrikiPLatform />
@@ -37,7 +36,6 @@ const Index = ({ state }) => {
       {state.router.link === "/supportlearning/" && <SupportLearning />}
       {state.router.link === "/privacypolicy/" && <PrivacyPage />}
       {state.router.link === "/termscondition/" && <Terms />}
-      {state.router.link === "/nav/" && <Nav />}
 
       <Footer />
     </>

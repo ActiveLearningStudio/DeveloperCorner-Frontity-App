@@ -22,7 +22,10 @@ function Index({ state }) {
         </div>
       </Banner>
       <div className="text-section">
+        <div className="heading-content">
         <Heading Scrollspy={Scrollspy} />
+        </div>
+       
         <Description />
       </div>
     </>

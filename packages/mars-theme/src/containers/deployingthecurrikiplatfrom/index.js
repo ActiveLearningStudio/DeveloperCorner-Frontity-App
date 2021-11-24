@@ -13,16 +13,13 @@ const Index = () => {
       <Global styles={css(externalCss)} />
       <Banner className="hero-section">
         <div className="hero-text">
-          {/* <Headings
-            headingType="h1"
-            color="#FFB124"
-            text="Deploying the Curriki Platform"
-          /> */}
           <h1>Deploying the Curriki Platform</h1>
         </div>
       </Banner>
       <div className="text-section">
+        <div className="heading-content">
         <HeadingPage Scrollspy={Scrollspy} />
+        </div>
         <Description />
       </div>
     </>

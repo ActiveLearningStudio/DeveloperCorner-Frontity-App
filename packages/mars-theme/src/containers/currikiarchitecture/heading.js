@@ -25,7 +25,7 @@ function Heading({ Scrollspy, state }) {
             <div className="heading">
               <p>1.</p>
 
-              <p>{state.source.author[1].name}</p>
+              <p>Home</p>
             </div>
           </a>
           <a href="#headings2">

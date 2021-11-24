@@ -2,7 +2,7 @@
   height: 140px;
   display: flex;
   align-items: center;
-  margin-bottom: 101px;
+  margin-bottom: 70px;
 }
 @media screen and (max-width: 767px) {
   .hero-section {
@@ -34,7 +34,7 @@
 .text-section {
   max-width: 1148px;
   margin: auto;
-  display: unset;
+  display: flex;
 }
 @media screen and (max-width: 1100px) {
   .text-section {
@@ -45,7 +45,6 @@
   width: 310px;
   position: sticky;
   top: 3rem;
-  margin-left: 150px;
 }
 @media screen and (max-width: 1100px) {
   .text-section .heading-contaner {
@@ -84,7 +83,6 @@
 .text-section .description-contaner {
   width: 788px;
   float: right;
-  margin-top: -260px;
   margin-right: 80px;
 }
 @media screen and (max-width: 1100px) {
@@ -98,11 +96,10 @@
   }
 }
 .text-section .description-contaner .description-text {
-  margin-bottom: 50px;
+
 }
 .text-section .description-contaner .description-text .description-heading {
   display: flex;
-  padding-bottom: 21px;
 }
 .text-section .description-contaner .description-text .description-heading h2 {
   color: rgb(8, 72, 146);
