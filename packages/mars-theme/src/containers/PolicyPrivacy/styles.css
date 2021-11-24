@@ -108,12 +108,12 @@
   line-height: normal;
   font-style: normal;
 }
-.text-section .description-contaner .description-text .description-heading p {
+.text-section .description-contaner .description-text p {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
-  color: rgb(81, 81, 81);
+  color: #515151;
 }
 
 .text-section

@@ -5,6 +5,7 @@ function Description() {
       <div className="description-contaner">
         <div id="headings1" className="description-text">
           <div className="description-heading">
+            <h2>1.</h2>
             <h2> Welcome</h2>
           </div>
 
