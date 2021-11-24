@@ -87,6 +87,9 @@ const CardContent = styled.div`
   @media screen and (max-width: 1202px) {
     padding: 20px 90px;
   }
+  @media screen and (max-width: 991px) {
+    padding: 20px 0px;
+  }
 `;
 const Card = styled.div`
   width: 340px;

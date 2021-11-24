@@ -44,17 +44,21 @@ const StyleDiv = styled.div`
     }
   }
 `;
-const Button = styled(PrimaryButton)`
-  @media screen and (max-width: 991px) {
-    margin-top: 50px;
+const Button = styled.button`
+  width: 212px;
+  height: 45px;
+  background: #084892;
+  font-family: rubik;
+  color: #fff;
+  border: 1px solid #084892;
+  box-shadow: 0px 10px 20px -5px rgb(8 72 146 / 35%);
+  border-radius: 25px;
+  @media screen and (max-width: 1200px) {
+    margin-bottom: 70px;
   }
 `;
 const InnerDiv = styled.div`
   @media screen and (max-width: 1200px) {
-    overflow: hidden;
-    margin-top: 0px;
-  }
-  @media screen and (max-width: 991px) {
     display: none;
   }
 `;

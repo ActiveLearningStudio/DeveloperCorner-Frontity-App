@@ -70,6 +70,9 @@ const StyleDiv = styled.div`
 const StyleFeature = styled.div`
   margin-top: 230px;
   padding: 40px;
+  @media screen and (max-width: 992px) {
+    margin-top: 140px;
+  }
 `;
 const OuterDiv = styled.div`
   display: flex;
