@@ -22,6 +22,7 @@ const settings = {
             ["SupportLearning", "/supportlearning"],
             ["PrivacyPolicy", "/privacypolicy"],
             ["TermsCondition", "/termscondition"],
+            ["QuickLinks", "/home/"],
           ],
           featured: {
             showOnList: false,
