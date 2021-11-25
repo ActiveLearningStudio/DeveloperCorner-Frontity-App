@@ -13,7 +13,7 @@ const settings = {
       state: {
         theme: {
           menu: [
-            ["Currikidocs", "/documentation"],
+            ["Currikiarchitecture", "/architecture/"],
             ["DatabaseSchema", "/databaseSchemas"],
             ["currikiPlatform", "/deployingthecurrikiplatfrom"],
             ["BusinessProduct", "/businessProduct"],

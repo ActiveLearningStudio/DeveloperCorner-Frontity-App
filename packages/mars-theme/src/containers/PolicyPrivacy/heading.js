@@ -25,35 +25,42 @@ function Heading({ Scrollspy, state }) {
             <div className="heading">
               <p>1.</p>
 
-              <p>{state.source.author[1].name}</p>
+              <p>Scope of this privacy policy</p>
             </div>
           </a>
           <a href="#headings2">
             <div className="heading">
               <p>2. </p>
 
-              <p> Curriki Developers </p>
+              <p>Information we collect</p>
             </div>
           </a>
           <a href="#headings3">
             <div className="heading">
-              <p>3.Curriki Users</p>
+              <p>3.</p>
 
-              <p> </p>
+              <p>How we use the information we collect</p>
             </div>
           </a>
           <a href="#headings4">
             <div className="heading">
               <p>4.</p>
 
-              <p> Curriki Parteners</p>
+              <p>How we share the information we collect</p>
             </div>
           </a>
           <a href="#headings5">
             <div className="heading">
               <p>5.</p>
 
-              <p> Curriki Support</p>
+              <p>Your Choices</p>
+            </div>
+          </a>
+          <a href="#headings6">
+            <div className="heading">
+              <p>6.</p>
+
+              <p>Other</p>
             </div>
           </a>
         </Scrollspy>

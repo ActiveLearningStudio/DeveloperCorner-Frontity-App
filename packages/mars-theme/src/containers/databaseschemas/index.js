@@ -18,7 +18,10 @@ const Index = () => {
         </div>
       </Banner>
       <div className="text-section">
+        <div className="heading-content">
         <HeadingPage Scrollspy={Scrollspy} />
+        </div>
+        
         <Description />
       </div>
     </>
