@@ -22,6 +22,8 @@ const settings = {
             ["SupportLearning", "/supportlearning"],
             ["PrivacyPolicy", "/privacypolicy"],
             ["TermsCondition", "/termscondition"],
+            ["SuccessStories", "  /successstories/"],
+          
           ],
           featured: {
             showOnList: false,
