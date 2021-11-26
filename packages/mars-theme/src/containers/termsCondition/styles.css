@@ -95,7 +95,8 @@
     width: 100%;
   }
 }
-.text-section .description-contaner .description-text {
+.text-section .description-contaner .description-text h5 {
+  color: #515151;
 }
 .text-section .description-contaner .description-text .description-heading {
   display: flex;
