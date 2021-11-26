@@ -23,8 +23,8 @@ const settings = {
             ["PrivacyPolicy", "/privacypolicy"],
             ["TermsCondition", "/termscondition"],
             ["SuccessStories", "  /successstories/"],
-          
-            ["QuickLinks", "/home/"],
+
+            ["InterativeLearning", "/learning/"],
           ],
           featured: {
             showOnList: false,

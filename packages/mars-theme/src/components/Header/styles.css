@@ -1,6 +1,16 @@
 /* @import '../../assets/css/color.scss'; */
 .header .Navbar {
-  background-color: #ffffff;
+  background: #ffffff;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+.Navbar .navbar-collapse .navbar-nav {
+  display: flex;
+  align-items: center;
+}
+.Navbar .navbar-collapse .navbar-nav .centered-menu {
+  display: flex;
+  margin-right: 330px;
 }
 .header .Navbar #responsive-navbar-nav {
   justify-content: flex-end !important;
@@ -19,6 +29,7 @@
     margin-left: 20px;
   }
 }
+
 .header-login a {
   font-family: Open Sans;
   font-style: normal;
@@ -26,6 +37,7 @@
   font-size: 16px;
   line-height: 22px;
   color: #084892;
+  margin-left: 10px;
 }
 .donate-btn {
   /* font-weight: bold; */

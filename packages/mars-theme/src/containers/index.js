@@ -1,7 +1,7 @@
 import React from "react";
 import { Global, css, connect } from "frontity";
 import Header from "../components/Header/header.js";
-import Home from "../containers/home/index";
+import IntractiveLearning from "./IntractiveLearning/index";
 import Footer from "../components/footer/index";
 import bootstrapCss from "bootstrap/dist/css/bootstrap.min.css";
 import GeneralDiscussion from "./generaldiscussion/index";
@@ -23,7 +23,7 @@ const Index = ({ state }) => {
       <Global styles={css(bootstrapCss)} />
       <Header />
 
-      {state.router.link === "/" && <Home />}
+      {state.router.link === "/" && <QuickLinks />}
       {state.router.link === "/architecture/" && <CurrikiArchitecture />}
       {state.router.link === "/databaseschemas/" && <DatabaseSchema />}
       {state.router.link === "/deployingthecurrikiplatfrom/" && (
@@ -39,7 +39,7 @@ const Index = ({ state }) => {
       {state.router.link === "/privacypolicy/" && <PrivacyPage />}
       {state.router.link === "/termscondition/" && <Terms />}
       {state.router.link === "/successstories/" && <SuccessStories />}
-      {state.router.link === "/home/" && <QuickLinks />}
+      {state.router.link === "/learning/" && <IntractiveLearning />}
       <Footer />
     </>
   );

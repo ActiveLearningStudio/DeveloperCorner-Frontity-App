@@ -24,7 +24,15 @@ const Index = () => {
           <Link>
             {" "}
             <img src={group} alt="" />
-            <a>Forum</a>
+            <a
+            // css={css`
+            //   color: #084892;
+            //   font-size: 14px;
+            //   font-family: rubik;
+            // `}
+            >
+              Forum
+            </a>
           </Link>
           <Link>
             {" "}
