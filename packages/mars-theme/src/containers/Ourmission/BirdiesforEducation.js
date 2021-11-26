@@ -78,6 +78,9 @@ const UpperRow = styled.div`
 const BottomRow = styled.div`
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 const LeftCol = styled.div`
   h6 {
@@ -103,6 +106,11 @@ const RightCol = styled.div`
     color: #084892;
     margin-top: 25px;
     margin-bottom: 25px;
+  }
+  img {
+    @media screen and (max-width: 768px) {
+      display:none;
+    }
   }
 `;
 const HeaderContent = styled.div`
