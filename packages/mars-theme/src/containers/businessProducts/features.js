@@ -5,10 +5,9 @@ import featurePic from "../../assets/images/Group153.png";
 import MoneyPic from "../../assets/images/Group29.png";
 const Features = () => {
   return (
-    <div
+    <FeatureSection
       css={css`
-        position: relative;
-        height: 730px;
+       
       `}
     >
       <StyleDiv>
@@ -53,11 +52,19 @@ const Features = () => {
           </StyleFeature>
         </Container>
       </StyleDiv>
-    </div>
+    </FeatureSection>
   );
 };
 
 export default Features;
+const FeatureSection = styled.div`
+position: relative;
+height: 730px;
+@media screen and (max-width: 768px) {
+  height:1150px;
+}
+`;
+
 const StyleDiv = styled.div`
   background-image: url(${featurePic});
   background-repeat: no-repeat;
@@ -73,6 +80,7 @@ const StyleFeature = styled.div`
   @media screen and (max-width: 992px) {
     margin-top: 140px;
   }
+  
 `;
 const OuterDiv = styled.div`
   display: flex;
@@ -99,5 +107,10 @@ const OuterDiv = styled.div`
       line-height: 22px;
       color: #515151;
     }
+  }
+@media screen and (max-width: 768px) {
+  flex-direction:column;
+  img {
+    margin-bottom:30px;
   }
 `;

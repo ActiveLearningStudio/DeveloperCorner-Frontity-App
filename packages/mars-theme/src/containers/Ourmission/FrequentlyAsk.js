@@ -112,10 +112,13 @@ const Content = styled.div`
   }
 `;
 const HeaderContent = styled.div`
-  width: 600px;
+  max-width: 600px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: 768px) {
+    display:block;
+  }
 `;
 const AccordionTitle = styled.div`
   color: #fff;
@@ -134,6 +137,9 @@ const Heading = styled.h2`
 const BottomLine = styled.div`
   width: 100px;
   border-bottom: 2px solid #ffb124;
+  @media screen and (max-width: 768px) {
+    display:none;
+  }
 `;
 const Paragraph = styled.div`
   color: #515151;

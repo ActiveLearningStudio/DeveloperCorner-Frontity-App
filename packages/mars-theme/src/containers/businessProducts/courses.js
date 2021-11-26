@@ -125,6 +125,9 @@ const Card = styled.div`
   @media screen and (max-width: 1202px) {
     margin-bottom: 30px;
   }
+  @media screen and (max-width: 767px) {
+   width:515px;
+  }
 `;
 const Footer = styled.div`
   display: flex;
