@@ -114,7 +114,7 @@ const Card = styled.div`
 
 const Headerbar = styled.div`
   width: 100px;
-  border: 2px solid #fa8f2c;
+  border-bottom: 3px solid #fa8f2c;
   transform: rotate(0deg);
 `;
 
