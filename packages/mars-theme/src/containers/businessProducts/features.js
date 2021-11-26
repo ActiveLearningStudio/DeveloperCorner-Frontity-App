@@ -5,11 +5,7 @@ import featurePic from "../../assets/images/Group153.png";
 import MoneyPic from "../../assets/images/Group29.png";
 const Features = () => {
   return (
-    <FeatureSection
-      css={css`
-       
-      `}
-    >
+    <FeatureSection>
       <StyleDiv>
         <Container>
           <StyleFeature>
