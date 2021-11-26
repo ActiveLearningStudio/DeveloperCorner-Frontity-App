@@ -37,6 +37,9 @@ const Content = styled.div`
   align-items: center;
 `;
 const LeftDiv = styled.div`
+@media screen and (max-width: 768px) {
+  margin-top: 14px;
+}
   h2 {
     font-family: Rubik;
     font-style: normal;
@@ -67,4 +70,8 @@ const LeftDiv = styled.div`
     }
   }
 `;
-const RightDiv = styled.div``;
+const RightDiv = styled.div`
+@media screen and (max-width: 768px) {
+  display:none;
+ }
+`;

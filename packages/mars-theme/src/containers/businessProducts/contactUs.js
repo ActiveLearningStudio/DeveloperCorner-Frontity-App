@@ -122,7 +122,7 @@ const Section = styled.div`
   }
 `;
 const Paradiv = styled.div`
-  width: 650px;
+  max-width: 650px;
 `;
 const InnerDiv = styled.div`
   h2 {
