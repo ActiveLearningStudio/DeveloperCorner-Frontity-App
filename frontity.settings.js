@@ -24,6 +24,7 @@ const settings = {
             ["TermsCondition", "/termscondition"],
             ["SuccessStories", "  /successstories/"],
           
+            ["QuickLinks", "/home/"],
           ],
           featured: {
             showOnList: false,
