@@ -96,18 +96,19 @@
   }
 }
 .text-section .description-contaner .description-text {
-
+  color: #515151;
 }
 .text-section .description-contaner .description-text .description-heading {
   display: flex;
 }
-.text-section .description-contaner .description-text .description-heading h2 {
+.text-section .description-contaner .description-text .description-heading h2{
   color: rgb(8, 72, 146);
   font-weight: 700;
   font-family: "rubic";
   line-height: normal;
   font-style: normal;
 }
+
 .text-section .description-contaner .description-text p {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
