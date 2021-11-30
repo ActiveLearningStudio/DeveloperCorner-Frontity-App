@@ -17,7 +17,8 @@ import PrivacyPage from "./PolicyPrivacy/index";
 import Terms from "./termsCondition/index";
 import SuccessStories from "./SuccessStories";
 import QuickLinks from "./QuickLinks/index";
-
+import Blogs from "./blogs/index";
+import Blogdetail from "./blogdetail/blogdetail.js";
 const Index = ({ state }) => {
   return (
     <>
@@ -41,7 +42,8 @@ const Index = ({ state }) => {
       {state.router.link === "/termscondition/" && <Terms />}
       {state.router.link === "/successstories/" && <SuccessStories />}
       {state.router.link === "/learning/" && <IntractiveLearning />}
-
+      {state.router.link === "/blogs/" && <Blogs />}
+      {state.router.link === "/blogdetail/" && <Blogdetail />}
       <Footer />
     </>
   );
