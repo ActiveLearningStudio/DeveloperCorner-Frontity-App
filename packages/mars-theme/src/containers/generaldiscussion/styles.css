@@ -48,13 +48,13 @@ p {
   }
 }
 .General-Discussion-container .general-section .nav-header {
-  max-width: 268px;
+  max-width: 300px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 22px;
 }
 .General-Discussion-container .general-section .nav-header a {
-  color: rgb(81, 81, 81);
+  color:#084892 ;
   font-family: "Open Sans", sans-serif;
   text-decoration: none;
   font-size: 16px;
@@ -62,8 +62,10 @@ p {
 .General-Discussion-container .general-section .nav-header a:hover {
   color: #084892 !important;
 }
-
-.General-Discussion-container .general-section .nav-header .cursor {
+.General-Discussion-container .general-section .nav-header .active {
+  color:#515151 !important;
+}
+.General-Discussion-container .general-section .nav-header a {
   cursor: pointer;
 }
 .General-Discussion-container .general-section .update {
@@ -123,6 +125,7 @@ p {
 .General-Discussion-container .general-section .table-blog .table thead {
   background: #e5e5e5;
   height: 50px;
+  border-bottom: hidden;
 }
 .General-Discussion-container
   .general-section
@@ -135,6 +138,7 @@ p {
 }
 .General-Discussion-container .general-section .table-blog .table tbody tr {
   height: 50px;
+  border: 1px solid #959595;
   padding: 14px 15px;
 }
 .General-Discussion-container
@@ -148,6 +152,7 @@ p {
 }
 .General-Discussion-container .general-section .table-blog .table tbody td {
   color: #084892;
+  padding-left: 15px;
 }
 .General-Discussion-container
   .general-section
@@ -159,6 +164,7 @@ p {
   .started {
   padding-top: 11.5px;
   display: flex;
+  align-items: flex-start;
 }
 .General-Discussion-container
   .general-section
@@ -171,6 +177,7 @@ p {
   display: flex;
   justify-content: center;
   padding-top: 11.5px;
+  align-items: flex-start;
 }
 .General-Discussion-container .general-section .login .login-forum {
   border: 1px solid #959595;
@@ -191,10 +198,11 @@ p {
   box-sizing: border-box;
   border-radius: 18px;
   padding: 0 32px;
-  box-shadow: 0 2px 6px 1px rgb(8 72 146 / 16%);
+  box-shadow: 0px 10px 20px -5px rgba(8, 72, 146, 0.35);
   font-size: 14px;
   font-family: "rubic";
-  font-weight: 500;
+  font-weight: bold;
+  text-transform: uppercase;
   width: 143px;
 }
 @media screen and (max-width: 767px) {
