@@ -25,6 +25,7 @@ const settings = {
             ["SuccessStories", "  /successstories/"],
             ["InterativeLearning", "/learning/"],
             ["GeneralDiscussion", "/generaldiscussion/"],
+            ["Success", "/success"],
           ],
           featured: {
             showOnList: false,
