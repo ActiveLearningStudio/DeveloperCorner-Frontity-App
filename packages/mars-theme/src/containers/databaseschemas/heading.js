@@ -11,25 +11,25 @@ const Heading = ({ Scrollspy }) => {
           <a href="#headings1">
             <div className="heading">
               <p>1.</p>
-              <p> Core platform</p>
+              <p className="heading-text"> Core platform</p>
             </div>
           </a>
           <a href="#headings2">
             <div className="heading">
               <p>2.</p>
-              <p>LTI Integration</p>
+              <p className="heading-text">LTI Integration</p>
             </div>
           </a>
           <a href="#headings3">
             <div className="heading">
               <p>3.</p>
-              <p> Learning Record Store</p>
+              <p className="heading-text"> Learning Record Store</p>
             </div>
           </a>
           <a href="#headings4">
             <div className="heading">
               <p>4.</p>
-              <p> Core B.I. ETLs</p>
+              <p className="heading-text"> Core B.I. ETLs</p>
             </div>
           </a>
         </Scrollspy>

@@ -1,6 +1,5 @@
 import React from "react";
 import { styled } from "frontity";
-import { Container } from "react-bootstrap";
 import PrimaryButton from "../../StyledComponent/PrimaryButton";
 import StyledPara from "../../StyledComponent/StyledPara";
 import StyledHeading from "../../StyledComponent/StyledHeading";
@@ -11,34 +10,32 @@ const GetInvolved = () => {
       <Content>
         <HeadingContent>
           <Topheading>
-            <Heading>Get invloved</Heading>
+            <Heading>Getting invloved</Heading>
             <img src={plusicon} alt="" />
           </Topheading>
 
-          <Subheading>Find an iniative</Subheading>
+          <Subheading>Find an initative</Subheading>
         </HeadingContent>
         <InnerContent>
           <LeftCol>
             <Colheading>In-Kind Services</Colheading>
             <Paragraph>
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration in some form, by
-              injected humour, or randomised words which don't look even
-              slightly believable. If you are going to use a passage of Lorem
-              Ipsum, you need to be sure there isn't anything embarrassing
-              hidden in the middle of text."
+              As a small but mighty nonprofit, we allocate most of our resources
+              towards building the most high priority items that support our
+              core technology. See our roadmap plans here. Our open source
+              approach is so that organizations with technology talent can
+              contribute to our ecosystem and advance the mission.
             </Paragraph>
             <Button>contact us</Button>
           </LeftCol>
           <RightCol>
-            <Colheading>Making Donation</Colheading>
+            <Colheading>Making a donation</Colheading>
             <Paragraph>
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration in some form, by
-              injected humour, or randomised words which don't look even
-              slightly believable. If you are going to use a passage of Lorem
-              Ipsum, you need to be sure there isn't anything embarrassing
-              hidden in the middle of text."
+              Do you want to support innovation in education but don’t know
+              where to start? Our partners are exploding with ideas to innovate
+              but we alone don’t have the resources. Supporting our roadmap
+              means that you are helping learners and educators innovate and
+              access interactive learning experiences like never before.
             </Paragraph>
             <Button>Donate</Button>
           </RightCol>
@@ -49,7 +46,10 @@ const GetInvolved = () => {
 };
 
 export default GetInvolved;
-
+const Container = styled.div`
+  max-width: 1440px;
+  padding: 0px 146px;
+`;
 const Content = styled.div`
   padding: 80px 0px 0px 0px;
 `;
@@ -80,6 +80,7 @@ const Subheading = styled.span`
   font-size: 32px;
   line-height: 38px;
   color: #084892;
+  text-transform: uppercase;
 `;
 const Colheading = styled.h3`
   font-family: Rubik;
@@ -102,6 +103,7 @@ const InnerContent = styled.div`
 const LeftCol = styled.div``;
 const RightCol = styled.div``;
 const Paragraph = styled.p`
+  width: 500px;
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
@@ -109,7 +111,7 @@ const Paragraph = styled.p`
   line-height: 25px;
   color: #515151;
   max-width: 99%;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   @media screen and (max-width: 1200px) {
     margin-bottom: 60px;
   }

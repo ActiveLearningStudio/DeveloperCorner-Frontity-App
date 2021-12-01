@@ -21,63 +21,56 @@ const Heading = ({ Scrollspy }) => {
         >
           <a href="#headings1">
             <div className="heading">
-
               <p>1.</p>
-              <p> Docker/Terraform</p>
+              <p className="heading-text"> Docker/Terraform</p>
             </div>
           </a>
           <a href="#headings2">
             <div className="heading">
-
               <p>2.</p>
-              <p> AWS</p>
+              <p className="heading-text"> AWS</p>
             </div>
           </a>
           <a href="#headings3">
             <div className="heading">
-
               <p>3.</p>
-              <p> Oracle Cloud</p>
+              <p className="heading-text"> Oracle Cloud</p>
             </div>
           </a>
           <a href="#headings4">
             <div className="heading">
- 
               <p>4.</p>
-              <p> Azure</p>
+              <p className="heading-text"> Azure</p>
             </div>
           </a>
           <a href="#headings5">
             <div className="heading">
-    
               <p>5.</p>
-              <p>Linode</p>
+              <p className="heading-text">Linode</p>
             </div>
           </a>
           <a href="#headings6">
             <div className="heading">
-
               <p>6.</p>
-              <p>Red Hat OpenShift</p>
+              <p className="heading-text">Red Hat OpenShift</p>
             </div>
           </a>
           <a href="#headings7">
             <div className="heading">
-       
               <p>7.</p>
-              <p>Other cloud environments</p>
+              <p className="heading-text">Other cloud environments</p>
             </div>
           </a>
           <a href="#headings8">
             <div className="heading">
               <p>8.</p>
-              <p>On premise deployments</p>
+              <p className="heading-text">On premise deployments</p>
             </div>
           </a>
           <a href="#headings9">
             <div className="heading">
               <p>9.</p>
-              <p>Noovo MAP (Satellite distribution)</p>
+              <p className="heading-text">Noovo MAP (Satellite distribution)</p>
             </div>
           </a>
         </Scrollspy>

@@ -7,7 +7,7 @@ const Description = () => {
         <div id="headings1" className="description-text">
           <div className="description-heading">
             <h2>1.</h2>
-            <h2>Core platform</h2>
+            <h2 className="heading-text">Core platform</h2>
           </div>
 
           <p>
@@ -33,7 +33,7 @@ const Description = () => {
         <div id="headings2" className="description-text">
           <div className="description-heading">
             <h2>2.</h2>
-            <h2> LTI Integration</h2>
+            <h2 className="heading-text"> LTI Integration</h2>
           </div>
 
           <p>
@@ -51,7 +51,7 @@ const Description = () => {
         <div id="headings3" className="description-text">
           <div className="description-heading">
             <h2>3.</h2>
-            <h2> Learning Record Store</h2>
+            <h2 className="heading-text"> Learning Record Store</h2>
           </div>
 
           <p>
@@ -66,7 +66,7 @@ const Description = () => {
         <div id="headings4" className="description-text">
           <div className="description-heading">
             <h2>4.</h2>
-            <h2> Core B.I. ETLs</h2>
+            <h2 className="heading-text"> Core B.I. ETLs</h2>
           </div>
 
           <p>
