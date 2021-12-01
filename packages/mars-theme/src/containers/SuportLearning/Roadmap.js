@@ -304,26 +304,31 @@ const Roadmap = () => {
                 <img src={AnnouncmentImg} alt="" />
               </div>
             </CardHead>
-            <CardHeading>CONTENT CLEARING HOUSE</CardHeading>
+            <CardHeading>LEARNING SCIENCE PROJECT TEMPLATES</CardHeading>
             <Paragraph>
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration in some form, by
-              injected humour, or randomised words which don't look even
-              slightly believable. If you are going to use a passage of Lorem
-              Ipsum, you need to be sure there isn't anything embarrassing
-              hidden in the middle of text.
+            CurrikiStudio authors are excited by tools but need help getting started. With top learning scientist, we will build best-in-class lesson templates.
             </Paragraph>
             <CardBottom>
               <CardHeading>Ask:</CardHeading>
               <Bottom>
                 <img src={plusicon} alt="" />
 
-                <Para>Introduction ot content publisher</Para>
+                <Para>In-kind development efforts.</Para>
               </Bottom>
               <Bottom>
                 <img src={plusicon} alt="" />
 
-                <Para>Introduction ot content publisher</Para>
+                <Para>In-kind learning science research guidance.</Para>
+              </Bottom>
+              <Bottom>
+                <img src={plusicon} alt="" />
+
+                <Para>$50,000 in development funds.</Para>
+              </Bottom>
+              <Bottom>
+                <img src={plusicon} alt="" />
+
+                <Para>$150,000 for Instructional Designer contractor funds.</Para>
               </Bottom>
             </CardBottom>
           </Card>
@@ -342,26 +347,32 @@ const Roadmap = () => {
                 <img src={vectorpc} alt="" />
               </div>
             </CardHead>
-            <CardHeading>CONTENT CLEARING HOUSE</CardHeading>
+            <CardHeading>SCIENCE LAB SIMULATIONS</CardHeading>
             <Paragraph>
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration in some form, by
-              injected humour, or randomised words which don't look even
-              slightly believable. If you are going to use a passage of Lorem
-              Ipsum, you need to be sure there isn't anything embarrassing
-              hidden in the middle of text.
+            The tactile experience of being in a lab is critical to learning in science. Flipped, interactive lab-like experiences will transform 21st century science.
+
             </Paragraph>
             <CardBottom>
               <CardHeading>Ask:</CardHeading>
               <Bottom>
                 <img src={plusicon} alt="" />
 
-                <Para>Introduction ot content publisher</Para>
+                <Para>$20,000 annual sponsorship of PHET integration. </Para>
               </Bottom>
               <Bottom>
                 <img src={plusicon} alt="" />
 
-                <Para>Introduction ot content publisher</Para>
+                <Para>$50,000 sponsorship for licensing of quality science content.</Para>
+              </Bottom>
+              <Bottom>
+                <img src={plusicon} alt="" />
+
+                <Para>In-kind learning science research. </Para>
+              </Bottom>
+              <Bottom>
+                <img src={plusicon} alt="" />
+
+                <Para>$250,000 in development funds.</Para>
               </Bottom>
             </CardBottom>
           </Card>
