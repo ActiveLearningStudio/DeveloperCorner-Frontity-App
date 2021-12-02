@@ -6,7 +6,18 @@ import plusicon from "../../assets/images/PLUS.svg";
 import CardImg from "../../assets/images/Rectangle10.png";
 import vector1 from "../../assets/images/vector1.png";
 import vector2 from "../../assets/images/vector2.png";
+import vector5 from "../../assets/images/vector5.png";
+import vector6 from "../../assets/images/vector6.png";
+import vector7 from "../../assets/images/vector7.png";
+import vector8 from "../../assets/images/vector8.png";
+import vector9 from "../../assets/images/vector9.png";
+import laptopimg from "../../assets/images/laptopimg.png";
+import laptopdesignimg from "../../assets/images/laptopdesignimg.png";
+import copyrightimg from "../../assets/images/copyrightimg.png";
+import girlmobileimg from "../../assets/images/girlmobileimg.png";
+import mobileimg from "../../assets/images/mobileimg.png";
 import vectorpc from "../../assets/images/vectorpc.png";
+import wifivector from "../../assets/images/wifivector.png";
 import pcimage from "../../assets/images/Rectangle109.png";
 import AnnouncmentImg from "../../assets/images/Group563.png";
 import RectImg from "../../assets/images/Rectangle110.png";
@@ -142,17 +153,17 @@ const Roadmap = () => {
           </Card>
           <Card>
             <CardHead
-              css={css`
-                background: linear-gradient(
-                    0deg,
-                    rgba(40, 90, 165, 0.75),
-                    rgba(40, 90, 165, 0.75)
-                  ),
-                  url("${RectImg}");
-              `}
+               css={css`
+               background: linear-gradient(
+                   0deg,
+                   rgba(40, 90, 165, 0.75),
+                   rgba(40, 90, 165, 0.75)
+                 ),
+                 url("${Cardbackground}");
+             `}
             >
               <div>
-                <img src={AnnouncmentImg} alt="" />
+                <img src={wifivector} alt="" />
               </div>
             </CardHead>
             <CardHeading>offline work</CardHeading>
@@ -183,11 +194,11 @@ const Roadmap = () => {
                     rgba(40, 90, 165, 0.75),
                     rgba(40, 90, 165, 0.75)
                   ),
-                  url("${CardImg}");
+                  url("${laptopimg}");
               `}
             >
               <div>
-                <img src={vectorpc} alt="" />
+                <img src={vector5} alt="" />
               </div>
             </CardHead>
             <CardHeading>VIDEO CONFERENCING</CardHeading>
@@ -225,11 +236,11 @@ const Roadmap = () => {
                     rgba(40, 90, 165, 0.75),
                     rgba(40, 90, 165, 0.75)
                   ),
-                  url("${pcimage}");
+                  url("${mobileimg}");
               `}
             >
               <div>
-                <img src={AnnouncmentImg} alt="" />
+                <img src={vector6} alt="" />
               </div>
             </CardHead>
             <CardHeading>STUDENT PORTFOLIO</CardHeading>
@@ -275,11 +286,11 @@ const Roadmap = () => {
                     rgba(40, 90, 165, 0.75),
                     rgba(40, 90, 165, 0.75)
                   ),
-                  url("${Cardbackground}");
+                  url("${girlmobileimg}");
               `}
             >
               <div>
-                <img src={AnnouncmentImg} alt="" />
+                <img src={vector7} alt="" />
               </div>
             </CardHead>
             <CardHeading>BADGES & LEADERBOARDS</CardHeading>
@@ -322,11 +333,11 @@ const Roadmap = () => {
                     rgba(40, 90, 165, 0.75),
                     rgba(40, 90, 165, 0.75)
                   ),
-                  url("${RectImg}");
+                  url("${copyrightimg}");
               `}
             >
               <div>
-                <img src={AnnouncmentImg} alt="" />
+                <img src={vector8} alt="" />
               </div>
             </CardHead>
             <CardHeading>LEARNING SCIENCE PROJECT TEMPLATES</CardHeading>
@@ -365,11 +376,11 @@ const Roadmap = () => {
                     rgba(40, 90, 165, 0.75),
                     rgba(40, 90, 165, 0.75)
                   ),
-                  url("${CardImg}");
+                  url("${laptopdesignimg}");
               `}
             >
               <div>
-                <img src={vectorpc} alt="" />
+                <img src={vector9} alt="" />
               </div>
             </CardHead>
             <CardHeading>SCIENCE LAB SIMULATIONS</CardHeading>
