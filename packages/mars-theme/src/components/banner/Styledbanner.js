@@ -35,6 +35,7 @@ const Heading = styled.h2`
   line-height:58px;
   color:#FFB124;
   font-family;rubic;
+  margin-bottom:20px;
 `;
 
 const Subheading = styled.h4`
@@ -44,6 +45,7 @@ const Subheading = styled.h4`
   font-size: 25px;
   line-height: 30px;
   color: #ffffff;
+  margin-bottom: 20px;
 `;
 const ParaContent = styled.div`
   width: 60%;
