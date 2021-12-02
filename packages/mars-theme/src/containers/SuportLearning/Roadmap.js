@@ -59,7 +59,7 @@ const Roadmap = () => {
               a sustainable model.
             </Paragraph>
             <CardBottom>
-              <CardHeading>Ask:</CardHeading>
+              <CardHeading>Asks:</CardHeading>
               <Bottom>
                 <img src={plusicon} alt="" />
 
@@ -95,7 +95,7 @@ const Roadmap = () => {
               people with the builders.
             </Paragraph>
             <CardBottom>
-              <CardHeading>Ask:</CardHeading>
+              <CardHeading>Asks:</CardHeading>
               <Bottom>
                 <img src={plusicon} alt="" />
 
@@ -133,7 +133,7 @@ const Roadmap = () => {
               today’s most innovative tech.
             </Paragraph>
             <CardBottom>
-              <CardHeading>Ask:</CardHeading>
+              <CardHeading>Asks:</CardHeading>
               <Bottom>
                 <img src={plusicon} alt="" />
 
@@ -153,14 +153,14 @@ const Roadmap = () => {
           </Card>
           <Card>
             <CardHead
-               css={css`
-               background: linear-gradient(
-                   0deg,
-                   rgba(40, 90, 165, 0.75),
-                   rgba(40, 90, 165, 0.75)
-                 ),
-                 url("${Cardbackground}");
-             `}
+              css={css`
+                background: linear-gradient(
+                    0deg,
+                    rgba(40, 90, 165, 0.75),
+                    rgba(40, 90, 165, 0.75)
+                  ),
+                  url("${Cardbackground}");
+              `}
             >
               <div>
                 <img src={wifivector} alt="" />
@@ -173,7 +173,7 @@ const Roadmap = () => {
               offline.
             </Paragraph>
             <CardBottom>
-              <CardHeading>Ask:</CardHeading>
+              <CardHeading>Asks:</CardHeading>
               <Bottom>
                 <img src={plusicon} alt="" />
 
@@ -208,7 +208,7 @@ const Roadmap = () => {
               activity type in CurrikiStudio.
             </Paragraph>
             <CardBottom>
-              <CardHeading>Ask:</CardHeading>
+              <CardHeading>Asks:</CardHeading>
               <Bottom>
                 <img src={plusicon} alt="" />
 
@@ -250,7 +250,7 @@ const Roadmap = () => {
               demonstrating college & career readiness.
             </Paragraph>
             <CardBottom>
-              <CardHeading>Ask:</CardHeading>
+              <CardHeading>Asks:</CardHeading>
               <Bottom>
                 <img src={plusicon} alt="" />
 
@@ -300,7 +300,7 @@ const Roadmap = () => {
               digital learning.
             </Paragraph>
             <CardBottom>
-              <CardHeading>Ask:</CardHeading>
+              <CardHeading>Asks:</CardHeading>
               <Bottom>
                 <img src={plusicon} alt="" />
 
@@ -342,10 +342,12 @@ const Roadmap = () => {
             </CardHead>
             <CardHeading>LEARNING SCIENCE PROJECT TEMPLATES</CardHeading>
             <Paragraph>
-            CurrikiStudio authors are excited by tools but need help getting started. With top learning scientist, we will build best-in-class lesson templates.
+              CurrikiStudio authors are excited by tools but need help getting
+              started. With top learning scientist, we will build best-in-class
+              lesson templates.
             </Paragraph>
             <CardBottom>
-              <CardHeading>Ask:</CardHeading>
+              <CardHeading>Asks:</CardHeading>
               <Bottom>
                 <img src={plusicon} alt="" />
 
@@ -364,7 +366,9 @@ const Roadmap = () => {
               <Bottom>
                 <img src={plusicon} alt="" />
 
-                <Para>$150,000 for Instructional Designer contractor funds.</Para>
+                <Para>
+                  $150,000 for Instructional Designer contractor funds.
+                </Para>
               </Bottom>
             </CardBottom>
           </Card>
@@ -385,11 +389,12 @@ const Roadmap = () => {
             </CardHead>
             <CardHeading>SCIENCE LAB SIMULATIONS</CardHeading>
             <Paragraph>
-            The tactile experience of being in a lab is critical to learning in science. Flipped, interactive lab-like experiences will transform 21st century science.
-
+              The tactile experience of being in a lab is critical to learning
+              in science. Flipped, interactive lab-like experiences will
+              transform 21st century science.
             </Paragraph>
             <CardBottom>
-              <CardHeading>Ask:</CardHeading>
+              <CardHeading>Asks:</CardHeading>
               <Bottom>
                 <img src={plusicon} alt="" />
 
@@ -398,7 +403,9 @@ const Roadmap = () => {
               <Bottom>
                 <img src={plusicon} alt="" />
 
-                <Para>$50,000 sponsorship for licensing of quality science content.</Para>
+                <Para>
+                  $50,000 sponsorship for licensing of quality science content.
+                </Para>
               </Bottom>
               <Bottom>
                 <img src={plusicon} alt="" />
@@ -428,7 +435,7 @@ const Section = styled.div`
   background-repeat: no-repeat;
   background-size: contain;
   width: 100%;
-  margin-top: -40px;
+  margin-top: -52px;
 `;
 
 const HeadingContent = styled.div`
@@ -497,7 +504,7 @@ const CardHead = styled.div`
   border-radius: 5px;
   background-repeat: no-repeat;
   background-size: cover !important;
-  text-transform: uppercase;
+
   div {
     text-align: center;
     padding-top: 120px;
