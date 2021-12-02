@@ -14,7 +14,7 @@ const GetInvolved = () => {
             <img src={plusicon} alt="" />
           </Topheading>
 
-          <Subheading>Find an initative</Subheading>
+          <Subheading>Fund an initative</Subheading>
         </HeadingContent>
         <InnerContent>
           <LeftCol>
