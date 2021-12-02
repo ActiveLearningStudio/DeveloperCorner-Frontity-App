@@ -7,7 +7,7 @@ import group from "../../assets/images/Group.png";
 const Index = () => {
   return (
     <>
-      <Heading>Developer Corner</Heading>
+      <Heading>Developers Corner</Heading>
       <LowerHeading>
         <Search>
           <SearchField
@@ -19,25 +19,19 @@ const Index = () => {
         <RightContent>
           <Link>
             <img src={EmailIcon} alt="" />
-            <a>News letter</a>
+            <a href="#">News letter</a>
           </Link>
           <Link>
             {" "}
             <img src={group} alt="" />
-            <a
-            // css={css`
-            //   color: #084892;
-            //   font-size: 14px;
-            //   font-family: rubik;
-            // `}
-            >
+            <a className="active" href="#">
               Forum
             </a>
           </Link>
           <Link>
             {" "}
             <img src={calenderIcon} alt="" />
-            <a>Schedule a demo</a>
+            <a href="#">Schedule a demo</a>
           </Link>
         </RightContent>
       </LowerHeading>
@@ -115,6 +109,7 @@ const Link = styled.a`
     line-height: 20px;
     margin-left: 5px;
     color: #084892 !important;
+    text-decoration: none;
   }
 `;
 const HeadingBar = styled.div`

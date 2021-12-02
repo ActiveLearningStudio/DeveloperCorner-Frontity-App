@@ -18,17 +18,17 @@ const QuickLinks = () => {
             <CardContent>
               <CardHead>
                 <img src={SettingIcon} alt="" />
-                <p>Set up, configure and run curriki studio</p>
+                <p>Set up, configure and run Curriki Studio</p>
               </CardHead>
               <InnerLinks>
                 <ol>
-                  <li>lorem ipsum is the first link</li>
+                  <li>Commondo non nulla vel.</li>
                   <li>
-                    Ipsum lorem the <a>second link</a>
+                    Velit donec <a>diam at viverra</a> tempor.
                   </li>
-                  <li>this is the third link</li>
+                  <li>Neque consequat elementum.</li>
                   <li>
-                    this is the <a>fourth link</a>
+                    Velit<a>pellentesque sed tellus.</a>
                   </li>
                 </ol>
               </InnerLinks>
@@ -48,13 +48,14 @@ const QuickLinks = () => {
               </CardHead>
               <InnerLinks>
                 <ol>
-                  <li>lorem ipsum is the first link</li>
                   <li>
-                    Ipsum lorem the <a>second link</a>
+                    <a href="#">Lacinia senectus</a> nulla est proin
                   </li>
-                  <li>this is the third link</li>
                   <li>
-                    this is the <a>fourth link</a>
+                    Eget molestie <a href="#">non habitant</a>
+                  </li>
+                  <li>
+                    Ultricies a <a href="#">tristique et</a> eu orci velit
                   </li>
                 </ol>
               </InnerLinks>
@@ -74,13 +75,20 @@ const QuickLinks = () => {
               </CardHead>
               <InnerLinks>
                 <ol>
-                  <li>lorem ipsum is the first link</li>
                   <li>
-                    Ipsum lorem the <a>second link</a>
+                    Vestibulum<a href="#">elit arcu elementum id.</a>
                   </li>
-                  <li>this is the third link</li>
                   <li>
-                    this is the <a>fourth link</a>
+                    <a href="#">Adipiscing fringilla morbi semper.</a>
+                  </li>
+                  <li>
+                    Turpis dictum <a href="#">egestas odio sed.</a>
+                  </li>
+                  <li>
+                    Dictumst <a href="#">tellus ante dui</a>pharetra.
+                  </li>
+                  <li>
+                    <a href="#">Consectetur</a> tristique sodales.
                   </li>
                 </ol>
               </InnerLinks>
@@ -100,13 +108,17 @@ const QuickLinks = () => {
               </CardHead>
               <InnerLinks>
                 <ol>
-                  <li>lorem ipsum is the first link</li>
                   <li>
-                    Ipsum lorem the <a>second link</a>
+                    Rutrum <a href="#">sodales cras nec</a> quis eget.
                   </li>
-                  <li>this is the third link</li>
                   <li>
-                    this is the <a>fourth link</a>
+                    Nunc <a href="#">enim dui integer</a> egestas a.
+                  </li>
+                  <li>
+                    Sit sollicitudin <a href="#">a enim velit.</a>
+                  </li>
+                  <li>
+                    Semper <a href="#">tortor in ut risus </a>convallis.
                   </li>
                 </ol>
               </InnerLinks>
@@ -122,18 +134,19 @@ const QuickLinks = () => {
             <CardContent>
               <CardHead>
                 <img src={pcIcon} alt="" />
-                <p>Web Application</p>
+                <p>Web Applications</p>
               </CardHead>
               <InnerLinks>
                 <ol>
-                  <li>lorem ipsum is the first link</li>
+                  <li>Lacus justo egestas ultrices a.</li>
                   <li>
-                    Ipsum lorem the <a>second link</a>
+                    <a href="#">Duis gravida mauris</a> proin lectus.
                   </li>
-                  <li>this is the third link</li>
+                  <li>Duis gravida mauris proin lectus.</li>
                   <li>
-                    this is the <a>fourth link</a>
+                    Et leo id vitae <a href="#">eget porta lacus.</a>
                   </li>
+                  <li>Porttitor et posuere eu velit luctus.</li>
                 </ol>
               </InnerLinks>
             </CardContent>
@@ -152,13 +165,17 @@ const QuickLinks = () => {
               </CardHead>
               <InnerLinks>
                 <ol>
-                  <li>lorem ipsum is the first link</li>
                   <li>
-                    Ipsum lorem the <a>second link</a>
+                    Sit auctor <a href="#">viverra porta dui.</a>
                   </li>
-                  <li>this is the third link</li>
                   <li>
-                    this is the <a>fourth link</a>
+                    Justo <a href="#">arcu scelerisque</a> sodales.
+                  </li>
+                  <li>
+                    Sit <a href="#">sodales ac </a>consectetur pulvinar.
+                  </li>
+                  <li>
+                    Urna ornare <a href="#">fringilla eu tincidunt.</a>
                   </li>
                 </ol>
               </InnerLinks>
@@ -208,7 +225,7 @@ const CardHead = styled.div`
   p {
     font-family: Rubik;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.02em;
@@ -231,6 +248,7 @@ const InnerLinks = styled.div`
     margin-bottom: 5px;
     a {
       color: #2e68bf !important;
+      text-decoration: none;
     }
     ::marker {
       color: #084892 !important;
