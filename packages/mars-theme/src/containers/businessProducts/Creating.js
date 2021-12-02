@@ -2,18 +2,16 @@ import React from "react";
 import { styled } from "frontity";
 import { Container } from "react-bootstrap";
 import StartedImg from "../../assets/images/Trynow1.svg";
+import backimage from "../../assets/images/backimage.png";
 const Creating = () => {
   return (
     <StyleDiv>
       <Container>
         <Content>
           <LeftDiv>
-            <h2>Try Curriki Studio Now</h2>
+            <h2>Try CurrikiStudio now</h2>
             <p>
-              Curriki Studio demo envirenment means to give you a preview of how
-              your organization can use use our technology. It is completetly
-              free. For more information on how to integrate your LMS, contact
-              us using the form below.
+            CurrikiStudio demo environment is meant to give you a preview of how your organization can use our technology. It is completely free. For information on how to integrate with your LMS, contact us using the form below.
             </p>
             <button>START CREATING</button>
           </LeftDiv>
@@ -29,12 +27,16 @@ const Creating = () => {
 export default Creating;
 
 const StyleDiv = styled.div`
-  background: #084892;
+background-image: url(${backimage});
+background-size: cover;
+background-position:bottom;
+background-repeat: no-repeat;
 `;
 const Content = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  padding-top:70px;
 `;
 const LeftDiv = styled.div`
 @media screen and (max-width: 768px) {

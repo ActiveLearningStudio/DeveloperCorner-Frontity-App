@@ -20,9 +20,7 @@ const Courses = () => {
 
             <h3>LA Opera</h3>
             <p>
-              The LA opera is commited t providing access to quality opera music
-              for all. Learming is a passion, and so is opera.Lorem ipsum
-              statment for dummy data
+            The LA Opera is committed to providing access to quality opera music for all. Learning is a passion, and so is opera …
             </p>
             <Footer>
               <a href="#">See Project</a>
@@ -33,9 +31,7 @@ const Courses = () => {
             <img src={image1} alt="" />
             <h3>ORACLE</h3>
             <p>
-              The LA opera is commited t providing access to quality opera music
-              for all. Learming is a passion, and so is opera.Lorem ipsum
-              statment for dummy data
+            Lorem ipsum dolor sit amet, adipiscing consectetur adipiscing elit.
             </p>
             <Footer>
               <a href="#">See Project</a>
@@ -46,9 +42,7 @@ const Courses = () => {
             <img src={image2} alt="" />
             <h3>DEJU</h3>
             <p>
-              The LA opera is commited t providing access to quality opera music
-              for all. Learming is a passion, and so is opera.Lorem ipsum
-              statment for dummy data
+            Lorem ipsum dolor sit amet, adipiscing consectetur adipiscing elit.
             </p>
             <Footer>
               <a href="#">See Project</a>
@@ -92,8 +86,7 @@ const CardContent = styled.div`
   }
 `;
 const Card = styled.div`
-  width: 340px;
-  height: 470px;
+  max-width: 340px;
   box-shadow: 0px 2px 25px 5px rgba(81, 81, 81, 0.1);
   border-radius: 5px;
   padding: 20px;

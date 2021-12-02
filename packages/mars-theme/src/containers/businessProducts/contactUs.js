@@ -3,12 +3,13 @@ import { styled } from "frontity";
 import { Formik, Field } from "formik";
 import { Container } from "react-bootstrap";
 import ContactImage from "../../assets/images/Hero-background.png";
+import formimage from "../../assets/images/formimage.png";
 const ContactUs = () => {
   return (
     <Section>
       <Container>
         <InnerDiv>
-          <h2>Contact Us</h2>
+          <h2>Contact us</h2>
           <Paradiv>
             <p>
               Is your business interested in using CurrikiStudio technology? Get
@@ -39,12 +40,6 @@ const ContactUs = () => {
                 }
                 return errors;
               }}
-              // onSubmit={(values, { setSubmitting }) => {
-              //  setTimeout(() => {
-              //   alert(JSON.stringify(values, null, 2));
-              //   setSubmitting(false);
-              //  }, 400);
-              // }}
             >
               {({
                 values,
@@ -57,12 +52,6 @@ const ContactUs = () => {
                 /* and other goodies */
               }) => (
                 <form onSubmit={handleSubmit}>
-                  {/* <Headings
-                    className="form-name"
-                    color="#515151"
-                    headingType="body2"
-                    text="Username"
-                  /> */}
                   <p>Name</p>
                   <input
                     type="email"
@@ -72,12 +61,6 @@ const ContactUs = () => {
                     value={values.email}
                   />
                   {errors.email && touched.email && errors.email}
-                  {/* <Headings
-                    className="form-name"
-                    color="#515151"
-                    headingType="body2"
-                    text="email"
-                  /> */}
                   <p>Email</p>
                   <input
                     type="email"
@@ -95,13 +78,15 @@ const ContactUs = () => {
                     onBlur={handleBlur}
                     value={values.email}
                   />
-                  {/* <button type="submit">Login</button> */}
                   <button type="submit" disabled={isSubmitting}>
                     Submit
                   </button>
                 </form>
               )}
             </Formik>
+            <ImgContact>
+          <img src={formimage} alt="Image" />
+          </ImgContact>
           </FormDiv>
         </InnerDiv>
       </Container>
@@ -144,6 +129,9 @@ const InnerDiv = styled.div`
   }
 `;
 const FormDiv = styled.div`
+display:flex;
+justify-content:space-between;
+
   form {
     display: flex;
     flex-direction: column;
@@ -171,6 +159,12 @@ const FormDiv = styled.div`
       box-shadow: 0px 10px 20px -5px rgba (8, 72, 146, 0.35);
       border-radius: 25px;
       margin-bottom: 4rem;
+      text-transform:uppercase;
     }
   }
+`;
+const ImgContact = styled.div`
+img {
+  max-width:525px;
+}
 `;
