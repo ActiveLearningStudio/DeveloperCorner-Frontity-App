@@ -20,7 +20,7 @@ const QuickLinks = () => {
                 <img src={SettingIcon} alt="" />
                 <p>Set up, configure and run Curriki Studio</p>
               </CardHead>
-              <InnerLinks>
+              <InnerLinks> 
                 <ol>
                   <li>Commondo non nulla vel.</li>
                   <li>
@@ -28,7 +28,7 @@ const QuickLinks = () => {
                   </li>
                   <li>Neque consequat elementum.</li>
                   <li>
-                    Velit<a>pellentesque sed tellus.</a>
+                    Velit <a> pellentesque sed tellus.</a>
                   </li>
                 </ol>
               </InnerLinks>
@@ -49,13 +49,13 @@ const QuickLinks = () => {
               <InnerLinks>
                 <ol>
                   <li>
-                    <a href="#">Lacinia senectus</a> nulla est proin
+                    <a href="#">Lacinia senectus</a> nulla est proin.
                   </li>
                   <li>
-                    Eget molestie <a href="#">non habitant</a>
+                    Eget molestie <a href="#">non habitant.</a>
                   </li>
                   <li>
-                    Ultricies a <a href="#">tristique et</a> eu orci velit
+                    Ultricies a <a href="#">tristique et</a> eu orci velit.
                   </li>
                 </ol>
               </InnerLinks>
@@ -76,7 +76,7 @@ const QuickLinks = () => {
               <InnerLinks>
                 <ol>
                   <li>
-                    Vestibulum<a href="#">elit arcu elementum id.</a>
+                    Vestibulum <a href="#">elit arcu elementum id.</a>
                   </li>
                   <li>
                     <a href="#">Adipiscing fringilla morbi semper.</a>
@@ -142,7 +142,7 @@ const QuickLinks = () => {
                   <li>
                     <a href="#">Duis gravida mauris</a> proin lectus.
                   </li>
-                  <li>Duis gravida mauris proin lectus.</li>
+                  <li>Morbi faucibus volutpat eleifend.</li>
                   <li>
                     Et leo id vitae <a href="#">eget porta lacus.</a>
                   </li>
