@@ -59,7 +59,7 @@ const Roadmap = () => {
               a sustainable model.
             </Paragraph>
             <CardBottom>
-              <CardHeading>Asks:</CardHeading>
+              <AskHeading>Asks:</AskHeading>
               <Bottom>
                 <img src={plusicon} alt="" />
 
@@ -95,7 +95,7 @@ const Roadmap = () => {
               people with the builders.
             </Paragraph>
             <CardBottom>
-              <CardHeading>Asks:</CardHeading>
+              <AskHeading>Asks:</AskHeading>
               <Bottom>
                 <img src={plusicon} alt="" />
 
@@ -133,7 +133,7 @@ const Roadmap = () => {
               today’s most innovative tech.
             </Paragraph>
             <CardBottom>
-              <CardHeading>Asks:</CardHeading>
+              <AskHeading>Asks:</AskHeading>
               <Bottom>
                 <img src={plusicon} alt="" />
 
@@ -173,7 +173,7 @@ const Roadmap = () => {
               offline.
             </Paragraph>
             <CardBottom>
-              <CardHeading>Asks:</CardHeading>
+              <AskHeading>Asks:</AskHeading>
               <Bottom>
                 <img src={plusicon} alt="" />
 
@@ -208,7 +208,7 @@ const Roadmap = () => {
               activity type in CurrikiStudio.
             </Paragraph>
             <CardBottom>
-              <CardHeading>Asks:</CardHeading>
+              <AskHeading>Asks:</AskHeading>
               <Bottom>
                 <img src={plusicon} alt="" />
 
@@ -250,7 +250,7 @@ const Roadmap = () => {
               demonstrating college & career readiness.
             </Paragraph>
             <CardBottom>
-              <CardHeading>Asks:</CardHeading>
+              <AskHeading>Asks:</AskHeading>
               <Bottom>
                 <img src={plusicon} alt="" />
 
@@ -300,7 +300,7 @@ const Roadmap = () => {
               digital learning.
             </Paragraph>
             <CardBottom>
-              <CardHeading>Asks:</CardHeading>
+              <AskHeading>Asks:</AskHeading>
               <Bottom>
                 <img src={plusicon} alt="" />
 
@@ -347,7 +347,7 @@ const Roadmap = () => {
               lesson templates.
             </Paragraph>
             <CardBottom>
-              <CardHeading>Asks:</CardHeading>
+              <AskHeading>Asks:</AskHeading>
               <Bottom>
                 <img src={plusicon} alt="" />
 
@@ -394,7 +394,7 @@ const Roadmap = () => {
               transform 21st century science.
             </Paragraph>
             <CardBottom>
-              <CardHeading>Asks:</CardHeading>
+              <AskHeading>Asks:</AskHeading>
               <Bottom>
                 <img src={plusicon} alt="" />
 
@@ -525,6 +525,16 @@ const CardHeading = styled.h5`
   color: #084892;
   margin-top: 20px;
   text-transform: uppercase;
+  margin-bottom: 10px;
+`;
+const AskHeading = styled.h5`
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #084892;
+  margin-top: 20px;
   margin-bottom: 10px;
 `;
 const Paragraph = styled.p`
