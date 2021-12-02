@@ -57,6 +57,7 @@
 }
 .text-section .heading-contaner .heading .heading-text {
   margin-left: 20px;
+  
 }
 .text-section .heading-contaner .heading p {
   color: rgb(118, 118, 118) !important;
@@ -101,7 +102,8 @@
   color: #084892;
   font-weight: 700;
   font-family: "rubic";
-  line-height: normal;
+  font-size: 36px;
+  line-height: 43px;
   font-style: normal;
 }
 .text-section
