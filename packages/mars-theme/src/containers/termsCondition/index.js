@@ -18,14 +18,14 @@ function Index({ state }) {
             color="#FFB124"
             text="Curriki’s Architecture/Components"
           /> */}
-          <h1>Terms and Conditions</h1>
+          <h1>Terms of service</h1>
         </div>
       </Banner>
       <div className="text-section">
         <div className="heading-content">
-        <Heading Scrollspy={Scrollspy} />
+          <Heading Scrollspy={Scrollspy} />
         </div>
-        
+
         <Description />
       </div>
     </>
