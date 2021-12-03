@@ -1,6 +1,6 @@
 import React from "react";
 import { styled } from "frontity";
-import { Container } from "react-bootstrap";
+
 import plusicon from "../../assets/images/PLUS.svg";
 import image1 from "../../assets/images/image1.png";
 import image2 from "../../assets/images/image2.png";
@@ -11,7 +11,7 @@ const Courses = () => {
     <Section>
       <Container>
         <SectionTitle>
-          <Title>SEE EXMPLES COURSES FROM BUSINESS PARTENER</Title>
+          <Title>SEE EXAMPLE COURSES FROM BUSINESS PARTENERS</Title>
           <img src={plusicon} alt="plus icon" />
         </SectionTitle>
         <CardContent>
@@ -20,7 +20,8 @@ const Courses = () => {
 
             <h3>LA Opera</h3>
             <p>
-            The LA Opera is committed to providing access to quality opera music for all. Learning is a passion, and so is opera …
+              The LA Opera is committed to providing access to quality opera
+              music for all. Learning is a passion, and so is opera …
             </p>
             <Footer>
               <a href="#">See Project</a>
@@ -31,7 +32,8 @@ const Courses = () => {
             <img src={image1} alt="" />
             <h3>ORACLE</h3>
             <p>
-            Lorem ipsum dolor sit amet, adipiscing consectetur adipiscing elit.
+              Lorem ipsum dolor sit amet, adipiscing consectetur adipiscing
+              elit.
             </p>
             <Footer>
               <a href="#">See Project</a>
@@ -42,7 +44,8 @@ const Courses = () => {
             <img src={image2} alt="" />
             <h3>DEJU</h3>
             <p>
-            Lorem ipsum dolor sit amet, adipiscing consectetur adipiscing elit.
+              Lorem ipsum dolor sit amet, adipiscing consectetur adipiscing
+              elit.
             </p>
             <Footer>
               <a href="#">See Project</a>
@@ -58,6 +61,10 @@ const Courses = () => {
 export default Courses;
 const Section = styled.div`
   margin-top: 50px;
+`;
+const Container = styled.div`
+  max-width: 1440px;
+  padding: 0px 146px;
 `;
 const SectionTitle = styled.div`
   display: flex;
@@ -119,7 +126,7 @@ const Card = styled.div`
     margin-bottom: 30px;
   }
   @media screen and (max-width: 767px) {
-   width:515px;
+    width: 515px;
   }
 `;
 const Footer = styled.div`

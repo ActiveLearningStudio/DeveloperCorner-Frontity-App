@@ -33,7 +33,7 @@
 }
 .text-section {
   max-width: 1297px;
-  margin:0 auto 70px;
+  margin: 0 auto 70px;
   display: flex;
 }
 @media screen and (max-width: 1100px) {
@@ -64,6 +64,9 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
+}
+.text-section .heading-contaner .heading .heading-text {
+  margin-left: 20px;
 }
 .text-section .heading-contaner .is-current .heading p {
   color: #084892 !important;
@@ -101,7 +104,6 @@
 .text-section .description-contaner .description-text .description-heading {
   display: flex;
   padding-bottom: 21px;
-
 }
 .text-section .description-contaner .description-text .description-heading h2 {
   color: rgb(8, 72, 146);
@@ -109,7 +111,13 @@
   font-family: "rubic";
   line-height: normal;
   font-style: normal;
-  
+}
+.text-section
+  .description-contaner
+  .description-text
+  .description-heading
+  .heading-text {
+  margin-left: 20px;
 }
 .text-section .description-contaner .description-text p {
   font-family: "Open Sans", sans-serif;
