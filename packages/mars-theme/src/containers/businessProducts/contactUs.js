@@ -1,7 +1,6 @@
 import React from "react";
 import { styled } from "frontity";
 import { Formik, Field } from "formik";
-import { Container } from "react-bootstrap";
 import ContactImage from "../../assets/images/Hero-background.png";
 import formimage from "../../assets/images/formimage.png";
 const ContactUs = () => {
@@ -82,7 +81,7 @@ const ContactUs = () => {
                       value={values.email}
                     />
                     <button type="submit" disabled={isSubmitting}>
-                      Submit
+                      Send message
                     </button>
                   </form>
                 )}
@@ -102,13 +101,17 @@ const ContactUs = () => {
 export default ContactUs;
 const Section = styled.div`
   position: relative;
-  margin-top: 120px;
+  margin-top: 110px;
   img {
     width: 100%;
     position: absolute;
     top: -160px;
     z-index: -1;
   }
+`;
+const Container = styled.div`
+  max-width: 1440px;
+  padding: 0px 146px;
 `;
 const Paradiv = styled.div`
   max-width: 650px;
@@ -155,7 +158,8 @@ const FormDiv = styled.div`
     }
     button {
       margin-top: 20px;
-      width: 150px;
+      height: 40px;
+      width: 170px;
       background: #084892;
       border: 1px solid #084892;
       color: #fff;
@@ -163,6 +167,7 @@ const FormDiv = styled.div`
       box-shadow: 0px 10px 20px -5px rgba (8, 72, 146, 0.35);
       border-radius: 25px;
       margin-bottom: 4rem;
+      font-weight: 700;
       text-transform: uppercase;
     }
   }
@@ -171,7 +176,7 @@ const ImgContact = styled.div`
   img {
     position: absolute;
     z-index: 1;
-    right: 50px;
+    right: -30px;
     top: 0px;
     max-width: 525px;
     height: 431;

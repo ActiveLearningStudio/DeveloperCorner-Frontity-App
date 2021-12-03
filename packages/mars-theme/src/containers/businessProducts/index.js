@@ -12,7 +12,7 @@ const Index = () => {
   return (
     <>
       <Global styles={css(externalCss)} />
-      <Banner title="Business Product" subheading="" para="" />
+      <Banner title="Businesses" subheading="" para="" />
       <GetStarted />
       <Features />
       <Creating />

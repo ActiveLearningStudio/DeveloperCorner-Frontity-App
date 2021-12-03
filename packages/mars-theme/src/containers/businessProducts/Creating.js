@@ -1,6 +1,6 @@
 import React from "react";
 import { styled } from "frontity";
-import { Container } from "react-bootstrap";
+
 import StartedImg from "../../assets/images/Trynow1.svg";
 import backimage from "../../assets/images/backimage.png";
 const Creating = () => {
@@ -34,6 +34,10 @@ const StyleDiv = styled.div`
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
+`;
+const Container = styled.div`
+  max-width: 1440px;
+  padding: 0px 146px;
 `;
 const Content = styled.div`
   display: flex;
