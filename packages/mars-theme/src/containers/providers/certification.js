@@ -1,6 +1,5 @@
 import React from "react";
 import { styled } from "frontity";
-import { Container } from "react-bootstrap";
 import plusicon from "../../assets/images/PLUS.svg";
 import resume1 from "../../assets/images/resume1.svg";
 import resume2 from "../../assets/images/resume2.svg";
@@ -18,9 +17,9 @@ const Certification = () => {
         <Content>
           <LeftCol>
             <Card>
-              <Span>1</Span>
+            <Span>1</Span>
               <Cardbody>
-                <h3>APPLICATION</h3>
+                <h3> Application</h3>
                 <div>
                   <p>
                     <img src={plusicon} alt="" />
@@ -36,7 +35,7 @@ const Certification = () => {
                   </p>
                   <p>
                     <img src={plusicon} alt="" />
-                    <span> Performance base Project</span>
+                    <span> Performance-Based Project Assignment</span>
                   </p>
                   <p>
                     <img src={plusicon} alt="" />
@@ -51,28 +50,25 @@ const Certification = () => {
             <Card>
               <Span>2</Span>
               <Cardbody>
-                <h3>APPLICATION</h3>
+                <h3>Certification</h3>
                 <div>
                   <p>
                     <img src={plusicon} alt="" />
-                    <span> Application Submission</span>
+                    <span>Kickoff and Account Manager Introduction</span>
                   </p>
                   <p>
                     <img src={plusicon} alt="" />
-                    <span> Technology / Learning Portfolio Review</span>
+                    <span>Self tour of Resources</span>
                   </p>
                   <p>
                     <img src={plusicon} alt="" />
-                    <span>Reference Check</span>
+                    <span>Course Completion</span>
                   </p>
                   <p>
                     <img src={plusicon} alt="" />
-                    <span> Performance base Project</span>
+                    <span>Support Hours</span>
                   </p>
-                  <p>
-                    <img src={plusicon} alt="" />
-                    <span> Partnership Agreement</span>
-                  </p>
+
                 </div>
               </Cardbody>
               <ImageDiv>
@@ -84,27 +80,17 @@ const Certification = () => {
             <Card>
               <Span>3</Span>
               <Cardbody>
-                <h3>APPLICATION</h3>
+                <h3>Launch</h3>
                 <div>
                   <p>
                     <img src={plusicon} alt="" />
-                    <span> Application Submission</span>
+                    <span>Co-branded Pitch</span>
                   </p>
                   <p>
                     <img src={plusicon} alt="" />
-                    <span> Technology / Learning Portfolio Review</span>
-                  </p>
-                  <p>
-                    <img src={plusicon} alt="" />
-                    <span>Reference Check</span>
-                  </p>
-                  <p>
-                    <img src={plusicon} alt="" />
-                    <span> Performance base Project</span>
-                  </p>
-                  <p>
-                    <img src={plusicon} alt="" />
-                    <span> Partnership Agreement</span>
+                    <span>Led Generation / Bring into deep dive/solutioning
+                    calls
+                    </span>
                   </p>
                 </div>
               </Cardbody>
@@ -115,19 +101,21 @@ const Certification = () => {
             <Card>
               <Span>4</Span>
               <Cardbody>
-                <h3>APPLICATION</h3>
+                <h3>Success</h3>
                 <div>
                   <p>
                     <img src={plusicon} alt="" />
-                    <span> Application Submission</span>
+                    <span>Bi-monthly Check-ins</span>
                   </p>
                   <p>
                     <img src={plusicon} alt="" />
-                    <span> Technology / Learning Portfolio Review</span>
+                    <span>Project and Pipeline Reviews</span>
                   </p>
                   <p>
                     <img src={plusicon} alt="" />
-                    <span>Reference Check</span>
+                    <span>Co-Marketing (Webinars, Newsletters, Press
+                    Releases), Social Media
+                    </span>
                   </p>
                   <p>
                     <img src={plusicon} alt="" />
@@ -135,7 +123,7 @@ const Certification = () => {
                   </p>
                   <p>
                     <img src={plusicon} alt="" />
-                    <span> Partnership Agreement</span>
+                    <span>Compatibility testing for New Releases and Features</span>
                   </p>
                 </div>
               </Cardbody>
@@ -153,6 +141,10 @@ const Certification = () => {
 export default Certification;
 
 const Section = styled.div``;
+const Container = styled.div`
+max-width:1440px;
+padding:0px 146px;
+`;
 const Heading = styled.div`
   display: flex;
   margin-top: 100px;
@@ -204,6 +196,7 @@ const Cardbody = styled.div`
     font-size: 28px;
     line-height: 33px;
     color: #084892;
+    text-transform:uppercase;
   }
   p {
     img {

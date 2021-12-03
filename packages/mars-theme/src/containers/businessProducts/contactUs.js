@@ -129,9 +129,6 @@ const InnerDiv = styled.div`
   }
 `;
 const FormDiv = styled.div`
-display:flex;
-justify-content:space-between;
-
   form {
     display: flex;
     flex-direction: column;
@@ -166,5 +163,6 @@ justify-content:space-between;
 const ImgContact = styled.div`
 img {
   max-width:525px;
+  top:0px;
 }
 `;
