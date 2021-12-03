@@ -18,7 +18,7 @@ const Features = () => {
                   With free technology solutions Curriki brings simplicity to
                   authoring and publishing, opening up a new world of
                   possiblility for student engagement, empowering educators to
-                  create interactive expereinces for learners at all levels.
+                  create interactive experiences for learners at all levels.
                 </p>
               </div>
             </OuterDiv>
