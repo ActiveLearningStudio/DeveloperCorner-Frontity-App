@@ -173,12 +173,6 @@ const FormDiv = styled.div`
   }
 `;
 const ImgContact = styled.div`
-<<<<<<< HEAD
-img {
-  max-width:525px;
-  top:0px;
-}
-=======
   img {
     position: absolute;
     z-index: 1;
@@ -187,5 +181,4 @@ img {
     max-width: 525px;
     height: 431;
   }
->>>>>>> 91abde8bbd1d1bf4ffa16e7941ce6cefc6ba7f84
 `;
