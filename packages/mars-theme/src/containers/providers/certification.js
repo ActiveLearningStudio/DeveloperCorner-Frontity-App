@@ -17,38 +17,45 @@ const Certification = () => {
         <Content>
           <LeftCol>
             <Card>
-            <Span>1</Span>
-              <Cardbody>
-                <h3> Application</h3>
+              <div className="card-content">
                 <div>
-                  <p>
-                    <img src={plusicon} alt="" />
-                    <span> Application Submission</span>
-                  </p>
-                  <p>
-                    <img src={plusicon} alt="" />
-                    <span> Technology / Learning Portfolio Review</span>
-                  </p>
-                  <p>
-                    <img src={plusicon} alt="" />
-                    <span>Reference Check</span>
-                  </p>
-                  <p>
-                    <img src={plusicon} alt="" />
-                    <span> Performance-Based Project Assignment</span>
-                  </p>
-                  <p>
-                    <img src={plusicon} alt="" />
-                    <span> Partnership Agreement</span>
-                  </p>
+                <Span>1</Span>
                 </div>
-              </Cardbody>
+                <Cardbody>
+                  <h3> Application</h3>
+                  <div>
+                    <p>
+                      <img src={plusicon} alt="" />
+                      <span> Application Submission</span>
+                    </p>
+                    <p>
+                      <img src={plusicon} alt="" />
+                      <span> Technology / Learning Portfolio Review</span>
+                    </p>
+                    <p>
+                      <img src={plusicon} alt="" />
+                      <span>Reference Check</span>
+                    </p>
+                    <p>
+                      <img src={plusicon} alt="" />
+                      <span> Performance-Based Project Assignment</span>
+                    </p>
+                    <p>
+                      <img src={plusicon} alt="" />
+                      <span> Partnership Agreement</span>
+                    </p>
+                  </div>
+                </Cardbody>
+              </div>
               <ImageDiv>
                 <img src={resume1} alt="" />
               </ImageDiv>
             </Card>
             <Card>
+              <div className="card-content">
+              <div>
               <Span>2</Span>
+              </div>
               <Cardbody>
                 <h3>Certification</h3>
                 <div>
@@ -68,9 +75,9 @@ const Certification = () => {
                     <img src={plusicon} alt="" />
                     <span>Support Hours</span>
                   </p>
-
                 </div>
               </Cardbody>
+              </div>
               <ImageDiv>
                 <img src={resume2} alt="" />
               </ImageDiv>
@@ -78,7 +85,10 @@ const Certification = () => {
           </LeftCol>
           <RightCol>
             <Card>
+              <div className="card-content">
+              <div>
               <Span>3</Span>
+              </div>
               <Cardbody>
                 <h3>Launch</h3>
                 <div>
@@ -88,18 +98,22 @@ const Certification = () => {
                   </p>
                   <p>
                     <img src={plusicon} alt="" />
-                    <span>Led Generation / Bring into deep dive/solutioning
-                    calls
+                    <span>
+                      Led Generation / Bring into deep dive/solutioning calls
                     </span>
                   </p>
                 </div>
               </Cardbody>
+              </div>
               <ImageDiv>
                 <img src={resume3} alt="" />
               </ImageDiv>
             </Card>
             <Card>
+              <div className="card-content">
+                <div>
               <Span>4</Span>
+              </div>
               <Cardbody>
                 <h3>Success</h3>
                 <div>
@@ -113,8 +127,9 @@ const Certification = () => {
                   </p>
                   <p>
                     <img src={plusicon} alt="" />
-                    <span>Co-Marketing (Webinars, Newsletters, Press
-                    Releases), Social Media
+                    <span>
+                      Co-Marketing (Webinars, Newsletters, Press Releases),
+                      Social Media
                     </span>
                   </p>
                   <p>
@@ -123,10 +138,13 @@ const Certification = () => {
                   </p>
                   <p>
                     <img src={plusicon} alt="" />
-                    <span>Compatibility testing for New Releases and Features</span>
+                    <span>
+                      Compatibility testing for New Releases and Features
+                    </span>
                   </p>
                 </div>
               </Cardbody>
+              </div>
               <ImageDiv>
                 <img src={resume4} alt="" />
               </ImageDiv>
@@ -142,8 +160,8 @@ export default Certification;
 
 const Section = styled.div``;
 const Container = styled.div`
-max-width:1440px;
-padding:0px 146px;
+  max-width: 1440px;
+  padding: 0px 146px;
 `;
 const Heading = styled.div`
   display: flex;
@@ -162,6 +180,11 @@ const Heading = styled.div`
 const Content = styled.div`
   padding: 60px;
   margin-bottom: 40px;
+  .card-content {
+    display:flex;
+    flex-direction:row;
+    align-items:baseline;
+  }
 `;
 const Card = styled.div`
 display:flex
@@ -185,8 +208,9 @@ const ImageDiv = styled.div`
 `;
 const Span = styled.span`
   color: rgb(255, 177, 36);
-  font-size: 50px;
+  font-size: 100px;
   font-weight: bold;
+  margin-right:30px;
 `;
 const Cardbody = styled.div`
   h3 {
@@ -196,13 +220,12 @@ const Cardbody = styled.div`
     font-size: 28px;
     line-height: 33px;
     color: #084892;
-    text-transform:uppercase;
+    text-transform: uppercase;
   }
   p {
     img {
       width: 12px;
       height: 12px;
-      
     }
     span {
       margin-left: 10px;
@@ -215,15 +238,15 @@ const LeftCol = styled.div`
   display: flex;
   justify-content: space-between;
   @media screen and (max-width: 768px) {
-  flex-direction:column;
-  text-align:center;
+    flex-direction: column;
+    text-align: center;
   }
 `;
 const RightCol = styled.div`
   display: flex;
   justify-content: space-between;
   @media screen and (max-width: 768px) {
-    flex-direction:column;
-    text-align:center;
-    }
+    flex-direction: column;
+    text-align: center;
+  }
 `;

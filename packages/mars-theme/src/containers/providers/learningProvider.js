@@ -4,6 +4,7 @@ import artificial from "../../assets/images/image9.png";
 import framework from "../../assets/images/image40.png";
 import xconnect from "../../assets/images/image41.png";
 import layer from "../../assets/images/Layer1.png";
+import idesignpic from "../../assets/images/idesignpic.png";
 
 const LearningProvider = () => {
   return (
@@ -67,7 +68,7 @@ const LearningProvider = () => {
         </Card>
         <Card>
           <LeftCol>
-            <img src={layer} alt="" />
+            <img src={idesignpic} alt="" />
           </LeftCol>
           <RightCol>
             <Paragraph>
@@ -164,6 +165,7 @@ const Paragraph = styled.p`
   line-height: 21px;
   color: #515151;
   font-weight: bold;
+  margin-bottom: 18px !important;
 `;
 const RightCol = styled.div`
   margin-left: 20px;
@@ -174,6 +176,7 @@ const RightCol = styled.div`
     font-size: 14px;
     line-height: 19px;
     color: #515151;
+    margin:0px;
   }
   a {
     color: #084892;

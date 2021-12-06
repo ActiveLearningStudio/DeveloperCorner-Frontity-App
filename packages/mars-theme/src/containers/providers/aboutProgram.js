@@ -3,6 +3,7 @@ import { styled } from "frontity";
 import backgroundPic from "../../assets/images/Group153.png";
 import plusicon from "../../assets/images/PLUS.svg";
 import HandImg from "../../assets/images/Group330.png";
+import handiconPic from "../../assets/images/handiconPic.png";
 const AboutProgram = () => {
   return (
     <Section>
@@ -39,7 +40,7 @@ const AboutProgram = () => {
             </InnerDIv>
             <InnerDIv>
               <LeftCol>
-                <img src={HandImg} alt="" />
+                <img src={handiconPic} alt="" />
               </LeftCol>
               <RightCol>
                 <h3>Benefits of being a provider</h3>
@@ -95,6 +96,7 @@ padding:0px 146px;
 const Background = styled.div`
   background: url("${backgroundPic}");
   position: absolute;
+  background-repeat:no-repeat;
   top: -212px;
   width: 100%;
   z-index: -1;
