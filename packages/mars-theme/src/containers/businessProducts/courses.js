@@ -11,7 +11,7 @@ const Courses = () => {
     <Section>
       <Container>
         <SectionTitle>
-          <Title>SEE EXAMPLE COURSES FROM BUSINESS PARTENERS</Title>
+          <Title>SEE EXAMPLE COURSES FROM BUSINESS PARTNERS</Title>
           <img src={plusicon} alt="plus icon" />
         </SectionTitle>
         <CardContent>

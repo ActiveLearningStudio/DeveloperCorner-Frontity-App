@@ -4,6 +4,9 @@
   align-items: center;
   margin-bottom: 70px;
 }
+.text-section .heading-content {
+  margin-right: 60px;
+}
 @media screen and (max-width: 767px) {
   .hero-section {
     height: auto;
@@ -65,6 +68,7 @@
   font-weight: 400;
   line-height: 22px;
 }
+
 .text-section .heading-contaner .heading .heading-text {
   margin-left: 20px;
 }
@@ -118,6 +122,14 @@
   .description-heading
   .heading-text {
   margin-left: 20px;
+}
+.text-section .description-contaner .description-text .subheading-text {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 30px;
+  color: #084892;
 }
 .text-section .description-contaner .description-text p {
   font-family: "Open Sans", sans-serif;

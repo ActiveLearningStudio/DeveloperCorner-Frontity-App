@@ -42,7 +42,7 @@ function Description() {
         <div id="headings3" className="description-text">
           <div className="description-heading">
             <h2>3.</h2>
-            <h2 className="heading-text">Individual features and services.</h2>
+            <h2 className="heading-text">Individual features and services</h2>
           </div>
 
           <p>
@@ -56,7 +56,7 @@ function Description() {
         <div id="headings4" className="description-text">
           <div className="description-heading">
             <h2>4.</h2>
-            <h2 className="heading-text">Modification of these Terms.</h2>
+            <h2 className="heading-text">Modification of these terms</h2>
           </div>
           <p>
             Curriki reserves the right, at our discretion, to change, modify,
@@ -73,7 +73,7 @@ function Description() {
         <div id="headings5" className="description-text">
           <div className="description-heading">
             <h2>5.</h2>
-            <h2 className="heading-text">Software and Content Downloads.</h2>
+            <h2 className="heading-text">Software and content downloads</h2>
           </div>
           <p>
             Curriki and its licensors may make certain software and other
@@ -87,9 +87,9 @@ function Description() {
         <div id="headings6" className="description-text">
           <div className="description-heading">
             <h2>6.</h2>
-            <h2 className="heading-text">Software and Content Downloads.</h2>
+            <h2 className="heading-text">Contributions license grant</h2>
           </div>
-          <h5>6.1 Contributions Generally.</h5>
+          <h5>6.1 Contributions generally.</h5>
 
           <p>
             (a) Contributions. Curriki permits the posting by You and other
@@ -108,7 +108,7 @@ function Description() {
             Curriki Trademark License and Policy, on such Contribution.
           </p>
 
-          <h5>6.2 License Grant to Curriki to Host.</h5>
+          <h5>6.2 License grant to Curriki to host.</h5>
           <p>
             By submitting or distributing Contributions through the Curriki
             Site, in addition to the Default License (defined below), You hereby
@@ -143,7 +143,7 @@ function Description() {
             commercial purposes, in whole or in part, in any media formats and
             through any media channels (now known or hereafter developed).
           </p>
-          <h5>6.4 Limited License Grant to Other Curriki Users.</h5>
+          <h5>6.4 Limited License grant to Other Curriki users.</h5>
           <p>
             (a) Default License. All Contributions submitted to the Curriki Site
             are shared under the Creative Commons Attribution 4.0 International
@@ -157,7 +157,7 @@ function Description() {
             provided by Curriki that enables you to license to Curriki and Users
             the rights you do have.
           </p>
-          <h5>6.5 Contributions Representations and Warranties.</h5>
+          <h5>6.5 Contributions representations and warranties.</h5>
           <p>
             You are solely responsible for your Contributions and the
             consequences of posting or publishing them. By uploading and
@@ -179,7 +179,7 @@ function Description() {
             RESERVES ALL RIGHTS AND REMEDIES AGAINST ANY USER WHO VIOLATES THIS
             TERMS OF SERVICE.
           </p>
-          <h5>6.6 Contributions Disclaimer.</h5>
+          <h5>6.6 Contributions disclaimer.</h5>
           <p>
             You understand that when using the Curriki Site You will be exposed
             to Contributions from a variety of sources, and that Curriki is not
@@ -203,7 +203,7 @@ function Description() {
         <div id="headings7" className="description-text">
           <div className="description-heading">
             <h2>7.</h2>
-            <h2 className="heading-text">Feedback.</h2>
+            <h2 className="heading-text">Feedback</h2>
           </div>
           <p>
             If you provide Curriki with any comments, bug reports, feedback, or
@@ -221,7 +221,7 @@ function Description() {
         <div id="headings8" className="description-text">
           <div className="description-heading">
             <h2>8.</h2>
-            <h2 className="heading-text"> Digital Millennium Copyright Act.</h2>
+            <h2 className="heading-text"> Digital millennium copyright act.</h2>
           </div>
           <p>
             It is Curriki’s policy to respond to notices of alleged copyright
@@ -238,8 +238,11 @@ function Description() {
         <div id="headings9" className="description-text">
           <div className="description-heading">
             <h2>9.</h2>
-            <h2 className="heading-text">Prohibited Conduct.</h2>
+            <h2 className="heading-text">Prohibited conduct.</h2>
           </div>
+          <h2 className="subheading-text">
+            By using the Curriki site you agree to:
+          </h2>
           <p>
             Curriki and its licensors may make certain software and other
             content available to You for download (for a fee or otherwise) from

@@ -13,7 +13,7 @@ const ContactUs = () => {
             <p>
               Is your business interested in using CurrikiStudio technology? Get
               in touch with us and we can setup a demo and discussion of how we
-              can help?
+              can help!
             </p>
           </Paradiv>
           <FormContent>

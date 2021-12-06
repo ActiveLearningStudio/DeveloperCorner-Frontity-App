@@ -17,6 +17,12 @@ function Heading({ Scrollspy, state }) {
             "headings9",
             "headings10",
             "headings12",
+            "headings13",
+            "headings14",
+            "headings15",
+            "headings16",
+            "headings17",
+            "headings18",
           ]}
           style={{ padding: 0 }}
           currentClassName="is-current"
@@ -46,23 +52,21 @@ function Heading({ Scrollspy, state }) {
             <div className="heading">
               <p>4.</p>
 
-              <p class="heading-text">Modification of these Terms</p>
+              <p class="heading-text">Modification of these terms</p>
             </div>
           </a>
           <a href="#headings5">
             <div className="heading">
               <p>5.</p>
 
-              <p class="heading-text">Software and Content Downloads</p>
+              <p class="heading-text">Software and Content downloads</p>
             </div>
           </a>
           <a href="#headings6">
             <div className="heading">
               <p>6.</p>
 
-              <p class="heading-text">
-                Contributions License Grant; Representations and Warranties
-              </p>
+              <p class="heading-text">Contributions license Grant</p>
             </div>
           </a>
           <a href="#headings7">
@@ -76,7 +80,7 @@ function Heading({ Scrollspy, state }) {
             <div className="heading">
               <p>8.</p>
 
-              <p class="heading-text">Digital Millennium Copyright Act</p>
+              <p class="heading-text">Digital Millennium Copyright act</p>
             </div>
           </a>
           <a href="#headings9">
@@ -90,7 +94,7 @@ function Heading({ Scrollspy, state }) {
             <div className="heading">
               <p>10.</p>
 
-              <p class="heading-text"> Account; Membership Fees; Donations</p>
+              <p class="heading-text"> Account; membership fees; donations</p>
             </div>
           </a>
           <a href="#headings11">
@@ -99,7 +103,7 @@ function Heading({ Scrollspy, state }) {
 
               <p class="heading-text">
                 {" "}
-                Third-Party Sites, Products and Services; Links
+                Third-party sites, products and services; links
               </p>
             </div>
           </a>
@@ -108,7 +112,7 @@ function Heading({ Scrollspy, state }) {
               <p>12.</p>
 
               <p class="heading-text">
-                Termination; Terms of Service Violations
+                Termination; terms of service violations
               </p>
             </div>
           </a>
@@ -116,7 +120,45 @@ function Heading({ Scrollspy, state }) {
             <div className="heading">
               <p>13.</p>
 
-              <p class="heading-text"> Ownership</p>
+              <p class="heading-text">
+                {" "}
+                Ownership; proprietary rights; deep linking & framing
+              </p>
+            </div>
+          </a>
+          <a href="#headings14">
+            <div className="heading">
+              <p>14.</p>
+
+              <p class="heading-text"> Indemnification</p>
+            </div>
+          </a>
+          <a href="#headings15">
+            <div className="heading">
+              <p>15.</p>
+
+              <p class="heading-text"> Limitation of liability and damages</p>
+            </div>
+          </a>
+          <a href="#headings16">
+            <div className="heading">
+              <p>16.</p>
+
+              <p class="heading-text"> Limitation of liability and damages</p>
+            </div>
+          </a>
+          <a href="#headings17">
+            <div className="heading">
+              <p>17.</p>
+
+              <p class="heading-text"> Dispute resolution and arbitration</p>
+            </div>
+          </a>
+          <a href="#headings18">
+            <div className="heading">
+              <p>18.</p>
+
+              <p class="heading-text"> Miscellaneous</p>
             </div>
           </a>
         </Scrollspy>
