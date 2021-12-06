@@ -137,7 +137,7 @@ function Heading({ Scrollspy, state }) {
             <div className="heading">
               <p>15.</p>
 
-              <p class="heading-text"> Limitation of liability and damages</p>
+              <p class="heading-text">Disclaimer; no warranties</p>
             </div>
           </a>
           <a href="#headings16">

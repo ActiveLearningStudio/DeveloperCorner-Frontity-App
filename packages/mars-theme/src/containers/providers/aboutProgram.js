@@ -97,6 +97,7 @@ const Background = styled.div`
   background: url("${backgroundPic}");
   position: absolute;
   background-repeat:no-repeat;
+  background-size:cover;
   top: -212px;
   width: 100%;
   z-index: -1;
@@ -118,7 +119,9 @@ const Heading = styled.div`
     color: #084892;
   }
 `;
-const Content = styled.div``;
+const Content = styled.div`
+margin-left:80px;
+`;
 const InnerDIv = styled.div`
   margin-top: 30px;
   display: flex;

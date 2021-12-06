@@ -182,13 +182,13 @@ const Content = styled.div`
   margin-bottom: 40px;
   .card-content {
     display:flex;
-    flex-direction:row;
     align-items:baseline;
   }
 `;
 const Card = styled.div`
-display:flex
-flex-direction:column;
+max-width: 350px;
+display:flex;
+flex-direction: column;
 justify-content:space-between;
 @media screen and (max-width: 991px) {
 padding:0 70px;
@@ -223,6 +223,7 @@ const Cardbody = styled.div`
     text-transform: uppercase;
   }
   p {
+    margin:0px;
     img {
       width: 12px;
       height: 12px;
