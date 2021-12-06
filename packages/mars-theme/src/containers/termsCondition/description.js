@@ -244,12 +244,30 @@ function Description() {
             By using the Curriki site you agree to:
           </h2>
           <p>
-            Curriki and its licensors may make certain software and other
-            content available to You for download (for a fee or otherwise) from
-            the Curriki Site. All such software or other content that You
-            download shall be subject to the terms and conditions included with
-            such software or content or otherwise presented to You at the time
-            of download.
+            <b>9.1</b>
+          </p>
+          <p>
+            Use the Curriki Site for any purposes other than to disseminate or
+            receive original or appropriately licensed content and/or to access
+            the Curriki Site as such services are offered by Curriki;
+          </p>
+          <p>
+            <b>9.2</b>
+          </p>
+          <p>
+            use the Curriki Site or Contributions for any commercial use, it
+            being understood that such use requires a separate agreement with
+            Curriki. Commercial use includes integration into educational
+            software, educational services, APIs or technology services.
+            Otherwise, it is understood that the Curriki Site is for personal,
+            non-commercial use only. With respect to the Curriki Site and
+            Contributions on the Curriki Site, “non-commercial” use means any
+            use of Contributions or the Curriki Site that is not intended to
+            generate, directly or indirectly, pecuniary gain or commercial
+            advantage. Without limiting the definition of “non-commercial”
+            herein, the following are types of uses that Curriki expressly
+            defines as falling outside of the definition of “non-commercial” and
+            necessitating a separate agreement with Curriki to enact:
           </p>
         </div>
         <div id="headings10" className="description-text">
