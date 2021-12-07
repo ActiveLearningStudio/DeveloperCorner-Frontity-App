@@ -150,7 +150,7 @@ const Cardtext = styled.div`
 const Cardlink = styled.div`
   background-image: url(${Group2});
   background-size: contain;
-  background-position:bottom;
+  background-position: bottom;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
