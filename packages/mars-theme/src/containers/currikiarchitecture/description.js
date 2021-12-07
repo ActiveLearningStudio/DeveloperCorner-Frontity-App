@@ -92,29 +92,65 @@ function Description() {
         </div>
         <div id="headings5" className="description-text">
           <div className="description-heading">
-            <h2>4.</h2>
-            <h2 className="heading-text">Curriki Developer</h2>
+            <h2>5.</h2>
+            <h2 className="heading-text">Identity Framework</h2>
           </div>
           <p>
-            Members of the Curriki team are available to help you with your
-            Curriki needs, via our Curriki.org Expert Support program. Please
-            visit curriki.org to learn more.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sodales, quam et blandit fermentum, arcu elit lacinia lectus, sit amet lobortis purus lacus scelerisque mauris. Aenean quis sagittis augue. Vivamus euismod pellentesque congue. 
           </p>
         </div>
-        <div id="headings5" className="description-text">
+        <div id="headings6" className="description-text">
           <div className="description-heading">
-            <h2>5.</h2>
-            <h2 className="heading-text"> Curriki Support</h2>
+            <h2>6.</h2>
+            <h2 className="heading-text"> Active Learning Framework (H5P)</h2>
           </div>
-
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-            sodales, quam et blandit fermentum, arcu elit lacinia lectus, sit
-            amet lobortis purus lacus scelerisque mauris. Aenean quis sagittis
-            augue. Vivamus euismod pellentesque congue. Donec egestas elementum
-            magna sit amet eleifend. Pellentesque interdum ex sed lobortis
-            malesuada. Etiam lorem felis, tincidunt pellentesque lacus quis,
-            sodales maximus neque.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sodales, quam et blandit fermentum, arcu elit lacinia lectus, sit amet lobortis purus lacus scelerisque mauris. Aenean quis sagittis augue. Vivamus euismod pellentesque congue. Donec egestas elementum magna sit amet eleifend. Pellentesque interdum ex sed lobortis malesuada. Etiam lorem felis, tincidunt pellentesque lacus quis, sodales maximus neque. 
+          </p>
+        </div>
+        <div id="headings7" className="description-text">
+          <div className="description-heading">
+            <h2>7.</h2>
+            <h2 className="heading-text"> Learning Tools Integration (LTI/Tsugi)</h2>
+          </div>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sodales, quam et blandit fermentum, arcu elit lacinia lectus, sit amet lobortis purus lacus scelerisque mauris. Aenean quis sagittis augue. Vivamus euismod pellentesque congue. Donec egestas elementum magna sit amet eleifend. Pellentesque interdum ex sed lobortis malesuada. Etiam lorem felis, tincidunt pellentesque lacus quis, sodales maximus neque. Quisque lacus turpis, sodales in sagittis eget, blandit quis sem. Vivamus consequat dui mauris, ac semper felis hendrerit in. Sed aliquam facilisis tellus, et vehicula nibh lacinia a. Sed ac odio nec enim imperdiet aliquam. 
+          </p>
+        </div>
+        <div id="headings8" className="description-text">
+          <div className="description-heading">
+            <h2>8.</h2>
+            <h2 className="heading-text"> Learning Record Store (xAPI/Trax)</h2>
+          </div>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sodales, quam et blandit fermentum, arcu elit lacinia lectus, sit amet lobortis purus lacus scelerisque mauris. Aenean quis sagittis augue. Vivamus euismod pellentesque congue. Donec egestas elementum magna sit amet eleifend. Pellentesque interdum ex sed lobortis malesuada. Etiam lorem felis, tincidunt pellentesque lacus quis, sodales maximus neque. Quisque lacus turpis, sodales in sagittis eget, blandit quis sem. Vivamus consequat dui mauris, ac semper felis hendrerit in. Sed aliquam facilisis tellus, et vehicula nibh lacinia a. Sed ac odio nec enim imperdiet aliquam. Aliquam egestas dolor vel orci consequat, at tempor elit auctor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris lacinia, odio vitae efficitur semper, eros sem malesuada metus, ac tempor augue lacus at elit.
+          </p>
+        </div>
+        <div id="headings9" className="description-text">
+          <div className="description-heading">
+            <h2>9.</h2>
+            <h2 className="heading-text"> Multi tenancy</h2>
+          </div>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sodales, quam et blandit fermentum, arcu elit lacinia lectus, sit amet lobortis purus lacus scelerisque mauris. Aenean quis sagittis augue. Vivamus euismod pellentesque congue. Donec egestas elementum magna sit amet eleifend. Pellentesque interdum ex sed lobortis malesuada. Etiam lorem felis, tincidunt pellentesque lacus quis, sodales maximus neque. Quisque lacus turpis, sodales in sagittis eget, blandit quis sem. Vivamus consequat dui mauris, ac semper felis hendrerit in.
+          </p>
+        </div>
+        <div id="headings10" className="description-text">
+          <div className="description-heading">
+            <h2>10.</h2>
+            <h2 className="heading-text"> Security Framework</h2>
+          </div>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sodales, quam et blandit fermentum, arcu elit lacinia lectus, sit amet lobortis purus lacus scelerisque mauris. Aenean quis sagittis augue. Vivamus euismod pellentesque congue. Donec egestas elementum magna sit amet eleifend. Pellentesque interdum ex sed lobortis malesuada. Etiam lorem felis, tincidunt pellentesque lacus quis, sodales maximus neque. Quisque lacus turpis, sodales in sagittis eget, blandit quis sem.
+          </p>
+        </div>
+        <div id="headings11" className="description-text">
+          <div className="description-heading">
+            <h2>11.</h2>
+            <h2 className="heading-text"> Business Intelligence/Data Mining</h2>
+          </div>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sodales, quam et blandit fermentum, arcu elit lacinia lectus, sit amet lobortis purus lacus scelerisque mauris. Aenean quis sagittis augue. Vivamus euismod pellentesque congue. Donec egestas elementum magna sit amet eleifend. Pellentesque interdum ex sed lobortis malesuada. Etiam lorem felis, tincidunt pellentesque lacus quis, sodales maximus neque. Quisque lacus turpis, sodales in sagittis eget, blandit quis sem. Vivamus consequat dui mauris, ac semper felis hendrerit in. Sed aliquam facilisis tellus, et vehicula nibh lacinia a. Sed ac odio nec enim imperdiet aliquam. Aliquam egestas dolor vel orci consequat, at tempor elit auctor.
           </p>
         </div>
       </div>
