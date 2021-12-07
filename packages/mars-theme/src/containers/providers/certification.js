@@ -19,30 +19,30 @@ const Certification = () => {
             <Card>
               <div className="card-content">
                 <div>
-                <Span>1</Span>
+                  <Span>1</Span>
                 </div>
                 <Cardbody>
                   <h3> Application</h3>
                   <div>
-                    <p>
+                    <p className="card-list-item">
                       <img src={plusicon} alt="" />
-                      <span> Application Submission</span>
+                      <p> Application Submission</p>
                     </p>
-                    <p>
+                    <p className="card-list-item">
                       <img src={plusicon} alt="" />
-                      <span> Technology / Learning Portfolio Review</span>
+                      <p> Technology / Learning Portfolio Review</p>
                     </p>
-                    <p>
+                    <p className="card-list-item">
                       <img src={plusicon} alt="" />
-                      <span>Reference Check</span>
+                      <p>Reference Check</p>
                     </p>
-                    <p>
+                    <p className="card-list-item">
                       <img src={plusicon} alt="" />
-                      <span> Performance-Based Project Assignment</span>
+                      <p> Performance-Based Project Assignment</p>
                     </p>
-                    <p>
+                    <p className="card-list-item">
                       <img src={plusicon} alt="" />
-                      <span> Partnership Agreement</span>
+                      <p> Partnership Agreement</p>
                     </p>
                   </div>
                 </Cardbody>
@@ -53,30 +53,30 @@ const Certification = () => {
             </Card>
             <Card>
               <div className="card-content">
-              <div>
-              <Span>2</Span>
-              </div>
-              <Cardbody>
-                <h3>Certification</h3>
                 <div>
-                  <p>
-                    <img src={plusicon} alt="" />
-                    <span>Kickoff and Account Manager Introduction</span>
-                  </p>
-                  <p>
-                    <img src={plusicon} alt="" />
-                    <span>Self tour of Resources</span>
-                  </p>
-                  <p>
-                    <img src={plusicon} alt="" />
-                    <span>Course Completion</span>
-                  </p>
-                  <p>
-                    <img src={plusicon} alt="" />
-                    <span>Support Hours</span>
-                  </p>
+                  <Span>2</Span>
                 </div>
-              </Cardbody>
+                <Cardbody>
+                  <h3>Certification</h3>
+                  <div>
+                    <p className="card-list-item">
+                      <img src={plusicon} alt="" />
+                      <p>Kickoff and Account Manager Introduction</p>
+                    </p>
+                    <p className="card-list-item">
+                      <img src={plusicon} alt="" />
+                      <p>Self tour of Resources</p>
+                    </p>
+                    <p className="card-list-item">
+                      <img src={plusicon} alt="" />
+                      <p>Course Completion</p>
+                    </p>
+                    <p className="card-list-item">
+                      <img src={plusicon} alt="" />
+                      <p>Support Hours</p>
+                    </p>
+                  </div>
+                </Cardbody>
               </div>
               <ImageDiv>
                 <img src={resume2} alt="" />
@@ -86,24 +86,24 @@ const Certification = () => {
           <RightCol>
             <Card>
               <div className="card-content">
-              <div>
-              <Span>3</Span>
-              </div>
-              <Cardbody>
-                <h3>Launch</h3>
                 <div>
-                  <p>
-                    <img src={plusicon} alt="" />
-                    <span>Co-branded Pitch</span>
-                  </p>
-                  <p>
-                    <img src={plusicon} alt="" />
-                    <span>
-                      Led Generation / Bring into deep dive/solutioning calls
-                    </span>
-                  </p>
+                  <Span>3</Span>
                 </div>
-              </Cardbody>
+                <Cardbody>
+                  <h3>Launch</h3>
+                  <div>
+                    <p className="card-list-item">
+                      <img src={plusicon} alt="" />
+                      <p>Co-branded Pitch</p>
+                    </p>
+                    <p className="card-list-item">
+                      <img src={plusicon} alt="" />
+                      <p>
+                        Led Generation / Bring into deep dive/solutioning calls
+                      </p>
+                    </p>
+                  </div>
+                </Cardbody>
               </div>
               <ImageDiv>
                 <img src={resume3} alt="" />
@@ -112,38 +112,36 @@ const Certification = () => {
             <Card>
               <div className="card-content">
                 <div>
-              <Span>4</Span>
-              </div>
-              <Cardbody>
-                <h3>Success</h3>
-                <div>
-                  <p>
-                    <img src={plusicon} alt="" />
-                    <span>Bi-monthly Check-ins</span>
-                  </p>
-                  <p>
-                    <img src={plusicon} alt="" />
-                    <span>Project and Pipeline Reviews</span>
-                  </p>
-                  <p>
-                    <img src={plusicon} alt="" />
-                    <span>
-                      Co-Marketing (Webinars, Newsletters, Press Releases),
-                      Social Media
-                    </span>
-                  </p>
-                  <p>
-                    <img src={plusicon} alt="" />
-                    <span> Performance base Project</span>
-                  </p>
-                  <p>
-                    <img src={plusicon} alt="" />
-                    <span>
-                      Compatibility testing for New Releases and Features
-                    </span>
-                  </p>
+                  <Span>4</Span>
                 </div>
-              </Cardbody>
+                <Cardbody>
+                  <h3>Success</h3>
+                  <div>
+                    <p className="card-list-item">
+                      <img src={plusicon} alt="" />
+                      <p>Bi-monthly Check-ins</p>
+                    </p>
+                    <p className="card-list-item">
+                      <img src={plusicon} alt="" />
+                      <p>Project and Pipeline Reviews</p>
+                    </p>
+                    <p className="card-list-item">
+                      <img src={plusicon} alt="" />
+                      <p>
+                        Co-Marketing (Webinars, Newsletters, Press Releases),
+                        Social Media
+                      </p>
+                    </p>
+                    <p className="card-list-item">
+                      <img src={plusicon} alt="" />
+                      <p> Performance base Project</p>
+                    </p>
+                    <p className="card-list-item">
+                      <img src={plusicon} alt="" />
+                      <p>Compatibility testing for New Releases and Features</p>
+                    </p>
+                  </div>
+                </Cardbody>
               </div>
               <ImageDiv>
                 <img src={resume4} alt="" />
@@ -181,19 +179,18 @@ const Content = styled.div`
   padding: 60px;
   margin-bottom: 40px;
   .card-content {
-    display:flex;
-    align-items:baseline;
+    display: flex;
+    align-items: baseline;
   }
 `;
 const Card = styled.div`
-max-width: 350px;
-display:flex;
-flex-direction: column;
-justify-content:space-between;
-@media screen and (max-width: 991px) {
-padding:0 70px;
-}
-
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media screen and (max-width: 991px) {
+    padding: 0 70px;
+  }
 `;
 const ImageDiv = styled.div`
   text-align: right;
@@ -210,7 +207,7 @@ const Span = styled.span`
   color: rgb(255, 177, 36);
   font-size: 100px;
   font-weight: bold;
-  margin-right:30px;
+  margin-right: 30px;
 `;
 const Cardbody = styled.div`
   h3 {
@@ -222,16 +219,20 @@ const Cardbody = styled.div`
     color: #084892;
     text-transform: uppercase;
   }
-  p {
-    margin:0px;
+  .card-list-item {
+    margin: 0px;
+    display: flex;
+    align-items: baseline;
     img {
       width: 12px;
       height: 12px;
     }
-    span {
+    p {
       margin-left: 10px;
       font-family: Open Sans;
       color: #515151;
+      margin-left: 20px;
+      margin-bottom: 0px !important;
     }
   }
 `;
