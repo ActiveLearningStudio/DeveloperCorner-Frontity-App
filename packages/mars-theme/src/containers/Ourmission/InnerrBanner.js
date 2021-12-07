@@ -1,7 +1,6 @@
 import React from "react";
 import { styled } from "frontity";
 import heroImg from "../../assets/images/hero-section.png";
-import { Container } from "react-bootstrap";
 const Banner = () => {
   return (
     <Section>
@@ -24,7 +23,12 @@ const Section = styled.div`
   widht: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 50px;
+  padding:50px 0px;
+`;
+const Container = styled.div`
+ max-width: 1440px;
+ padding:0px 146px;
+ margin:0;
 `;
 const Content = styled.div`
   display: flex;
@@ -42,7 +46,7 @@ const Heading = styled.h2`
   }
 `;
 const Button = styled.button`
-  background-color: #084892 !important;
+  background-color: transparent;
   width: 155px;
   height: 45px;
   color: #fff;

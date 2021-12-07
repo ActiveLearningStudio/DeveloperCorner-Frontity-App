@@ -1,8 +1,9 @@
 import React from "react";
 import { styled } from "frontity";
 import GlobalCss from "../../assets/css/fonts.css";
-import { Accordion, Card } from "react-bootstrap";
-import { Container } from "react-bootstrap";
+// import { Accordion, Card } from "react-bootstrap";
+import { Accordion } from "react-bootstrap";
+import ArrowPath from "../../assets/images/ArrowPath.png";
 const FrequentlyAsk = () => {
   return (
     <Section>
@@ -12,91 +13,47 @@ const FrequentlyAsk = () => {
           <BottomLine></BottomLine>
         </HeaderContent>
         <Content>
-          <Accordion>
-            <Card>
-              <AccordionTitle>
-                <Accordion.Toggle as={Card.Header} eventKey="0" active>
-                  Is my donation tax deductible?
-                </Accordion.Toggle>
-              </AccordionTitle>
+        <Accordion defaultActiveKey="0">
+  <Accordion.Item eventKey="0">
+    <Accordion.Header>Is my donation tax deductible?</Accordion.Header>
+    <Accordion.Body>
+    All donations are 100% tax-deductible. Curriki is a U.S. tax exempt organization under Internal Revenue
+    Service Act Section 501(c)(3). Our Tax ID number is 20-3478467.
+    </Accordion.Body>
+  </Accordion.Item>
+  <Accordion.Item eventKey="1">
+    <Accordion.Header>Can I speak with someone about a wire transfer or other type of gift?</Accordion.Header>
+    <Accordion.Body>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
+    </Accordion.Body>
+  </Accordion.Item>
+  <Accordion.Item eventKey="2">
+    <Accordion.Header>Is my donation tax deductible?</Accordion.Header>
+    <Accordion.Body>
+    All donations are 100% tax-deductible. Curriki is a U.S. tax exempt organization under Internal Revenue
+    Service Act Section 501(c)(3). Our Tax ID number is 20-3478467.
+    </Accordion.Body>
+  </Accordion.Item>
+  <Accordion.Item eventKey="3">
+    <Accordion.Header>Is my donation tax deductible?</Accordion.Header>
+    <Accordion.Body>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
+    </Accordion.Body>
+  </Accordion.Item>
+</Accordion>
 
-              <Accordion.Collapse eventKey="0" active>
-                <Card.Body>
-                  <Paragraph>
-                    It is a long established fact that a reader will be
-                    distracted by the readable content of a page when looking at
-                    its layout. The point of using Lorem Ipsum is that it has a
-                    more-or-less normal distribution of letters, as opposed to
-                    using 'Content here, content here', making it look like
-                    readable English. Many desktop publishing packages and web
-                    page editors now use Lorem Ipsum as their default model
-                    text, and a search for 'lorem ipsum'
-                  </Paragraph>
-                </Card.Body>
-              </Accordion.Collapse>
-            </Card>
-
-            <Card>
-              <Accordion.Toggle as={Card.Header} eventKey="1">
-                Can i speak someone about a wire transfer or other type of gift?
-              </Accordion.Toggle>
-
-              <Accordion.Collapse eventKey="1">
-                <Card.Body>
-                  <Paragraph>
-                    It is a long established fact that a reader will be
-                    distracted by the readable content of a page when looking at
-                    its layout. The point of using Lorem Ipsum is that it has a
-                    more-or-less normal distribution of letters, as opposed to
-                    using 'Content here, content here', making it look like
-                    readable English. Many desktop publishing packages and web
-                    page editors now use Lorem Ipsum as their default model
-                    text, and a search for 'lorem ipsum'
-                  </Paragraph>
-                </Card.Body>
-              </Accordion.Collapse>
-            </Card>
-            <Card>
-              <Accordion.Toggle as={Card.Header} eventKey="2">
-                Is my donation tax deductible?
-              </Accordion.Toggle>
-
-              <Accordion.Collapse eventKey="2">
-                <Card.Body>
-                  <Paragraph>
-                    It is a long established fact that a reader will be
-                    distracted by the readable content of a page when looking at
-                    its layout. The point of using Lorem Ipsum is that it has a
-                    more-or-less normal distribution of letters, as opposed to
-                    using 'Content here, content here', making it look like
-                    readable English. Many desktop publishing packages and web
-                    page editors now use Lorem Ipsum as their default model
-                    text, and a search for 'lorem ipsum'
-                  </Paragraph>
-                </Card.Body>
-              </Accordion.Collapse>
-            </Card>
-            <Card>
-              <Accordion.Toggle as={Card.Header} eventKey="3">
-                Is my donation tax deductible?
-              </Accordion.Toggle>
-
-              <Accordion.Collapse eventKey="3">
-                <Card.Body>
-                  <Paragraph>
-                    It is a long established fact that a reader will be
-                    distracted by the readable content of a page when looking at
-                    its layout. The point of using Lorem Ipsum is that it has a
-                    more-or-less normal distribution of letters, as opposed to
-                    using 'Content here, content here', making it look like
-                    readable English. Many desktop publishing packages and web
-                    page editors now use Lorem Ipsum as their default model
-                    text, and a search for 'lorem ipsum'
-                  </Paragraph>
-                </Card.Body>
-              </Accordion.Collapse>
-            </Card>
-          </Accordion>
         </Content>
       </Container>
     </Section>
@@ -105,10 +62,23 @@ const FrequentlyAsk = () => {
 
 export default FrequentlyAsk;
 const Section = styled.div``;
+const Container = styled.div`
+max-width:1440px;
+padding:0px 146px;
+`;
 const Content = styled.div`
   padding: 35px 0 70px 0px;
   Card {
     color: #084892;
+  }
+  .accordion {
+    .accordion-item {
+      .accordion-header {
+        box-shadow: 0px 10px 20px -5px rgba(8, 72, 146, 0.35) !important; 
+        background: linear-gradient(0deg, #084892, #084892) !important;
+        border-radius: 5px !important;
+      }
+    }
   }
 `;
 const HeaderContent = styled.div`
@@ -132,7 +102,7 @@ const Heading = styled.h2`
   font-weight: 500;
   font-size: 40px;
   line-height: 58px;
-  color: #ffb124;
+  color: #084892;
 `;
 const BottomLine = styled.div`
   width: 100px;

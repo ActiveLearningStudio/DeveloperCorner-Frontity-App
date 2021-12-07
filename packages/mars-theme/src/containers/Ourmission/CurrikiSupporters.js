@@ -1,12 +1,14 @@
 import React from "react";
 import { styled } from "frontity";
-import { Container } from "react-bootstrap";
 import Oracle from "../../assets/images/ourMission/oracle.svg";
 import SusanImg from "../../assets/images/ourMission/susandel.svg";
 import Charles from "../../assets/images/ourMission/charles.svg";
 import Foundation from "../../assets/images/ourMission/foundation.svg";
 import ATT from "../../assets/images/ourMission/AT.svg";
 import AWS from "../../assets/images/ourMission/aws.svg";
+import amgenpic from "../../assets/images/amgenpic.png";
+import Attpic from "../../assets/images/Attpic.png";
+import Birdies from "../../assets/images/Birdies.png";
 const CurrikiSupporters = () => {
   return (
     <Section>
@@ -16,26 +18,29 @@ const CurrikiSupporters = () => {
             <Heading>
               <span>Curriki suporters</span> are some of the world's leading
             </Heading>
-            <Heading> technology companies and foundations</Heading>
+            <Heading> technology companies and foundations.</Heading>
           </HeadingContent>
           <Foundations>
             <Div>
               <img src={SusanImg} alt="" />
             </Div>
             <Div>
+              <img src={Attpic} alt="" />
+            </Div>
+            <Div>
               <img src={Foundation} alt="" />
+            </Div>
+            <Div>
+              <img src={Birdies} alt="" width="208px" />
             </Div>
             <Div>
               <img src={Charles} alt="" />
             </Div>
             <Div>
-              <img src={Foundation} alt="" />
+              <img src={amgenpic} alt="" />
             </Div>
             <Div>
               <img src={Oracle} alt="" />
-            </Div>
-            <Div>
-              <img src={ATT} alt="" />
             </Div>
             <Div>
               <img src={AWS} alt="" />
@@ -49,6 +54,10 @@ const CurrikiSupporters = () => {
 
 export default CurrikiSupporters;
 const Section = styled.div``;
+const Container = styled.div`
+  max-width: 1440px;
+  padding: 0px 146px;
+`;
 const Content = styled.div`
   display: flex;
   flex-direction: column;
@@ -64,14 +73,15 @@ const Heading = styled.h2`
   font-size: 32px;
   line-height: 38px;
   text-align: center;
-  color: #f8af2c;
+  color: #084892;
   span {
-    color: #ffb124;
+    color: #f8af2c;
   }
 `;
 const Foundations = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   @media screen and (max-width: 1200px) {
     padding: 0px 100px;
