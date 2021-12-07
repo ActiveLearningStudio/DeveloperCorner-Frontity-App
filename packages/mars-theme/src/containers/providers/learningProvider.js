@@ -31,7 +31,7 @@ const LearningProvider = () => {
             </p>
             <p>
               <b>Certified Services: </b>Systems Integration, Cloud hosting, Custom
-              Deveopment
+              Development
             </p>
             <p>
               <b>Website:</b> <a href="#"> https://artificial.chat/</a>
@@ -47,14 +47,14 @@ const LearningProvider = () => {
               <b>Framework</b>
             </Paragraph>
             <p>
-              Framework Development Group (Framework) is an Education Cosulting
+              Framework Development Group (Framework) is an Education Consulting
               company dedicated to providing K-12 professional services, staffing,
               workforce management, and direct hire support to the Learning services
               sector. As a Curriki Certified Partner, we help k12 organizations to
               positively impact the lives of children by empowering some of the 
               greatest influencers in their lives: their educators.
               Framework helps empower CurrikiStudio educators to continually improve
-              their skills so our next generation of learners emgerges with the skills
+              their skills so our next generation of learners emerges with the skills
               and confidence necessary to realize their dreams.
             </p>
             <p>
