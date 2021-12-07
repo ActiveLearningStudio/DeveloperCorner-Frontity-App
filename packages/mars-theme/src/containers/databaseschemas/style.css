@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 .hero-section {
   height: 140px;
   display: flex;
@@ -14,7 +16,12 @@
   padding: 0px 170px;
 }
 .hero-section .hero-text h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 49px;
+  line-height: 58px;
   color: #ffb124;
+  font-family: "Rubik";
 }
 @media screen and (max-width: 1100px) {
   .hero-section .hero-text {
@@ -57,20 +64,19 @@
 }
 .text-section .heading-contaner .heading .heading-text {
   margin-left: 20px;
-  
 }
 .text-section .heading-contaner .heading p {
   color: rgb(118, 118, 118) !important;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
 }
 .text-section .heading-contaner .is-current .heading p {
   color: #084892 !important;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 22px;
 }
 .text-section .heading-contaner .heading .h-text {
@@ -101,7 +107,7 @@
 .text-section .description-contaner .description-text .description-heading h2 {
   color: #084892;
   font-weight: 700;
-  font-family: "rubic";
+  font-family: "Rubik";
   font-size: 36px;
   line-height: 43px;
   font-style: normal;
@@ -114,9 +120,9 @@
   margin-left: 20px;
 }
 .text-section .description-contaner .description-text p {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 16px;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 22px;
   color: #515151;
 }

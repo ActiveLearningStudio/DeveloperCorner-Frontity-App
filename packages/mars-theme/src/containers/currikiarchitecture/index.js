@@ -13,15 +13,14 @@ function index({ state }) {
       <Global styles={css(externalCss)} />
       <Banner className="hero-section">
         <div className="hero-text">
-         
-          <h1>Curriki Architecture</h1>
+          <h1>Curriki’s Architecture/Components</h1>
         </div>
       </Banner>
       <div className="text-section">
-        <div className="heading-content" >
-        <Heading Scrollspy={Scrollspy} />
+        <div className="heading-content">
+          <Heading Scrollspy={Scrollspy} />
         </div>
-        
+
         <Description />
       </div>
     </>

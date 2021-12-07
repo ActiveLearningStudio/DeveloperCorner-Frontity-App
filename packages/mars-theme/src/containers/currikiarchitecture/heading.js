@@ -25,35 +25,85 @@ function Heading({ Scrollspy, state }) {
             <div className="heading">
               <p>1.</p>
 
-              <p>Home</p>
+              <p className="heading-text">
+                How does Curriki’s technology work?
+              </p>
             </div>
           </a>
           <a href="#headings2">
             <div className="heading">
               <p>2. </p>
 
-              <p> Curriki Developers </p>
+              <p className="heading-text">API </p>
             </div>
           </a>
           <a href="#headings3">
             <div className="heading">
-              <p>3.Curriki Users</p>
+              <p>3. Reference Implementation/User Interface</p>
 
-              <p> </p>
+              <p className="heading-text"> </p>
             </div>
           </a>
           <a href="#headings4">
             <div className="heading">
               <p>4.</p>
 
-              <p> Curriki Parteners</p>
+              <p className="heading-text">
+                {" "}
+                Search Infrastructure (Elastic Stack)
+              </p>
             </div>
           </a>
           <a href="#headings5">
             <div className="heading">
               <p>5.</p>
 
-              <p> Curriki Support</p>
+              <p className="heading-text"> Identity Framework</p>
+            </div>
+          </a>
+          <a href="#headings5">
+            <div className="heading">
+              <p>6.</p>
+
+              <p className="heading-text"> Active Learning Framework (H5P)</p>
+            </div>
+          </a>
+          <a href="#headings5">
+            <div className="heading">
+              <p>7.</p>
+
+              <p className="heading-text">
+                {" "}
+                Learning Tools Integration (LTI/Tsugi)
+              </p>
+            </div>
+          </a>
+          <a href="#headings5">
+            <div className="heading">
+              <p>8.</p>
+
+              <p className="heading-text"> Learning Record Store (xAPI/Trax)</p>
+            </div>
+          </a>
+          <a href="#headings5">
+            <div className="heading">
+              <p>9.</p>
+
+              <p className="heading-text"> Multi tenancy</p>
+            </div>
+          </a>
+          <a href="#headings5">
+            <div className="heading">
+              <p>10.</p>
+
+              <p className="heading-text">Security Framework</p>
+            </div>
+          </a>
+          <a href="#headings5">
+            <div className="heading">
+              <p>11.</p>
+
+              <p className="heading-text"> Business Intelligence/Data Mining</p>
             </div>
           </a>
         </Scrollspy>
