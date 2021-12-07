@@ -8,8 +8,8 @@ const Index = () => {
     <>
       <Banner
         title="Support Learning"
-        subheading="Impact education through technology"
-        para="Curriki is dedicated to interactive learning experience eccessible for everyone by pproviding free and open tools to design. customize andpublish content"
+        subheading="IMPACTING EDUCATION THROUGH TECHNOLOGY"
+        para="Curriki is dedicated to making interactive learning experiences accessible for everyone, by providing free and open tools to design, customize and publish content."
       />
       <GetInvolved />
       <Roadmap />

@@ -82,8 +82,8 @@ const Login = () => {
                   {/* <Headings className="" color="#515151" headingType="body2" text="Keep me signed in" /> */}
                   <p>Keep me signed in</p>
                 </label>
-                <button type="submit" text="Login">
-                  Login
+                <button className="login-btn" type="submit" text="Login">
+                  Log in
                 </button>
               </form>
             )}

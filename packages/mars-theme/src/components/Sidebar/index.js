@@ -24,20 +24,21 @@ const Index = () => {
           <p>Home</p>
         </div>
         <SidebarContent>
-          <h5>Quick Links</h5>
+          <h5>Quick links</h5>
           <Menu iconShape="square">
-            <SubMenu title="Set up, configure, and run curriki studio">
+            <SubMenu title="Set up, configure, and run Curriki Studio">
               <MenuItem>Component 1</MenuItem>
               <MenuItem>Component 2</MenuItem>
             </SubMenu>
 
             <SubMenu title="How to contribute">
-              <MenuItem>Curriki support</MenuItem>
-              <MenuItem>Curriki partners</MenuItem>
-              <MenuItem>Curriki Architecture</MenuItem>
+              <MenuItem>Core platform</MenuItem>
+              <MenuItem>LTI Integration</MenuItem>
+              <MenuItem>Learning Record Store</MenuItem>
+              <MenuItem>Core B.I. ETLs</MenuItem>
             </SubMenu>
 
-            <SubMenu title="System Overview">
+            <SubMenu title="System overview">
               <MenuItem>Component 1</MenuItem>
               <MenuItem>COmponent 2</MenuItem>
               <MenuItem>Component 3</MenuItem>
@@ -49,13 +50,13 @@ const Index = () => {
               <MenuItem>Curriki database schema</MenuItem>
             </SubMenu>
 
-            <SubMenu title="Web Application">
+            <SubMenu title="Web applications">
               <MenuItem>Open LearnX</MenuItem>
               <MenuItem>Vivenesity</MenuItem>
               <MenuItem>third one</MenuItem>
             </SubMenu>
 
-            <SubMenu title="Mobile App">
+            <SubMenu title="Mobile app">
               <MenuItem>Component 1</MenuItem>
               <MenuItem>Compnent 2</MenuItem>
               <MenuItem>COmponent 3</MenuItem>
@@ -69,7 +70,7 @@ const Index = () => {
               <MenuItem>Component 2</MenuItem>
             </SubMenu>
 
-            <SubMenu title="References Implementation Storybook">
+            <SubMenu title="Reference Implementation storybook">
               <MenuItem>Curriki support</MenuItem>
               <MenuItem>Curriki partners</MenuItem>
               <MenuItem>Curriki Architecture</MenuItem>
@@ -93,7 +94,7 @@ const Index = () => {
               <MenuItem>third one</MenuItem>
             </SubMenu>
 
-            <SubMenu title="Developer Forums">
+            <SubMenu title="Developer's Forum">
               <MenuItem>Component 1</MenuItem>
               <MenuItem>Compnent 2</MenuItem>
               <MenuItem>COmponent 3</MenuItem>

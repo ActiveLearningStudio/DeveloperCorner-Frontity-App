@@ -13,12 +13,8 @@ function Index({ state }) {
       <Global styles={css(externalCss)} />
       <Banner className="hero-section">
         <div className="hero-text">
-          {/* <Headings
-            headingType="h1"
-            color="#FFB124"
-            text="Curriki’s Architecture/Components"
-          /> */}
-          <h1>Privacy and policy</h1>
+       
+          <h1>Privacy policy</h1>
         </div>
       </Banner>
       <div className="text-section">

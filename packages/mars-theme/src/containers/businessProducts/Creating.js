@@ -1,18 +1,19 @@
 import React from "react";
 import { styled } from "frontity";
-import { Container } from "react-bootstrap";
+
 import StartedImg from "../../assets/images/Trynow1.svg";
+import backimage from "../../assets/images/backimage.png";
 const Creating = () => {
   return (
     <StyleDiv>
       <Container>
         <Content>
           <LeftDiv>
-            <h2>Try Curriki Studio Now</h2>
+            <h2>Try CurrikiStudio now</h2>
             <p>
-              Curriki Studio demo envirenment means to give you a preview of how
-              your organization can use use our technology. It is completetly
-              free. For more information on how to integrate your LMS, contact
+              CurrikiStudio demo environment is meant to give you a preview of
+              how your organization can use our technology. It is completely
+              free. For information on how to integrate with your LMS, contact
               us using the form below.
             </p>
             <button>START CREATING</button>
@@ -29,17 +30,25 @@ const Creating = () => {
 export default Creating;
 
 const StyleDiv = styled.div`
-  background: #084892;
+  background-image: url(${backimage});
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+`;
+const Container = styled.div`
+  max-width: 1440px;
+  padding: 0px 146px;
 `;
 const Content = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 70px;
 `;
 const LeftDiv = styled.div`
-@media screen and (max-width: 768px) {
-  margin-top: 14px;
-}
+  @media screen and (max-width: 768px) {
+    margin-top: 14px;
+  }
   h2 {
     font-family: Rubik;
     font-style: normal;
@@ -71,7 +80,8 @@ const LeftDiv = styled.div`
   }
 `;
 const RightDiv = styled.div`
-@media screen and (max-width: 768px) {
-  display:none;
- }
+  margin-bottom: -12px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;

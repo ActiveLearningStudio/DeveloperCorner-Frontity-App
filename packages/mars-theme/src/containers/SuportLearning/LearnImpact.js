@@ -1,6 +1,5 @@
 import React from "react";
 import { styled } from "frontity";
-import { Container } from "react-bootstrap";
 import PrimaryButton from "../../StyledComponent/PrimaryButton";
 import StyledPara from "../../StyledComponent/StyledPara";
 import StyledHeading from "../../StyledComponent/StyledHeading";
@@ -21,26 +20,22 @@ const LearnImpact = () => {
           <LeftCol>
             <Colheading>Curriki suites release notes</Colheading>
             <Paragraph>
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration in some form, by
-              injected humour, or randomised words which don't look even
-              slightly believable. If you are going to use a passage of Lorem
-              Ipsum, you need to be sure there isn't anything embarrassing
-              hidden in the middle of text."
+              Curious as to what we’ve already built, how we are building it,
+              and what is next? Our publish product roadmap and documentation
+              provides our planned path towards what our team is working on and
+              the value it brings to education.
             </Paragraph>
-            <Button>contact us</Button>
+            <Button>See public jira roadmap</Button>
           </LeftCol>
           <RightCol>
             <Colheading>See the impact we make</Colheading>
             <Paragraph>
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration in some form, by
-              injected humour, or randomised words which don't look even
-              slightly believable. If you are going to use a passage of Lorem
-              Ipsum, you need to be sure there isn't anything embarrassing
-              hidden in the middle of text."
+              We’re proud of the impact we’ve made in education but we’re only
+              doing so because of our great partners. Check out our reference
+              implementations to see how Curriki and our suite of tools are
+              driving innovation in education.
             </Paragraph>
-            <Button>Donate</Button>
+            <Button>Success stories</Button>
           </RightCol>
         </InnerContent>
       </Content>
@@ -49,6 +44,10 @@ const LearnImpact = () => {
 };
 
 export default LearnImpact;
+const Container = styled.div`
+  max-width: 1440px;
+  padding: 0px 146px;
+`;
 const Content = styled.div`
   padding: 50px 0px 80px 0px;
 `;
@@ -101,6 +100,7 @@ const InnerContent = styled.div`
 const LeftCol = styled.div``;
 const RightCol = styled.div``;
 const Paragraph = styled.p`
+  width: 500px;
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;

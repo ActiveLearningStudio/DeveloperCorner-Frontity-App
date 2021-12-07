@@ -1,6 +1,5 @@
 import React from "react";
 import { styled } from "frontity";
-import { Container } from "react-bootstrap";
 import globeImg from "../../assets/images/providers.png";
 const Requestinfo = () => {
   return (
@@ -17,10 +16,10 @@ const Requestinfo = () => {
             </h3>
             <p>
               Curriki provides organizations from around the world with the
-              tools to create our next generation learning experience. To
+              tools to create next-generation learning experiences. To
               support our customers, we are growing a network of professional
-              Service providers with strong leadership, technology expertise,
-              and comitment to scaling open, free, and quality education across
+              service providers with strong leadership, technology expertise,
+              and a commitment to scaling open, free, and quality education across
               the globe.
             </p>
             <button>REQUEST MORE INFORMATION</button>
@@ -36,7 +35,10 @@ const Requestinfo = () => {
 
 export default Requestinfo;
 const Section = styled.div``;
-
+const Container = styled.div`
+max-width:1440px;
+padding:0px 146px;
+`;
 const Content = styled.div`
   display: flex;
   padding: 60px 0px;

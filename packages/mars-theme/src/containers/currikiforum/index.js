@@ -13,7 +13,7 @@ const Index = () => {
       <Banner className="hero-section">
         <div className="hero-text">
           {/* <Headings headingType="h1" color="#FFB124" text="Curriki forum" /> */}
-          <h1>CUrriki forum</h1>
+          <h1>Curriki forum</h1>
         </div>
       </Banner>
       <div className="main-container">

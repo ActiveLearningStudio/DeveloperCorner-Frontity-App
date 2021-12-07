@@ -6,9 +6,8 @@ const Description = () => {
       <div className="description-contaner">
         <div id="headings1" className="description-text">
           <div className="description-heading">
-
             <h2>1.</h2>
-            <h2> Docker/Terraform</h2>
+            <h2 className="heading-text"> Docker/Terraform</h2>
           </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
@@ -32,9 +31,8 @@ const Description = () => {
         </div>
         <div id="headings2" className="description-text">
           <div className="description-heading">
- 
             <h2>2.</h2>
-            <h2> AWS</h2>
+            <h2 className="heading-text"> AWS</h2>
           </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
@@ -50,11 +48,10 @@ const Description = () => {
         </div>
         <div id="headings3" className="description-text">
           <div className="description-heading">
-           
             <h2>3.</h2>
-            <h2> Oracle Cloud</h2>
+            <h2 className="heading-text"> Oracle Cloud</h2>
           </div>
-          
+
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
             sodales, quam et blandit fermentum, arcu elit lacinia lectus, sit
@@ -66,11 +63,10 @@ const Description = () => {
         </div>
         <div id="headings4" className="description-text">
           <div className="description-heading">
-            
             <h2>4.</h2>
-            <h2> text="Azure</h2>
+            <h2 className="heading-text">Azure</h2>
           </div>
-          
+
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
             sodales, quam et blandit fermentum, arcu elit lacinia lectus, sit
@@ -86,11 +82,10 @@ const Description = () => {
         </div>
         <div id="headings5" className="description-text">
           <div className="description-heading">
-            
             <h2>5.</h2>
-            <h2>Linode</h2>
+            <h2 className="heading-text">Linode</h2>
           </div>
-         
+
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
             sodales, quam et blandit fermentum, arcu elit lacinia lectus, sit
@@ -100,11 +95,10 @@ const Description = () => {
         </div>
         <div id="headings6" className="description-text">
           <div className="description-heading">
-            
             <h2>6.</h2>
-            <h2>Red Hat OpenShift</h2>
+            <h2 className="heading-text">Red Hat OpenShift</h2>
           </div>
-          
+
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
             sodales, quam et blandit fermentum, arcu elit lacinia lectus, sit
@@ -117,11 +111,10 @@ const Description = () => {
         </div>
         <div id="headings7" className="description-text">
           <div className="description-heading">
-           
             <h2>7.</h2>
-            <h2>Other cloud environments</h2>
+            <h2 className="heading-text">Other cloud environments</h2>
           </div>
-          
+
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
             sodales, quam et blandit fermentum, arcu elit lacinia lectus, sit
@@ -137,11 +130,10 @@ const Description = () => {
         </div>
         <div id="headings8" className="description-text">
           <div className="description-heading">
-           
             <h2>8.</h2>
-            <h2>On premise deployments</h2>
+            <h2 className="heading-text">On premise deployments</h2>
           </div>
-         
+
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
             sodales, quam et blandit fermentum, arcu elit lacinia lectus, sit
@@ -161,11 +153,10 @@ const Description = () => {
         </div>
         <div id="headings9" className="description-text">
           <div className="description-heading">
-           
             <h2>9.</h2>
-            <h2>Noovo MAP (Satellite distribution)</h2>
+            <h2 className="heading-text">Noovo MAP (Satellite distribution)</h2>
           </div>
-         
+
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
             sodales, quam et blandit fermentum, arcu elit lacinia lectus, sit

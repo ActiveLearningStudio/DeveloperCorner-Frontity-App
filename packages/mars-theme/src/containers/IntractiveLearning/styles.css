@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 .main-area .heroSection {
   background-image: url("../../assets/images/hero-section.png");
   background-repeat: no-repeat;
@@ -15,7 +17,7 @@
 }
 .main-area .heroSection h2 {
   max-width: 1000px;
-  font-family: rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-size: 49px;
@@ -32,7 +34,7 @@
 .main-area .heroSection p {
   margin-top: 22px;
   max-width: 1000px;
-  font-family: rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 300;
   font-size: 25px;
@@ -61,7 +63,7 @@
   }
 }
 .main-area .api-section h2 {
-  font-family: rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -94,7 +96,7 @@
 }
 .main-area .api-section .api-content .api-content-detail h3 {
   max-width: 500px;
-  font-family: rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 300;
   font-size: 25px;
@@ -110,7 +112,7 @@
 .main-area .api-section .api-content .api-content-detail p {
   margin-top: 30px;
   max-width: 500px;
-  font-family: Open Sans;
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -122,7 +124,7 @@
   }
 }
 .main-area .api-section .api-content .api-content-detail a {
-  font-family: rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-size: 14.7987px;
@@ -144,7 +146,7 @@
   padding-top: 101px;
 }
 .main-area .bussiness-product-section .bussiness-product-title h2 {
-  font-family: rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -154,7 +156,7 @@
 }
 .main-area .bussiness-product-section .bussiness-product-title p {
   margin-top: 15px;
-  font-family: rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 300;
   font-size: 25px;
@@ -223,7 +225,7 @@
   .bussiness-card-detail
   h2 {
   margin-top: 36px;
-  font-family: rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -237,7 +239,7 @@
   .bussiness-card-detail
   p {
   margin-top: 15px;
-  font-family: Open Sans;
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -263,7 +265,7 @@
   .bussiness-card-detail
   .bussiness-card-footer
   a {
-  font-family: rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -285,7 +287,7 @@
   align-items: center;
 }
 .main-area .techSection .tech-heading h2 {
-  font-family: rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -310,7 +312,7 @@
   margin-top: 50px;
 }
 .main-area .techSection .tech-content .tech-step .tech-step-card span {
-  font-family: Open Sans;
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: bold;
   font-size: 100px;
@@ -335,7 +337,7 @@
   .tech-step-card
   .tech-step-card-inner
   h3 {
-  font-family: rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-size: 28px;
@@ -350,7 +352,7 @@
   .tech-step-card
   .tech-step-card-inner
   p {
-  font-family: Open Sans;
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -396,7 +398,7 @@
   max-width: 650px;
 }
 .main-area .developer-get-started .get-started-content .get-started h3 {
-  font-family: rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-size: 36px;
@@ -406,7 +408,7 @@
 .main-area .developer-get-started .get-started-content .get-started p {
   margin-top: 20px;
   margin-bottom: 50px;
-  font-family: Open Sans;
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -453,7 +455,7 @@
   }
 }
 .main-area .developer-tool-area h2 {
-  font-family: rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -462,7 +464,7 @@
   color: #084892;
 }
 .main-area .developer-tool-area p {
-  font-family: rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 300;
   font-size: 25px;
@@ -536,7 +538,7 @@
   .developer-tool-card
   h3 {
   margin-top: 35px;
-  font-family: rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -551,7 +553,7 @@
   p {
   margin-top: 10px;
   margin-bottom: 40px;
-  font-family: Open Sans;
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -565,7 +567,7 @@
   .developer-tools-cards
   .developer-tool-card
   a {
-  font-family: rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -614,7 +616,7 @@
   align-items: center;
 }
 .main-area .developer-help-area .developer-help-area-title h2 {
-  font-family: rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -684,7 +686,7 @@
   .deveoloper-help-card
   h3 {
   margin-top: 35px;
-  font-family: rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -699,7 +701,7 @@
   p {
   margin-top: 15px;
   margin-bottom: 40px;
-  font-family: Open Sans;
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -712,7 +714,7 @@
   .developer-help-cards
   .deveoloper-help-card
   a {
-  font-family: rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;

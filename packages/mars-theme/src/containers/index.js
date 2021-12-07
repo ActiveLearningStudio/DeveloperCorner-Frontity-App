@@ -18,7 +18,8 @@ import Terms from "./termsCondition/index";
 import SuccessStories from "./SuccessStories";
 import QuickLinks from "./QuickLinks/index";
 import Success from "./success/Success";
-
+import Blogs from "./blogs/index";
+import Blogdetail from "./blogdetail/blogdetail.js";
 const Index = ({ state }) => {
   return (
     <>
@@ -43,7 +44,8 @@ const Index = ({ state }) => {
       {state.router.link === "/successstories/" && <SuccessStories />}
       {state.router.link === "/success/" && <Success />}
       {state.router.link === "/learning/" && <IntractiveLearning />}
-
+      {state.router.link === "/blogs/" && <Blogs />}
+      {state.router.link === "/blogdetail/" && <Blogdetail />}
       <Footer />
     </>
   );

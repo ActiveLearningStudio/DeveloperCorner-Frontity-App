@@ -1,8 +1,9 @@
 import React from "react";
 import { css, styled } from "frontity";
-import { Container } from "react-bootstrap";
 import featurePic from "../../assets/images/Group153.png";
 import MoneyPic from "../../assets/images/Group29.png";
+import tabletpic from "../../assets/images/tabletpic.svg";
+import searchpic from "../../assets/images/searchpic.svg";
 const Features = () => {
   return (
     <FeatureSection>
@@ -14,34 +15,40 @@ const Features = () => {
               <div>
                 <h2>Save money and time</h2>
                 <p>
-                  WIth free technology solution curriki brings simplicity to
+                  With free technology solutions Curriki brings simplicity to
                   authoring and publishing, opening up a new world of
-                  possiblility for student engangment, empowering educaators to
-                  create interactive expereincs for learners at all levels.
+                  possiblility for student engagement, empowering educators to
+                  create interactive experiences for learners at all levels.
                 </p>
               </div>
             </OuterDiv>
             <OuterDiv>
-              <img src={MoneyPic} alt="" />
+              <img src={tabletpic} alt="" />
               <div>
-                <h2>Save money and time</h2>
+                <h2>Help employees achieve better results</h2>
                 <p>
-                  WIth free technology solution curriki brings simplicity to
-                  authoring and publishing, opening up a new world of
-                  possiblility for student engangment, empowering educaators to
-                  create interactive expereincs for learners at all levels.
+                  Transform lectures, case studies, and assessments into
+                  interactive course activities. Add multiple interactions into
+                  your slide presentations and videos, create visual study
+                  tools, and create opportunities for deeper conceptual
+                  understanding. It takes just a few minutes to go from a
+                  one-to-many class to a distance learning experience that
+                  engages.
                 </p>
               </div>
             </OuterDiv>
             <OuterDiv>
-              <img src={MoneyPic} alt="" />
+              <img src={searchpic} alt="" />
               <div>
-                <h2>Save money and time</h2>
+                <h2>Increase productivity and profitability</h2>
                 <p>
-                  WIth free technology solution curriki brings simplicity to
-                  authoring and publishing, opening up a new world of
-                  possiblility for student engangment, empowering educaators to
-                  create interactive expereincs for learners at all levels.
+                  Transform lectures, case studies, and assessments into
+                  interactive course activities. Add multiple interactions into
+                  your slide presentations and videos, create visual study
+                  tools, and create opportunities for deeper conceptual
+                  understanding. It takes just a few minutes to go from a
+                  one-to-many class to a distance learning experience that
+                  engages.
                 </p>
               </div>
             </OuterDiv>
@@ -54,11 +61,15 @@ const Features = () => {
 
 export default Features;
 const FeatureSection = styled.div`
-position: relative;
-height: 730px;
-@media screen and (max-width: 768px) {
-  height:1150px;
-}
+  position: relative;
+  height: 730px;
+  @media screen and (max-width: 768px) {
+    height: 1150px;
+  }
+`;
+const Container = styled.div`
+  max-width: 1440px;
+  padding: 0px 146px;
 `;
 
 const StyleDiv = styled.div`
@@ -66,7 +77,7 @@ const StyleDiv = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  top: -135px;
+  top: -190px;
   width: 100%;
   z-index: -1;
 `;
@@ -76,7 +87,6 @@ const StyleFeature = styled.div`
   @media screen and (max-width: 992px) {
     margin-top: 140px;
   }
-  
 `;
 const OuterDiv = styled.div`
   display: flex;
@@ -90,7 +100,7 @@ const OuterDiv = styled.div`
     h2 {
       font-family: Rubik;
       font-style: normal;
-      font-weight: 500;
+      font-weight: bold;
       font-size: 25px;
       line-height: 30px;
       color: #084892;

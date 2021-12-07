@@ -1,8 +1,8 @@
 import React from "react";
 import { styled } from "frontity";
-import { Container } from "react-bootstrap";
 import BirdiesImg from "../../assets/images/ourMission/birdies.svg";
 import HeartIcon from "../../assets/images/ourMission/heart1.svg";
+import amazonpic from "../../assets/images/amazonpic.png";
 const BirdiesforEducation = () => {
   return (
     <Section>
@@ -12,8 +12,8 @@ const BirdiesforEducation = () => {
             <LeftCol>
               <TopHeading>Birdies for Education</TopHeading>
               <Paragraph>
-                Contribute through Birdies for Education- Maverick McNealy's
-                golf fundraise for Curriki.
+                Contribute through Birdies for Education – Maverick McNealy’s
+                golf fundraiser for Curriki.
               </Paragraph>
               <Button>TAKE ME TO BIRDIES</Button>
             </LeftCol>
@@ -29,20 +29,20 @@ const BirdiesforEducation = () => {
                 <BottomLine></BottomLine>
               </HeaderContent>
               <Paragraph>
-                Send your tax deductible contribution directly to us by maiiling
-                it to: 20660 Stevens CreekBLvd/332 Cupertino , CA 95104
+                <p>
+                Send your tax-deductible contribution directly to us by mailing
+                it to: 20660 Stevens Creek Blvd/332 Cupertino, CA 95014</p>
               </Paragraph>
             </LeftCol>
             <RightCol>
-              <img src={HeartIcon} alt="" />
+              <img src={amazonpic} alt="" />
               <HeaderContent>
                 <h6>Alternative ways to contribute</h6>
                 <BottomLine></BottomLine>
               </HeaderContent>
 
               <Paragraph>
-                AmazonSmile is a simple and automatic way for you to supoort
-                Curriki every time you shop, at no costto you.
+              AmazonSmile is a simple and automatic way for you to support Curriki every time you shop, at no cost to you.
                 <Link>AmazonSmile</Link>
               </Paragraph>
             </RightCol>
@@ -55,6 +55,10 @@ const BirdiesforEducation = () => {
 
 export default BirdiesforEducation;
 const Section = styled.div``;
+const Container = styled.div`
+  max-width: 1440px;
+  padding: 0px 146px;
+`;
 const Content = styled.div`
   padding: 80px 0px;
 `;
@@ -91,6 +95,7 @@ const LeftCol = styled.div`
   button {
     background: #084892;
     color: #fff;
+    font-weight: 700;
     border-radius: 25px;
     border: none !important;
     padding: 5px 20px;
@@ -109,7 +114,7 @@ const RightCol = styled.div`
   }
   img {
     @media screen and (max-width: 768px) {
-      display:none;
+      display: none;
     }
   }
 `;
@@ -133,7 +138,12 @@ const BottomLine = styled.div`
 `;
 const Paragraph = styled.p`
   color: #515151;
+  max-width: 514px;
   font-family: Open Sans;
+  p {
+    max-width: 244px;
+    color: #515151;
+  }
 `;
 const Button = styled.button``;
 const Link = styled.a`

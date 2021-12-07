@@ -5,7 +5,6 @@ import Banner from "../../components/banner";
 import General from "./general";
 import Archives from "./archives";
 import externalCss from "./styles.css";
-
 const Index = () => {
   return (
     <>

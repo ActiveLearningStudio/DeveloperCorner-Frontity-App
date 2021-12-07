@@ -1,9 +1,9 @@
 import React from "react";
 import { styled } from "frontity";
-import { Container } from "react-bootstrap";
 import backgroundPic from "../../assets/images/Group153.png";
 import plusicon from "../../assets/images/PLUS.svg";
 import HandImg from "../../assets/images/Group330.png";
+import handiconPic from "../../assets/images/handiconPic.png";
 const AboutProgram = () => {
   return (
     <Section>
@@ -22,43 +22,55 @@ const AboutProgram = () => {
                 <h3>Why become a provider</h3>
                 <p>
                   <img src={plusicon} alt="" />
-                  <span>Expanded your existing offerings</span>
+                  <span>Expanded your existing offerings.</span>
                 </p>
                 <p>
                   <img src={plusicon} alt="" />
-                  <span>Unlock new revenue stream(s)</span>
+                  <span>Unlock new revenue stream(s).</span>
                 </p>
                 <p>
                   <img src={plusicon} alt="" />
-                  <span>Lead generation f rom curriki</span>
+                  <span>Lead generation from Curriki.</span>
                 </p>
                 <p>
                   <img src={plusicon} alt="" />
-                  <span>CO-marketing/promotion</span>
+                  <span>Co-marketing/promotion.</span>
                 </p>
               </RightCol>
             </InnerDIv>
             <InnerDIv>
               <LeftCol>
-                <img src={HandImg} alt="" />
+                <img src={handiconPic} alt="" />
               </LeftCol>
               <RightCol>
-                <h3>Bennefits of being provider</h3>
+                <h3>Benefits of being a provider</h3>
                 <p>
                   <img src={plusicon} alt="" />
-                  <span>Expanded your existing offerings</span>
+                  <span>Dedicated point of contact.</span>
                 </p>
                 <p>
                   <img src={plusicon} alt="" />
-                  <span>Unlock new revenue stream(s)</span>
+                  <span>Priority support & ticketing.</span>
                 </p>
                 <p>
                   <img src={plusicon} alt="" />
-                  <span>Lead generation f rom curriki</span>
+                  <span>Invited to present to partners/prospects.</span>
                 </p>
                 <p>
                   <img src={plusicon} alt="" />
-                  <span>CO-marketing/promotion</span>
+                  <span>Training - Tech & Learning Design.</span>
+                </p>
+                <p>
+                  <img src={plusicon} alt="" />
+                  <span>Centralized Certified Knowledge Base.</span>
+                </p>
+                <p>
+                  <img src={plusicon} alt="" />
+                  <span>Badge & promotion/listing on site.</span>
+                </p>
+                <p>
+                  <img src={plusicon} alt="" />
+                  <span>Certified Partner Slack Channel.</span>
                 </p>
               </RightCol>
             </InnerDIv>
@@ -76,10 +88,16 @@ const Section = styled.div`
   width: 100%;
   height: 600px;
 `;
+const Container = styled.div`
+max-width:1440px;
+padding:0px 146px;
+`;
 
 const Background = styled.div`
   background: url("${backgroundPic}");
   position: absolute;
+  background-repeat:no-repeat;
+  background-size:cover;
   top: -212px;
   width: 100%;
   z-index: -1;
@@ -101,7 +119,9 @@ const Heading = styled.div`
     color: #084892;
   }
 `;
-const Content = styled.div``;
+const Content = styled.div`
+margin-left:80px;
+`;
 const InnerDIv = styled.div`
   margin-top: 30px;
   display: flex;

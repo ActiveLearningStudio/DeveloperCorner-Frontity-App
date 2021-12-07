@@ -1,108 +1,96 @@
 import React from "react";
 import { styled } from "frontity";
 import { Formik, Field } from "formik";
-import { Container } from "react-bootstrap";
 import ContactImage from "../../assets/images/Hero-background.png";
+import formimage from "../../assets/images/formimage.png";
 const ContactUs = () => {
   return (
     <Section>
       <Container>
         <InnerDiv>
-          <h2>Contact Us</h2>
+          <h2>Contact us</h2>
           <Paradiv>
             <p>
               Is your business interested in using CurrikiStudio technology? Get
               in touch with us and we can setup a demo and discussion of how we
-              can help?
+              can help!
             </p>
           </Paradiv>
-          <FormDiv>
-            <Formik
-              initialValues={{
-                name: "",
-                email: "",
-                message: "",
-                toggle: false,
-                checked: [],
-              }}
-              validate={(values) => {
-                const errors = {};
-                if (!values.email) {
-                  errors.email = "Required";
-                }
-                if (!values.email) {
-                  errors.email = "Required";
-                } else if (
-                  !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-                ) {
-                  errors.email = "Invalid email address";
-                }
-                return errors;
-              }}
-              // onSubmit={(values, { setSubmitting }) => {
-              //  setTimeout(() => {
-              //   alert(JSON.stringify(values, null, 2));
-              //   setSubmitting(false);
-              //  }, 400);
-              // }}
-            >
-              {({
-                values,
-                errors,
-                touched,
-                handleChange,
-                handleBlur,
-                handleSubmit,
-                isSubmitting,
-                /* and other goodies */
-              }) => (
-                <form onSubmit={handleSubmit}>
-                  {/* <Headings
-                    className="form-name"
-                    color="#515151"
-                    headingType="body2"
-                    text="Username"
-                  /> */}
-                  <p>Name</p>
-                  <input
-                    type="email"
-                    name="email"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    value={values.email}
-                  />
-                  {errors.email && touched.email && errors.email}
-                  {/* <Headings
-                    className="form-name"
-                    color="#515151"
-                    headingType="body2"
-                    text="email"
-                  /> */}
-                  <p>Email</p>
-                  <input
-                    type="email"
-                    name="email"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    value={values.email}
-                  />
-                  {errors.email && touched.email && errors.email}
-                  <p>Message</p>
-                  <input
-                    type="text"
-                    name="message"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    value={values.email}
-                  />
-                  {/* <button type="submit">Login</button> */}
-                  <button type="submit" disabled={isSubmitting}>
-                    Submit
-                  </button>
-                </form>
-              )}
-            </Formik>
-          </FormDiv>
+          <FormContent>
+            <FormDiv>
+              <Formik
+                initialValues={{
+                  name: "",
+                  email: "",
+                  message: "",
+                  toggle: false,
+                  checked: [],
+                }}
+                validate={(values) => {
+                  const errors = {};
+                  if (!values.email) {
+                    errors.email = "Required";
+                  }
+                  if (!values.email) {
+                    errors.email = "Required";
+                  } else if (
+                    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
+                      values.email
+                    )
+                  ) {
+                    errors.email = "Invalid email address";
+                  }
+                  return errors;
+                }}
+              >
+                {({
+                  values,
+                  errors,
+                  touched,
+                  handleChange,
+                  handleBlur,
+                  handleSubmit,
+                  isSubmitting,
+                  /* and other goodies */
+                }) => (
+                  <form onSubmit={handleSubmit}>
+                    <p>Name</p>
+                    <input
+                      type="email"
+                      name="email"
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      value={values.email}
+                    />
+                    {errors.email && touched.email && errors.email}
+                    <p>Email</p>
+                    <input
+                      type="email"
+                      name="email"
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      value={values.email}
+                    />
+                    {errors.email && touched.email && errors.email}
+                    <p>Message</p>
+                    <input
+                      type="text"
+                      name="message"
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      value={values.email}
+                    />
+                    <button type="submit" disabled={isSubmitting}>
+                      Send message
+                    </button>
+                  </form>
+                )}
+              </Formik>
+            </FormDiv>
+            <ImgContact>
+              <img src={formimage} alt="Image" />
+            </ImgContact>
+          </FormContent>
         </InnerDiv>
       </Container>
       <img src={ContactImage} atl="" />
@@ -113,7 +101,7 @@ const ContactUs = () => {
 export default ContactUs;
 const Section = styled.div`
   position: relative;
-  margin-top: 60px;
+  margin-top: 110px;
   img {
     width: 100%;
     position: absolute;
@@ -121,8 +109,15 @@ const Section = styled.div`
     z-index: -1;
   }
 `;
+const Container = styled.div`
+  max-width: 1440px;
+  padding: 0px 146px;
+`;
 const Paradiv = styled.div`
   max-width: 650px;
+`;
+const FormContent = styled.div`
+  position: relative;
 `;
 const InnerDiv = styled.div`
   h2 {
@@ -163,7 +158,8 @@ const FormDiv = styled.div`
     }
     button {
       margin-top: 20px;
-      width: 150px;
+      height: 40px;
+      width: 170px;
       background: #084892;
       border: 1px solid #084892;
       color: #fff;
@@ -171,6 +167,18 @@ const FormDiv = styled.div`
       box-shadow: 0px 10px 20px -5px rgba (8, 72, 146, 0.35);
       border-radius: 25px;
       margin-bottom: 4rem;
+      font-weight: 700;
+      text-transform: uppercase;
     }
+  }
+`;
+const ImgContact = styled.div`
+  img {
+    position: absolute;
+    z-index: 1;
+    right: -30px;
+    top: 0px;
+    max-width: 525px;
+    height: 431;
   }
 `;

@@ -1,6 +1,5 @@
 import React from "react";
 import { styled } from "frontity";
-import { Container } from "react-bootstrap";
 import plusicon from "../../assets/images/PLUS.svg";
 import DonorImg from "../../assets/images/ourMission/Donors3.png";
 
@@ -11,9 +10,9 @@ const Donation = () => {
         <Content>
           <LeftCol>
             <Heading>
-              Your donation <span>supports our non profit mission,</span> which
-              is to bring free and open technolgy tool in every school, collge
-              and non profit organization
+              Your donation <span>supports our non-profit mission,</span> which
+              is to bring free and open technology tools into every school, college
+              and nonprofit organization.
             </Heading>
 
             <Innerdiv>
@@ -47,7 +46,10 @@ const Donation = () => {
 export default Donation;
 
 const Section = styled.div``;
-
+const Container = styled.div`
+  max-width: 1440px;
+  padding: 0px 146px;
+`;
 const Content = styled.div`
   display: flex;
   padding: 40px 0px;
@@ -56,9 +58,11 @@ const Content = styled.div`
   }
 `;
 const LeftCol = styled.div`
+  margin-top: 46px;
   button {
     width: 185px;
     height: 45px;
+    font-weight:700;
     background: #084892;
     color: #fff;
     border: 1px solid #084892;
@@ -81,7 +85,7 @@ const RightCol = styled.div`
     overflow: hidden;
   }
   @media screen and (max-width: 768px) {
-    display:none;
+    display: none;
   }
 `;
 const Innerdiv = styled.div`
@@ -96,6 +100,7 @@ const Innerdiv = styled.div`
   }
 `;
 const Heading = styled.h2`
+  max-width: 504px;
   font-family: Rubic;
   font-style: normal;
   font-weight: 500;
