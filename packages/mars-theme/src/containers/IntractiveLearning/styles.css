@@ -19,7 +19,7 @@
   max-width: 1000px;
   font-family: "Rubik";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 49px;
   line-height: 58px;
   color: #ffb124;
@@ -65,7 +65,7 @@
 .main-area .api-section h2 {
   font-family: "Rubik";
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 32px;
   line-height: 38px;
   text-transform: uppercase;

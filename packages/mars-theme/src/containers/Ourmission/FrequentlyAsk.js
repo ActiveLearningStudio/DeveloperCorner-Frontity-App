@@ -3,7 +3,8 @@ import { styled } from "frontity";
 import GlobalCss from "../../assets/css/fonts.css";
 // import { Accordion, Card } from "react-bootstrap";
 import { Accordion } from "react-bootstrap";
-import ArrowPath from "../../assets/images/ArrowPath.png";
+// import ArrowPath from "../../assets/images/ArrowPath.png";
+import whiteArrow from "../../assets/images/whiteArrow.png";
 const FrequentlyAsk = () => {
   return (
     <Section>
@@ -74,9 +75,40 @@ const Content = styled.div`
   .accordion {
     .accordion-item {
       .accordion-header {
-        box-shadow: 0px 10px 20px -5px rgba(8, 72, 146, 0.35) !important; 
+        .accordion-body {
+          font-family: Open Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 22px;
+
+color: #515151;
+        }
+        .accordion-button {
+          font-family: Rubik;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 21px;
+
+color: #084892;
+          border:none !important;
+          margin-bottom:8px;
+          background-color:#FFFFFF;
+          box-shadow: 0px 10px 20px -5px rgba(8, 72, 146, 0.35);
+          border-radius: 5px;
+        }
+        .accordion-button:not(.collapsed) {
+          box-shadow: 0px 10px 20px -5px rgba(8, 72, 146, 0.35) !important; 
         background: linear-gradient(0deg, #084892, #084892) !important;
         border-radius: 5px !important;
+        color:#fff;
+        }
+        accordion-button::after {
+          background: url(${whiteArrow});
+          background-repeat:no-repeat;
+          background-size:cover;
+      }
       }
     }
   }

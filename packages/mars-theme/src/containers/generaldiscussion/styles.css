@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 p {
   color: rgb(81, 81, 81);
   font-size: 16px;
@@ -19,6 +21,12 @@ p {
 }
 .hero-section .hero-text h1 {
   color: #ffb124;
+  font-family: "Rubik";
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 49px;
+  line-height: 58px;
 }
 @media screen and (max-width: 1100px) {
   .hero-section .hero-text {
@@ -54,7 +62,7 @@ p {
   margin-bottom: 22px;
 }
 .General-Discussion-container .general-section .nav-header a {
-  color:#084892 ;
+  color: #084892;
   font-family: "Open Sans", sans-serif;
   text-decoration: none;
   font-size: 16px;
@@ -63,7 +71,7 @@ p {
   color: #084892 !important;
 }
 .General-Discussion-container .general-section .nav-header .active {
-  color:#515151 !important;
+  color: #515151 !important;
 }
 .General-Discussion-container .general-section .nav-header a {
   cursor: pointer;
@@ -200,7 +208,7 @@ p {
   padding: 0 32px;
   box-shadow: 0px 10px 20px -5px rgba(8, 72, 146, 0.35);
   font-size: 14px;
-  font-family: "rubic";
+  font-family: "Rubik";
   font-weight: bold;
   text-transform: uppercase;
   width: 143px;
