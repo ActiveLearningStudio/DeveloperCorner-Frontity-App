@@ -219,20 +219,22 @@ const Cardbody = styled.div`
     color: #084892;
     text-transform: uppercase;
   }
-  .card-list-item {
-    margin: 0px;
-    display: flex;
-    align-items: baseline;
-    img {
-      width: 12px;
-      height: 12px;
-    }
-    p {
-      margin-left: 10px;
-      font-family: Open Sans;
-      color: #515151;
-      margin-left: 20px;
-      margin-bottom: 0px !important;
+  div {
+    .card-list-item {
+      margin: 0px;
+      display: flex;
+      align-items: baseline;
+      img {
+        width: 12px;
+        height: 12px;
+      }
+      p {
+        margin-left: 10px;
+        font-family: Open Sans;
+        color: #515151;
+        margin-left: 20px;
+        margin-bottom: 0px !important;
+      }
     }
   }
 `;
