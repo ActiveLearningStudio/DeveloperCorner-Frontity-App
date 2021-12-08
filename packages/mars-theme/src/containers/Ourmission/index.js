@@ -8,7 +8,7 @@ import FrequentlyAsk from "./FrequentlyAsk";
 const Index = () => {
   return (
     <>
-      <Banner title="Support Our Mission" subheading="" para="" />
+      <Banner title="Support our mission" subheading="" para="" />
       <Donation />
       <InnerBanner />
       <BirdiesforEducation />

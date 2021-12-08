@@ -8,7 +8,7 @@ const Banner = () => {
         <Content>
           <Heading>
             {" "}
-            Be part of curriki <span> ground breaking</span> work
+          Be part of Curriki’s <span> groundbreaking</span> work.
           </Heading>
           <Button>Donate</Button>
         </Content>
@@ -49,7 +49,9 @@ const Button = styled.button`
   background-color: transparent;
   width: 155px;
   height: 45px;
+  text-transform: uppercase;
   color: #fff;
+  font-weight:bold;
   border: 1px solid #fff;
   box-sizing: border-box;
   border-radius: 25px;
