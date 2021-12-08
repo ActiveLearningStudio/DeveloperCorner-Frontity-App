@@ -20,7 +20,7 @@ const Donation = () => {
                 <img src={plusicon} alt="" />
 
                 <Paragraph>
-                  if contributing by check please send your tax exept donation
+                  If contributing by check please send your tax exept donation
                   ot Curriki, 20660 Stevens Creek blvd #332, Cupertino, CA 95014
                 </Paragraph>
               </div>

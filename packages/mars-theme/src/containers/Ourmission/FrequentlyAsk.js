@@ -5,6 +5,7 @@ import GlobalCss from "../../assets/css/fonts.css";
 import { Accordion } from "react-bootstrap";
 // import ArrowPath from "../../assets/images/ArrowPath.png";
 import whiteArrow from "../../assets/images/whiteArrow.png";
+import blueArrow from "../../assets/images/blueArrow.png";
 const FrequentlyAsk = () => {
   return (
     <Section>
@@ -93,10 +94,8 @@ const Content = styled.div`
     color: #084892;
   }
   .accordion {
-    .accordion-item{
-      border:none !important;
-    }
     .accordion-item {
+      border:none !important;
       .accordion-header {
         .accordion-body {
           .item-para{
@@ -130,10 +129,30 @@ const Content = styled.div`
           border-radius: 5px !important;
           color: #fff;
         }
-        accordion-button::after {
+        .accordion-button::after {
+          width:16px;
+          height:8px;
+          background: url(${blueArrow});
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .accordion-button:not(.collapsed)::after{
+          width:21px;
+          height:13px;
           background: url(${whiteArrow});
           background-repeat: no-repeat;
           background-size: cover;
+        }
+      }
+      .accordion-body {
+        .item-para {
+          font-family: Open Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 22px;
+
+color: #515151;
         }
       }
     }

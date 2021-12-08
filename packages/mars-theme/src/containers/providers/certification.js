@@ -99,7 +99,7 @@ const Certification = () => {
                     <p className="card-list-item">
                       <img src={plusicon} alt="" />
                       <p>
-                        Led Generation / Bring into deep dive/solutioning calls
+                        Led Generation → Bring into deep dive/solutioning calls
                       </p>
                     </p>
                   </div>

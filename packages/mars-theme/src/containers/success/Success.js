@@ -345,7 +345,11 @@ const CardDescription = styled.div`
   justify-content: space-between;
   padding-bottom:100px;
 `;
-const Card = styled.div``;
+const Card = styled.div`
+display:flex;
+flex-direction:column;
+justify-content: space-between;
+`;
 const Cardbody = styled.div`
   p {
     max-width: 330px;
