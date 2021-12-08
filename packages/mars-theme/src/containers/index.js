@@ -21,6 +21,8 @@ import Successdetail from "./successdetailpage/index";
 import Blogs from "./blogs/index";
 import Blogdetail from "./blogdetail/blogdetail.js";
 import Thankyou from "./thankyoupage";
+import PressAwards from "./pressawards/pressAwards";
+import Pressdetail from "./pressdetail/pressDetail";
 const Index = ({ state }) => {
   return (
     <>
@@ -48,7 +50,9 @@ const Index = ({ state }) => {
       {state.router.link === "/blogs/" && <Blogs />}
       {state.router.link === "/blogdetail/" && <Blogdetail />}
       {state.router.link === "/thankyou/" && <Thankyou />}
-      
+      {state.router.link === "/pressawards/" && <PressAwards />}
+      {state.router.link === "/pressdetail/" && <Pressdetail />}
+
       <Footer />
     </>
   );

@@ -29,6 +29,8 @@ const settings = {
             ["Blogs", "/blogs/"],
             ["Blogdetail", "/blogdetail/"],
             ["Thankyou", "/thankyou/"],
+            ["Press&awards", "/pressawards/"],
+            ["Press&detail", "/pressdetail/"],
           ],
           featured: {
             showOnList: false,
