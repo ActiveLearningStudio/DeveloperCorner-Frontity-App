@@ -28,6 +28,8 @@ const settings = {
             ["Success", "/success"],
             ["Blogs", "/blogs/"],
             ["Blogdetail", "/blogdetail/"],
+            ["404page", "/error/"],
+            ["webinars", "/webinars/"],
           ],
           featured: {
             showOnList: false,

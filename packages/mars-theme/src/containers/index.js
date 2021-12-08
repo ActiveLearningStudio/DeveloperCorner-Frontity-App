@@ -20,6 +20,8 @@ import QuickLinks from "./QuickLinks/index";
 import Success from "./success/Success";
 import Blogs from "./blogs/index";
 import Blogdetail from "./blogdetail/blogdetail.js";
+import ErrorPage from "./404page/index";
+import Webinars from "./webinars/index";
 const Index = ({ state }) => {
   return (
     <>
@@ -46,6 +48,8 @@ const Index = ({ state }) => {
       {state.router.link === "/learning/" && <IntractiveLearning />}
       {state.router.link === "/blogs/" && <Blogs />}
       {state.router.link === "/blogdetail/" && <Blogdetail />}
+      {state.router.link === "/error/" && <ErrorPage />}
+      {state.router.link === "/webinars/" && <Webinars />}
       <Footer />
     </>
   );
