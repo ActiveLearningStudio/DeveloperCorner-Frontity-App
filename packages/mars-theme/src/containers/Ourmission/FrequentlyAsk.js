@@ -94,10 +94,8 @@ const Content = styled.div`
     color: #084892;
   }
   .accordion {
-    .accordion-item{
-      border:none !important;
-    }
     .accordion-item {
+      border:none !important;
       .accordion-header {
         .accordion-body {
           .item-para{
@@ -144,6 +142,17 @@ const Content = styled.div`
           background: url(${whiteArrow});
           background-repeat: no-repeat;
           background-size: cover;
+        }
+      }
+      .accordion-body {
+        .item-para {
+          font-family: Open Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 22px;
+
+color: #515151;
         }
       }
     }
