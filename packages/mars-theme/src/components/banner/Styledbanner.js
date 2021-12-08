@@ -29,7 +29,7 @@ const Section = styled.div`
   padding: 50px 0px;
 `;
 const Heading = styled.h2`
-  width:830px;
+  width:900px;
   font-weight: 500;
   font-size:49px;
   line-height:58px;

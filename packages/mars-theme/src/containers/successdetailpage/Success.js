@@ -267,11 +267,12 @@ const Paragraph = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 958px;
-  margin-left:30px;
+  margin:22px 0px 0px 30px;
   border-radius: 50px;
   img {
     width: 32px;
     height: 24px;
+    margin:0px 12px;
   }
   p {
     font-family: Open Sans;
@@ -302,6 +303,7 @@ const DescriptionText = styled.div`
   margin-top: 75px;
   h4 {
     font-family: Sans Serif;
+    margin-bottom:22px;
     color: #084892;
     font-size: 25px;
     line-height: 30px;
@@ -392,6 +394,10 @@ const Button1 = styled.div`
     font-style: normal;
     font-weight: 700;
     line-height: 19px;
+    background: #084892;
+
+box-shadow: 0px 10px 20px -5px rgba(8, 72, 146, 0.35);
+;
   }
   img{
     margin-right:22px;
@@ -412,6 +418,8 @@ button {
   font-style: normal;
   font-weight: 700;
   line-height: 19px;
+  background: #084892;
+  box-shadow: 0px 10px 20px -5px rgba(8, 72, 146, 0.35);
 }
 img{
   margin-left:22px;

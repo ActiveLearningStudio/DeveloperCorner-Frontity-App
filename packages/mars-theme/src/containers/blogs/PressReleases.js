@@ -7,6 +7,7 @@ import press2 from "../../assets/images/PressReleases/press2.png";
 import press3 from "../../assets/images/PressReleases/press3.png";
 import press4 from "../../assets/images/PressReleases/press4.png";
 import press5 from "../../assets/images/PressReleases/press5.png";
+import Pagination from "react-bootstrap/Pagination";
 const PressReleases = () => {
   return (
     <Container>
@@ -193,6 +194,12 @@ const PressReleases = () => {
           </div>
         </Article>
       </Content>
+      <Pagination>
+        <Pagination.Prev />
+        <Pagination.Item>{1}</Pagination.Item>
+        <Pagination.Item disabled>{2}</Pagination.Item>
+        <Pagination.Next />
+      </Pagination>
     </Container>
   );
 };
@@ -201,6 +208,35 @@ export default PressReleases;
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
+  .pagination {
+    justify-content: center;
+    border-radius: 25px;
+    li.page-item {
+      a.page-link {
+        border-radius: 25px;
+        background: #285aa5;
+        margin-left: 8px;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        color: #ffffff;
+      }
+    }
+    span.page-link {
+      border-radius: 25px;
+      background: #e5e5e5;
+      margin-left: 8px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      color: #ffffff;
+    }
+  }
 `;
 const Heading = styled.h2`
   width: 290px;

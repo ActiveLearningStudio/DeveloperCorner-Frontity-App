@@ -228,6 +228,23 @@ const Blogdetail = () => {
                 </div>
               </div>
             </div>
+            <div className="archives-heading">
+              <h4>archives</h4>
+              <div className="inner-link-div">
+                <a href="#">April 2021</a>
+                <a href="#">February 2021</a>
+                <a href="#">December 2020</a>
+                <a href="#">November 2020</a>
+                <a href="#">September 2020</a>
+                <a href="#">August 2020</a>
+                <a href="#">July 2020</a>
+                <a href="#">June 2020</a>
+                <a href="#">March 2020</a>
+                <a href="#">November 2019</a>
+                <a href="#">September 2019</a>
+                <a href="#">April 2019</a>
+              </div>
+            </div>
           </RecentPost>
         </DescriptionContent>
       </Container>
@@ -289,6 +306,7 @@ const SocialLinks = styled.div`
 `;
 const DescriptionContent = styled.div`
   display: flex;
+  margin-bottom: 60px;
 `;
 const Description = styled.div`
   width: 787px;
@@ -298,10 +316,11 @@ const Description = styled.div`
   .updates-list-para {
     .list-item {
       display: flex;
-      align-items: center;
+      align-items: baseline;
       img {
         width: 10px;
         height: 10px;
+        margin-right: 8px;
       }
     }
   }
@@ -388,4 +407,25 @@ const RecentPost = styled.div`
       }
     }
   }
+  .archives-heading {
+    display-flex;
+    flex-direction:column;
+    margin:30px 0px 0px 30px;
+    h4 {
+      text-transform:uppercase;
+      font-size:25px;
+      font-weight:bold;
+      color:#084892;
+      margin-bottom:25px;
+    }
+    .inner-link-div {
+      display:flex;
+      flex-direction:column;
+      a {
+        margin-bottom:8px;
+        text-decoration:none;
+      }
+    }
+  }
+  
 `;

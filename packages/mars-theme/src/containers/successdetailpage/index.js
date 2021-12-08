@@ -1,10 +1,10 @@
 import React from 'react';
 import Banner from '../../components/banner/Styledbanner.js';
-import Success from './success'
+import Success from './Success'
 const Index = () => {
     return (
         <div>
-             <Banner title="Providers"  />
+             <Banner title="Success Story"  />
             <Success/>
         </div>
     )
