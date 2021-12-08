@@ -31,6 +31,8 @@ const settings = {
             ["Thankyou", "/thankyou/"],
             ["Press&awards", "/pressawards/"],
             ["Press&detail", "/pressdetail/"],
+            ["404page", "/error/"],
+            ["webinars", "/webinars/"],
           ],
           featured: {
             showOnList: false,

@@ -23,6 +23,8 @@ import Blogdetail from "./blogdetail/blogdetail.js";
 import Thankyou from "./thankyoupage";
 import PressAwards from "./pressawards/pressAwards";
 import Pressdetail from "./pressdetail/pressDetail";
+import ErrorPage from "./404page/index";
+import Webinars from "./webinars/index";
 const Index = ({ state }) => {
   return (
     <>
@@ -53,6 +55,8 @@ const Index = ({ state }) => {
       {state.router.link === "/pressawards/" && <PressAwards />}
       {state.router.link === "/pressdetail/" && <Pressdetail />}
 
+      {state.router.link === "/error/" && <ErrorPage />}
+      {state.router.link === "/webinars/" && <Webinars />}
       <Footer />
     </>
   );
