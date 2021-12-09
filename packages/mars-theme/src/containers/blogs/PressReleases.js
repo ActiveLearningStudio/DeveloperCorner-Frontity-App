@@ -222,7 +222,7 @@ const Container = styled.div`
   padding: 0px 146px;
   .pagination {
     justify-content: center;
-    border-radius: 25px;
+    align-items: baseline;
     li.page-item {
       a.page-link {
         border-radius: 25px;
@@ -247,6 +247,18 @@ const Container = styled.div`
       line-height: 19px;
       text-align: center;
       color: #ffffff;
+    }
+    .page-item:first-child a {
+      background: none !important;
+      border: none;
+      color: #084892 !important;
+      font-size: 40px !important;
+    }
+    .page-item:last-child a {
+      background: none !important;
+      border: none;
+      color: #084892 !important;
+      font-size: 40px !important;
     }
   }
 `;
@@ -290,9 +302,9 @@ const BlogHeading = styled.h3`
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
-  display: flex;
-  align-items: center;
+  height: 63px;
   color: #084892;
+  margin-bottom: 22px;
 `;
 const BlogAuthor = styled.p`
   width: 220px;

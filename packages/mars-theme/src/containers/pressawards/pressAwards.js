@@ -292,8 +292,8 @@ const BlogHeading = styled.h3`
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
-  display: flex;
-  align-items: center;
+  height: 147px;
+  margin-bottom: 10px;
   color: #084892;
 `;
 const BlogAuthor = styled.p`
