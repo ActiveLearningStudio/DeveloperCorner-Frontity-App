@@ -17,9 +17,14 @@ import PrivacyPage from "./PolicyPrivacy/index";
 import Terms from "./termsCondition/index";
 import SuccessStories from "./SuccessStories";
 import QuickLinks from "./QuickLinks/index";
-import Success from "./success/Success";
+import Successdetail from "./successdetailpage/index";
 import Blogs from "./blogs/index";
 import Blogdetail from "./blogdetail/blogdetail.js";
+import Thankyou from "./thankyoupage";
+import PressAwards from "./pressawards/pressAwards";
+import Pressdetail from "./pressdetail/pressDetail";
+import ErrorPage from "./404page/index";
+import Webinars from "./webinars/index";
 const Index = ({ state }) => {
   return (
     <>
@@ -42,10 +47,16 @@ const Index = ({ state }) => {
       {state.router.link === "/privacypolicy/" && <PrivacyPage />}
       {state.router.link === "/termscondition/" && <Terms />}
       {state.router.link === "/successstories/" && <SuccessStories />}
-      {state.router.link === "/success/" && <Success />}
+      {state.router.link === "/successdetail/" && <Successdetail />}
       {state.router.link === "/learning/" && <IntractiveLearning />}
       {state.router.link === "/blogs/" && <Blogs />}
       {state.router.link === "/blogdetail/" && <Blogdetail />}
+      {state.router.link === "/thankyou/" && <Thankyou />}
+      {state.router.link === "/pressawards/" && <PressAwards />}
+      {state.router.link === "/pressdetail/" && <Pressdetail />}
+
+      {state.router.link === "/error/" && <ErrorPage />}
+      {state.router.link === "/webinars/" && <Webinars />}
       <Footer />
     </>
   );

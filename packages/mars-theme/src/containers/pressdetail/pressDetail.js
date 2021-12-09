@@ -1,6 +1,6 @@
 import React from "react";
-import { styled } from "frontity";
 import Banner from "../../components/banner/Styledbanner";
+import { styled } from "frontity";
 import facebookicon from "../../assets/images/social-icons/facebook.png";
 import twittericon from "../../assets/images/social-icons/twitter.png";
 import linkedicon from "../../assets/images/social-icons/linked-in.png";
@@ -15,10 +15,10 @@ import articleimg4 from "../../assets/images/PressReleases/articleimg4.png";
 import articleimg5 from "../../assets/images/PressReleases/articleimg5.png";
 import articleimg6 from "../../assets/images/PressReleases/articleimg6.png";
 import articleimg7 from "../../assets/images/PressReleases/articleimg7.png";
-const Blogdetail = () => {
+const PressDetail = () => {
   return (
-    <>
-      <Banner title="Blog" />
+    <div>
+      <Banner title="Press" />
       <Container>
         <BlogContent>
           <div className="updates-content">
@@ -248,11 +248,11 @@ const Blogdetail = () => {
           </RecentPost>
         </DescriptionContent>
       </Container>
-    </>
+    </div>
   );
 };
 
-export default Blogdetail;
+export default PressDetail;
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
