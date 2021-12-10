@@ -332,6 +332,7 @@ const Description = styled.div`
   button.link-btn {
     width: 301px;
     height: 45px;
+    border:none;
     font-weight: 700;
     margin-top: 35px;
     background: #084892;
