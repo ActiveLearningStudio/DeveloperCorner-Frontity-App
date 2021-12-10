@@ -252,13 +252,13 @@ const Container = styled.div`
       background: none !important;
       border: none;
       color: #084892 !important;
-      font-size: 40px !important;
+      font-size: 30px !important;
     }
     .page-item:last-child a {
       background: none !important;
       border: none;
       color: #084892 !important;
-      font-size: 40px !important;
+      font-size: 30px !important;
     }
   }
 `;
