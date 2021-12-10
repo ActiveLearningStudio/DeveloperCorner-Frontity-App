@@ -3,11 +3,14 @@ import Banner from "../../components/banner/Styledbanner";
 import { styled } from "frontity";
 import arrow from "../../assets/images/yellow-arrow.png";
 import currikiupdate from "../../assets/images/currikiupdates.png";
-import press1 from "../../assets/images/PressReleases/press1.png";
-import press2 from "../../assets/images/PressReleases/press2.png";
-import press3 from "../../assets/images/PressReleases/press3.png";
-import press4 from "../../assets/images/PressReleases/press4.png";
-import press5 from "../../assets/images/PressReleases/press5.png";
+import pressCard1 from "../../assets/images/pressCard1.png";
+import pressCard2 from "../../assets/images/pressCard2.png";
+import pressCard3 from "../../assets/images/pressCard3.png";
+import pressCard5 from "../../assets/images/pressCard5.png";
+import pressCard6 from "../../assets/images/pressCard6.png";
+import pressCard8 from "../../assets/images/pressCard8.png";
+import pressCard9 from "../../assets/images/pressCard9.png";
+import pressCard10 from "../../assets/images/pressCard10.png";
 import Pagination from "react-bootstrap/Pagination";
 const PressAwards = () => {
   return (
@@ -18,13 +21,14 @@ const PressAwards = () => {
         <Content>
           <Article>
             <div className="blog-image">
-              <img src={currikiupdate} alt="" />
+              <img src={pressCard1} alt="" />
             </div>
             <div className="article-text">
               <BlogHeading>
-                What's New with CurrikiStudio Updates as of November 2020
+                “How to Become an Entrepreneur” is Now Available Online as the
+                First Higher Education Course Designed with CurrikiStudio
               </BlogHeading>
-              <BlogAuthor>By Leny Dora</BlogAuthor>
+              <BlogAuthor> By: Caroline Benoist</BlogAuthor>
               <BlogLink>
                 <Link>Red article</Link>
                 <img src={arrow} alt="" />
@@ -33,13 +37,13 @@ const PressAwards = () => {
           </Article>
           <Article>
             <div className="blog-image">
-              <img src={press1} alt="" />
+              <img src={pressCard2} alt="" />
             </div>
             <div className="article-text">
               <BlogHeading>
-                What's New with CurrikiStudio Updates as of November 2020
+                Curriki Launches Interactive Civics Videos for Remote Learning
               </BlogHeading>
-              <BlogAuthor>By Leny Dora</BlogAuthor>
+              <BlogAuthor>By: Caroline Benoist</BlogAuthor>
               <BlogLink>
                 <Link>Red article</Link>
                 <img src={arrow} alt="" />
@@ -48,58 +52,15 @@ const PressAwards = () => {
           </Article>
           <Article>
             <div className="blog-image">
-              <img src={press2} alt="" />
+              <img src={pressCard3} alt="" />
             </div>
             <div className="article-text">
               <BlogHeading>
-                What's New with CurrikiStudio Updates as of November 2020
+                Curriki Answers the Call from School Districts, Universities,
+                and Nonprofits―Launches CurrikiStudio AWS CloudFormation
+                Template
               </BlogHeading>
-              <BlogAuthor>By Leny Dora</BlogAuthor>
-              <BlogLink>
-                <Link>Red article</Link>
-                <img src={arrow} alt="" />
-              </BlogLink>
-            </div>
-          </Article>
-          <Article>
-            <div className="blog-image">
-              <img src={press3} alt="" />
-            </div>
-            <div className="article-text">
-              <BlogHeading>
-                What's New with CurrikiStudio Updates as of November 2020
-              </BlogHeading>
-              <BlogAuthor>By Leny Dora</BlogAuthor>
-              <BlogLink>
-                <Link>Red article</Link>
-                <img src={arrow} alt="" />
-              </BlogLink>
-            </div>
-          </Article>
-          <Article>
-            <div className="blog-image">
-              <img src={press4} alt="" />
-            </div>
-            <div className="article-text">
-              <BlogHeading>
-                What's New with CurrikiStudio Updates as of November 2020
-              </BlogHeading>
-              <BlogAuthor>By Leny Dora</BlogAuthor>
-              <BlogLink>
-                <Link>Red article</Link>
-                <img src={arrow} alt="" />
-              </BlogLink>
-            </div>
-          </Article>
-          <Article>
-            <div className="blog-image">
-              <img src={press5} alt="" />
-            </div>
-            <div className="article-text">
-              <BlogHeading>
-                What's New with CurrikiStudio Updates as of November 2020
-              </BlogHeading>
-              <BlogAuthor>By Leny Dora</BlogAuthor>
+              <BlogAuthor>By: Caroline Benoist</BlogAuthor>
               <BlogLink>
                 <Link>Red article</Link>
                 <img src={arrow} alt="" />
@@ -112,9 +73,11 @@ const PressAwards = () => {
             </div>
             <div className="article-text">
               <BlogHeading>
-                What's New with CurrikiStudio Updates as of November 2020
+                Curriki® Delivers Game-Changing Functionality and Access to its
+                Free Interactive Authoring Tool, CurrikiStudio, with Support
+                from Linode
               </BlogHeading>
-              <BlogAuthor>By Leny Dora</BlogAuthor>
+              <BlogAuthor>By: Caroline Benoist</BlogAuthor>
               <BlogLink>
                 <Link>Red article</Link>
                 <img src={arrow} alt="" />
@@ -123,13 +86,13 @@ const PressAwards = () => {
           </Article>
           <Article>
             <div className="blog-image">
-              <img src={press1} alt="" />
+              <img src={pressCard5} alt="" />
             </div>
             <div className="article-text">
               <BlogHeading>
-                What's New with CurrikiStudio Updates as of November 2020
+                Curriki® Unveils Multi - platform Publishing for CurrikiStudio
               </BlogHeading>
-              <BlogAuthor>By Leny Dora</BlogAuthor>
+              <BlogAuthor>By: Caroline Benoist</BlogAuthor>
               <BlogLink>
                 <Link>Red article</Link>
                 <img src={arrow} alt="" />
@@ -138,13 +101,14 @@ const PressAwards = () => {
           </Article>
           <Article>
             <div className="blog-image">
-              <img src={press2} alt="" />
+              <img src={pressCard6} alt="" />
             </div>
             <div className="article-text">
               <BlogHeading>
-                What's New with CurrikiStudio Updates as of November 2020
+                Curriki Launches CurrikiStudio to Fast-track Digital Content
+                Authoring and Delivery for Distance Learning
               </BlogHeading>
-              <BlogAuthor>By Leny Dora</BlogAuthor>
+              <BlogAuthor>By: Caroline Benoist</BlogAuthor>
               <BlogLink>
                 <Link>Red article</Link>
                 <img src={arrow} alt="" />
@@ -153,13 +117,14 @@ const PressAwards = () => {
           </Article>
           <Article>
             <div className="blog-image">
-              <img src={press3} alt="" />
+              <img src={pressCard1} alt="" />
             </div>
             <div className="article-text">
               <BlogHeading>
-                What's New with CurrikiStudio Updates as of November 2020
+                Curriki Names Keith Kostrzewski as CEO, Succeeding Chairman &
+                Co-Founder Kim Jones
               </BlogHeading>
-              <BlogAuthor>By Leny Dora</BlogAuthor>
+              <BlogAuthor>By: Caroline Benoist</BlogAuthor>
               <BlogLink>
                 <Link>Red article</Link>
                 <img src={arrow} alt="" />
@@ -168,13 +133,13 @@ const PressAwards = () => {
           </Article>
           <Article>
             <div className="blog-image">
-              <img src={press4} alt="" />
+              <img src={pressCard8} alt="" />
             </div>
             <div className="article-text">
               <BlogHeading>
-                What's New with CurrikiStudio Updates as of November 2020
+                Curriki Awarded Grants from Four Technology Giants in 2019
               </BlogHeading>
-              <BlogAuthor>By Leny Dora</BlogAuthor>
+              <BlogAuthor>By: Caroline Benoist</BlogAuthor>
               <BlogLink>
                 <Link>Red article</Link>
                 <img src={arrow} alt="" />
@@ -183,13 +148,58 @@ const PressAwards = () => {
           </Article>
           <Article>
             <div className="blog-image">
-              <img src={press5} alt="" />
+              <img src={pressCard9} alt="" />
             </div>
             <div className="article-text">
               <BlogHeading>
-                What's New with CurrikiStudio Updates as of November 2020
+                Curriki Wins EdTech Digest Cool Tool Award for Open Educational
+                Resources
               </BlogHeading>
-              <BlogAuthor>By Leny Dora</BlogAuthor>
+              <BlogAuthor>By: Caroline Benoist</BlogAuthor>
+              <BlogLink>
+                <Link>Red article</Link>
+                <img src={arrow} alt="" />
+              </BlogLink>
+            </div>
+          </Article>
+          <Article>
+            <div className="blog-image">
+              <img src={pressCard10} alt="" />
+            </div>
+            <div className="article-text">
+              <BlogHeading>
+                Curriki Offers Youth Entrepreneurs® Resources to Middle and High
+                School Business Educators for Real-World Application
+              </BlogHeading>
+              <BlogAuthor>By: Caroline Benoist</BlogAuthor>
+              <BlogLink>
+                <Link>Red article</Link>
+                <img src={arrow} alt="" />
+              </BlogLink>
+            </div>
+          </Article>
+          <Article>
+            <div className="blog-image">
+              <img src={pressCard6} alt="" />
+            </div>
+            <div className="article-text">
+              <BlogHeading>
+                Curriki Offers Two New Social Studies Collections
+              </BlogHeading>
+              <BlogAuthor>By: Caroline Benoist</BlogAuthor>
+              <BlogLink>
+                <Link>Red article</Link>
+                <img src={arrow} alt="" />
+              </BlogLink>
+            </div>
+          </Article>
+          <Article>
+            <div className="blog-image">
+              <img src={pressCard2} alt="" />
+            </div>
+            <div className="article-text">
+              <BlogHeading>Oracle Awards Curriki $20K Grant</BlogHeading>
+              <BlogAuthor>By: Caroline Benoist</BlogAuthor>
               <BlogLink>
                 <Link>Red article</Link>
                 <img src={arrow} alt="" />
@@ -261,6 +271,9 @@ const Content = styled.div`
   margin-bottom: 50px;
 `;
 const Article = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 260px;
   background: #ffffff;
   box-shadow: 0px 2px 25px 5px rgba(81, 81, 81, 0.1);
@@ -279,8 +292,8 @@ const BlogHeading = styled.h3`
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
-  display: flex;
-  align-items: center;
+  height: 147px;
+  margin-bottom: 10px;
   color: #084892;
 `;
 const BlogAuthor = styled.p`

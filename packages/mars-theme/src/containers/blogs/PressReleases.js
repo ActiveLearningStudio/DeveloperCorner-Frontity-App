@@ -7,6 +7,12 @@ import press2 from "../../assets/images/PressReleases/press2.png";
 import press3 from "../../assets/images/PressReleases/press3.png";
 import press4 from "../../assets/images/PressReleases/press4.png";
 import press5 from "../../assets/images/PressReleases/press5.png";
+import blogCard2 from "../../assets/images/blogCard2.png";
+import blogCard8 from "../../assets/images/blogCard8.png";
+import blogCard9 from "../../assets/images/blogCard9.png";
+import blogCard10 from "../../assets/images/blogCard10.png";
+import blogCard11 from "../../assets/images/blogCard11.png";
+import blogCard12 from "../../assets/images/blogCard12.png";
 import Pagination from "react-bootstrap/Pagination";
 const PressReleases = () => {
   return (
@@ -21,7 +27,7 @@ const PressReleases = () => {
             <BlogHeading>
               What's New with CurrikiStudio Updates as of November 2020
             </BlogHeading>
-            <BlogAuthor>By Leny Dora</BlogAuthor>
+            <BlogAuthor>By: Lani deGuia</BlogAuthor>
             <BlogLink>
               <Link>Red article</Link>
               <img src={arrow} alt="" />
@@ -30,103 +36,13 @@ const PressReleases = () => {
         </Article>
         <Article>
           <div className="blog-image">
-            <img src={press1} alt="" />
+            <img src={blogCard2} alt="" />
           </div>
           <div className="article-text">
             <BlogHeading>
-              What's New with CurrikiStudio Updates as of November 2020
+              Shawna Young: I’m a 4th Grade Teacher in Times of COVID
             </BlogHeading>
-            <BlogAuthor>By Leny Dora</BlogAuthor>
-            <BlogLink>
-              <Link>Red article</Link>
-              <img src={arrow} alt="" />
-            </BlogLink>
-          </div>
-        </Article>
-        <Article>
-          <div className="blog-image">
-            <img src={press2} alt="" />
-          </div>
-          <div className="article-text">
-            <BlogHeading>
-              What's New with CurrikiStudio Updates as of November 2020
-            </BlogHeading>
-            <BlogAuthor>By Leny Dora</BlogAuthor>
-            <BlogLink>
-              <Link>Red article</Link>
-              <img src={arrow} alt="" />
-            </BlogLink>
-          </div>
-        </Article>
-        <Article>
-          <div className="blog-image">
-            <img src={press3} alt="" />
-          </div>
-          <div className="article-text">
-            <BlogHeading>
-              What's New with CurrikiStudio Updates as of November 2020
-            </BlogHeading>
-            <BlogAuthor>By Leny Dora</BlogAuthor>
-            <BlogLink>
-              <Link>Red article</Link>
-              <img src={arrow} alt="" />
-            </BlogLink>
-          </div>
-        </Article>
-        <Article>
-          <div className="blog-image">
-            <img src={press4} alt="" />
-          </div>
-          <div className="article-text">
-            <BlogHeading>
-              What's New with CurrikiStudio Updates as of November 2020
-            </BlogHeading>
-            <BlogAuthor>By Leny Dora</BlogAuthor>
-            <BlogLink>
-              <Link>Red article</Link>
-              <img src={arrow} alt="" />
-            </BlogLink>
-          </div>
-        </Article>
-        <Article>
-          <div className="blog-image">
-            <img src={press5} alt="" />
-          </div>
-          <div className="article-text">
-            <BlogHeading>
-              What's New with CurrikiStudio Updates as of November 2020
-            </BlogHeading>
-            <BlogAuthor>By Leny Dora</BlogAuthor>
-            <BlogLink>
-              <Link>Red article</Link>
-              <img src={arrow} alt="" />
-            </BlogLink>
-          </div>
-        </Article>
-        <Article>
-          <div className="blog-image">
-            <img src={currikiupdate} alt="" />
-          </div>
-          <div className="article-text">
-            <BlogHeading>
-              What's New with CurrikiStudio Updates as of November 2020
-            </BlogHeading>
-            <BlogAuthor>By Leny Dora</BlogAuthor>
-            <BlogLink>
-              <Link>Red article</Link>
-              <img src={arrow} alt="" />
-            </BlogLink>
-          </div>
-        </Article>
-        <Article>
-          <div className="blog-image">
-            <img src={press1} alt="" />
-          </div>
-          <div className="article-text">
-            <BlogHeading>
-              What's New with CurrikiStudio Updates as of November 2020
-            </BlogHeading>
-            <BlogAuthor>By Leny Dora</BlogAuthor>
+            <BlogAuthor>By: Lani deGuia</BlogAuthor>
             <BlogLink>
               <Link>Red article</Link>
               <img src={arrow} alt="" />
@@ -139,24 +55,9 @@ const PressReleases = () => {
           </div>
           <div className="article-text">
             <BlogHeading>
-              What's New with CurrikiStudio Updates as of November 2020
+              Five Ways to Use Digital Learning in Homeschooling
             </BlogHeading>
-            <BlogAuthor>By Leny Dora</BlogAuthor>
-            <BlogLink>
-              <Link>Red article</Link>
-              <img src={arrow} alt="" />
-            </BlogLink>
-          </div>
-        </Article>
-        <Article>
-          <div className="blog-image">
-            <img src={press3} alt="" />
-          </div>
-          <div className="article-text">
-            <BlogHeading>
-              What's New with CurrikiStudio Updates as of November 2020
-            </BlogHeading>
-            <BlogAuthor>By Leny Dora</BlogAuthor>
+            <BlogAuthor>By: Lani deGuia</BlogAuthor>
             <BlogLink>
               <Link>Red article</Link>
               <img src={arrow} alt="" />
@@ -169,9 +70,40 @@ const PressReleases = () => {
           </div>
           <div className="article-text">
             <BlogHeading>
-              What's New with CurrikiStudio Updates as of November 2020
+              Four Ways to Use Digital Learning in Professional Development
             </BlogHeading>
-            <BlogAuthor>By Leny Dora</BlogAuthor>
+            <BlogAuthor>By: Lani deGuia</BlogAuthor>
+            <BlogLink>
+              <Link>Red article</Link>
+              <img src={arrow} alt="" />
+            </BlogLink>
+          </div>
+        </Article>
+        <Article>
+          <div className="blog-image">
+            <img src={press3} alt="" />
+          </div>
+          <div className="article-text">
+            <BlogHeading>
+              CurrikiStudio Earns Academics’ Choice 2020 Smart Media Award for
+              Mind-Building Excellence
+            </BlogHeading>
+            <BlogAuthor>By: Lani deGuia</BlogAuthor>
+            <BlogLink>
+              <Link>Red article</Link>
+              <img src={arrow} alt="" />
+            </BlogLink>
+          </div>
+        </Article>
+        <Article>
+          <div className="blog-image">
+            <img src={press1} alt="" />
+          </div>
+          <div className="article-text">
+            <BlogHeading>
+              Five Essentials for Designing Remote Learning in Higher Education
+            </BlogHeading>
+            <BlogAuthor>By: Lani deGuia</BlogAuthor>
             <BlogLink>
               <Link>Red article</Link>
               <img src={arrow} alt="" />
@@ -184,9 +116,89 @@ const PressReleases = () => {
           </div>
           <div className="article-text">
             <BlogHeading>
-              What's New with CurrikiStudio Updates as of November 2020
+              E-Learning: Your Burning Questions Answered
             </BlogHeading>
-            <BlogAuthor>By Leny Dora</BlogAuthor>
+            <BlogAuthor>By: Lani deGuia</BlogAuthor>
+            <BlogLink>
+              <Link>Red article</Link>
+              <img src={arrow} alt="" />
+            </BlogLink>
+          </div>
+        </Article>
+        <Article>
+          <div className="blog-image">
+            <img src={blogCard8} alt="" />
+          </div>
+          <div className="article-text">
+            <BlogHeading>
+              This Doesn’t Have to Be the School Year of Learning Loss. Here’s
+              Why.
+            </BlogHeading>
+            <BlogAuthor>By: Lani deGuia</BlogAuthor>
+            <BlogLink>
+              <Link>Red article</Link>
+              <img src={arrow} alt="" />
+            </BlogLink>
+          </div>
+        </Article>
+        <Article>
+          <div className="blog-image">
+            <img src={blogCard9} alt="" />
+          </div>
+          <div className="article-text">
+            <BlogHeading>
+              Ways Instructional Specialists Can Use CurrikiStudio to Support
+              Teachers This Fall
+            </BlogHeading>
+            <BlogAuthor>By: Lani deGuia</BlogAuthor>
+            <BlogLink>
+              <Link>Red article</Link>
+              <img src={arrow} alt="" />
+            </BlogLink>
+          </div>
+        </Article>
+        <Article>
+          <div className="blog-image">
+            <img src={blogCard10} alt="" />
+          </div>
+          <div className="article-text">
+            <BlogHeading>
+              CurrikiOne July 30: Publishing Interactive Content With CurrikiGo
+              (FREE webinar)
+            </BlogHeading>
+            <BlogAuthor>By: Lani deGuia</BlogAuthor>
+            <BlogLink>
+              <Link>Red article</Link>
+              <img src={arrow} alt="" />
+            </BlogLink>
+          </div>
+        </Article>
+        <Article>
+          <div className="blog-image">
+            <img src={blogCard11} alt="" />
+          </div>
+          <div className="article-text">
+            <BlogHeading>
+              CurrikiOne July 30: Publishing Interactive Content With CurrikiGo
+              (FREE webinar)
+            </BlogHeading>
+            <BlogAuthor>By: Lani deGuia</BlogAuthor>
+            <BlogLink>
+              <Link>Red article</Link>
+              <img src={arrow} alt="" />
+            </BlogLink>
+          </div>
+        </Article>
+        <Article>
+          <div className="blog-image">
+            <img src={blogCard12} alt="" />
+          </div>
+          <div className="article-text">
+            <BlogHeading>
+              CurrikiOne: Free Webinar, Designing Immersive Learning Experiences
+              for Today’s Learner
+            </BlogHeading>
+            <BlogAuthor>By: Lani deGuia</BlogAuthor>
             <BlogLink>
               <Link>Red article</Link>
               <img src={arrow} alt="" />
@@ -210,7 +222,7 @@ const Container = styled.div`
   padding: 0px 146px;
   .pagination {
     justify-content: center;
-    border-radius: 25px;
+    align-items: baseline;
     li.page-item {
       a.page-link {
         border-radius: 25px;
@@ -236,6 +248,18 @@ const Container = styled.div`
       text-align: center;
       color: #ffffff;
     }
+    .page-item:first-child a {
+      background: none !important;
+      border: none;
+      color: #084892 !important;
+      font-size: 40px !important;
+    }
+    .page-item:last-child a {
+      background: none !important;
+      border: none;
+      color: #084892 !important;
+      font-size: 40px !important;
+    }
   }
 `;
 const Heading = styled.h2`
@@ -257,6 +281,9 @@ const Content = styled.div`
   margin-bottom: 50px;
 `;
 const Article = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 260px;
   background: #ffffff;
   box-shadow: 0px 2px 25px 5px rgba(81, 81, 81, 0.1);
@@ -275,9 +302,9 @@ const BlogHeading = styled.h3`
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
-  display: flex;
-  align-items: center;
+  height: 63px;
   color: #084892;
+  margin-bottom: 22px;
 `;
 const BlogAuthor = styled.p`
   width: 220px;

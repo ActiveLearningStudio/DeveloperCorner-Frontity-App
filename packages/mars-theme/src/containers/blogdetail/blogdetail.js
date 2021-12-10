@@ -275,8 +275,6 @@ const Heading = styled.div`
   font-weight: 700;
   font-size: 32px;
   line-height: 38px;
-  display: flex;
-  align-items: center;
   text-transform: capitalize;
   color: #084892;
   margin-bottom: 30px;
@@ -306,10 +304,10 @@ const SocialLinks = styled.div`
 `;
 const DescriptionContent = styled.div`
   display: flex;
-  margin-bottom: 60px;
 `;
 const Description = styled.div`
   width: 787px;
+  margin-bottom: 106px;
   .article-desc-image {
     margin-bottom: 20px;
   }
