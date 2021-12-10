@@ -21,7 +21,7 @@ const settings = {
             ["Ourmission", "/ourmission"],
             ["SupportLearning", "/supportlearning"],
             ["PrivacyPolicy", "/privacypolicy"],
-            ["TermsCondition", "/termscondition"],
+            ["TermsofServices", "/termscondition"],
             ["SuccessStories", "  /successstories/"],
             ["InterativeLearning", "/learning/"],
             ["GeneralDiscussion", "/generaldiscussion/"],

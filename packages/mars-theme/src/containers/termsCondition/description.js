@@ -1101,6 +1101,7 @@ function Description() {
             <p> e-mail: info@curriki.org</p>
             <p>
             Address:</p>
+            <div className="diclosure-para">
             <p>
             Curriki 
             </p>
@@ -1108,9 +1109,10 @@ function Description() {
             <p>Cupertino, CA 95014 </p>
             <p>Phone: 1-408-655-0233</p>
             <p> Fax:1-408-608-0332 </p>
+            </div>
             <p>Previous Terms of
             Service can be found <a href="#">here</a>.
-          </p>
+            </p>
          
         </div>
       </div>

@@ -109,6 +109,7 @@
 .text-section .description-contaner .description-text .description-heading {
   display: flex;
   padding-bottom: 21px;
+  width:600px;
 }
 .text-section .description-contaner .description-text .description-heading h2 {
   color: rgb(8, 72, 146);
@@ -134,6 +135,12 @@ display: flex;
   font-size: 25px;
   line-height: 30px;
   color: #084892;
+}
+.text-section .description-contaner .description-text  .diclosure-para  {
+  margin-bottom: 20px;
+ }
+.text-section .description-contaner .description-text  .diclosure-para p {
+ margin-bottom: 0px;
 }
 .text-section .description-contaner .description-text p {
   font-family: "Open Sans", sans-serif;
