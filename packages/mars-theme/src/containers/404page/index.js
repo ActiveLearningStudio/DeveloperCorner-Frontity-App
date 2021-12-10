@@ -48,6 +48,7 @@ const Subheading = styled.h2`
   font-family: Rubik;
   font-style: normal;
   font-weight: 700;
+  width:597px;
   font-size: 32px;
   line-height: 38px;
   font-feature-settings: "case" on;
@@ -64,6 +65,7 @@ const Paragraph = styled.p`
   line-height: 25px;
   font-feature-settings: "case" on;
   margin-bottom: 40px;
+  width:597px;
   color: #515151;
 `;
 const ErrorButtons = styled.div``;

@@ -62,6 +62,7 @@ const Paragraph = styled.p`
   text-align: center;
   color: #084892;
   margin-bottom: 30px;
+  
 `;
 const Subheading = styled.h5`
   font-family: Rubik;
