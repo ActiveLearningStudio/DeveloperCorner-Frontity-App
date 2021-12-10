@@ -26,7 +26,7 @@ const Blogdetail = () => {
               What's New with CurrikiStudio? Updates As of November 2020
             </Heading>
             <Paragraph>
-              <span>By Lani deguide</span>
+              <span>By Lani deGuia</span>
               <span>Nov 17, 2020</span>
               <span>Blog</span>
               <span>0 Comments</span>
@@ -172,6 +172,13 @@ const Blogdetail = () => {
                 <DescPara> Collaboration and conferencing </DescPara>
               </div>
             </div>
+            <DescPara>
+              Like the new updates to CurrikiStudio and interested in joining
+              this next innovation in digital learning? CurrikiStudio is a FREE
+              digital learning design platform! Sign up for your account and
+              start building today!
+            </DescPara>
+            <button className="link-btn">Get CurrikiStudio for FREE</button>
           </Description>
           <RecentPost>
             <div className="recent-post-content">
@@ -322,6 +329,16 @@ const Description = styled.div`
       }
     }
   }
+  button.link-btn {
+    width: 301px;
+    height: 45px;
+    font-weight: 700;
+    margin-top: 35px;
+    background: #084892;
+    color: #ffffff;
+    box-shadow: 0px 10px 20px -5px rgba(8, 72, 146, 0.35);
+    border-radius: 25px;
+  }
 `;
 const DescHeading = styled.h3`
   font-family: Rubik;
@@ -383,6 +400,7 @@ const RecentPost = styled.div`
       padding-bottom: 20px;
       margin-top: 20px;
       p {
+        max-width: 255px;
         font-family: Rubik;
         font-style: normal;
         font-weight: 500;

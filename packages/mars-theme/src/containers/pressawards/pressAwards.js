@@ -30,7 +30,7 @@ const PressAwards = () => {
               </BlogHeading>
               <BlogAuthor> By: Caroline Benoist</BlogAuthor>
               <BlogLink>
-                <Link>Red article</Link>
+                <Link>Read article</Link>
                 <img src={arrow} alt="" />
               </BlogLink>
             </div>
@@ -45,7 +45,7 @@ const PressAwards = () => {
               </BlogHeading>
               <BlogAuthor>By: Caroline Benoist</BlogAuthor>
               <BlogLink>
-                <Link>Red article</Link>
+                <Link>Read article</Link>
                 <img src={arrow} alt="" />
               </BlogLink>
             </div>
@@ -62,7 +62,7 @@ const PressAwards = () => {
               </BlogHeading>
               <BlogAuthor>By: Caroline Benoist</BlogAuthor>
               <BlogLink>
-                <Link>Red article</Link>
+                <Link>Read article</Link>
                 <img src={arrow} alt="" />
               </BlogLink>
             </div>
@@ -79,7 +79,7 @@ const PressAwards = () => {
               </BlogHeading>
               <BlogAuthor>By: Caroline Benoist</BlogAuthor>
               <BlogLink>
-                <Link>Red article</Link>
+                <Link>Read article</Link>
                 <img src={arrow} alt="" />
               </BlogLink>
             </div>
@@ -94,7 +94,7 @@ const PressAwards = () => {
               </BlogHeading>
               <BlogAuthor>By: Caroline Benoist</BlogAuthor>
               <BlogLink>
-                <Link>Red article</Link>
+                <Link>Read article</Link>
                 <img src={arrow} alt="" />
               </BlogLink>
             </div>
@@ -110,7 +110,7 @@ const PressAwards = () => {
               </BlogHeading>
               <BlogAuthor>By: Caroline Benoist</BlogAuthor>
               <BlogLink>
-                <Link>Red article</Link>
+                <Link>Read article</Link>
                 <img src={arrow} alt="" />
               </BlogLink>
             </div>
@@ -126,7 +126,7 @@ const PressAwards = () => {
               </BlogHeading>
               <BlogAuthor>By: Caroline Benoist</BlogAuthor>
               <BlogLink>
-                <Link>Red article</Link>
+                <Link>Read article</Link>
                 <img src={arrow} alt="" />
               </BlogLink>
             </div>
@@ -141,7 +141,7 @@ const PressAwards = () => {
               </BlogHeading>
               <BlogAuthor>By: Caroline Benoist</BlogAuthor>
               <BlogLink>
-                <Link>Red article</Link>
+                <Link>Read article</Link>
                 <img src={arrow} alt="" />
               </BlogLink>
             </div>
@@ -157,7 +157,7 @@ const PressAwards = () => {
               </BlogHeading>
               <BlogAuthor>By: Caroline Benoist</BlogAuthor>
               <BlogLink>
-                <Link>Red article</Link>
+                <Link>Read article</Link>
                 <img src={arrow} alt="" />
               </BlogLink>
             </div>
@@ -173,7 +173,7 @@ const PressAwards = () => {
               </BlogHeading>
               <BlogAuthor>By: Caroline Benoist</BlogAuthor>
               <BlogLink>
-                <Link>Red article</Link>
+                <Link>Read article</Link>
                 <img src={arrow} alt="" />
               </BlogLink>
             </div>
@@ -188,7 +188,7 @@ const PressAwards = () => {
               </BlogHeading>
               <BlogAuthor>By: Caroline Benoist</BlogAuthor>
               <BlogLink>
-                <Link>Red article</Link>
+                <Link>Read article</Link>
                 <img src={arrow} alt="" />
               </BlogLink>
             </div>
@@ -201,7 +201,7 @@ const PressAwards = () => {
               <BlogHeading>Oracle Awards Curriki $20K Grant</BlogHeading>
               <BlogAuthor>By: Caroline Benoist</BlogAuthor>
               <BlogLink>
-                <Link>Red article</Link>
+                <Link>Read article</Link>
                 <img src={arrow} alt="" />
               </BlogLink>
             </div>

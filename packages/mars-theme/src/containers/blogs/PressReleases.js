@@ -25,11 +25,11 @@ const PressReleases = () => {
           </div>
           <div className="article-text">
             <BlogHeading>
-              What's New with CurrikiStudio Updates as of November 2020
+              What's New with CurrikiStudio? Updates as of November 2020
             </BlogHeading>
             <BlogAuthor>By: Lani deGuia</BlogAuthor>
             <BlogLink>
-              <Link>Red article</Link>
+              <Link>Read article</Link>
               <img src={arrow} alt="" />
             </BlogLink>
           </div>
@@ -44,7 +44,7 @@ const PressReleases = () => {
             </BlogHeading>
             <BlogAuthor>By: Lani deGuia</BlogAuthor>
             <BlogLink>
-              <Link>Red article</Link>
+              <Link>Read article</Link>
               <img src={arrow} alt="" />
             </BlogLink>
           </div>
@@ -59,7 +59,7 @@ const PressReleases = () => {
             </BlogHeading>
             <BlogAuthor>By: Lani deGuia</BlogAuthor>
             <BlogLink>
-              <Link>Red article</Link>
+              <Link>Read article</Link>
               <img src={arrow} alt="" />
             </BlogLink>
           </div>
@@ -74,7 +74,7 @@ const PressReleases = () => {
             </BlogHeading>
             <BlogAuthor>By: Lani deGuia</BlogAuthor>
             <BlogLink>
-              <Link>Red article</Link>
+              <Link>Read article</Link>
               <img src={arrow} alt="" />
             </BlogLink>
           </div>
@@ -90,7 +90,7 @@ const PressReleases = () => {
             </BlogHeading>
             <BlogAuthor>By: Lani deGuia</BlogAuthor>
             <BlogLink>
-              <Link>Red article</Link>
+              <Link>Read article</Link>
               <img src={arrow} alt="" />
             </BlogLink>
           </div>
@@ -105,7 +105,7 @@ const PressReleases = () => {
             </BlogHeading>
             <BlogAuthor>By: Lani deGuia</BlogAuthor>
             <BlogLink>
-              <Link>Red article</Link>
+              <Link>Read article</Link>
               <img src={arrow} alt="" />
             </BlogLink>
           </div>
@@ -116,11 +116,11 @@ const PressReleases = () => {
           </div>
           <div className="article-text">
             <BlogHeading>
-              E-Learning: Your Burning Questions Answered
+              E-Learning: Your Burning Questions AnsweRead
             </BlogHeading>
             <BlogAuthor>By: Lani deGuia</BlogAuthor>
             <BlogLink>
-              <Link>Red article</Link>
+              <Link>Read article</Link>
               <img src={arrow} alt="" />
             </BlogLink>
           </div>
@@ -136,7 +136,7 @@ const PressReleases = () => {
             </BlogHeading>
             <BlogAuthor>By: Lani deGuia</BlogAuthor>
             <BlogLink>
-              <Link>Red article</Link>
+              <Link>Read article</Link>
               <img src={arrow} alt="" />
             </BlogLink>
           </div>
@@ -152,7 +152,7 @@ const PressReleases = () => {
             </BlogHeading>
             <BlogAuthor>By: Lani deGuia</BlogAuthor>
             <BlogLink>
-              <Link>Red article</Link>
+              <Link>Read article</Link>
               <img src={arrow} alt="" />
             </BlogLink>
           </div>
@@ -168,7 +168,7 @@ const PressReleases = () => {
             </BlogHeading>
             <BlogAuthor>By: Lani deGuia</BlogAuthor>
             <BlogLink>
-              <Link>Red article</Link>
+              <Link>Read article</Link>
               <img src={arrow} alt="" />
             </BlogLink>
           </div>
@@ -178,13 +178,10 @@ const PressReleases = () => {
             <img src={blogCard11} alt="" />
           </div>
           <div className="article-text">
-            <BlogHeading>
-              CurrikiOne July 30: Publishing Interactive Content With CurrikiGo
-              (FREE webinar)
-            </BlogHeading>
+            <BlogHeading>Why Now Is the Time for CurrikiStudio</BlogHeading>
             <BlogAuthor>By: Lani deGuia</BlogAuthor>
             <BlogLink>
-              <Link>Red article</Link>
+              <Link>Read article</Link>
               <img src={arrow} alt="" />
             </BlogLink>
           </div>
@@ -200,7 +197,7 @@ const PressReleases = () => {
             </BlogHeading>
             <BlogAuthor>By: Lani deGuia</BlogAuthor>
             <BlogLink>
-              <Link>Red article</Link>
+              <Link>Read article</Link>
               <img src={arrow} alt="" />
             </BlogLink>
           </div>
