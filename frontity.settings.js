@@ -25,7 +25,7 @@ const settings = {
             ["SuccessStories", "  /successstories/"],
             ["InterativeLearning", "/learning/"],
             ["GeneralDiscussion", "/generaldiscussion/"],
-            ["successdetail", "/successdetail/"],
+            ["SuccessStory", "/successdetail/"],
             ["Blogs", "/blogs/"],
             ["Blogdetail", "/blogdetail/"],
             ["Thankyou", "/thankyou/"],

@@ -51,10 +51,11 @@ const ParaContent = styled.div`
   width: 60%;
 `;
 const Paragraph = styled.p`
+width:900px;
   font-family: Rubik;
   font-style: normal;
   font-weight: 300;
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 25px;
+  line-height: 29px;
   color: #ffffff;
 `;

@@ -82,7 +82,7 @@ const PressDetail = () => {
                 Civicate videos, with more to come.
               </DescPara>
               <DescPara>
-                Civics enthusiasts and educators are encouraged to join
+                Civics enthusiasts and educators are encouraged to join{" "}
                 <a className="none-deco-link" href="#">
                   CurrikiStudio
                 </a>{" "}
@@ -140,7 +140,7 @@ const PressDetail = () => {
               <DescPara>
                 To learn more about Civicate’s Interactive Video Collection and
                 the CurrikiStudio Showcase Partner Program, please join our
-                webinar on 2/17 at 4 pm ET:{" "}
+                webinar on 2/17 at 4 pm ET:{" "}<br/>
                 <a className="none-deco-link" href="#">
                   https://www.curriki.org/currikione-events/
                 </a>{" "}
@@ -154,7 +154,7 @@ const PressDetail = () => {
                 over 50 mobile-first activities including interactive
                 multimedia, images, games, virtual tours, and simulations, and
                 one-click publishing to Learning Management Systems. To learn
-                more about becoming a CurrikiStudio Showcase Partner, please
+                more about becoming a CurrikiStudio Showcase Partner, please{" "}
                 <a className="none-deco-link" href="#">
                   submit an inquiry
                 </a>
@@ -190,7 +190,7 @@ const PressDetail = () => {
                 free and open tools to design, customize, and deliver
                 interactive learning content all in one place. Be part of
                 changing the lives of learners all over the world by enabling
-                great minds to reach and teach today’s learners.
+                great minds to reach and teach today’s learners.{" "}
                 <a className="none-deco-link" href="#">
                   https://www.curriki.org/
                 </a>

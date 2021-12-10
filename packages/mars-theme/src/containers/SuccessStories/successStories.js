@@ -1,6 +1,5 @@
 import React from "react";
 import { styled } from "frontity";
-import { Container } from "react-bootstrap";
 import image21 from "../../assets/images/image21.png";
 import Arrow from "../../assets/images/Arrow.svg";
 import Group2 from "../../assets/images/Group2.png";
@@ -23,53 +22,61 @@ const SuccessStories = () => {
         </Headercontainer>
         <Cardcontent>
           <Card>
+          <Cardbody>
             <img src={image21} alt="rectangle-image"></img>
-            <Cardbody>
+            <div className="card-inner-content">
               <p>
-                TCI Education Publishing Company Discovers New Ways to Reach.
+                TCI Education Publishing Company Discovers New Ways to Reach Students.
               </p>
               <Cardtext>
-                <p>Category: </p>
+                <p>Category:{' '}</p>
                 <p>Education Publishing</p>
               </Cardtext>
+              </div>
+              </Cardbody>
               <Cardlink>
                 <a href="#">Read more</a>
                 <img src={Arrow} alt="image"></img>
               </Cardlink>
-            </Cardbody>
+           
           </Card>
           <Card>
+          <Cardbody>
             <img src={Card2} alt="rectangle-image"></img>
-            <Cardbody>
+           <div className="card-inner-content">
               <p>
-                LA Opera Brings Interative Civicate Creates iteractive Civics
-                Videos.
+              LA Opera Brings Interactive and User-Friendly Digital Educational Content to Inspire and Teach the Community
               </p>
               <Cardtext>
                 <p>Category: </p>
                 <p>Education Publishing</p>
               </Cardtext>
+              </div>
+              </Cardbody>
               <Cardlink>
                 <a href="#">Read more</a>
                 <img src={Arrow} alt="image"></img>
               </Cardlink>
-            </Cardbody>
+            
           </Card>
           <Card>
+          <Cardbody>
             <img src={Card3} alt="rectangle-image"></img>
-            <Cardbody>
+            <div className="card-inner-content">
               <p>
-                Civicate Creates iteractive Civics Videos for Remove Learning
+              Civicate Creates Iteractive Civics Videos for Remove Learning
               </p>
               <Cardtext>
                 <p>Category: </p>
                 <p>K-12 Education</p>
               </Cardtext>
+              </div>
+              </Cardbody>
               <Cardlink>
                 <a href="#">Read more</a>
                 <img src={Arrow} alt="image"></img>
               </Cardlink>
-            </Cardbody>
+            
           </Card>
         </Cardcontent>
       </Container>
@@ -81,8 +88,12 @@ export default SuccessStories;
 const Section = styled.div`
   margin-top: 85px;
 `;
+const Container = styled.div`
+  max-width:1440px;
+  padding:0px 146px;
+`;
 const Headercontainer = styled.div`
-  width: 85%;
+  width: 94%;
   display: flex;
   justify-content: space-between;
 `;
@@ -102,11 +113,17 @@ const Header = styled.div`
 const Cardcontent = styled.div`
   display: flex;
   flex-wrap: wrap;
+  margin-right:-50px;
+  margin-bottom:73px;
 `;
 const Card = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
   margin-right: 55px;
   max-width: 333px;
-  margin-bottom: 73px;
+
   background: #ffffff;
   box-shadow: 0px 2px 25px 5px rgba(81, 81, 81, 0.1);
   border-radius: 5px;
@@ -120,22 +137,22 @@ const Headerbar = styled.div`
 
 const Cardbody = styled.div`
         border-radius:5px;
-        padding-left:20px;
-
+        .card-inner-content{
+          padding:14px;
+          margin-bottom:0px;
         p {
-            font family:Open-Sans;
+            font-family:Open Sans;
             font-style:normal;
             font-weight-normal;
             font-size:18px;
             color:#515151;
             line-height:25px;
-            margin-top:30px;
-
         }
+      }
       `;
 const Cardtext = styled.div`
   display: flex;
-
+  
   p {
     font-family: Rubik;
     font-style: normal;
@@ -145,6 +162,7 @@ const Cardtext = styled.div`
     color: #285aa5;
     margin-bottom: 0 !important;
     margin-top: 0;
+    color: #084892 !important;
   }
 `;
 const Cardlink = styled.div`
@@ -155,7 +173,8 @@ const Cardlink = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 62px 0 33px;
+  width:100%;
+  padding: 40px 0px 33px;
 
   a {
     color: #084892;
@@ -164,6 +183,7 @@ const Cardlink = styled.div`
     font-family: Rubic;
     font-style: normal;
     text-decoration: underline;
+    margin-left:20px;
   }
   img {
     margin-right: 25px;
