@@ -695,14 +695,14 @@ function Description() {
             <h5>No warranties</h5>
           </div>
           <p>
-          To the fullest extent permissible pursuant to applicable law, curriki, and its affiliates, partners, licensors and suppliers disclaim all warranties, statutory, express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, and non-infringement of proprietary rights.  no advice or information, whether oral or written, obtained by you from curriki or through the curriki site will create any warranty not expressly stated herein.  you expressly acknowledge that as used in this section 14 the term curriki includes curriki’s officers, directors, employees, shareholders, agents, licensors and subcontractors.
+          To the fullest extent permissible pursuant to applicable law, Curriki, and its affiliates, partners, licensors and suppliers disclaim all warranties, statutory, express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, and non-infringement of proprietary rights.  No advice or information, whether oral or written, obtained by you from Curriki or through the Curriki site will create any warranty not expressly stated herein.  You expressly acknowledge that as used in this section 14 the term curriki includes curriki’s officers, directors, employees, shareholders, agents, licensors and subcontractors.
           </p>
           <div className="sub-heading-content">
             <h5>15.2</h5>
             <h5>“As is” and “As available” and “With all faults”</h5>
           </div>
           <p>
-          You expressly agree that use of the curriki site is at your sole risk.  the curriki site and any data, information, third-party software, contributions, reference sites, services, or applications made available in conjunction with or through the curriki site are provided on an “as is” and “as available”, “with all faults” basis and without warranties or representations of any kind either express or implied.
+          You expressly agree that use of the Curriki site is at your sole risk.  The Curriki site and any data, information, third-party software, contributions, reference sites, services, or applications made available in conjunction with or through the Curriki site are provided on an “As is” and “As available”, “With all faults” basis and without warranties or representations of any kind either express or implied.
           </p>
           <div className="sub-heading-content">
             <h5>15.3</h5>
