@@ -1,17 +1,19 @@
 import { React, useState } from "react";
 import { Modal, Button } from "react-bootstrap";
-import { styled } from "frontity";
+import { styled,Global,css } from "frontity";
 import donateImg from "../../assets/images/donateImg.png";
-import "./style.css";
+import externalCss from  "./style.css";
 const DonateNow = (props) => {
   const [donatesubmit, setdonatesubmit] = useState(false);
   return (
-    <Container>
+   <div className="modal-container">
+     <Global styles={css(externalCss)} />
       <Modal
         {...props}
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
+        dialogClassName="test"
       >
         {donatesubmit != true ? (
           <div>
@@ -55,46 +57,8 @@ const DonateNow = (props) => {
           </>
         )}
       </Modal>
-    </Container>
+      </div>
   );
 };
 export default DonateNow;
-const Container = styled.div`
-  .modal-dialog {
-    .modal-content {
-      padding: 0px 146px;
-      div {
-        .modal-header {
-          background: linear-gradient(90deg, #084892 30.14%, #285aa5 94.74%);
-          background: red !important;
-          border-radius: 25px;
-          color: #084892;
-          .modal-body {
-            .modal.show .modal-dialog {
-              text-align: center;
-              h4 {
-                font-family: Rubik;
-                font-style: normal;
-                font-weight: 500;
-                font-size: 36px;
-                line-height: 43px;
-                color: #084892;
-              }
-              h3 {
-                width: 201px;
-                height: 116px;
-                font-family: Rubik;
-                font-style: normal;
-                font-weight: 300;
-                font-size: 98px;
-                line-height: 116px;
-                text-align: center;
-                color: #084892;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`;
+
