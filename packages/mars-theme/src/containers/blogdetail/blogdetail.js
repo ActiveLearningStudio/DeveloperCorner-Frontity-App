@@ -63,7 +63,7 @@ const Blogdetail = () => {
               get new updates to CurrikiStudio and see what’s coming!
             </DescPara>
             <DescHeading>Enhancements to CurrikiStudio</DescHeading>
-            <SubHeading>Publish and combine with Assets in Your LMS</SubHeading>
+            <SubHeading>Publish and Combine with Assets in Your LMS</SubHeading>
             <DescPara>
               One of our most popular requests from schools and districts is now
               a reality. You can now publish your projects and playlists to your
@@ -174,9 +174,12 @@ const Blogdetail = () => {
             </div>
             <DescPara>
               Like the new updates to CurrikiStudio and interested in joining
-              this next innovation in digital learning? CurrikiStudio is a FREE
-              digital learning design platform! Sign up for your account and
-              start building today!
+              this next innovation in digital learning?{" "}
+              <a href="#" className="none-deco-link">
+                CurrikiStudio
+              </a>{" "}
+              is a FREE digital learning design platform! Sign up for your
+              account and start building today!
             </DescPara>
             <button className="link-btn">Get CurrikiStudio for FREE</button>
           </Description>

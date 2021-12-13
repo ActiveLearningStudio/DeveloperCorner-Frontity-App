@@ -116,7 +116,7 @@ const PressReleases = () => {
           </div>
           <div className="article-text">
             <BlogHeading>
-              E-Learning: Your Burning Questions AnsweRead
+              E-Learning: Your Burning Questions Answered
             </BlogHeading>
             <BlogAuthor>By: Lani deGuia</BlogAuthor>
             <BlogLink>
@@ -206,7 +206,7 @@ const PressReleases = () => {
       <Pagination>
         <Pagination.Prev />
         <Pagination.Item>{1}</Pagination.Item>
-        <Pagination.Item disabled>{2}</Pagination.Item>
+        <Pagination.Item>{2}</Pagination.Item>
         <Pagination.Next />
       </Pagination>
     </Container>

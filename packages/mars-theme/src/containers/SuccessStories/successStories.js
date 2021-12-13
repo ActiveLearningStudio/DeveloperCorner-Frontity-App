@@ -22,61 +22,60 @@ const SuccessStories = () => {
         </Headercontainer>
         <Cardcontent>
           <Card>
-          <Cardbody>
-            <img src={image21} alt="rectangle-image"></img>
-            <div className="card-inner-content">
-              <p>
-                TCI Education Publishing Company Discovers New Ways to Reach Students.
-              </p>
-              <Cardtext>
-                <p>Category:{' '}</p>
-                <p>Education Publishing</p>
-              </Cardtext>
+            <Cardbody>
+              <img src={image21} alt="rectangle-image"></img>
+              <div className="card-inner-content">
+                <p>
+                  TCI Education Publishing Company Discovers New Ways to Reach
+                  Students.
+                </p>
+                <Cardtext>
+                  <p>Category:&nbsp; </p>
+                  <p>Education Publishing</p>
+                </Cardtext>
               </div>
-              </Cardbody>
-              <Cardlink>
-                <a href="#">Read more</a>
-                <img src={Arrow} alt="image"></img>
-              </Cardlink>
-           
+            </Cardbody>
+            <Cardlink>
+              <a href="#">Read more</a>
+              <img src={Arrow} alt="image"></img>
+            </Cardlink>
           </Card>
           <Card>
-          <Cardbody>
-            <img src={Card2} alt="rectangle-image"></img>
-           <div className="card-inner-content">
-              <p>
-              LA Opera Brings Interactive and User-Friendly Digital Educational Content to Inspire and Teach the Community
-              </p>
-              <Cardtext>
-                <p>Category: </p>
-                <p>Education Publishing</p>
-              </Cardtext>
+            <Cardbody>
+              <img src={Card2} alt="rectangle-image"></img>
+              <div className="card-inner-content">
+                <p>
+                  LA Opera Brings Interactive and User-Friendly Digital
+                  Educational Content to Inspire and Teach the Community
+                </p>
+                <Cardtext>
+                  <p>Category:&nbsp; </p>
+                  <p>Education Publishing</p>
+                </Cardtext>
               </div>
-              </Cardbody>
-              <Cardlink>
-                <a href="#">Read more</a>
-                <img src={Arrow} alt="image"></img>
-              </Cardlink>
-            
+            </Cardbody>
+            <Cardlink>
+              <a href="#">Read more</a>
+              <img src={Arrow} alt="image"></img>
+            </Cardlink>
           </Card>
           <Card>
-          <Cardbody>
-            <img src={Card3} alt="rectangle-image"></img>
-            <div className="card-inner-content">
-              <p>
-              Civicate Creates Iteractive Civics Videos for Remove Learning
-              </p>
-              <Cardtext>
-                <p>Category: </p>
-                <p>K-12 Education</p>
-              </Cardtext>
+            <Cardbody>
+              <img src={Card3} alt="rectangle-image"></img>
+              <div className="card-inner-content">
+                <p>
+                  Civicate Creates Iteractive Civics Videos for Remove Learning
+                </p>
+                <Cardtext>
+                  <p>Category:&nbsp; </p>
+                  <p>K-12 Education</p>
+                </Cardtext>
               </div>
-              </Cardbody>
-              <Cardlink>
-                <a href="#">Read more</a>
-                <img src={Arrow} alt="image"></img>
-              </Cardlink>
-            
+            </Cardbody>
+            <Cardlink>
+              <a href="#">Read more</a>
+              <img src={Arrow} alt="image"></img>
+            </Cardlink>
           </Card>
         </Cardcontent>
       </Container>
@@ -89,8 +88,8 @@ const Section = styled.div`
   margin-top: 85px;
 `;
 const Container = styled.div`
-  max-width:1440px;
-  padding:0px 146px;
+  max-width: 1440px;
+  padding: 0px 146px;
 `;
 const Headercontainer = styled.div`
   width: 94%;
@@ -113,14 +112,14 @@ const Header = styled.div`
 const Cardcontent = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin-right:-50px;
-  margin-bottom:73px;
+  margin-right: -50px;
+  margin-bottom: 73px;
 `;
 const Card = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   margin-right: 55px;
   max-width: 333px;
 
@@ -152,7 +151,7 @@ const Cardbody = styled.div`
       `;
 const Cardtext = styled.div`
   display: flex;
-  
+
   p {
     font-family: Rubik;
     font-style: normal;
@@ -173,7 +172,7 @@ const Cardlink = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width:100%;
+  width: 100%;
   padding: 40px 0px 33px;
 
   a {
@@ -183,7 +182,7 @@ const Cardlink = styled.div`
     font-family: Rubic;
     font-style: normal;
     text-decoration: underline;
-    margin-left:20px;
+    margin-left: 20px;
   }
   img {
     margin-right: 25px;

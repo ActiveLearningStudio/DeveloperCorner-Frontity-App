@@ -104,7 +104,7 @@ const Success = () => {
           </InnerContent>
         </InnerText>
         <DescriptionText>
-          <h4>A few ways currikiStudio helped la opera:</h4>
+          <h4>A few ways currikiStudio helped LA opera:</h4>
           <InnerDiv>
             <img src={plusicon} alt="" />
             <p>
@@ -155,7 +155,7 @@ const Success = () => {
               the lessons.
             </p>
           </InnerDiv>
-          <h4>imapct of currikiStudio on the la opera</h4>
+          <h4>impact of currikiStudio on the LA opera</h4>
           <p>
             LA Opera has more than doubled the amount of students participating
             since we began using CurrikiStudio.
