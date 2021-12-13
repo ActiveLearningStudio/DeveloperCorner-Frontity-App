@@ -1,6 +1,5 @@
 import { React, useState } from "react";
 import { Modal, Button } from "react-bootstrap";
-import { styled } from "frontity";
 import { Formik, Field } from "formik";
 import donateImg from "../../assets/images/donateImg.png";
 import heart from "../../assets/images/heart.png";
