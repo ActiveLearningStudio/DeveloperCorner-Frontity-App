@@ -114,6 +114,11 @@ const Cardcontent = styled.div`
   flex-wrap: wrap;
   margin-right: -50px;
   margin-bottom: 73px;
+  @media screen and (max-width: 1018px) {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 `;
 const Card = styled.div`
   display: flex;
@@ -126,16 +131,26 @@ const Card = styled.div`
   background: #ffffff;
   box-shadow: 0px 2px 25px 5px rgba(81, 81, 81, 0.1);
   border-radius: 5px;
+  @media screen and (max-width: 1018px) {
+    display: block;
+    margin: 0px;
+  }
 `;
 
 const Headerbar = styled.div`
   width: 100px;
   border-bottom: 3px solid #fa8f2c;
   transform: rotate(0deg);
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Cardbody = styled.div`
         border-radius:5px;
+          img{
+            width:100%;
+          }
         .card-inner-content{
           padding:14px;
           margin-bottom:0px;

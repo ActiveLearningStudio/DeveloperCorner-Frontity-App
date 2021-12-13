@@ -1,10 +1,10 @@
-import {React,useState} from "react";
+import { React, useState } from "react";
 import { styled } from "frontity";
 import plusicon from "../../assets/images/PLUS.svg";
 import DonorImg from "../../assets/images/ourMission/Donors3.png";
 import DonateNow from "../../components/donateModal/donateNow";
 const Donation = () => {
-  const [modalshow, setModalShow] = useState(false)
+  const [modalshow, setModalShow] = useState(false);
   return (
     <Section>
       <Container>
@@ -12,8 +12,8 @@ const Donation = () => {
           <LeftCol>
             <Heading>
               Your donation <span>supports our non-profit mission,</span> which
-              is to bring free and open technology tools into every school, college
-              and nonprofit organization.
+              is to bring free and open technology tools into every school,
+              college and nonprofit organization.
             </Heading>
 
             <Innerdiv>
@@ -39,10 +39,7 @@ const Donation = () => {
             <img src={DonorImg} alt="" />
           </RightCol>
         </Content>
-        <DonateNow
-        show={modalshow}
-        onHide={() => setModalShow(false)}
-      />
+        <DonateNow show={modalshow} onHide={() => setModalShow(false)} />
       </Container>
     </Section>
   );
@@ -67,7 +64,7 @@ const LeftCol = styled.div`
   button {
     width: 185px;
     height: 45px;
-    font-weight:700;
+    font-weight: 700;
     background: #084892;
     color: #fff;
     border: 1px solid #084892;
