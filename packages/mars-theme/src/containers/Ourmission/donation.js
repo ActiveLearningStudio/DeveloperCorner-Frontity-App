@@ -1,9 +1,10 @@
-import React from "react";
+import {React,useState} from "react";
 import { styled } from "frontity";
 import plusicon from "../../assets/images/PLUS.svg";
 import DonorImg from "../../assets/images/ourMission/Donors3.png";
-
+import DonateNow from "../../components/donateModal/donateNow";
 const Donation = () => {
+  const [modalshow, setModalShow] = useState(false)
   return (
     <Section>
       <Container>
@@ -32,12 +33,16 @@ const Donation = () => {
                 <Paragraph>If you would like to pay by credit card</Paragraph>
               </div>
             </Innerdiv>
-            <button>CLICK HERE</button>
+            <button onClick={() => setModalShow(true)}>CLICK HERE</button>
           </LeftCol>
           <RightCol>
             <img src={DonorImg} alt="" />
           </RightCol>
         </Content>
+        <DonateNow
+        show={modalshow}
+        onHide={() => setModalShow(false)}
+      />
       </Container>
     </Section>
   );
