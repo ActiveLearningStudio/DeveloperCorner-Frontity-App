@@ -220,6 +220,7 @@ const Container = styled.div`
   .pagination {
     justify-content: center;
     align-items: baseline;
+    margin-bottom:40px;
     li.page-item {
       a.page-link {
         border-radius: 25px;
@@ -229,9 +230,12 @@ const Container = styled.div`
         font-style: normal;
         font-weight: bold;
         font-size: 16px;
-        line-height: 19px;
         text-align: center;
         color: #ffffff;
+        height:36px;
+        :focus{
+          box-shadow:none;
+        }
       }
     }
     span.page-link {
@@ -244,12 +248,18 @@ const Container = styled.div`
       line-height: 19px;
       text-align: center;
       color: #ffffff;
+      width: 33px;
+      height: 36px;
+      :focus{
+        box-shadow:none;
+      }
     }
     .page-item:first-child a {
       background: none !important;
       border: none;
       color: #084892 !important;
       font-size: 30px !important;
+      
     }
     .page-item:last-child a {
       background: none !important;
