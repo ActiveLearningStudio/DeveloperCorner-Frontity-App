@@ -210,7 +210,7 @@ const PressAwards = () => {
         <Pagination>
           <Pagination.Prev />
           <Pagination.Item>{1}</Pagination.Item>
-          <Pagination.Item disabled>{2}</Pagination.Item>
+          <Pagination.Item>{2}</Pagination.Item>
           <Pagination.Next />
         </Pagination>
       </Container>
