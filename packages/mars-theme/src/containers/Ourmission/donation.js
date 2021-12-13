@@ -39,7 +39,9 @@ const Donation = () => {
             <img src={DonorImg} alt="" />
           </RightCol>
         </Content>
-        <DonateNow show={modalshow} onHide={() => setModalShow(false)} />
+        <ModelContainer>
+          <DonateNow show={modalshow} onHide={() => setModalShow(false)} />
+        </ModelContainer>
       </Container>
     </Section>
   );
@@ -115,3 +117,12 @@ const Heading = styled.h2`
   }
 `;
 const Para1 = styled.div``;
+const ModelContainer = styled.div`
+  .modal.show .modal-dialog {
+    .modal-content {
+      display: flex;
+      justify-content: center;
+      background: black;
+    }
+  }
+`;
