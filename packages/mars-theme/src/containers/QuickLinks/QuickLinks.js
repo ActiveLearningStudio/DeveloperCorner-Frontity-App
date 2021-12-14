@@ -20,7 +20,7 @@ const QuickLinks = () => {
                 <img src={SettingIcon} alt="" />
                 <p>Set up, configure and run Curriki Studio</p>
               </CardHead>
-              <InnerLinks> 
+              <InnerLinks>
                 <ol>
                   <li>Commondo non nulla vel.</li>
                   <li>
@@ -199,7 +199,11 @@ const Container = styled.div`
   max-width: 1200px;
 `;
 const Content = styled.div`
-  padding: 30px 75px 70px 75px;
+  padding: 30px 60px 70px;
+
+  @media (max-width: 980px) {
+    padding: 30px 20px 70px;
+  }
 `;
 const Cards = styled.div`
   display: flex;

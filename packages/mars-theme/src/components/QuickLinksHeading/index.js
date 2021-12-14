@@ -58,8 +58,9 @@ const Heading = styled.h3`
   color: #084892;
 `;
 const LowerHeading = styled.div`
-  width: 1008px;
+  max-width: 1008px;
   display: flex;
+  flex-wrap: wrap !important;
   justify-content: space-between;
   align-items: center;
   background: #f7faff;
@@ -95,6 +96,10 @@ const RightContent = styled.div`
   display: flex;
   align-items: center;
   margin-right: -15px;
+
+  @media (max-width: 980px) {
+    margin-top: 18px;
+  }
 `;
 const Link = styled.a`
   display: flex;
@@ -113,7 +118,7 @@ const Link = styled.a`
   }
 `;
 const HeadingBar = styled.div`
-  width: 1008px;
+  max-width: 1008px;
   justify-content: space-between;
   display: flex;
   align-items: center;
@@ -125,10 +130,13 @@ const Title = styled.h3`
   font-size: 25px;
   line-height: 30px;
   color: #f8af2c;
+  width: 132.7px;
+  flex-shrink: 0;
+  margin: 0 12px 0 0;
 `;
 const Bar = styled.div`
   border-bottom: 2px solid #f8af2c;
   height: 5px;
-  width: 855px;
+  width: 100%;
   color: #f8af2c;
 `;
