@@ -1,3 +1,158 @@
- .modal .modal-content .modal-header {
-  background: red !important;
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+.modal .modal-content {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+.modal .modal-content .modal-header {
+  background: linear-gradient(90deg, #084892 30.14%, #285aa5 94.74%);
+  height: 100px;
+  padding-left: 75px;
+}
+.modal .modal-content .modal-header .modal-title {
+  color: #f8af2c;
+}
+/* .modal .modal-content .modal-header .btn-close {
+  background-image: url("../../assets/images/x.png");
+} */
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 70px 0px 75px;
+}
+/* Second Page Donation */
+.model-body-2 .body-donation {
+  width: 945px;
+  display: flex;
+  flex-direction: column;
+}
+.model-body-2 .body-donation a {
+  text-align: left;
+}
+.model-body-2 .body-donation .inner-donation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.model-body-2 .body-donation .inner-donation .inner-dollar {
+  display: flex;
+  align-items: baseline;
+}
+.model-body-2 .body-donation img {
+  max-width: 47px;
+}
+.model-body-2 .body-donation .inner-donation .inner-content h4 {
+  width: fit-content;
+}
+.model-body-2 .form-donation form {
+  display: flex;
+  width: 945px;
+  justify-content: space-between;
+}
+.model-body-2 .form-donation .left-donation h4 {
+  font-size: 25px;
+  line-height: 30px;
+  text-align: left;
+  margin-left: 30px;
+}
+.model-body-2 .form-donation .left-donation p {
+  margin: 15px 0px 0px 30px;
+  color: #515151;
+  font-family: "Rubik";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 19px;
+  text-align: left;
+}
+.model-body-2 .form-donation .left-donation input {
+  width: 440px;
+  height: 45px;
+  margin-top: 5px;
+  border: 1px solid #515151;
+  filter: drop-shadow(-3px 5px 5px rgba(229, 238, 255, 0.35));
+  border-radius: 25px;
+}
+.model-body-2 .form-donation .right-donation {
+  display: flex;
+  flex-direction: column;
+}
+.model-body-2 .form-donation .right-donation p {
+  margin: 15px 0px 0px 30px;
+  font-family: "Rubik";
+  color: #515151;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 19px;
+  text-align: left;
+}
+.model-body-2 .form-donation .right-donation input {
+  width: 440px;
+  height: 45px;
+  margin-top: 5px;
+  border: 1px solid #515151;
+  box-sizing: border-box;
+  filter: drop-shadow(-3px 5px 5px rgba(229, 238, 255, 0.35));
+  border-radius: 25px;
+}
+.model-body-2 .form-donation .right-donation button.login-btn {
+  max-width: fit-content;
+  margin: 40px 0px 43px;
+}
+.model-body-2 .form-donation .right-donation img {
+  width: 270px;
+}
+.model-body-2 .form-donation .right-donation h4 {
+  text-align: left;
+  font-size: 25px;
+  line-height: 30px;
+  margin: 0px;
+}
+.modal-body h4 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 43px;
+  color: #084892;
+}
+.modal-body p {
+  max-width: 600px;
+  font-family: "Open Sans";
+  color: #515151;
+  font-size: 18px;
+  line-height: 25px;
+}
+.modal-body h3 {
+  font-family: "Rubik";
+  text-align: center;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 98px;
+  line-height: 116px;
+  color: #084892;
+}
+.modal-body h5 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 43px;
+  color: #084892;
+}
+.modal-body button {
+  padding: 13px 45px;
+  max-width: 210px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  height: 45px;
+  background: #084892;
+  border-radius: 25px;
+  border: none;
+  text-transform: uppercase;
+  margin: 30px 0px 20px;
 }
