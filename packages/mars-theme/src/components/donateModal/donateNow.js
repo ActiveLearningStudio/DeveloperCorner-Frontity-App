@@ -2,7 +2,7 @@ import { React, useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 import { Formik, Field } from "formik";
 import donateImg from "../../assets/images/donateImg.png";
-import heart from "../../assets/images/heart.png";
+import Back from "../../assets/images/Back.png";
 import { styled, Global, css } from "frontity";
 import externalCss from "./style.css";
 const DonateNow = (props) => {
@@ -12,7 +12,7 @@ const DonateNow = (props) => {
       <Global styles={css(externalCss)} />
       <Modal
         {...props}
-        size="lg"
+        size="xl"
         aria-labelledby="contained-modal-title-vcenter"
         centered
         dialogClassName="test"
@@ -33,13 +33,9 @@ const DonateNow = (props) => {
               </p>
               <h3>0.00</h3>
               <h5>USD</h5>
-              <button>Donate now </button>
+              <button onClick={() => setdonatesubmit(true)}>Donate now </button>
               <img src={donateImg} />
             </Modal.Body>
-            <Modal.Footer>
-              <Button onClick={() => setdonatesubmit(true)}>Donate Now</Button>
-              <Button onClick={props.onHide}>Close</Button>
-            </Modal.Footer>
           </div>
         ) : (
           <>
@@ -48,69 +44,73 @@ const DonateNow = (props) => {
                 Donations
               </Modal.Title>
             </Modal.Header>
-            <Modal.Body>
+            <Modal.Body className="model-body-2">
               <div className="body-donation">
-                <img src={heart} />
-                <a href="#">Back</a>
+                <a href="#">
+                  yfyf
+                  <img src={Back} onClick={() => setdonatesubmit(false)} />
+                </a>
                 <div className="inner-donation">
                   <div className="inner-content">
                     <h4>Make a donation</h4>
                     <p>Your donation supports our non-profit mission.</p>
                   </div>
-                  <p>
-                    0,00 <span>USD</span>
-                  </p>
+                  <div className="inner-dollar">
+                    <h3>0,00</h3>
+                    <h5>USD</h5>
+                  </div>
                 </div>
               </div>
               <div className="form-donation">
-                <div className="left-donation">
-                  <h4>Personal information</h4>
-                  <Formik
-                    initialValues={{
-                      name: "",
-                      email: "",
-                      password: "",
-                      toggle: false,
-                      checked: [],
-                    }}
-                    validate={(values) => {
-                      const errors = {};
-                      if (!values.name) {
-                        errors.name = "Required";
-                      }
-                      if (!values.password) {
-                        errors.password = "Required";
-                      }
-                      if (!values.email) {
-                        errors.email = "Required";
-                      } else if (
-                        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
-                          values.email
-                        )
-                      ) {
-                        errors.email = "Invalid email address";
-                      }
-                      return errors;
-                    }}
-                    // onSubmit={(values, { setSubmitting }) => {
-                    //  setTimeout(() => {
-                    //   alert(JSON.stringify(values, null, 2));
-                    //   setSubmitting(false);
-                    //  }, 400);
-                    // }}
-                  >
-                    {({
-                      values,
-                      errors,
-                      touched,
-                      handleChange,
-                      handleBlur,
-                      handleSubmit,
-                      isSubmitting,
-                      /* and other goodies */
-                    }) => (
-                      <form onSubmit={handleSubmit}>
-                        {/* <Headings className="form-name" color="#515151" headingType="body2" text="Username" /> */}
+                <Formik
+                  initialValues={{
+                    name: "",
+                    email: "",
+                    password: "",
+                    number: "",
+                    toggle: false,
+                    checked: [],
+                  }}
+                  validate={(values) => {
+                    const errors = {};
+                    if (!values.name) {
+                      errors.name = "Required";
+                    }
+                    if (!values.password) {
+                      errors.password = "Required";
+                    }
+                    if (!values.email) {
+                      errors.email = "Required";
+                    } else if (
+                      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
+                        values.email
+                      )
+                    ) {
+                      errors.email = "Invalid email address";
+                    }
+                    return errors;
+                  }}
+                  // onSubmit={(values, { setSubmitting }) => {
+                  //  setTimeout(() => {
+                  //   alert(JSON.stringify(values, null, 2));
+                  //   setSubmitting(false);
+                  //  }, 400);
+                  // }}
+                >
+                  {({
+                    values,
+                    errors,
+                    touched,
+                    handleChange,
+                    handleBlur,
+                    handleSubmit,
+                    isSubmitting,
+                    /* and other goodies */
+                  }) => (
+                    <form onSubmit={handleSubmit}>
+                      {/* <Headings className="form-name" color="#515151" headingType="body2" text="Username" /> */}
+                      <div className="left-donation">
+                        <h4>Personal information</h4>
                         <p>Name</p>
                         <input
                           type="name"
@@ -119,6 +119,7 @@ const DonateNow = (props) => {
                           onBlur={handleBlur}
                           value={values.name}
                         />
+
                         {errors.name && touched.name && errors.name}
                         {/* <Headings className="form-name" color="#515151" headingType="body2" text="Password" /> */}
                         <p>Email</p>
@@ -139,39 +140,9 @@ const DonateNow = (props) => {
                           value={values.number}
                         />
                         {errors.number && touched.number && errors.number}
-                      </form>
-                    )}
-                  </Formik>
-                </div>
-                <div className="right-donation">
-                  <h4>Card details</h4>
-                  <Formik
-                    initialValues={{
-                      passwerd: "",
-                      toggle: false,
-                      checked: [],
-                    }}
-                    validate={(values) => {}}
-                    // onSubmit={(values, { setSubmitting }) => {
-                    //  setTimeout(() => {
-                    //   alert(JSON.stringify(values, null, 2));
-                    //   setSubmitting(false);
-                    //  }, 400);
-                    // }}
-                  >
-                    {({
-                      values,
-                      errors,
-                      touched,
-                      handleChange,
-                      handleBlur,
-                      handleSubmit,
-                      isSubmitting,
-                      /* and other goodies */
-                    }) => (
-                      <form onSubmit={handleSubmit}>
-                        {/* <Headings className="form-name" color="#515151" headingType="body2" text="Username" /> */}
-                        {/* <Headings className="form-name" color="#515151" headingType="body2" text="Password" /> */}
+                      </div>
+                      <div className="right-donation">
+                        <h4>Card details</h4>
                         <p>Card number</p>
                         <input
                           type="passwerd"
@@ -188,17 +159,13 @@ const DonateNow = (props) => {
                         >
                           send donation
                         </button>
-                      </form>
-                    )}
-                  </Formik>
-                  <img src={donateImg} />
-                </div>
+                        <img src={donateImg} />
+                      </div>
+                    </form>
+                  )}
+                </Formik>
               </div>
             </Modal.Body>
-            <Modal.Footer>
-              <Button onClick={() => setModalShow(true)}>Donate Now</Button>
-              <Button onClick={props.onHide}>Close</Button>
-            </Modal.Footer>
           </>
         )}
       </Modal>

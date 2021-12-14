@@ -8,7 +8,7 @@ const Banner = () => {
         <Content>
           <Heading>
             {" "}
-          Be part of Curriki’s <span> groundbreaking</span> work.
+            Be part of Curriki’s <span> groundbreaking</span> work.
           </Heading>
           <Button>Donate</Button>
         </Content>
@@ -23,12 +23,12 @@ const Section = styled.div`
   widht: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  padding:50px 0px;
+  padding: 50px 0px;
 `;
 const Container = styled.div`
- max-width: 1440px;
- padding:0px 146px;
- margin:0;
+  max-width: 1440px;
+  padding: 0px 146px;
+  margin: 0;
 `;
 const Content = styled.div`
   display: flex;
@@ -51,7 +51,7 @@ const Button = styled.button`
   height: 45px;
   text-transform: uppercase;
   color: #fff;
-  font-weight:bold;
+  font-weight: bold;
   border: 1px solid #fff;
   box-sizing: border-box;
   border-radius: 25px;
