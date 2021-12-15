@@ -26,6 +26,7 @@ import PressAwards from "./pressawards/pressAwards";
 import Pressdetail from "./pressdetail/pressDetail";
 import ErrorPage from "./404page/index";
 import Webinars from "./webinars/index";
+import NewUi from './new-ui/index';
 const Globalstyle = createGlobalStyle`
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
@@ -75,6 +76,7 @@ const Index = ({ state }) => {
 
       {state.router.link === "/error/" && <ErrorPage />}
       {state.router.link === "/webinars/" && <Webinars />}
+      {state.router.link === "/newui/" && <NewUi />}
       <Footer />
     </>
   );
