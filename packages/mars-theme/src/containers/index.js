@@ -1,5 +1,6 @@
 import React from "react";
 import { Global, css, connect } from "frontity";
+import { createGlobalStyle } from "styled-components";
 import Header from "../components/Header/header.js";
 import IntractiveLearning from "./IntractiveLearning/index";
 import Footer from "../components/footer/index";
@@ -25,9 +26,20 @@ import PressAwards from "./pressawards/pressAwards";
 import Pressdetail from "./pressdetail/pressDetail";
 import ErrorPage from "./404page/index";
 import Webinars from "./webinars/index";
+const Globalstyle = createGlobalStyle`
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+ body,h1,h2,h3,h4,h5  {
+    font-family:'Rubik',sans-serif;
+}
+p {
+  font-family:'Open-Sans',sans-serif;
+}
+`;
 const Index = ({ state }) => {
   return (
     <>
+      <Globalstyle />
       <Global styles={css(bootstrapCss)} />
       <Header />
 
