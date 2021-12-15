@@ -35,7 +35,7 @@ const Content = styled.div`
   justify-content: space-between;
 `;
 const Heading = styled.h2`
-  cfont-family: Rubik;
+  cfont-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -48,6 +48,7 @@ const Heading = styled.h2`
 const Button = styled.button`
   background-color: transparent;
   width: 155px;
+  font-family: "Rubik";
   height: 45px;
   text-transform: uppercase;
   color: #fff;

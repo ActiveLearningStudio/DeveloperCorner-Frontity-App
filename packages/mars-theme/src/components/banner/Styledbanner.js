@@ -29,17 +29,17 @@ const Section = styled.div`
   padding: 50px 0px;
 `;
 const Heading = styled.h2`
-  max-width:900px;
+  max-width: 900px;
   font-weight: 500;
-  font-size:49px;
-  line-height:58px;
-  color:#FFB124;
-  font-family;rubic;
-  margin-bottom:20px;
+  font-size: 49px;
+  line-height: 58px;
+  color: #ffb124;
+  font-family: "Rubik";
+  margin-bottom: 20px;
 `;
 
 const Subheading = styled.h4`
-  font-family: Rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 300;
   font-size: 25px;
@@ -52,7 +52,7 @@ const ParaContent = styled.div`
 `;
 const Paragraph = styled.p`
   width: 900px;
-  font-family: Rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 300;
   font-size: 25px;

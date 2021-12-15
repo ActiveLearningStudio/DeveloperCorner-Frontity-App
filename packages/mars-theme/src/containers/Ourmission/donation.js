@@ -6,48 +6,48 @@ import DonateNow from "../../components/donateModal/donateNow";
 const Donation = () => {
   const [modalshow, setModalShow] = useState(false);
   return (
-    <Section>
-      <Container>
-        <Content>
-          <LeftCol>
-            <Heading>
-              Your donation <span>supports our non-profit mission,</span> which
-              is to bring free and open technology tools into every school,
-              college and nonprofit organization.
-            </Heading>
+    <Container>
+      <Content>
+        <LeftCol>
+          <Heading>
+            Your donation <span>supports our non-profit mission,</span> which is
+            to bring free and open technology tools into every school, college
+            and nonprofit organization.
+          </Heading>
 
-            <Innerdiv>
+          <Innerdiv>
+            <div className="para-content">
+              <img src={plusicon} alt="" />
               <div>
-                <img src={plusicon} alt="" />
-
                 <Paragraph>
                   If contributing by check please send your tax exept donation
                   ot Curriki, 20660 Stevens Creek blvd #332, Cupertino, CA 95014
                 </Paragraph>
+                <p>Curriki non profit taX ID#203478467</p>
               </div>
-              <p>Curriki non profit taX ID#203478467</p>
-            </Innerdiv>
-            <Innerdiv>
+            </div>
+          </Innerdiv>
+          <Innerdiv>
+            <div className="para-content">
+              <img src={plusicon} alt="" />
               <div>
-                <img src={plusicon} alt="" />
                 <Paragraph>If you would like to pay by credit card</Paragraph>
               </div>
-            </Innerdiv>
-            <button onClick={() => setModalShow(true)}>CLICK HERE</button>
-          </LeftCol>
-          <RightCol>
-            <img src={DonorImg} alt="" />
-          </RightCol>
-        </Content>
-        <DonateNow show={modalshow} onHide={() => setModalShow(false)} />
-      </Container>
-    </Section>
+            </div>
+          </Innerdiv>
+          <button onClick={() => setModalShow(true)}>CLICK HERE</button>
+        </LeftCol>
+        <RightCol>
+          <img src={DonorImg} alt="" />
+        </RightCol>
+      </Content>
+      <DonateNow show={modalshow} onHide={() => setModalShow(false)} />
+    </Container>
   );
 };
 
 export default Donation;
 
-const Section = styled.div``;
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
@@ -71,9 +71,10 @@ const LeftCol = styled.div`
     box-shadow: 0px 10px 20px -5px rgba (8, 72, 146, 0.35);
     border-radius: 25px;
     margin-top: 10px;
+    font-family: "Rubik";
   }
 `;
-const Paragraph = styled.div`
+const Paragraph = styled.p`
   margin-left: 20px;
   margin-bottom: 20px;
   font-family: Open Sans;
@@ -93,17 +94,22 @@ const RightCol = styled.div`
 const Innerdiv = styled.div`
   display: flex;
   flex-direction: column;
-  div {
+  .para-content {
     display: flex;
     align-items: flex-start;
+    div {
+      display: flex;
+      flex-direction: column;
+    }
   }
   p {
     margin-left: 38px;
+    font-family: "Open Sans";
   }
 `;
 const Heading = styled.h2`
   max-width: 504px;
-  font-family: Rubic;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -114,4 +120,3 @@ const Heading = styled.h2`
     color: #ffb124;
   }
 `;
-const Para1 = styled.div``;

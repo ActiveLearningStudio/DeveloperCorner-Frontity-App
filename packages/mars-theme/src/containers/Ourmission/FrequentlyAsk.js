@@ -99,7 +99,7 @@ const Content = styled.div`
       .accordion-header {
         .accordion-body {
           .item-para{
-            font-family: Open Sans;
+            font-family: 'Open Sans';
             font-style: normal;
             font-weight: normal;
             font-size: 16px;
@@ -110,7 +110,7 @@ const Content = styled.div`
           }
         }
         .accordion-button {
-          font-family: Rubik;
+          font-family: 'Rubik';
           font-style: normal;
           font-weight: 500;
           font-size: 18px;
@@ -146,7 +146,7 @@ const Content = styled.div`
       }
       .accordion-body {
         .item-para {
-          font-family: Open Sans;
+          font-family: 'Open Sans';
 font-style: normal;
 font-weight: normal;
 font-size: 16px;
@@ -174,7 +174,7 @@ const AccordionTitle = styled.div`
   border-radius: 5px;
 `;
 const Heading = styled.h2`
-  font-family: Rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-size: 40px;
@@ -187,8 +187,4 @@ const BottomLine = styled.div`
   @media screen and (max-width: 768px) {
     display: none;
   }
-`;
-const Paragraph = styled.div`
-  color: #515151;
-  font-family: Open Sans;
 `;
