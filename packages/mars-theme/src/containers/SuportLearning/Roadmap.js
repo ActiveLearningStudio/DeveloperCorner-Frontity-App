@@ -1,6 +1,5 @@
 import React from "react";
 import { styled, css } from "frontity";
-import StyledHeading from "../../StyledComponent/StyledHeading";
 import backgroundPic from "../../assets/images/Group153.png";
 import plusicon from "../../assets/images/PLUS.svg";
 import CardImg from "../../assets/images/Rectangle10.png";
@@ -16,7 +15,6 @@ import laptopdesignimg from "../../assets/images/laptopdesignimg.png";
 import copyrightimg from "../../assets/images/copyrightimg.png";
 import girlmobileimg from "../../assets/images/girlmobileimg.png";
 import mobileimg from "../../assets/images/mobileimg.png";
-import vectorpc from "../../assets/images/vectorpc.png";
 import wifivector from "../../assets/images/wifivector.png";
 import pcimage from "../../assets/images/Rectangle109.png";
 import AnnouncmentImg from "../../assets/images/Group563.png";
@@ -449,7 +447,6 @@ const TopHeading = styled.div`
   align-items: center;
 `;
 const Heading = styled.h2`
-  font-family: Rubik;
   font-style: normal;
   font-weight: bold;
   font-size: 32px;
@@ -459,7 +456,6 @@ const Heading = styled.h2`
 `;
 
 const Subheading = styled.h3`
-  font-family: Rubik;
   font-style: normal;
   font-weight: 300;
   font-size: 25px;
@@ -517,7 +513,6 @@ const CardHead = styled.div`
   }
 `;
 const CardHeading = styled.h5`
-  font-family: Rubik;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -528,7 +523,6 @@ const CardHeading = styled.h5`
   margin-bottom: 10px;
 `;
 const AskHeading = styled.h5`
-  font-family: Rubik;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -538,14 +532,13 @@ const AskHeading = styled.h5`
   margin-bottom: 10px;
 `;
 const Paragraph = styled.p`
-  font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 25px;
   color: #515151;
 `;
-const CardBottom = styled.p``;
+const CardBottom = styled.div``;
 const Bottom = styled.div`
   display: flex;
   align-items: flex-start;

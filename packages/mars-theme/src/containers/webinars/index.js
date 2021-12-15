@@ -2,7 +2,6 @@ import React from "react";
 import { styled, css } from "frontity";
 import webinarhero from "../../assets/images/webinarhero.svg";
 import backgroundPic from "../../assets/images/Group153.png";
-import vector1 from "../../assets/images/vector1.png";
 import Banner from "../../components/banner/Styledbanner";
 import pcimage from "../../assets/images/Rectangle109.png";
 import plusicon from "../../assets/images/PLUS.svg";
@@ -275,7 +274,6 @@ const LeftCol = styled.div``;
 const RightCol = styled.div``;
 const Heading = styled.h2`
   width: 391px;
-  font-family: Rubik;
   font-style: normal;
   font-weight: 500;
   font-size: 36px;
@@ -285,7 +283,6 @@ const Heading = styled.h2`
 `;
 const Paragraph = styled.p`
   width: 395px;
-  font-family: Rubik;
   font-style: normal;
   font-weight: 300;
   font-size: 25px;
@@ -314,7 +311,6 @@ const WebinarHeading = styled.div`
   padding-top: 200px;
   margin-bottom: 60px;
   h2 {
-    font-family: Rubik;
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
@@ -358,7 +354,6 @@ const CardHead = styled.div`
   }
 `;
 const CardHeading = styled.h5`
-  font-family: Rubik;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -370,7 +365,6 @@ const CardHeading = styled.h5`
   margin-bottom: 10px;
 `;
 const CardPara = styled.p`
-  font-family: Rubik;
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
@@ -382,7 +376,6 @@ const CardBottom = styled.div`
   justify-content: space-between;
   align-items: center;
   a {
-    font-family: Rubik;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;

@@ -36,7 +36,6 @@ const Content = styled.div`
   margin-bottom: 120px;
 `;
 const Heading = styled.h2`
-  font-family: Rubik;
   font-style: normal;
   font-weight: 500;
   font-size: 150px;
@@ -45,10 +44,9 @@ const Heading = styled.h2`
   font-weight: bold;
 `;
 const Subheading = styled.h2`
-  font-family: Rubik;
   font-style: normal;
   font-weight: 700;
-  width:597px;
+  width: 597px;
   font-size: 32px;
   line-height: 38px;
   font-feature-settings: "case" on;
@@ -58,14 +56,13 @@ const Subheading = styled.h2`
   }
 `;
 const Paragraph = styled.p`
-  font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 25px;
   font-feature-settings: "case" on;
   margin-bottom: 40px;
-  width:597px;
+  width: 597px;
   color: #515151;
 `;
 const ErrorButtons = styled.div``;
@@ -88,10 +85,9 @@ const SecondaryButton = styled.button`
   border-radius: 25px;
   background: transparent;
   border: 1px solid #084892;
-  font-family: Rubik
   font-style: normal;
   font-weight: bold;
-  color:#084892;
+  color: #084892;
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;

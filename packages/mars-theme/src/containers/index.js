@@ -35,6 +35,12 @@ const Globalstyle = createGlobalStyle`
 p {
   font-family:'Open-Sans',sans-serif;
 }
+button {
+  font-family:'Rubik',sans-serif;
+}
+a {
+   font-family:'Rubik',sans-serif;
+}
 `;
 const Index = ({ state }) => {
   return (

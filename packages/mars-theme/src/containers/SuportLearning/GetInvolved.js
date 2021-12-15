@@ -1,8 +1,5 @@
 import React from "react";
 import { styled } from "frontity";
-import PrimaryButton from "../../StyledComponent/PrimaryButton";
-import StyledPara from "../../StyledComponent/StyledPara";
-import StyledHeading from "../../StyledComponent/StyledHeading";
 import plusicon from "../../assets/images/PLUS.svg";
 const GetInvolved = () => {
   return (
@@ -63,7 +60,6 @@ const Topheading = styled.div`
   align-items: center;
 `;
 const Heading = styled.h3`
-  font-family: Rubik;
   font-style: normal;
   font-weight: bold;
   font-size: 32px;
@@ -74,7 +70,7 @@ const Heading = styled.h3`
 `;
 
 const Subheading = styled.span`
-  font-family: Rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -83,7 +79,6 @@ const Subheading = styled.span`
   text-transform: uppercase;
 `;
 const Colheading = styled.h3`
-  font-family: Rubik;
   font-style: normal;
   font-weight: 300;
   font-size: 25px;
@@ -104,7 +99,6 @@ const LeftCol = styled.div``;
 const RightCol = styled.div``;
 const Paragraph = styled.p`
   width: 500px;
-  font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -123,6 +117,7 @@ const Button = styled.button`
   padding: 5px 40px;
   background: #084892;
   color: #fff;
+
   text-transform: uppercase;
   border: 1px solid #084892;
   box-shadow: 0px 10px 20px -5px rgb(8 72 146 / 35%);

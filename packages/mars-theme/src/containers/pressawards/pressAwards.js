@@ -225,21 +225,20 @@ const Container = styled.div`
   .pagination {
     justify-content: center;
     align-items: baseline;
-    margin-bottom:40px;
+    margin-bottom: 40px;
     li.page-item {
       a.page-link {
         border-radius: 25px;
         background: #285aa5;
         margin-left: 8px;
-        font-family: Rubik;
         font-style: normal;
         font-weight: bold;
         font-size: 16px;
         text-align: center;
         color: #ffffff;
-        height:37px;
-        :focus{
-          box-shadow:none;
+        height: 37px;
+        :focus {
+          box-shadow: none;
         }
       }
     }
@@ -255,8 +254,8 @@ const Container = styled.div`
       color: #ffffff;
       width: 33px;
       height: 36px;
-      :focus{
-        box-shadow:none;
+      :focus {
+        box-shadow: none;
       }
     }
     .page-item:first-child a {
@@ -264,7 +263,6 @@ const Container = styled.div`
       border: none;
       color: #084892 !important;
       font-size: 30px !important;
-      
     }
     .page-item:last-child a {
       background: none !important;
@@ -276,7 +274,6 @@ const Container = styled.div`
 `;
 const Heading = styled.h2`
   width: 290px;
-  font-family: rubik;
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -309,7 +306,6 @@ const Article = styled.div`
 
 const BlogHeading = styled.h3`
   width: 220px;
-  font-family: Rubik;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -320,7 +316,6 @@ const BlogHeading = styled.h3`
 `;
 const BlogAuthor = styled.p`
   width: 220px;
-  font-family: Rubik;
   font-style: normal;
   font-weight: 300;
   font-size: 12px;
@@ -334,7 +329,6 @@ const BlogLink = styled.div`
   align-items: center;
 `;
 const Link = styled.a`
-  font-family: Rubik;
   font-style: normal;
   font-weight: 500;
   font-size: 14.7987px;

@@ -47,7 +47,6 @@ const DonateNow = (props) => {
             <Modal.Body className="model-body-2">
               <div className="body-donation">
                 <a href="#">
-                  yfyf
                   <img src={Back} onClick={() => setdonatesubmit(false)} />
                 </a>
                 <div className="inner-donation">
