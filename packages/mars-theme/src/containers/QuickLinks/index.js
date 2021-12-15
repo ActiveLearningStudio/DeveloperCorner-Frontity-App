@@ -8,7 +8,6 @@ const Index = () => {
   return (
     <FlexBox>
       <Sidebar />
-
       <QuickLinks />
     </FlexBox>
   );

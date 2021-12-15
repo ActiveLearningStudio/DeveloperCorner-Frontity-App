@@ -33,6 +33,7 @@ const settings = {
             ["Press&detail", "/pressdetail/"],
             ["404page", "/error/"],
             ["webinars", "/webinars/"],
+            ["NewUI", "/newui/"],
           ],
           featured: {
             showOnList: false,
