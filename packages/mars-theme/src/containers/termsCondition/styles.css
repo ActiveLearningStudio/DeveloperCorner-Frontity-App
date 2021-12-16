@@ -15,14 +15,14 @@
   }
 }
 .hero-section .hero-text {
-  width: 1297px;
-  margin: auto;
+  max-width: 1440px;
+  padding: 0px 146px;
 }
 .hero-section .hero-text h1 {
   color: rgb(255, 177, 36);
   font-size: 48px;
   font-weight: bold;
-  font-family: "rubic";
+  font-family: "Rubik";
   font-style: normal;
 }
 @media screen and (max-width: 1100px) {
@@ -37,8 +37,9 @@
   }
 }
 .text-section {
-  max-width: 1297px;
-  margin: 0 auto 70px;
+  max-width: 1440px;
+  padding: 0px 146px;
+  margin-bottom: 70px;
   display: flex;
 }
 @media screen and (max-width: 1100px) {
@@ -76,7 +77,7 @@
 }
 .text-section .heading-contaner .is-current .heading p {
   color: #084892 !important;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Rubik";
   font-size: 16px;
   font-weight: 700;
   line-height: 22px;
@@ -111,7 +112,7 @@
 .text-section .description-contaner .description-text .description-heading {
   display: flex;
   padding-bottom: 21px;
-  width:600px;
+  width: 600px;
 }
 .text-section .description-contaner .description-text .description-heading h2 {
   color: rgb(8, 72, 146);
@@ -121,7 +122,7 @@
   font-style: normal;
 }
 .text-section .description-contaner .description-text .sub-heading-content {
-display: flex;
+  display: flex;
 }
 .text-section
   .description-contaner
@@ -138,11 +139,11 @@ display: flex;
   line-height: 30px;
   color: #084892;
 }
-.text-section .description-contaner .description-text  .diclosure-para  {
+.text-section .description-contaner .description-text .diclosure-para {
   margin-bottom: 20px;
- }
-.text-section .description-contaner .description-text  .diclosure-para p {
- margin-bottom: 0px;
+}
+.text-section .description-contaner .description-text .diclosure-para p {
+  margin-bottom: 0px;
 }
 .text-section .description-contaner .description-text p {
   font-family: "Open Sans", sans-serif;
