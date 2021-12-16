@@ -33,6 +33,7 @@
     "history": "^5.0.1",
     "react-bootstrap": "^2.0.3",
     "react-dom": "^17.0.2",
+    "react-js-pagination": "^3.0.3",
     "react-pro-sidebar": "^0.7.1",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
