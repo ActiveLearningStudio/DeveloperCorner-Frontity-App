@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 .pro-sidebar {
   padding: 40px 16px 24px 16px;
   width: 240px;
@@ -14,7 +16,7 @@
   margin-bottom: 14px;
 }
 .pro-sidebar .pro-sidebar-inner .navbar-header p {
-  font-family: Rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -31,7 +33,7 @@
   background-color: #fff;
 }
 .pro-sidebar .pro-sidebar-layout .pro-sidebar-content h5 {
-  font-family: Rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -48,7 +50,7 @@
   .pro-menu
   .pro-inner-item
   span {
-  font-family: Rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: normal;
   font-size: 14px;

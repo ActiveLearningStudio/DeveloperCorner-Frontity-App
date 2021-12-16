@@ -49,7 +49,7 @@ const Heading = styled.h3`
   background: #f7faff;
   border-radius: 4px;
   padding: 8px;
-  font-family: Rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: bold;
   font-size: 25px;
@@ -73,7 +73,7 @@ const Search = styled.div`
     border: none !important;
     border-bottom: 2px solid #084892 !important;
     input {
-      font-family: Open Sans;
+      font-family: "Open Sans";
       font-style: normal;
       font-weight: normal;
       font-size: 14px;
@@ -107,7 +107,7 @@ const Link = styled.a`
   margin-right: 15px;
   text-decoration: none;
   a {
-    font-family: Rubik;
+    font-family: "Rubik";
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -124,7 +124,7 @@ const HeadingBar = styled.div`
   align-items: center;
 `;
 const Title = styled.h3`
-  font-family: Rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: bold;
   font-size: 25px;

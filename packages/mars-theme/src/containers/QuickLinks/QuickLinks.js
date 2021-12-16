@@ -227,7 +227,7 @@ const CardHead = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   p {
-    font-family: Rubik;
+    font-family: "Rubik";
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -242,7 +242,7 @@ const CardContent = styled.div`
 `;
 const InnerLinks = styled.div`
   li {
-    font-family: Open Sans;
+    font-family: "Open Sans";
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -271,7 +271,7 @@ const Link = styled.div`
   justify-content: flex-end;
   align-items: center;
   a {
-    font-family: Rubik;
+    font-family: "Rubik";
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
