@@ -1,4 +1,4 @@
-import React from "react";
+import {React,useState} from "react";
 import { styled } from "frontity";
 import arrow from "../../assets/images/yellow-arrow.png";
 import currikiupdate from "../../assets/images/currikiupdates.png";
@@ -13,8 +13,13 @@ import blogCard9 from "../../assets/images/blogCard9.png";
 import blogCard10 from "../../assets/images/blogCard10.png";
 import blogCard11 from "../../assets/images/blogCard11.png";
 import blogCard12 from "../../assets/images/blogCard12.png";
-import Pagination from "react-bootstrap/Pagination";
+// import Pagination from "react-bootstrap/Pagination";
+import Pagination from "react-js-pagination";
 const PressReleases = () => {
+  const [activePage, setactivePage] = useState(1)
+  function handlepagechange(){
+    setactivePage(2);
+  }
   return (
     <Container>
       <Heading>Press Releases</Heading>
@@ -227,12 +232,16 @@ const PressReleases = () => {
           </div>
         </Article>
       </Content>
-      <Pagination>
-        <Pagination.Prev />
-        <Pagination.Item>{1}</Pagination.Item>
-        <Pagination.Item>{2}</Pagination.Item>
-        <Pagination.Next />
-      </Pagination>
+      <Pagination
+          itemClass="page-item"
+          linkClass="page-link"
+          firstPageText="false"
+          activePage={activePage}
+          itemsCountPerPage={10}
+          totalItemsCount={450}
+          pageRangeDisplayed={2}
+          onChange={handlepagechange}
+        />
     </Container>
   );
 };
@@ -245,50 +254,44 @@ const Container = styled.div`
     justify-content: center;
     align-items: baseline;
     margin-bottom: 40px;
-    li.page-item {
-      a.page-link {
-        border-radius: 25px;
-        background: #285aa5;
-        margin-left: 8px;
-        font-family: "Rubik";
-        font-style: normal;
-        font-weight: bold;
-        font-size: 16px;
-        text-align: center;
-        color: #ffffff;
-        height: 36px;
-        :focus {
-          box-shadow: none;
-        }
-      }
+    // li.page-item {
+    //   a.page-link {
+    //     border-radius: 25px;
+    //     background: #285aa5;
+    //     margin-left: 8px;
+    //     font-family: "Rubik";
+    //     font-style: normal;
+    //     font-weight: bold;
+    //     font-size: 16px;
+    //     text-align: center;
+    //     color: #ffffff;
+    //     height: 36px;
+    //     :focus {
+    //       box-shadow: none;
+    //     }
+    //   }
+    // }
+    // span.page-link {
+    //   border-radius: 25px;
+    //   background: #e5e5e5;
+    //   margin-left: 8px;
+    //   font-style: normal;
+    //   font-weight: bold;
+    //   font-size: 16px;
+    //   line-height: 19px;
+    //   text-align: center;
+    //   color: #ffffff;
+    //   width: 33px;
+    //   height: 36px;
+    //   :focus {
+    //     box-shadow: none;
+    //   }
+    // }
+    .page-item:first-child {
+      display:none;
     }
-    span.page-link {
-      border-radius: 25px;
-      background: #e5e5e5;
-      margin-left: 8px;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 16px;
-      line-height: 19px;
-      text-align: center;
-      color: #ffffff;
-      width: 33px;
-      height: 36px;
-      :focus {
-        box-shadow: none;
-      }
-    }
-    .page-item:first-child a {
-      background: none !important;
-      border: none;
-      color: #084892 !important;
-      font-size: 30px !important;
-    }
-    .page-item:last-child a {
-      background: none !important;
-      border: none;
-      color: #084892 !important;
-      font-size: 30px !important;
+    .page-item:last-child  {
+    display:none;
     }
   }
 `;
