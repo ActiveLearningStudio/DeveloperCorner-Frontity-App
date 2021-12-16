@@ -54,7 +54,6 @@ const ThankyouDiv = styled.div`
   }
 `;
 const Paragraph = styled.p`
-  font-family: Rubik;
   font-style: normal;
   font-weight: normal;
   font-size: 25px;
@@ -62,10 +61,8 @@ const Paragraph = styled.p`
   text-align: center;
   color: #084892;
   margin-bottom: 30px;
-  
 `;
 const Subheading = styled.h5`
-  font-family: Rubik;
   font-style: normal;
   font-weight: normal;
   font-size: 25px;
@@ -73,7 +70,6 @@ const Subheading = styled.h5`
   color: #084892;
 `;
 const Email = styled.p`
-  font-family: Rubik;
   font-style: normal;
   font-weight: 300;
   font-size: 25px;

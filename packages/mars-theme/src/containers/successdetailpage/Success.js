@@ -14,7 +14,7 @@ import Left from "../../assets/images/Left.png";
 import Right from "../../assets/images/Right.png";
 const Success = () => {
   return (
-    <Section>
+    <>
       <Container>
         <ContentText>
           <LeftContent>
@@ -237,20 +237,18 @@ const Success = () => {
           </Button2>
         </InnerButton>
       </Container>
-    </Section>
+    </>
   );
 };
 
 export default Success;
-const Section = styled.div`
-  margin-top: 100px;
-`;
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
 `;
 const ContentText = styled.div`
   display: flex;
+  margin-top: 100px;
   justify-content: space-between;
   align-items: center;
 `;
@@ -279,12 +277,10 @@ color:#084892;
 margin-bottom:70px;
 h4 {
   font-size:25px
-  font-family:Sans Sarif;
   line-height:30px;
   margin:10px 0;
 }
 p {
-  font-family:Open Sans;
   font-size:16px;
   line-height:22px;
   color:#515151;
@@ -304,14 +300,12 @@ const RightCol = styled.div`
 `;
 const InnerText = styled.div`
   h4 {
-    font-family: Sans Serif;
     color: #084892;
     font-size: 25px;
     font-weight: 600;
     line-height: 30px;
   }
   p {
-    font-family: Open Sans;
     color: #515151;
     font-size: 16px;
     line-height: 22px;
@@ -320,7 +314,7 @@ const InnerText = styled.div`
     max-width: 1064px;
   }
 `;
-const Paragraph = styled.div`
+const Paragraph = styled.p`
   background-image: url(${triangle});
   background-repeat: no-repeat;
   background-size: cover;
@@ -333,17 +327,16 @@ const Paragraph = styled.div`
     margin: 0px 12px;
   }
   p {
-    font-family: Open Sans;
     font-size: 16px;
     line-height: 22px;
     text-align: center;
     color: #515151;
-    padding: 70px 67px;
+    margin: 0px;
+    padding: 90px 51px;
     font-style: normal;
   }
 `;
 const InnerContent = styled.div`
-  font-family: Sans Serif;
   color: #084892;
   text-align: center;
   margin-top: 31px;
@@ -360,7 +353,6 @@ const InnerContent = styled.div`
 const DescriptionText = styled.div`
   margin-top: 75px;
   h4 {
-    font-family: Sans Serif;
     margin-bottom: 22px;
     color: #084892;
     font-size: 25px;
@@ -368,7 +360,6 @@ const DescriptionText = styled.div`
     text-transform: capitalize;
   }
   p {
-    font-family: Open Sans;
     color: #515151;
     font-size: 16px;
     line-height: 22px;
@@ -413,7 +404,6 @@ const Card = styled.div`
 const Cardbody = styled.div`
   p {
     max-width: 330px;
-    font-family: Open Sans;
     font-size: 18px;
     height: 75px;
     line-height: 25px;
@@ -426,7 +416,6 @@ const Cardlink = styled.div`
   align-items: flex-start;
   justify-content: space-between;
   p {
-    font-family: Open Sans;
     font-size: 18px;
     line-height: 22px;
     font-style: normal;
@@ -450,7 +439,6 @@ const Button1 = styled.div`
     margin-bottom: 101px;
     background: #084892;
     color: #ffffff;
-    font-family: Rubik;
     text-transform: uppercase;
     font-size: 16px;
     font-style: normal;
@@ -473,7 +461,6 @@ const Button2 = styled.div`
     margin-bottom: 101px;
     background: #084892;
     color: #ffffff;
-    font-family: Rubik;
     text-transform: uppercase;
     font-size: 16px;
     font-style: normal;

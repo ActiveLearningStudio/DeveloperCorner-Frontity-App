@@ -96,7 +96,7 @@ const Headercontainer = styled.div`
   display: flex;
   justify-content: space-between;
 `;
-const Header = styled.div`
+const Header = styled.h4`
         max-width:333px;
         display:flex;
         margin-bottom:50px;
@@ -155,7 +155,6 @@ const Cardbody = styled.div`
           padding:14px;
           margin-bottom:0px;
         p {
-            font-family:Open Sans;
             font-style:normal;
             font-weight-normal;
             font-size:18px;
@@ -164,11 +163,10 @@ const Cardbody = styled.div`
         }
       }
       `;
-const Cardtext = styled.div`
+const Cardtext = styled.p`
   display: flex;
 
   p {
-    font-family: Rubik;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;

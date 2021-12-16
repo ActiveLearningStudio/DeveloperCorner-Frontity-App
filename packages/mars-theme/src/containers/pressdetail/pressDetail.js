@@ -17,8 +17,11 @@ const PressDetail = () => {
         <BlogContent>
           <div className="updates-content">
             <Heading>
-              Curriki Launches Interactive Civics{" "}
-              <span>Videos for Remote Learning</span>
+              <h4>
+                {" "}
+                Curriki Launches Interactive Civics
+                <span> Videos for Remote Learning</span>{" "}
+              </h4>
             </Heading>
             <Paragraph>
               <span>By Caroline Benoist</span>
@@ -140,7 +143,7 @@ const PressDetail = () => {
               <DescPara>
                 To learn more about Civicate’s Interactive Video Collection and
                 the CurrikiStudio Showcase Partner Program, please join our
-                webinar on 2/17 at 4 pm ET:{" "}<br/>
+                webinar on 2/17 at 4 pm ET: <br />
                 <a className="none-deco-link" href="#">
                   https://www.curriki.org/currikione-events/
                 </a>{" "}
@@ -300,18 +303,19 @@ const BlogContent = styled.div`
     height: 368px;
   }
 `;
-const Heading = styled.div`
-  max-width: 450px;
-  font-family: Rubik;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 38px;
-  text-transform: capitalize;
-  color: #084892;
-  margin-bottom: 30px;
-  span {
-    color: #ffb124;
+const Heading = styled.h4`
+  h4 {
+    max-width: 450px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    text-transform: capitalize;
+    color: #084892;
+    margin-bottom: 30px;
+    span {
+      color: #ffb124;
+    }
   }
 `;
 const Paragraph = styled.div`
@@ -319,7 +323,6 @@ const Paragraph = styled.div`
   flex-direction: column;
   margin-bottom: 30px;
   span {
-    font-family: Rubik;
     font-style: normal;
     font-weight: 300;
     font-size: 18px;
@@ -360,7 +363,6 @@ const Description = styled.div`
   }
 `;
 const DescHeading = styled.h3`
-  font-family: Rubik;
   font-style: normal;
   font-weight: 700;
   font-size: 25px;
@@ -369,7 +371,6 @@ const DescHeading = styled.h3`
 `;
 
 const DescPara = styled.p`
-  font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -384,7 +385,6 @@ const DescPara = styled.p`
   }
 `;
 const SubHeading = styled.h3`
-  font-family: Rubik;
   font-style: normal;
   font-weight: 300;
   font-size: 25px;
@@ -401,7 +401,6 @@ const RecentPost = styled.div`
     width: 300px;
     margin-left: 30px;
     h2 {
-      font-family: Rubik;
       font-style: normal;
       font-weight: 700;
       font-size: 32px;
@@ -419,7 +418,6 @@ const RecentPost = styled.div`
       padding-bottom: 20px;
       margin-top: 20px;
       p {
-        font-family: Rubik;
         font-style: normal;
         font-weight: 500;
         font-size: 18px;
@@ -429,7 +427,6 @@ const RecentPost = styled.div`
       }
       .article-link {
         a {
-          font-family: Rubik;
           font-style: normal;
           font-weight: 500;
           font-size: 14.7987px;

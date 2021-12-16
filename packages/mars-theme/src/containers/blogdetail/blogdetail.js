@@ -23,7 +23,10 @@ const Blogdetail = () => {
         <BlogContent>
           <div className="updates-content">
             <Heading>
-              What's New with CurrikiStudio? Updates As of November 2020
+              <h4>
+                {" "}
+                What's New with CurrikiStudio? Updates As of November 2020
+              </h4>
             </Heading>
             <Paragraph>
               <span>By Lani deGuia</span>
@@ -278,23 +281,24 @@ const BlogContent = styled.div`
     height: 368px;
   }
 `;
-const Heading = styled.div`
-  max-width: 450px;
-  font-family: Rubik;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 38px;
-  text-transform: capitalize;
-  color: #084892;
-  margin-bottom: 30px;
+const Heading = styled.h4`
+  h4 {
+    max-width: 450px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    text-transform: capitalize;
+    color: #084892;
+    margin-bottom: 30px;
+  }
 `;
 const Paragraph = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
   span {
-    font-family: Rubik;
+    font-family: "Rubik";
     font-style: normal;
     font-weight: 300;
     font-size: 18px;
@@ -335,7 +339,7 @@ const Description = styled.div`
   button.link-btn {
     width: 301px;
     height: 45px;
-    border:none;
+    border: none;
     font-weight: 700;
     margin-top: 35px;
     background: #084892;
@@ -345,7 +349,6 @@ const Description = styled.div`
   }
 `;
 const DescHeading = styled.h3`
-  font-family: Rubik;
   font-style: normal;
   font-weight: 700;
   font-size: 25px;
@@ -354,7 +357,6 @@ const DescHeading = styled.h3`
 `;
 
 const DescPara = styled.p`
-  font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -369,7 +371,6 @@ const DescPara = styled.p`
   }
 `;
 const SubHeading = styled.h3`
-  font-family: Rubik;
   font-style: normal;
   font-weight: 300;
   font-size: 25px;
@@ -386,7 +387,6 @@ const RecentPost = styled.div`
     width: 300px;
     margin-left: 30px;
     h2 {
-      font-family: Rubik;
       font-style: normal;
       font-weight: 700;
       font-size: 32px;
@@ -405,7 +405,6 @@ const RecentPost = styled.div`
       margin-top: 20px;
       p {
         max-width: 255px;
-        font-family: Rubik;
         font-style: normal;
         font-weight: 500;
         font-size: 18px;
@@ -415,13 +414,11 @@ const RecentPost = styled.div`
       }
       .article-link {
         a {
-          font-family: Rubik;
           font-style: normal;
           font-weight: 500;
           font-size: 14.7987px;
           line-height: 18px;
-          text-decoration-line: underline;
-
+          text-decoration: underline;
           color: #084892;
         }
       }

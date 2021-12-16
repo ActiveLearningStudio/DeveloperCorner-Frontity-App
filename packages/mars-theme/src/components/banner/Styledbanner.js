@@ -34,12 +34,10 @@ const Heading = styled.h2`
   font-size: 49px;
   line-height: 58px;
   color: #ffb124;
-  font-family: "Rubik";
   margin-bottom: 20px;
 `;
 
 const Subheading = styled.h4`
-  font-family: "Rubik";
   font-style: normal;
   font-weight: 300;
   font-size: 25px;
@@ -52,7 +50,6 @@ const ParaContent = styled.div`
 `;
 const Paragraph = styled.p`
   width: 900px;
-  font-family: "Rubik";
   font-style: normal;
   font-weight: 300;
   font-size: 25px;
