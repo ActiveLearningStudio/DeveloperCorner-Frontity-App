@@ -29,6 +29,9 @@ const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
   margin: 0;
+  @media screen and (max-width: 1024px) {
+    padding: 0px 70px;
+  }
 `;
 const Content = styled.div`
   display: flex;
@@ -56,4 +59,7 @@ const Button = styled.button`
   border: 1px solid #fff;
   box-sizing: border-box;
   border-radius: 25px;
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
 `;

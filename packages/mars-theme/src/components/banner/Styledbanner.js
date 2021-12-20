@@ -23,7 +23,7 @@ const Container = styled.div`
 `;
 const Section = styled.div`
   background: url("${heroImg}");
-  widht: 100%;
+  width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 50px 0px;
