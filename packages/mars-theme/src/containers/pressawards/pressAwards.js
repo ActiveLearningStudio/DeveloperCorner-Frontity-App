@@ -306,7 +306,7 @@ const Container = styled.div`
         border-radius: 25px;
         border: none;
         margin-left: 8px;
-        color: #084892 !important;
+        color: #084892;
         font-family: "Rubik";
         font-style: normal;
         font-weight: bold;
@@ -320,11 +320,11 @@ const Container = styled.div`
     }
     .item-prev .page-link {
       background: none !important;
-      color: #084892;
+      color: #084892 !important;
     }
     .item-next .page-link {
       background: none !important;
-      color: #084892;
+      color: #084892 !important;
     }
     .page-item.active .page-link {
       color: #fff !important;
