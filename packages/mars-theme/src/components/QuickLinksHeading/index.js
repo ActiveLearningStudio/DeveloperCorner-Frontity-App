@@ -4,7 +4,8 @@ import SearchField from "react-search-field";
 import EmailIcon from "../../assets/images/email.png";
 import calenderIcon from "../../assets/images/calender.png";
 import group from "../../assets/images/Group.png";
-const Index = () => {
+const Index = (props) => {
+  const {titlebar}= props;
   return (
     <>
       <Heading>Developers Corner</Heading>
@@ -36,7 +37,7 @@ const Index = () => {
         </RightContent>
       </LowerHeading>
       <HeadingBar>
-        <Title>Quick Links</Title>
+        <Title>{titlebar}</Title>
         <Bar></Bar>
       </HeadingBar>
     </>
@@ -132,6 +133,7 @@ const Title = styled.h3`
   color: #f8af2c;
   width: 132.7px;
   flex-shrink: 0;
+  max-width:476px;
   margin: 0 12px 0 0;
 `;
 const Bar = styled.div`

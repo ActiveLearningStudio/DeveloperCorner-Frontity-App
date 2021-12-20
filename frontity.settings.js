@@ -34,6 +34,7 @@ const settings = {
             ["404page", "/error/"],
             ["webinars", "/webinars/"],
             ["NewUI", "/newui/"],
+            ["howtoContribute", "/contribution/"],
           ],
           featured: {
             showOnList: false,

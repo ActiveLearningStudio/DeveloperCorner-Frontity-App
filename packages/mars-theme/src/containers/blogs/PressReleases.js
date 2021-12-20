@@ -292,7 +292,7 @@ const Container = styled.div`
         border-radius: 25px;
         border: none;
         margin-left: 8px;
-        color: #084892 !important;
+        color: #fff;
         font-family: "Rubik";
         font-style: normal;
         font-weight: bold;
@@ -306,11 +306,11 @@ const Container = styled.div`
     }
     .item-prev .page-link {
       background: none !important;
-      color: #084892;
+      color: #084892 !important;
     }
     .item-next .page-link {
       background: none !important;
-      color: #084892;
+      color: #084892 !important;
     }
     .page-item.active .page-link {
       color: #fff !important;
@@ -354,6 +354,7 @@ const Content = styled.div`
   flex-wrap: wrap;
   margin-right: -36px;
   margin-bottom: 50px;
+ 
 `;
 const Article = styled.div`
   display: flex;
@@ -368,6 +369,7 @@ const Article = styled.div`
   .article-text {
     padding: 20px 20px;
   }
+
 `;
 
 const BlogHeading = styled.h3`
