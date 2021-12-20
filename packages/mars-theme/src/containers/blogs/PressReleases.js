@@ -7,6 +7,7 @@ import press2 from "../../assets/images/PressReleases/press2.png";
 import press3 from "../../assets/images/PressReleases/press3.png";
 import press4 from "../../assets/images/PressReleases/press4.png";
 import press5 from "../../assets/images/PressReleases/press5.png";
+import press13 from "../../assets/images/press13.png";
 import blogCard2 from "../../assets/images/blogCard2.png";
 import blogCard8 from "../../assets/images/blogCard8.png";
 import blogCard9 from "../../assets/images/blogCard9.png";
@@ -241,13 +242,13 @@ const PressReleases = () => {
       ) : (
         <Article>
           <div className="blog-image">
-            <img src={currikiupdate} alt="" />
+            <img src={press13} alt="" />
           </div>
           <div className="article-text">
             <BlogHeading>
-              What's New with CurrikiStudio? Updates as of November 2020
+              Letter to Parents During the Pandemic: YOUR best IS the best.
             </BlogHeading>
-            <BlogAuthor>By: Lani deGuia</BlogAuthor>
+            <BlogAuthor>By: Curriki</BlogAuthor>
             <BlogLink>
               <Link>
                 <a href="#">Read article</a>
@@ -262,9 +263,14 @@ const PressReleases = () => {
         linkClass="page-link"
         linkClassNext="pages-link"
         firstPageText="false"
+        nextPageText=">"
+        hideDisable="false"
+        itemClassPrev="item-prev"
+        prevPageText="<"
+        itemClassNext="item-next"
         activePage={activePage}
-        itemsCountPerPage={10}
-        totalItemsCount={450}
+        itemsCountPerPage={16}
+        totalItemsCount={17}
         pageRangeDisplayed={2}
         onChange={handlepagechange}
       />
@@ -282,7 +288,9 @@ const Container = styled.div`
     margin-bottom: 40px;
     li.page-item {
       a.page-link {
+        background: #e5e5e5;
         border-radius: 25px;
+        border: none;
         margin-left: 8px;
         color: #084892 !important;
         font-family: "Rubik";
@@ -290,25 +298,33 @@ const Container = styled.div`
         font-weight: bold;
         font-size: 16px;
         text-align: center;
-        height: 35px;
+        width: 35px;
         :focus {
           box-shadow: none;
-          color: #fff !important;
         }
       }
     }
+    .item-prev .page-link {
+      background: none !important;
+      color: #084892;
+    }
+    .item-next .page-link {
+      background: none !important;
+      color: #084892;
+    }
+    .page-item.active .page-link {
+      color: #fff !important;
+      background-color: #285aa6 !important;
+    }
     span.page-link {
       border-radius: 25px;
-      background: #e5e5e5;
-
+      background: #285aa5;
       margin-left: 8px;
       font-style: normal;
       font-weight: bold;
       font-size: 16px;
       line-height: 19px;
       text-align: center;
-      width: 33px;
-      height: 36px;
       :focus {
         box-shadow: none;
       }
