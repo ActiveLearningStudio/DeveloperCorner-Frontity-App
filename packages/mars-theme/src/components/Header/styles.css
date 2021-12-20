@@ -10,7 +10,7 @@
 }
 .Navbar .navbar-collapse .navbar-nav .centered-menu {
   display: flex;
-  margin-right: 330px;
+  margin-right: 130px;
 }
 .header .Navbar #responsive-navbar-nav {
   justify-content: flex-end !important;
@@ -29,7 +29,9 @@
     margin-left: 20px;
   }
 }
-
+.header-login{
+  margin-right:20px;
+}
 .header-login a {
   font-family: Open Sans;
   font-style: normal;
@@ -38,6 +40,7 @@
   line-height: 22px;
   color: #084892;
   margin-left: 10px;
+  text-decoration: none;
 }
 .donate-btn {
   /* font-weight: bold; */
@@ -49,13 +52,16 @@
   min-height: 36px;
   border: none;
   box-sizing: border-box;
-  border-radius: 18px;
-  padding: 0 32px;
+  border-radius: 25px;
+ display:flex;
+ justify-content: space-around;
+ align-items: center;
   box-shadow: 0 2px 6px 1px rgb(8 72 146 / 16%);
   font-size: 16px;
   font-family: "rubic";
   font-weight: 700 !important;
 }
+
 .footer-area {
   background-repeat: no-repeat;
   padding: 20px;

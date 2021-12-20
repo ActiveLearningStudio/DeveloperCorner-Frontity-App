@@ -5,6 +5,7 @@ import { Button } from "react-bootstrap";
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import Brand from "../../assets/images/Logos/Currikistudio-logo.png";
 import usericon from "../../assets/images/UserCircle1.png";
+import heartIcon from '../../assets/images/Vector.png';
 import Link from "./link";
 import HeaderCss from "./styles.css";
 const Header = ({ state }) => {
@@ -26,7 +27,7 @@ const Header = ({ state }) => {
               <Nav>
                 <div className="centered-menu">
                   <NavDropdown
-                    title="Blog"
+                    title="Products"
                     id="collasible-nav-dropdown"
                     color="#285AA5"
                   >
@@ -44,26 +45,22 @@ const Header = ({ state }) => {
                       );
                     })}
                   </NavDropdown>
-                  <NavDropdown title="Community" id="collasible-nav-dropdown">
+                  <NavDropdown title="Customers" id="collasible-nav-dropdown">
                     <NavDropdown.Item href="/providers">
                       Providers
                     </NavDropdown.Item>
                   </NavDropdown>
-                  <NavDropdown title="Support" id="collasible-nav-dropdown">
-                    <NavDropdown.Item href="#">
-                      Curriki Documentation
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#">
-                      Database Schemas
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#">
-                      Deploying The Curriki Platfrom
-                    </NavDropdown.Item>
+                  <NavDropdown title="Community" id="collasible-nav-dropdown">
                     <NavDropdown.Item href="#">
                       Bussiness Product
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="#">Separated link</NavDropdown.Item>
+                  </NavDropdown>
+                  <NavDropdown title="Company" id="collasible-nav-dropdown">
+                    <NavDropdown.Item href="/providers">
+                      Providers
+                    </NavDropdown.Item>
                   </NavDropdown>
                 </div>
                 <Nav.Link href="#deets" className="header-login">
@@ -72,9 +69,12 @@ const Header = ({ state }) => {
                   {/* <a href="/generaldiscussion">Signup</a> */}
                 </Nav.Link>
 
-                {/* <Button className="donate-btn" variant="primary">
-                  Donate
-                </Button> */}
+                <Button className="donate-btn" variant="primary">
+                  <div>
+                  <img src={heartIcon} alt=""/>
+                  </div>
+                 <span>Donate</span> 
+                </Button>
               </Nav>
             </Navbar.Collapse>
             {/* </div> */}

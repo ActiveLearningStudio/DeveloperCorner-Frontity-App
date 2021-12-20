@@ -12,7 +12,7 @@ const QuickLinks = () => {
   return (
     <Container>
       <Content>
-        <Linksheading />
+        <Linksheading titlebar="Quick Links" />
         <Cards>
           <Card>
             <CardContent>
