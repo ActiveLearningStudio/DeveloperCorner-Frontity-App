@@ -269,21 +269,31 @@ export default Blogdetail;
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
+  @media screen and (max-width: 1200px) {
+    padding:0px 100px;
+  }
+  @media screen and (max-width: 768px) {
+    padding:0px 40px;
+  }
 `;
 const BlogContent = styled.div`
-  display: flex;
-
+  display: flex;  
   align-items: center;
   margin-top: 70px;
   margin-bottom: 100px;
   .curriki-updates-image {
-    width: 50%;
-    height: 368px;
+    img{
+      width:100%;
+    }
+    @media screen and (max-width: 767px) {
+     display:none;
+    }
+   
   }
 `;
 const Heading = styled.h4`
   h4 {
-    max-width: 450px;
+    
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
@@ -320,10 +330,12 @@ const DescriptionContent = styled.div`
   display: flex;
 `;
 const Description = styled.div`
-  width: 787px;
   margin-bottom: 106px;
   .article-desc-image {
     margin-bottom: 20px;
+    img{
+      width:100%;
+    }
   }
   .updates-list-para {
     .list-item {
@@ -346,6 +358,13 @@ const Description = styled.div`
     color: #ffffff;
     box-shadow: 0px 10px 20px -5px rgba(8, 72, 146, 0.35);
     border-radius: 25px;
+    @media screen and (max-width: 767px) {
+      width: 250px;
+      height: 35px;
+    }
+  }
+  @media screen and (max-width: 992px) {
+    width:100%;
   }
 `;
 const DescHeading = styled.h3`
@@ -444,5 +463,7 @@ const RecentPost = styled.div`
       }
     }
   }
-  
+  @media screen and (max-width: 1300px) {
+    display:none;
+  }
 `;

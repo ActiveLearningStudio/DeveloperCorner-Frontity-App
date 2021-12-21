@@ -1,5 +1,6 @@
 import { React, useState } from "react";
 import { styled } from "frontity";
+import Pagination from "react-js-pagination";
 import arrow from "../../assets/images/yellow-arrow.png";
 import currikiupdate from "../../assets/images/currikiupdates.png";
 import press1 from "../../assets/images/PressReleases/press1.png";
@@ -14,8 +15,6 @@ import blogCard9 from "../../assets/images/blogCard9.png";
 import blogCard10 from "../../assets/images/blogCard10.png";
 import blogCard11 from "../../assets/images/blogCard11.png";
 import blogCard12 from "../../assets/images/blogCard12.png";
-// import Pagination from "react-bootstrap/Pagination";
-import Pagination from "react-js-pagination";
 const PressReleases = () => {
   const [activePage, setactivePage] = useState(1);
   function handlepagechange() {
@@ -282,6 +281,12 @@ export default PressReleases;
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    padding: 0px 70px;
+  }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    padding: 0px 40px;
+  }
   .pagination {
     justify-content: center;
     align-items: baseline;
@@ -339,7 +344,7 @@ const Container = styled.div`
   }
 `;
 const Heading = styled.h2`
-  width: 290px;
+  max-width: 290px;
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -354,7 +359,6 @@ const Content = styled.div`
   flex-wrap: wrap;
   margin-right: -36px;
   margin-bottom: 50px;
- 
 `;
 const Article = styled.div`
   display: flex;
@@ -369,9 +373,15 @@ const Article = styled.div`
   .article-text {
     padding: 20px 20px;
   }
-
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    width: 100%;
+    .blog-image {
+      img {
+        width: 100%;
+      }
+    }
+  }
 `;
-
 const BlogHeading = styled.h3`
   width: 220px;
   font-style: normal;
@@ -381,6 +391,9 @@ const BlogHeading = styled.h3`
   height: 63px;
   color: #084892;
   margin-bottom: 22px;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    width: 100%;
+  }
 `;
 const BlogAuthor = styled.p`
   width: 220px;
@@ -395,6 +408,9 @@ const BlogLink = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    width: 100%;
+  }
 `;
 const Link = styled.a`
   font-style: normal;
