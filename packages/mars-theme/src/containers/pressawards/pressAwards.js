@@ -296,6 +296,12 @@ export default PressAwards;
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    padding: 0px 70px;
+  }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    padding: 0px 40px;
+  }
   .pagination {
     justify-content: center;
     align-items: baseline;
@@ -353,7 +359,6 @@ const Container = styled.div`
   }
 `;
 const Heading = styled.h2`
-  width: 290px;
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -382,6 +387,14 @@ const Article = styled.div`
   .article-text {
     padding: 20px 20px;
   }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    width: 100%;
+    .blog-image {
+      img {
+        width: 100%;
+      }
+    }
+  }
 `;
 
 const BlogHeading = styled.h3`
@@ -393,6 +406,9 @@ const BlogHeading = styled.h3`
   height: 147px;
   margin-bottom: 10px;
   color: #084892;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    width: 100%;
+  }
 `;
 const BlogAuthor = styled.p`
   width: 220px;
@@ -407,6 +423,9 @@ const BlogLink = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    width: 100%;
+  }
 `;
 const Link = styled.a`
   font-style: normal;

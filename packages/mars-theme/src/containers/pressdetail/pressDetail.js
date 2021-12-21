@@ -285,6 +285,16 @@ export default PressDetail;
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
+  @media screen and (max-width: 1200px) {
+    padding:0px 100px;
+  }
+  @media screen and (max-width: 768px) {
+    padding:0px 40px;
+  }
+  @media screen and (max-width: 380px) {
+    padding:0px 20px;
+  }
+  
 `;
 const BlogSection = styled.div`
   width: 100%;
@@ -292,6 +302,15 @@ const BlogSection = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: -190px;
+ 
+  @media screen and (max-width: 600px) {
+    margin-top: -240px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-top: -280px;
+  }
+ 
+ 
 `;
 const BlogContent = styled.div`
   display: flex;
@@ -299,8 +318,12 @@ const BlogContent = styled.div`
   margin-top: 70px;
   margin-bottom: 100px;
   .curriki-updates-image {
-    width: 50%;
-    height: 368px;
+    img{
+      width:100%;
+    }
+    @media screen and (max-width: 767px) {
+     display:none;
+    }
   }
 `;
 const Heading = styled.h4`
@@ -343,12 +366,25 @@ const SocialLinks = styled.div`
 const DescriptionContent = styled.div`
   display: flex;
   padding-top: 200px;
+  @media screen and (max-width: 600px) {
+    padding-top: 300px;
+  }
+  @media screen and (max-width: 480px) {
+    padding-top: 340px;
+  }
+  @media screen and (max-width: 380px) {
+    padding-top: 420px;
+  }
+  
 `;
 const Description = styled.div`
   width: 787px;
   margin-bottom: 106px;
   .article-desc-image {
     margin-bottom: 20px;
+    img{
+      width:100%;
+    }
   }
   .updates-list-para {
     .list-item {
@@ -359,7 +395,13 @@ const Description = styled.div`
         height: 10px;
         margin-right: 8px;
       }
+      @media screen and (max-width: 380px) {
+        display:block;
+      }
     }
+  }
+  @media screen and (max-width: 380px) {
+    width:100%
   }
 `;
 const DescHeading = styled.h3`
@@ -458,5 +500,7 @@ const RecentPost = styled.div`
       }
     }
   }
-  
+  @media screen and (max-width: 1300px) {
+    display:none;
+  }
 `;
