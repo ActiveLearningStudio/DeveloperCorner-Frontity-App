@@ -49,10 +49,9 @@ const Subheading = styled.h4`
   margin-bottom: 20px;
 `;
 const ParaContent = styled.div`
-  width: 60%;
+  width: 100%;
 `;
 const Paragraph = styled.p`
-  width: 900px;
   font-style: normal;
   font-weight: 300;
   font-size: 25px;

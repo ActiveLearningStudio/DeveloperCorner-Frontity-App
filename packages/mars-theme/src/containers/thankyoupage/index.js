@@ -42,6 +42,12 @@ const Section = styled.div`
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 345px;
+  @media screen and (max-width: 1024px) {
+    padding: 0px 100px;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 0px 40px;
+  }
 `;
 const ThankyouDiv = styled.div`
   display: flex;
@@ -51,6 +57,12 @@ const ThankyouDiv = styled.div`
 
   img {
     padding-bottom: 30px;
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 420px) {
+    align-items: flex-start;
   }
 `;
 const Paragraph = styled.p`
@@ -61,6 +73,9 @@ const Paragraph = styled.p`
   text-align: center;
   color: #084892;
   margin-bottom: 30px;
+  @media screen and (max-width: 420px) {
+    text-align: left;
+  }
 `;
 const Subheading = styled.h5`
   font-style: normal;

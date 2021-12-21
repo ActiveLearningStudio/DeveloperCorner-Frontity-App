@@ -161,6 +161,9 @@ const HeaderContent = styled.div`
 const BottomLine = styled.div`
   width: 100px;
   border-bottom: 2px solid #ffb124;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 const Paragraph = styled.p`
   color: #515151;

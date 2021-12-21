@@ -85,7 +85,7 @@ const Success = () => {
             students learning from home while being intuitive for us as non-web
             developers.
           </p>
-          <img src={opera} alt="Image"></img>
+          <img src={opera} className="opera-Img" alt="Image"></img>
           <Paragraph>
             <p>
               <img src={comma} alt="image"></img>
@@ -245,6 +245,12 @@ export default Success;
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
+  @media screen and (max-width: 1300px) {
+    padding: 0px 60px;
+    @media screen and (max-width: 767px) {
+      padding: 0px 40px;
+    }
+  }
 `;
 const ContentText = styled.div`
   display: flex;
@@ -256,7 +262,7 @@ const LeftContent = styled.div`
   max-width: 629px;
 `;
 const RightContent = styled.div`
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 1024px) {
     display: none;
   }
 `;
@@ -285,7 +291,7 @@ p {
   line-height:22px;
   color:#515151;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width:1024px) {
   flex-direction:column;
  }
 `;
@@ -294,9 +300,15 @@ const LeftCol = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media screen and (max-width: 1024px) {
+    max-width: 999px;
+  }
 `;
 const RightCol = styled.div`
   max-width: 500px;
+  @media screen and (max-width: 1024px) {
+    max-width: 999px;
+  }
 `;
 const InnerText = styled.div`
   h4 {
@@ -310,8 +322,11 @@ const InnerText = styled.div`
     font-size: 16px;
     line-height: 22px;
   }
-  img {
-    max-width: 1064px;
+  img.opera-Img {
+    width: 100%;
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
   }
 `;
 const Paragraph = styled.p`
@@ -334,6 +349,9 @@ const Paragraph = styled.p`
     margin: 0px;
     padding: 90px 51px;
     font-style: normal;
+  }
+  @media screen and (max-width: 1024px) {
+    display: none;
   }
 `;
 const InnerContent = styled.div`
@@ -400,6 +418,9 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 `;
 const Cardbody = styled.div`
   p {
@@ -409,6 +430,9 @@ const Cardbody = styled.div`
     line-height: 25px;
     font-style: normal;
     margin-top: 22px;
+    @media screen and (max-width: 767px) {
+      max-width: 999px;
+    }
   }
 `;
 const Cardlink = styled.div`
@@ -429,6 +453,9 @@ const InnerButton = styled.div`
   display: flex;
   justify-content: space-between;
   max-width: 1148px;
+  @media screen and (max-width: 767px) {
+    justify-content: space-around;
+  }
 `;
 const Button1 = styled.div`
   button {
@@ -445,11 +472,16 @@ const Button1 = styled.div`
     font-weight: 700;
     line-height: 19px;
     background: #084892;
-
     box-shadow: 0px 10px 20px -5px rgba(8, 72, 146, 0.35);
+    @media screen and (max-width: 767px) {
+      width: 144px;
+    }
   }
   img {
     margin-right: 22px;
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
   }
 `;
 const Button2 = styled.div`
@@ -468,8 +500,14 @@ const Button2 = styled.div`
     line-height: 19px;
     background: #084892;
     box-shadow: 0px 10px 20px -5px rgba(8, 72, 146, 0.35);
+    @media screen and (max-width: 767px) {
+      width: 144px;
+    }
   }
   img {
     margin-left: 22px;
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
   }
 `;

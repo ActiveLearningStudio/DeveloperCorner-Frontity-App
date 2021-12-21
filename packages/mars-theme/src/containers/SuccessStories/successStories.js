@@ -5,7 +5,6 @@ import Arrow from "../../assets/images/Arrow.svg";
 import Group2 from "../../assets/images/Group2.png";
 import Card2 from "../../assets/images/Card2.png";
 import Card3 from "../../assets/images/Card3.png";
-
 const SuccessStories = () => {
   return (
     <Section>
@@ -90,11 +89,20 @@ const Section = styled.div`
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
+  @media screen and (max-width: 992px) {
+    padding: 0px 70px;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 0px 40px;
+  }
 `;
 const Headercontainer = styled.div`
-  width: 94%;
+  width: 97%;
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 1024px) {
+    width: 98%;
+  }
 `;
 const Header = styled.h4`
         max-width:333px;
@@ -114,10 +122,13 @@ const Cardcontent = styled.div`
   flex-wrap: wrap;
   margin-right: -50px;
   margin-bottom: 73px;
-  @media screen and (max-width: 1018px) {
+  @media screen and (max-width: 1024px) {
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
+  }
+  @media screen and (max-width: 767px) {
+    flex-direction: row;
   }
 `;
 const Card = styled.div`
@@ -131,21 +142,22 @@ const Card = styled.div`
   background: #ffffff;
   box-shadow: 0px 2px 25px 5px rgba(81, 81, 81, 0.1);
   border-radius: 5px;
-  @media screen and (max-width: 1018px) {
-    display: block;
-    margin: 0px;
+  @media screen and (max-width: 1024px) {
+    margin: 0px 0px 40px 0px;
+    max-width: 300px;
+  }
+  @media screen and (max-width: 767px) {
+    max-width: 620px;
   }
 `;
-
 const Headerbar = styled.div`
   width: 100px;
   border-bottom: 3px solid #fa8f2c;
   transform: rotate(0deg);
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     display: none;
   }
 `;
-
 const Cardbody = styled.div`
         border-radius:5px;
           img{
@@ -187,7 +199,6 @@ const Cardlink = styled.div`
   justify-content: space-between;
   width: 100%;
   padding: 40px 0px 33px;
-
   a {
     color: #084892;
     font-size: 18px;

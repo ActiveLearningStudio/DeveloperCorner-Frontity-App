@@ -38,7 +38,7 @@ const Content = styled.div`
   justify-content: space-between;
 `;
 const Heading = styled.h2`
-  cfont-family: "Rubik";
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -46,6 +46,9 @@ const Heading = styled.h2`
   color: #ffffff;
   span {
     color: rgb(255, 177, 36);
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 28px;
   }
 `;
 const Button = styled.button`
@@ -59,7 +62,7 @@ const Button = styled.button`
   border: 1px solid #fff;
   box-sizing: border-box;
   border-radius: 25px;
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 500px) {
     display: none;
   }
 `;
