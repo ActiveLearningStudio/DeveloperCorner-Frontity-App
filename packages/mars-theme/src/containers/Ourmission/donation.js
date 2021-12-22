@@ -51,6 +51,9 @@ export default Donation;
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
+  @media screen and (max-width: 1024px) {
+    padding: 0px 70px;
+  }
 `;
 const Content = styled.div`
   display: flex;
@@ -87,7 +90,7 @@ const RightCol = styled.div`
   @media screen and (max-width: 1200px) {
     overflow: hidden;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     display: none;
   }
 `;
@@ -118,5 +121,8 @@ const Heading = styled.h2`
   margin-bottom: 40px;
   span {
     color: #ffb124;
+  }
+  @media screen and (max-width: 1024px) {
+    max-width: 1000px;
   }
 `;

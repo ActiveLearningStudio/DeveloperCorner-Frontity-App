@@ -57,6 +57,9 @@ const Section = styled.div``;
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
+  @media screen and (max-width: 1024px) {
+    padding: 0px 70px;
+  }
 `;
 const Content = styled.div`
   display: flex;
@@ -93,4 +96,9 @@ const Foundations = styled.div`
 const Div = styled.div`
   margin-right: 30px;
   margin-bottom: 70px;
+  img {
+    @media screen and (max-width: 500px) {
+      width: 150px;
+    }
+  }
 `;

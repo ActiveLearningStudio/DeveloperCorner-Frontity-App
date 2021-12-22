@@ -18,7 +18,12 @@ const BirdiesforEducation = () => {
               <Button>TAKE ME TO BIRDIES</Button>
             </LeftCol>
             <RightCol>
-              <img src={BirdiesImg} alt="" width="550px" />
+              <img
+                src={BirdiesImg}
+                className="birdiesImg"
+                alt=""
+                width="550px"
+              />
             </RightCol>
           </UpperRow>
           <BottomRow>
@@ -30,19 +35,22 @@ const BirdiesforEducation = () => {
               </HeaderContent>
               <Paragraph>
                 <p>
-                Send your tax-deductible contribution directly to us by mailing
-                it to: 20660 Stevens Creek Blvd/332 Cupertino, CA 95014</p>
+                  Send your tax-deductible contribution directly to us by
+                  mailing it to: 20660 Stevens Creek Blvd/332 Cupertino, CA
+                  95014
+                </p>
               </Paragraph>
             </LeftCol>
             <RightCol>
-              <img src={amazonpic} alt="" />
+              <img src={amazonpic} className="amazonPic" alt="" />
               <HeaderContent>
                 <h6>Alternative ways to contribute</h6>
                 <BottomLine></BottomLine>
               </HeaderContent>
 
               <Paragraph>
-              AmazonSmile is a simple and automatic way for you to support Curriki every time you shop, at no cost to you.
+                AmazonSmile is a simple and automatic way for you to support
+                Curriki every time you shop, at no cost to you.
                 <Link>AmazonSmile</Link>
               </Paragraph>
             </RightCol>
@@ -58,12 +66,16 @@ const Section = styled.div``;
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
+  @media screen and (max-width: 1024px) {
+    padding: 0px 70px;
+  }
 `;
 const Content = styled.div`
   padding: 80px 0px;
 `;
 const TopHeading = styled.h2`
   color: #084892;
+  max-width: 314px;
   margin-bottom: 40px;
   font-family: Rubik;
   font-style: normal;
@@ -82,6 +94,8 @@ const UpperRow = styled.div`
 const BottomRow = styled.div`
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 1024px) {
+  }
   @media screen and (max-width: 768px) {
     flex-direction: column;
   }
@@ -112,9 +126,21 @@ const RightCol = styled.div`
     margin-top: 25px;
     margin-bottom: 25px;
   }
-  img {
-    @media screen and (max-width: 768px) {
-      display: none;
+  img.birdiesImg {
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      margin-right: 40px;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+  img.amazonPic {
+    @media screen and (max-width: 993px) {
+      max-width: 551px;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
   }
 `;
@@ -135,14 +161,23 @@ const HeaderContent = styled.div`
 const BottomLine = styled.div`
   width: 100px;
   border-bottom: 2px solid #ffb124;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 const Paragraph = styled.p`
   color: #515151;
   max-width: 514px;
   font-family: Open Sans;
   p {
-    max-width: 244px;
+    max-width: 400px;
     color: #515151;
+  }
+  @media screen and (max-width: 1024px) {
+    max-width: 306px;
+  }
+  @media screen and (max-width: 768px) {
+    max-width: 620px;
   }
 `;
 const Button = styled.button``;

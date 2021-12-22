@@ -26,7 +26,7 @@ const Container = styled.div`
 `;
 const Section = styled.div`
   background: url("${heroImg}");
-  widht: 100%;
+  width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 50px 0px;
@@ -49,10 +49,9 @@ const Subheading = styled.h4`
   margin-bottom: 20px;
 `;
 const ParaContent = styled.div`
-  width: 60%;
+  width: 100%;
 `;
 const Paragraph = styled.p`
-  width: 900px;
   font-style: normal;
   font-weight: 300;
   font-size: 25px;
