@@ -66,8 +66,11 @@ const Section = styled.div``;
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
-  @media screen and (max-width: 1024px) {
-    padding: 0px 70px;
+  @media screen and (max-width: 1200px) {
+    padding: 0px 100px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0px 40px;
   }
 `;
 const Content = styled.div`
@@ -94,8 +97,6 @@ const UpperRow = styled.div`
 const BottomRow = styled.div`
   display: flex;
   justify-content: space-between;
-  @media screen and (max-width: 1024px) {
-  }
   @media screen and (max-width: 768px) {
     flex-direction: column;
   }

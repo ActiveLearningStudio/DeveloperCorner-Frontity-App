@@ -87,8 +87,11 @@ const Section = styled.div``;
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
-  @media screen and (max-width: 1024px) {
-    padding: 0px 70px;
+  @media screen and (max-width: 1200px) {
+    padding: 0px 100px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0px 40px;
   }
 `;
 const Content = styled.div`
@@ -166,7 +169,7 @@ const HeaderContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     display: block;
   }
 `;
@@ -187,7 +190,7 @@ const Heading = styled.h2`
 const BottomLine = styled.div`
   width: 100px;
   border-bottom: 2px solid #ffb124;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     display: none;
   }
 `;
