@@ -65,6 +65,12 @@ const Section = styled.div`
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
+  @media screen and (max-width: 1200px) {
+    padding: 0px 100px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0px 40px;
+  }
 `;
 const SectionTitle = styled.div`
   display: flex;
@@ -85,12 +91,7 @@ const CardContent = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  @media screen and (max-width: 1202px) {
-    padding: 20px 90px;
-  }
-  @media screen and (max-width: 991px) {
-    padding: 20px 0px;
-  }
+  
 `;
 const Card = styled.div`
   max-width: 340px;
@@ -125,9 +126,10 @@ const Card = styled.div`
   @media screen and (max-width: 1202px) {
     margin-bottom: 30px;
   }
-  @media screen and (max-width: 767px) {
-    width: 515px;
+  @media screen and (max-width: 480px) {
+    width: 248px;
   }
+ 
 `;
 const Footer = styled.div`
   display: flex;

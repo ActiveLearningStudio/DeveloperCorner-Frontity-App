@@ -257,21 +257,30 @@ const Index = () => {
     </div>
   );
 };
-
 export default Index;
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
+  @media screen and (max-width: 1200px) {
+    padding: 0px 100px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0px 40px;
+  }
 `;
 const Content = styled.div`
-  width: 1100px;
-  max-width: 1100px;
   padding-top: 100px;
   display: flex;
   justify-content: space-between;
 `;
-const LeftCol = styled.div``;
-const RightCol = styled.div``;
+const LeftCol = styled.div`
+  width: 100%;
+`;
+const RightCol = styled.div`
+  @media screen and (max-width: 991px) {
+    display: none;
+  }
+`;
 const Heading = styled.h2`
   width: 391px;
   font-style: normal;
@@ -304,6 +313,9 @@ const PastWebinars = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: -115px;
+  @media screen and (max-width: 1024px) {
+    background: none;
+  }
 `;
 const WebinarHeading = styled.div`
   display: flex;
@@ -329,7 +341,6 @@ const Card = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 260px;
-
   border-radius: 5px;
   background: #fff;
   margin-right: 25px;
@@ -339,18 +350,22 @@ const Card = styled.div`
   .card-inner-content {
     padding: 14px;
   }
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 `;
-
 const CardHead = styled.div`
   width: 260px;
   height: 200px;
   border-radius: 5px;
   background-repeat: no-repeat;
   background-size: cover !important;
-
   div {
     text-align: center;
     padding-top: 62px;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 100%;
   }
 `;
 const CardHeading = styled.h5`
@@ -360,7 +375,7 @@ const CardHeading = styled.h5`
   line-height: 21px;
   color: #084892;
   margin-top: 20px;
-  width: 220px;
+  // width: 220px;
   height: 84px;
   margin-bottom: 10px;
 `;
