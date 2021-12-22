@@ -57,8 +57,11 @@ const Section = styled.div``;
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
-  @media screen and (max-width: 1024px) {
-    padding: 0px 70px;
+  @media screen and (max-width: 1200px) {
+    padding: 0px 100px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0px 40px;
   }
 `;
 const Content = styled.div`
@@ -86,12 +89,6 @@ const Foundations = styled.div`
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  @media screen and (max-width: 1200px) {
-    padding: 0px 100px;
-  }
-  @media screen and (max-width: 992px) {
-    padding: 0px 150px;
-  }
 `;
 const Div = styled.div`
   margin-right: 30px;

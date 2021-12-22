@@ -89,10 +89,10 @@ const Section = styled.div`
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
-  @media screen and (max-width: 992px) {
-    padding: 0px 70px;
+  @media screen and (max-width: 1200px) {
+    padding: 0px 100px;
   }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     padding: 0px 40px;
   }
 `;
@@ -127,7 +127,7 @@ const Cardcontent = styled.div`
     flex-direction: row;
     justify-content: space-between;
   }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     flex-direction: row;
   }
 `;
@@ -146,7 +146,7 @@ const Card = styled.div`
     margin: 0px 0px 40px 0px;
     max-width: 300px;
   }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     max-width: 620px;
   }
 `;

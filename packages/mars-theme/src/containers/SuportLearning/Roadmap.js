@@ -427,6 +427,12 @@ export default Roadmap;
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
+  @media screen and (max-width: 1200px) {
+    padding: 0px 100px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0px 40px;
+  }
 `;
 const Section = styled.div`
   background: url("${backgroundPic}");
@@ -466,17 +472,7 @@ const Subheading = styled.h3`
 const CardContent = styled.div`
   display: flex;
   flex-wrap: wrap;
-
-  @media screen and (max-width: 1200px) {
-    padding: 0px 100px;
-  }
-  @media screen and (max-width: 992px) {
-    padding: 0px 40px !important;
-  }
   @media screen and (max-width: 768px) {
-    padding: 0px 44px !important;
-  }
-  @media screen and (max-width: 767px) {
     padding: 0px !important;
   }
 `;
@@ -490,7 +486,7 @@ const Card = styled.div`
     width: 278px;
   }
   @media screen and (max-width: 767px) {
-    width: 520px;
+    width: 100%;
   }
 `;
 
@@ -509,7 +505,7 @@ const CardHead = styled.div`
     width: 278px;
   }
   @media screen and (max-width: 767px) {
-    width: 520px;
+    width: 100%;
   }
 `;
 const CardHeading = styled.h5`

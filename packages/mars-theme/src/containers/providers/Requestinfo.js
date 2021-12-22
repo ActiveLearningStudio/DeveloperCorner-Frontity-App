@@ -16,11 +16,11 @@ const Requestinfo = () => {
             </h3>
             <p>
               Curriki provides organizations from around the world with the
-              tools to create next-generation learning experiences. To
-              support our customers, we are growing a network of professional
-              service providers with strong leadership, technology expertise,
-              and a commitment to scaling open, free, and quality education across
-              the globe.
+              tools to create next-generation learning experiences. To support
+              our customers, we are growing a network of professional service
+              providers with strong leadership, technology expertise, and a
+              commitment to scaling open, free, and quality education across the
+              globe.
             </p>
             <button>REQUEST MORE INFORMATION</button>
           </Leftcol>
@@ -36,8 +36,14 @@ const Requestinfo = () => {
 export default Requestinfo;
 const Section = styled.div``;
 const Container = styled.div`
-max-width:1440px;
-padding:0px 146px;
+  max-width: 1440px;
+  padding: 0px 146px;
+  @media screen and (max-width: 1200px) {
+    padding: 0px 100px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0px 40px;
+  }
 `;
 const Content = styled.div`
   display: flex;
@@ -89,15 +95,14 @@ const Leftcol = styled.div`
     border: none;
     color: #fff;
     border-radius: 25px;
-  }
-
-  @media screen and (max-width: 1200px) {
-    padding-bottom: 100px !important;
+    @media screen and (max-width: 480px) {
+      width: 270px;
+    }
   }
 `;
 
 const Rightcol = styled.div`
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 1200px) {
     display: none;
   }
 `;

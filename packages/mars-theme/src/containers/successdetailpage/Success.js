@@ -245,9 +245,9 @@ export default Success;
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
-  @media screen and (max-width: 1300px) {
-    padding: 0px 60px;
-    @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1200px) {
+    padding: 0px 100px;
+    @media screen and (max-width: 768px) {
       padding: 0px 40px;
     }
   }

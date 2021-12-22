@@ -42,10 +42,10 @@ const Section = styled.div`
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 345px;
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1200px) {
     padding: 0px 100px;
   }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     padding: 0px 40px;
   }
 `;
@@ -57,7 +57,7 @@ const ThankyouDiv = styled.div`
 
   img {
     padding-bottom: 30px;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 768px) {
       width: 100%;
     }
   }

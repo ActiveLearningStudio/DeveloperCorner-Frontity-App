@@ -44,6 +44,12 @@ export default LearnImpact;
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
+  @media screen and (max-width: 1200px) {
+    padding: 0px 100px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0px 40px;
+  }
 `;
 const Content = styled.div`
   padding: 50px 0px 80px 0px;
@@ -88,20 +94,23 @@ const InnerContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     flex-direction: column;
   }
 `;
 const LeftCol = styled.div``;
-const RightCol = styled.div``;
+const RightCol = styled.div`
+  @media screen and (max-width: 1024px) {
+    margin-left: 30px;
+  }
+`;
 const Paragraph = styled.p`
-  width: 500px;
+  max-width: 500px;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 25px;
   color: #515151;
-  max-width: 99%;
   margin-bottom: 50px;
   @media screen and (max-width: 1200px) {
     margin-bottom: 60px;
