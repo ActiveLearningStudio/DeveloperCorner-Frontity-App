@@ -282,7 +282,6 @@ const RightCol = styled.div`
   }
 `;
 const Heading = styled.h2`
-  width: 391px;
   font-style: normal;
   font-weight: 500;
   font-size: 36px;
@@ -291,7 +290,6 @@ const Heading = styled.h2`
   margin-bottom: 20px;
 `;
 const Paragraph = styled.p`
-  width: 395px;
   font-style: normal;
   font-weight: 300;
   font-size: 25px;
