@@ -187,6 +187,9 @@ const Content = styled.div`
     display: flex;
     align-items: baseline;
   }
+  @media screen and (max-width: 768px) {
+    padding: 0px;
+  }
 `;
 const Card = styled.div`
   max-width: 350px;
@@ -195,7 +198,7 @@ const Card = styled.div`
   justify-content: space-between;
   @media screen and (max-width: 768px) {
     margin-bottom: 40px;
-    align-items: flex-start;
+    align-items: end;
   }
 `;
 const ImageDiv = styled.div`
@@ -207,6 +210,7 @@ const ImageDiv = styled.div`
   @media screen and (max-width: 768px) {
     text-align:center;
     padding:0;
+    margin-top:30px;
     }
 `;
 const Span = styled.span`
