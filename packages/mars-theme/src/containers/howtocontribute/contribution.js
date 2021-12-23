@@ -80,7 +80,9 @@ const ContributeArticle = styled.div`
   border-bottom: 1px solid #e5e5e5;
   padding-bottom: 20px;
   .article-img {
-    width: 100%;
+    @media (max-width: 600px) {
+      width: 100%;
+    }
     img {
       @media (max-width: 600px) {
         width: 100%;
@@ -111,15 +113,18 @@ const Heading = styled.h3`
   color: #084892;
 `;
 const Paragraph = styled.p`
-  max-width: 833px;
+  width: 833px;
   font-family: "Open Sans";
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
   color: #515151;
+  @media (max-width: 1350px) {
+    width: 100%;
+  }
   @media (max-width: 1024px) {
-    margin-right: 20px;
+    padding-right: 20px;
   }
   @media (max-width: 992px) {
     text-align: justify;
