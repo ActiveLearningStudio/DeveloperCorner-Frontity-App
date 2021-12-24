@@ -12,7 +12,6 @@
 }
 .Navbar .navbar-collapse .navbar-nav .centered-menu {
   display: flex;
-  margin-right: 130px;
 }
 @media screen and (max-width:1199px) {
   .Navbar .navbar-collapse .navbar-nav .centered-menu {

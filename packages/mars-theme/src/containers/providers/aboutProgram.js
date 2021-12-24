@@ -132,9 +132,9 @@ const Heading = styled.div`
     align-items: center;
     text-transform: capitalize;
     color: #084892;
-  }
-  @media screen and (max-width: 480px) {
-    margin: 0px;
+    @media screen and (max-width: 480px) {
+      margin: 0px;
+    }
   }
 `;
 const Content = styled.div`

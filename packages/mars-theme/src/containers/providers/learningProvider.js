@@ -151,6 +151,10 @@ const Heading = styled.h2`
   @media screen and (max-width: 768px) {
     margin-top: 350px;
   }
+  @media screen and (max-width: 480px) {
+    margin-bottom: 0px;
+    font-size: 26px;
+  }
 `;
 const Card = styled.div`
   box-shadow: 0px 2px 25px 5px rgba(81, 81, 81, 0.1);
@@ -160,7 +164,7 @@ const Card = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 40px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 992px) {
     flex-direction: column;
   }
 `;

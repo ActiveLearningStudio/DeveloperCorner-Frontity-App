@@ -64,7 +64,6 @@ export default Contribution;
 
 const Container = styled.div`
   max-width: 1200px;
-  width: 1200px;
 `;
 const Content = styled.div`
   padding: 30px 60px 70px;
@@ -78,9 +77,18 @@ const ContributeArticle = styled.div`
   align-items: center;
   margin-top: 20px;
   max-width: 1008px;
-  width: 1008px;
   border-bottom: 1px solid #e5e5e5;
   padding-bottom: 20px;
+  .article-img {
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+    img {
+      @media (max-width: 600px) {
+        width: 100%;
+      }
+    }
+  }
   .article-img {
     button {
       border: 1px solid #084892;
@@ -91,6 +99,9 @@ const ContributeArticle = styled.div`
       box-shadow: 0px 2px 8px 1px rgba(8, 72, 146, 0.16);
       border-radius: 16px;
     }
+  }
+  @media (max-width: 600px) {
+    flex-direction: column;
   }
 `;
 const Heading = styled.h3`
@@ -109,4 +120,13 @@ const Paragraph = styled.p`
   font-size: 16px;
   line-height: 22px;
   color: #515151;
+  @media (max-width: 1350px) {
+    width: 100%;
+  }
+  @media (max-width: 1024px) {
+    padding-right: 20px;
+  }
+  @media (max-width: 992px) {
+    text-align: justify;
+  }
 `;
