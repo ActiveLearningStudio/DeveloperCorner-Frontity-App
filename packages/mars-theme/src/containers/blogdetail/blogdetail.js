@@ -144,7 +144,7 @@ const Blogdetail = () => {
               future.
             </DescPara>
             <DescHeading>
-              Other updates planned for the rest of 2020
+              Other updates planned for the rest of 2022
             </DescHeading>
             <DescPara>
               In the coming months, watch for some really exciting additions to
