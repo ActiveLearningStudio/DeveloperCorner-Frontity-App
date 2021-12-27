@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "frontity";
+import { Container } from "react-bootstrap";
 import Banner from "../../components/banner/Styledbanner";
 import facebookicon from "../../assets/images/social-icons/facebook.png";
 import twittericon from "../../assets/images/social-icons/twitter.png";
@@ -144,7 +145,7 @@ const Blogdetail = () => {
               future.
             </DescPara>
             <DescHeading>
-              Other updates planned for the rest of 2022
+              Other updates planned for the rest of 2020
             </DescHeading>
             <DescPara>
               In the coming months, watch for some really exciting additions to
@@ -266,16 +267,16 @@ const Blogdetail = () => {
 };
 
 export default Blogdetail;
-const Container = styled.div`
-  max-width: 1440px;
-  padding: 0px 146px;
-  @media screen and (max-width: 1200px) {
-    padding:0px 100px;
-  }
-  @media screen and (max-width: 768px) {
-    padding:0px 40px;
-  }
-`;
+// const Container = styled.div`
+//   max-width: 1440px;
+//   padding: 0px 146px;
+//   @media screen and (max-width: 1200px) {
+//     padding:0px 100px;
+//   }
+//   @media screen and (max-width: 768px) {
+//     padding:0px 40px;
+//   }
+// `;
 const BlogContent = styled.div`
   display: flex;  
   align-items: center;
