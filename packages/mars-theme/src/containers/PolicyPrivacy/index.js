@@ -4,19 +4,14 @@ import { Global, css, connect } from "frontity";
 import Heading from "./heading";
 import Description from "./description";
 import Scrollspy from "react-scrollspy";
-import Banner from "../../components/banner";
+import Banner from "../../components/banner/Styledbanner";
 import externalCss from "./styles.css";
 
 function Index({ state }) {
   return (
     <>
       <Global styles={css(externalCss)} />
-      <Banner className="hero-section">
-        <div className="hero-text">
-       
-          <h1>Privacy policy</h1>
-        </div>
-      </Banner>
+      <Banner title="Privacy policy"/>
       <div className="text-section">
         <div className="heading-content">
         <Heading Scrollspy={Scrollspy} />
