@@ -5,7 +5,7 @@ import EmailIcon from "../../assets/images/email.png";
 import calenderIcon from "../../assets/images/calender.png";
 import group from "../../assets/images/Group.png";
 const Index = (props) => {
-  const {titlebar}= props;
+  const { titlebar } = props;
   return (
     <>
       <Heading>Developers Corner</Heading>
@@ -101,6 +101,9 @@ const RightContent = styled.div`
   @media (max-width: 980px) {
     margin-top: 18px;
   }
+  @media (max-width: 380px) {
+    flex-wrap: wrap;
+  }
 `;
 const Link = styled.a`
   display: flex;
@@ -116,6 +119,9 @@ const Link = styled.a`
     margin-left: 5px;
     color: #084892 !important;
     text-decoration: none;
+  }
+  @media (max-width: 380px) {
+    margin-bottom: 15px;
   }
 `;
 const HeadingBar = styled.div`
@@ -133,7 +139,7 @@ const Title = styled.h3`
   color: #f8af2c;
   width: 132.7px;
   flex-shrink: 0;
-  max-width:476px;
+  max-width: 476px;
   margin: 0 12px 0 0;
 `;
 const Bar = styled.div`

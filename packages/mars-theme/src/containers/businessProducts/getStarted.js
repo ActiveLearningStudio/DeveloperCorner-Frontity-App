@@ -26,6 +26,7 @@ export default connect(GetStarted);
 const Container = styled.div`
 max-width:1440px;
 padding:0px 146px;
+margin: auto;
 @media screen and (max-width: 1200px) {
   padding: 0px 100px;
 }

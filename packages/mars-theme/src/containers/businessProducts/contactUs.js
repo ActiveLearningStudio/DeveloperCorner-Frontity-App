@@ -112,6 +112,7 @@ const Section = styled.div`
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
+  margin: auto;
   @media screen and (max-width: 1200px) {
     padding: 0px 100px;
   }
@@ -159,8 +160,8 @@ const FormDiv = styled.div`
       padding: 20px;
       margin-bottom: 10px;
       @media screen and (max-width: 767px) {
-        width:100%
-        }
+        width: 100%;
+      }
     }
     input[type="text"] {
       height: 200px;
@@ -190,12 +191,10 @@ const ImgContact = styled.div`
     max-width: 525px;
     height: 431;
     @media screen and (max-width: 1200px) {
-    right:-96px
+      right: -96px;
     }
-   
   }
   @media screen and (max-width: 1023px) {
-    display:none;
-    }
- 
+    display: none;
+  }
 `;

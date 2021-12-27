@@ -82,6 +82,7 @@ const FeatureSection = styled.div`
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
+  margin: auto;
   @media screen and (max-width: 1200px) {
     padding: 0px 100px;
   }
@@ -113,7 +114,6 @@ const StyleFeature = styled.div`
   @media screen and (max-width: 380px) {
     margin-top: 200233px;
   }
- 
 `;
 const OuterDiv = styled.div`
   display: flex;
@@ -125,7 +125,7 @@ const OuterDiv = styled.div`
     margin-left: 7rem;
     flex-direction: column;
     @media screen and (max-width: 992px) {
-     margin-left:0px;
+      margin-left: 0px;
     }
     h2 {
       font-family: Rubik;
@@ -144,11 +144,10 @@ const OuterDiv = styled.div`
       color: #515151;
     }
   }
-@media screen and (max-width: 992px) {
-  flex-direction:column;
-  img {
-    margin-bottom:30px;
+  @media screen and (max-width: 992px) {
+    flex-direction: column;
+    img {
+      margin-bottom: 30px;
+    }
   }
- 
-}
 `;
