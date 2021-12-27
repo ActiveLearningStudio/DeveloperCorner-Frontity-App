@@ -65,6 +65,7 @@ const Section = styled.div`
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
+  margin: auto;
   @media screen and (max-width: 1200px) {
     padding: 0px 100px;
   }
@@ -91,7 +92,6 @@ const CardContent = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  
 `;
 const Card = styled.div`
   max-width: 340px;
@@ -129,7 +129,6 @@ const Card = styled.div`
   @media screen and (max-width: 480px) {
     width: 248px;
   }
- 
 `;
 const Footer = styled.div`
   display: flex;

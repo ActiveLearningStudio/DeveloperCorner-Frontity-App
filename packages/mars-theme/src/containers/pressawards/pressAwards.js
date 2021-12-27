@@ -296,6 +296,7 @@ export default PressAwards;
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
+  margin: auto;
   @media screen and (min-width: 768px) and (max-width: 1200px) {
     padding: 0px 70px;
   }

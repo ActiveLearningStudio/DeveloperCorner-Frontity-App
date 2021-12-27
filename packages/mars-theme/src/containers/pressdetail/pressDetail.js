@@ -285,16 +285,16 @@ export default PressDetail;
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
+  margin: auto;
   @media screen and (max-width: 1200px) {
-    padding:0px 100px;
+    padding: 0px 100px;
   }
   @media screen and (max-width: 768px) {
-    padding:0px 40px;
+    padding: 0px 40px;
   }
   @media screen and (max-width: 380px) {
-    padding:0px 20px;
+    padding: 0px 20px;
   }
-  
 `;
 const BlogSection = styled.div`
   width: 100%;
@@ -302,15 +302,13 @@ const BlogSection = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: -190px;
- 
+
   @media screen and (max-width: 600px) {
     margin-top: -240px;
   }
   @media screen and (max-width: 480px) {
     margin-top: -280px;
   }
- 
- 
 `;
 const BlogContent = styled.div`
   display: flex;
@@ -318,11 +316,11 @@ const BlogContent = styled.div`
   margin-top: 70px;
   margin-bottom: 100px;
   .curriki-updates-image {
-    img{
-      width:100%;
+    img {
+      width: 100%;
     }
     @media screen and (max-width: 767px) {
-     display:none;
+      display: none;
     }
   }
 `;
@@ -375,15 +373,14 @@ const DescriptionContent = styled.div`
   @media screen and (max-width: 380px) {
     padding-top: 420px;
   }
-  
 `;
 const Description = styled.div`
   width: 787px;
   margin-bottom: 106px;
   .article-desc-image {
     margin-bottom: 20px;
-    img{
-      width:100%;
+    img {
+      width: 100%;
     }
   }
   .updates-list-para {
@@ -396,12 +393,12 @@ const Description = styled.div`
         margin-right: 8px;
       }
       @media screen and (max-width: 380px) {
-        display:block;
+        display: block;
       }
     }
   }
   @media screen and (max-width: 380px) {
-    width:100%
+    width: 100%;
   }
 `;
 const DescHeading = styled.h3`

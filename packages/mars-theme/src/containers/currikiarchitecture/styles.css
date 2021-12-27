@@ -36,7 +36,7 @@
 .text-section {
   max-width: 1440px;
   padding: 0px 170px;
-  margin-bottom: 70px;
+  margin: 0px auto 70px;
   display: flex;
 }
 .text-section .heading-content {

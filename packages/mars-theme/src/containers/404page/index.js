@@ -30,6 +30,7 @@ const Container = styled.div`
   padding: 100px 0px 0px 146px;
   display: flex;
   justify-content: space-between;
+  margin: auto;
 `;
 const Content = styled.div`
   max-width: 632px;
