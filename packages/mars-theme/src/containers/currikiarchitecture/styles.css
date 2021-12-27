@@ -13,7 +13,7 @@
 }
 .hero-section .hero-text {
   max-width: 1440px;
-  padding: 0px 170px;
+  padding: 0px 146px;
   margin:auto;
 }
 .hero-section .hero-text h1 {
@@ -36,11 +36,9 @@
 }
 .text-section {
   max-width: 1440px;
-  padding: 0px 170px;
-  margin:auto;
-  margin-bottom: 70px;
+  padding: 0px 146px;
   display: flex;
-  margin-top: 60px;
+  margin: 60px auto 70px;
 }
 .text-section .heading-content {
   margin-right: 80px;
