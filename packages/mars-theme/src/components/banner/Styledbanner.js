@@ -1,6 +1,5 @@
 import React from "react";
 import { styled } from "frontity";
-import { Container } from "react-bootstrap";
 import heroImg from "../../assets/images/hero-section.png";
 const Banner = (props) => {
   const { title, subheading, para } = props;
@@ -18,16 +17,17 @@ const Banner = (props) => {
 };
 
 export default Banner;
-// const Container = styled.div`
-//   max-width: 1440px;
-//   padding: 0px 146px;
-//   @media screen and (max-width: 1200px) {
-//     padding: 0px 100px;
-//   }
-//   @media screen and (max-width: 768px) {
-//     padding: 0px 40px;
-//   }
-// `;
+const Container = styled.div`
+  max-width: 1440px;
+  padding: 0px 146px;
+  margin:auto;
+  @media screen and (max-width: 1200px) {
+    padding: 0px 100px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0px 40px;
+  }
+`;
 const Section = styled.div`
   background: url("${heroImg}");
   width: 100%;
