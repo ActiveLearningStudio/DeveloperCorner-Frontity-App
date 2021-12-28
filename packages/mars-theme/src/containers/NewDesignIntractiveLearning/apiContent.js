@@ -6,7 +6,7 @@ import ApiImg4 from '../../assets/images/image29.svg';
 const ApiSection = () => {
  return (
   <div className="container api-section">
-   <h2>WHAT CAN you DO WITH THE CURRIKI API?</h2>
+   <h2>What can you do with the Curriki API?</h2>
    <div className="api-content flex-normal">
     <div className="api-content-detail mr-90">
      <h3>Use CurrikiStudio to build and publish interactive courses</h3>

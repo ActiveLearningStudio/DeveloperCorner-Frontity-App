@@ -19,20 +19,27 @@ const Index = (props) => {
         </Search>
         <RightContent>
           <Link>
+          <div>
             <img src={EmailIcon} alt="" />
             <a href="#">News letter</a>
+            </div>
           </Link>
+          
           <Link>
             {" "}
+            <div className="div-active">
             <img src={group} alt="" />
             <a className="active" href="#">
               Forum
             </a>
+            </div>
           </Link>
           <Link>
             {" "}
+            <div>
             <img src={calenderIcon} alt="" />
             <a href="#">Schedule a demo</a>
+            </div>
           </Link>
         </RightContent>
       </LowerHeading>
@@ -97,7 +104,6 @@ const RightContent = styled.div`
   display: flex;
   align-items: center;
   margin-right: -15px;
-
   @media (max-width: 980px) {
     margin-top: 18px;
   }
@@ -108,8 +114,18 @@ const RightContent = styled.div`
 const Link = styled.a`
   display: flex;
   align-items: center;
-  margin-right: 15px;
+  margin-right: 24px;
   text-decoration: none;
+  color: #084892 !important;
+  div {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .div-active {
+    background: #E5EEFF;
+    margin-right:4px !important;
+  }
   a {
     font-family: "Rubik";
     font-style: normal;
@@ -133,11 +149,11 @@ const HeadingBar = styled.div`
 const Title = styled.h3`
   font-family: "Rubik";
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 25px;
   line-height: 30px;
   color: #f8af2c;
-  width: 132.7px;
+  width: 218px;
   flex-shrink: 0;
   max-width: 476px;
   margin: 0 12px 0 0;

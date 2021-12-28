@@ -9,8 +9,8 @@ const Technology = () => {
     <div className="techSection">
       <div className="container">
         <div className="tech-heading">
-          <h2>USE CURRIKI TECHNOLGY IN JUST STEPS</h2>
-          <img src={plusicon} alt="plus sign" />
+          <h2>Use Curriki technology in just 4 steps</h2>
+          {/* <img src={plusicon} alt="plus sign" /> */}
         </div>
         <div className="tech-content">
           <div className="tech-step">

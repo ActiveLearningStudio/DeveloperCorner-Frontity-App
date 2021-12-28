@@ -7,16 +7,16 @@ import Help from "../../components/help/index";
 const Index = () => {
   return (
     <div>
-      {/* <Banner title=" Build Interactive Learning Apps with Currik's API and Developer
+      <Banner title=" Build Interactive Learning Apps with Currik's API and Developer
               Tools" subheading=" Developer tools and resources to integrate our authoring tool into
-              your existing learning technology stack."/> */}
+              your existing learning technology stack."/>
 
       <Container>
         <Sidebar />
         <div className="page-wrapper">
           <InteractiveLearning />
         </div>
-        <Help />
+        {/* <Help /> */}
       </Container>
     </div>
   );

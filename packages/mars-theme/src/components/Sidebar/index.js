@@ -26,7 +26,7 @@ const Index = () => {
         <SidebarContent>
           <h5>Quick links</h5>
           <Menu iconShape="square">
-            <SubMenu title="Set up, configure, and run Curriki Studio">
+            <SubMenu title="Set up, configure, and run Curriki Studio" defaultOpen="1">
               <MenuItem>Component 1</MenuItem>
               <MenuItem>Component 2</MenuItem>
             </SubMenu>

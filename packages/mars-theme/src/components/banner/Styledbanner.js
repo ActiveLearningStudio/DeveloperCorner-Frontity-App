@@ -38,8 +38,8 @@ const Section = styled.div`
 const Heading = styled.h2`
   max-width: 900px;
   font-weight: 500;
-  font-size: 49px;
-  line-height: 58px;
+  font-size: 36px;
+  line-height: 42px;
   color: #ffb124;
   margin-bottom: 20px;
 `;

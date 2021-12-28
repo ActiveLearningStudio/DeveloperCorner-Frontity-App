@@ -68,7 +68,6 @@
   font-weight: 500;
   font-size: 25px;
   line-height: 38px;
-  text-transform: uppercase;
   color: #ffb124;
 }
 .main-area .api-section .api-content {
@@ -107,7 +106,7 @@
   }
 }
 .main-area .api-section .api-content .api-content-detail p {
-  width: 480px;
+  width: 688px;
   font-family: "Open Sans";
   font-style: normal;
   font-weight: normal;
@@ -290,7 +289,6 @@
   font-weight: 500;
   font-size: 25px;
   line-height: 38px;
-  text-transform: uppercase;
   color: #F8AF2C;
 }
 .main-area .techSection .tech-heading img {
@@ -298,7 +296,7 @@
 }
 .main-area .techSection .tech-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 @media screen and (max-width: 767px) {
   .main-area .techSection .tech-content {
@@ -313,7 +311,7 @@
   font-family: "Open Sans";
   font-style: normal;
   font-weight: bold;
-  font-size: 100px;
+  font-size: 67px;
   line-height: 136px;
   color: #f8af2c;
 }
@@ -339,7 +337,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 33px;
+  line-height: 19px;
   width:99px;
   text-transform: uppercase;
   color: #084892;
@@ -356,7 +354,7 @@
   font-weight: normal;
   font-size: 16px;
   width: 280px;
-  line-height: 25px;
+  line-height: 21px;
   color: #515151;
 }
 .main-area
@@ -402,14 +400,14 @@
   font-style: normal;
   font-weight: 500;
   font-size: 25px;
-  line-height: 43px;
+  line-height: 30px;
   color: #ffb124;
 }
 .main-area .developer-get-started .get-started-content .get-started p {
   margin-top: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 24px;
   font-family: "Open Sans";
-  width:800px;
+  width:1008px;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;

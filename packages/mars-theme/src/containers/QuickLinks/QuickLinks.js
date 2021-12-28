@@ -239,7 +239,7 @@ const CardHead = styled.div`
   p {
     font-family: "Rubik";
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.02em;
@@ -251,6 +251,9 @@ const CardContent = styled.div`
   padding: 14px 14px 30px 14px;
 `;
 const InnerLinks = styled.div`
+ol {
+  padding-left:30px !important;
+}
   li {
     font-family: "Open Sans";
     font-style: normal;
@@ -263,6 +266,7 @@ const InnerLinks = styled.div`
     a {
       color: #2e68bf !important;
       text-decoration: none;
+      font-family:'Open Sans';
     }
     ::marker {
       color: #084892 !important;
