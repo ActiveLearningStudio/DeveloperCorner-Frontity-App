@@ -77,8 +77,10 @@ color: #285AA5;
   margin-left: 10px;
   text-decoration: none;
 }
+a{
+  text-decoration: none;
+}
 .donate-btn {
-  /* font-weight: bold; */
   height: 46px;
   width: 136px;
   background: #084892 !important;

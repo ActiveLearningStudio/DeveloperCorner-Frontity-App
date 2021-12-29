@@ -45,10 +45,10 @@ const Header = ({ state }) => {
                       <img src={dropdownImg} />
                     </Dropdown.Toggle>
                     <Dropdown.Menu className="super-colors">
-                      {state.theme.menu.map(([name, link]) => {
+                      {state.theme.menu.products.map(([name, link]) => {
                         const isCurrentPage = state.router.link === link;
                         return (
-                          <Dropdown.Item key={name}>
+                          <Dropdown.Item eventKey={name}>
                             <Link
                               link={link}
                               aria-current={isCurrentPage ? "page" : undefined}
@@ -66,9 +66,19 @@ const Header = ({ state }) => {
                       <img src={dropdownImg} />
                     </Dropdown.Toggle>
                     <Dropdown.Menu className="super-colors">
-                      <Dropdown.Item eventKey="1">Action</Dropdown.Item>
-                      <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
-                      <Dropdown.Item eventKey="3">Separated link</Dropdown.Item>
+                      {state.theme.menu.customers.map(([name, link]) => {
+                        const isCurrentPage = state.router.link === link;
+                        return (
+                          <Dropdown.Item eventKey={name}>
+                            <Link
+                              link={link}
+                              aria-current={isCurrentPage ? "page" : undefined}
+                            >
+                              {name}
+                            </Link>
+                          </Dropdown.Item>
+                        );
+                      })}
                     </Dropdown.Menu>
                   </Dropdown>{" "}
                   <Dropdown>
@@ -77,9 +87,19 @@ const Header = ({ state }) => {
                       <img src={dropdownImg} />
                     </Dropdown.Toggle>
                     <Dropdown.Menu className="super-colors">
-                      <Dropdown.Item eventKey="1">Action</Dropdown.Item>
-                      <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
-                      <Dropdown.Item eventKey="3">Separated link</Dropdown.Item>
+                      {state.theme.menu.community.map(([name, link]) => {
+                        const isCurrentPage = state.router.link === link;
+                        return (
+                          <Dropdown.Item eventKey={name}>
+                            <Link
+                              link={link}
+                              aria-current={isCurrentPage ? "page" : undefined}
+                            >
+                              {name}
+                            </Link>
+                          </Dropdown.Item>
+                        );
+                      })}
                     </Dropdown.Menu>
                   </Dropdown>{" "}
                   <Dropdown>
@@ -88,27 +108,56 @@ const Header = ({ state }) => {
                       <img src={dropdownImg} />
                     </Dropdown.Toggle>
                     <Dropdown.Menu className="super-colors">
-                      <Dropdown.Item eventKey="1">Action</Dropdown.Item>
-                      <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
-                      <Dropdown.Item eventKey="3">Separated link</Dropdown.Item>
+                      {state.theme.menu.company.map(([name, link]) => {
+                        const isCurrentPage = state.router.link === link;
+                        return (
+                          <Dropdown.Item eventKey={name}>
+                            <Link
+                              link={link}
+                              aria-current={isCurrentPage ? "page" : undefined}
+                            >
+                              {name}
+                            </Link>
+                          </Dropdown.Item>
+                        );
+                      })}
                     </Dropdown.Menu>
                   </Dropdown>{" "}
                 </div>
-                <Nav.Link href="#deets" className="header-login">
-                  <img src={usericon} alt="user icon" />
-                  <a href="/currikiforum">Login </a>
-                  {/* <a href="/generaldiscussion">Signup</a> */}
-                </Nav.Link>
-
+                {state.theme.menu.login.map(([name, link]) => {
+                  const isCurrentPage = state.router.link === link;
+                  return (
+                    <Link
+                      link={link}
+                      aria-current={isCurrentPage ? "page" : undefined}
+                    >
+                      <Nav.Link href={link} className="header-login">
+                        <img src={usericon} alt="user icon" />
+                        <a href="/currikiforum">Login </a>
+                        {/* <a href="/generaldiscussion">Signup</a> */}
+                      </Nav.Link>
+                    </Link>
+                  );
+                })}
                 <Button className="donate-btn" variant="primary">
-                  <div>
-                    <img src={heartIcon} alt="" />
-                  </div>
-                  <span>Donate</span>
+                  {state.theme.menu.donate.map(([name, link]) => {
+                    const isCurrentPage = state.router.link === link;
+                    return (
+                      <Link
+                        link={link}
+                        aria-current={isCurrentPage ? "page" : undefined}
+                        className="donate-btn"
+                      >
+                        <div>
+                          <img src={heartIcon} alt="" />
+                        </div>
+                        <span>Donate</span>
+                      </Link>
+                    );
+                  })}
                 </Button>
               </Nav>
             </Navbar.Collapse>
-            {/* </div> */}
           </Container>
         </Navbar>
       </div>

@@ -1,9 +1,10 @@
 import React from "react";
-import { Global, css } from "frontity";
+import Link from "../Header/link";
+import { Global, css, connect } from "frontity";
 import Logo from "../../assets/images/curriki_new_logo 1.svg";
 import FooterCss from "../Header/styles.css";
 import FooterBackground from "../../assets/images/hero-section.png";
-const Index = () => {
+const Index = ({ state }) => {
   return (
     <>
       <Global styles={css(FooterCss)} />
@@ -18,37 +19,41 @@ const Index = () => {
           <div className="footer-content-area">
             <img src={Logo} alt="curriki logo" />
             <div className="footer-links">
-              <a href="curriki.org" target="_blank">
+              <a href="https://curriki.org/" target="_blank">
                 About
               </a>
-              <a href="curriki.org" target="_blank">
+              <a href="https://curriki.org/" target="_blank">
                 Blog
               </a>
-              <a href="curriki.org" target="_blank">
+              <a href="https://curriki.org/" target="_blank">
                 Webinars
               </a>
             </div>
             <div className="footer-links">
-              <a href="curriki.org" target="_blank">
+              <a href="https://curriki.org/" target="_blank">
                 Press
               </a>
-              <a href="curriki.org" target="_blank">
+              <a href="https://curriki.org/" target="_blank">
                 Providers
               </a>
-              <a href="curriki.org" target="_blank">
+              <a href="https://curriki.org/" target="_blank">
                 Donate
               </a>
             </div>
             <div className="footer-links">
-              <a href="curriki.org" target="_blank">
-                Contact
-              </a>
-              <a href="curriki.org" target="_blank">
-                Privacy Policy
-              </a>
-              <a href="curriki.org" target="_blank">
-                Terms of service
-              </a>
+              {state.theme.menu.currikiterms.map(([name, link]) => {
+                const isCurrentPage = state.router.link === link;
+                return (
+                  <a href={link} target="_blank">
+                    <Link
+                      link={link}
+                      aria-current={isCurrentPage ? "page" : undefined}
+                    >
+                      {name}
+                    </Link>
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -56,7 +61,7 @@ const Index = () => {
       <div className="bottom-footer">
         <p>
           <span>
-            <a href="curriki.org" style={{ textDecoration: "none" }}>
+            <a href="https://curriki.org/" style={{ textDecoration: "none" }}>
               curriki.org
             </a>
           </span>{" "}
@@ -67,4 +72,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default connect(Index);

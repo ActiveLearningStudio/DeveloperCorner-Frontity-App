@@ -12,30 +12,48 @@ const settings = {
       name: "@frontity/mars-theme",
       state: {
         theme: {
-          menu: [
-            ["Currikiarchitecture", "/architecture/"],
+          menu:{
+            customers:[
+              ["SuccessStories", "  /successstories/"],
+              ["BusinessProduct", "/businessProduct"],
+            ],
+            community:[
+              ["Blogs", "/blogs/"],
+              ["webinars", "/webinars/"],
+              ["Providers", "/providers"],
+              ["Support Learning", "/supportlearning"],
+            ],
+            company:[
+              ["Ourmission", "/ourmission"],
+              ["Press&awards", "/pressawards/"],
+            ],
+            login:[ 
+              ["Login", "/currikiforum/"],
+            ],
+            donate:[ 
+              ["Ourmission", "/ourmission"],
+            ],
+            currikiterms:[ 
+              ["Privacy Policy", "/privacypolicy"],
+              ["Terms of Services", "/termscondition"],
+              ["Curriki Architecture", "/architecture/"],
+            ],
+            products: [
             ["DatabaseSchema", "/databaseSchemas"],
             ["currikiPlatform", "/deployingthecurrikiplatfrom"],
-            ["BusinessProduct", "/businessProduct"],
-            ["Providers", "/providers"],
-            ["Ourmission", "/ourmission"],
-            ["SupportLearning", "/supportlearning"],
-            ["PrivacyPolicy", "/privacypolicy"],
-            ["TermsofServices", "/termscondition"],
-            ["SuccessStories", "  /successstories/"],
+           
             ["InterativeLearning", "/learning/"],
             ["GeneralDiscussion", "/generaldiscussion/"],
             ["SuccessStory", "/successdetail/"],
-            ["Blogs", "/blogs/"],
             ["Blogdetail", "/blogdetail/"],
             ["Thankyou", "/thankyou/"],
-            ["Press&awards", "/pressawards/"],
             ["Press&detail", "/pressdetail/"],
             ["404page", "/error/"],
-            ["webinars", "/webinars/"],
             ["NewUI", "/newui/"],
             ["howtoContribute", "/contribution/"],
-          ],
+          ]
+        },
+       
           featured: {
             showOnList: false,
             showOnPost: false,

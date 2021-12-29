@@ -74,7 +74,6 @@ const Index = ({ state }) => {
       {state.router.link === "/thankyou/" && <Thankyou />}
       {state.router.link === "/pressawards/" && <PressAwards />}
       {state.router.link === "/pressdetail/" && <Pressdetail />}
-
       {state.router.link === "/error/" && <ErrorPage />}
       {state.router.link === "/webinars/" && <Webinars />}
       {state.router.link === "/newui/" && <NewUi />}
