@@ -124,38 +124,40 @@ const Header = ({ state }) => {
                     </Dropdown.Menu>
                   </Dropdown>{" "}
                 </div>
-                {state.theme.menu.login.map(([name, link]) => {
-                  const isCurrentPage = state.router.link === link;
-                  return (
-                    <Link
-                      link={link}
-                      aria-current={isCurrentPage ? "page" : undefined}
-                    >
-                      <Nav.Link href={link} className="header-login">
-                        <img src={usericon} alt="user icon" />
-                        <a href="/currikiforum">Login </a>
-                        {/* <a href="/generaldiscussion">Signup</a> */}
-                      </Nav.Link>
-                    </Link>
-                  );
-                })}
-                <Button className="donate-btn" variant="primary">
-                  {state.theme.menu.donate.map(([name, link]) => {
+                <div className="link-btn">
+                  {state.theme.menu.login.map(([name, link]) => {
                     const isCurrentPage = state.router.link === link;
                     return (
                       <Link
                         link={link}
                         aria-current={isCurrentPage ? "page" : undefined}
-                        className="donate-btn"
                       >
-                        <div>
-                          <img src={heartIcon} alt="" />
-                        </div>
-                        <span>Donate</span>
+                        <Nav.Link href={link} className="header-login">
+                          <img src={usericon} alt="user icon" />
+                          <a href="/currikiforum">Login </a>
+                          {/* <a href="/generaldiscussion">Signup</a> */}
+                        </Nav.Link>
                       </Link>
                     );
                   })}
-                </Button>
+                  <Button className="donate-btn" variant="primary">
+                    {state.theme.menu.donate.map(([name, link]) => {
+                      const isCurrentPage = state.router.link === link;
+                      return (
+                        <Link
+                          link={link}
+                          aria-current={isCurrentPage ? "page" : undefined}
+                          className="flex-btn"
+                        >
+                          <div>
+                            <img src={heartIcon} alt="" />
+                          </div>
+                          <span>Donate</span>
+                        </Link>
+                      );
+                    })}
+                  </Button>
+                </div>
               </Nav>
             </Navbar.Collapse>
           </Container>
