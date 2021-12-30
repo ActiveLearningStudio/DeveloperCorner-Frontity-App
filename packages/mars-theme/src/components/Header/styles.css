@@ -10,6 +10,12 @@
   display: flex;
   align-items: flex-end;
 }
+@media screen and (max-width:1199px) {
+  .Navbar .navbar-collapse .navbar-nav  {
+    align-items: flex-start;
+    flex-direction: column-reverse;
+  }
+}
 .Navbar .navbar-collapse .navbar-nav .centered-menu {
   display: flex;
   align-items: baseline;
@@ -19,14 +25,23 @@
     flex-direction: column;
   }
 }
-.Navbar .navbar-collapse .navbar-nav .centered-menu .dropdown {
-}
 .Navbar .navbar-collapse .navbar-nav .centered-menu .dropdown a {
   width: 156px;
   display: flex;
   align-items: baseline;
   text-decoration: none;
   color: #084892;
+}
+@media screen and (max-width: 1199px) {
+.Navbar .navbar-collapse .navbar-nav .centered-menu .dropdown a {
+   justify-content: space-between;
+   width: 130px;
+  }
+}
+@media screen and (max-width: 1199px) {
+.Navbar .navbar-collapse .navbar-nav .centered-menu .dropdown a img {
+  display: none;
+  }
 }
 .Navbar .navbar-collapse .navbar-nav .centered-menu .dropdown p {
 font-family: 'Rubik';
@@ -37,7 +52,7 @@ font-size: 16px;
 line-height: 19px;
 color: #285AA5;
 }
-.Navbar .navbar-collapse .navbar-nav .centered-menu .dropdown-menu .dropdown-item:active {
+.Navbar .navbar-collapse .navbar-nav .centered-menu .dropdown-menu .dropdown-item.active {
   background: none !important;
 }
 .navbar-expand-xl .navbar-nav .dropdown-menu {
@@ -59,9 +74,20 @@ color: #285AA5;
   display: flex;
   align-items: center;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1199px) {
   .header .Navbar .nav-link {
-    margin-left: 20px;
+    margin: 0px;
+  }
+}
+.link-btn {
+    display: flex;
+    align-items: center;
+}
+@media screen and (max-width: 1199px) {
+  .link-btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
 }
 .header-login{
@@ -80,13 +106,14 @@ color: #285AA5;
 a{
   text-decoration: none;
 }
+button:focus:not(:focus-visible) {
+  box-shadow: none;
+}
 .donate-btn {
   height: 46px;
   width: 136px;
   background: #084892 !important;
-  border: none;
   color: #fff !important;
-  min-height: 36px;
   border: none;
   box-sizing: border-box;
   border-radius: 25px;
@@ -98,7 +125,12 @@ a{
   font-family: "Rubik";
   font-weight: 700 !important;
 }
-
+.flex-btn {
+  width: 136px;
+  color: #fff !important;
+  display:flex;
+  justify-content: space-around;
+}
 .footer-area {
   background-repeat: no-repeat;
   padding: 20px;
