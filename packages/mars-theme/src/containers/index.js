@@ -74,10 +74,10 @@ const Index = ({ state }) => {
         <Thankyou when={route === "/thankyou/"} />
         <PressAwards when={route === "/pressawards/"} />
         <Pressdetail when={route === "/pressdetail/"} />
-        <ErrorPage when={route === "/error/"} />
         <Webinars when={route === "/webinars/"} />
         <NewUi when={route === "/newui/"} />
         <Contribution when={route === "/contribution/"} />
+        <ErrorPage when={!(state.theme.menu.products.includes(route))} />
       </Switch>
       <Footer />
       {/* {state.router.link === "/" && <QuickLinks />}

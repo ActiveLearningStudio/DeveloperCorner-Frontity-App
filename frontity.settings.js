@@ -48,7 +48,7 @@ const settings = {
             ["Blogdetail", "/blogdetail/"],
             ["Thankyou", "/thankyou/"],
             ["Press&detail", "/pressdetail/"],
-            ["404page", "/error/"],
+            // ["404page", "/error/"],
             ["NewUI", "/newui/"],
             ["howtoContribute", "/contribution/"],
           ]
