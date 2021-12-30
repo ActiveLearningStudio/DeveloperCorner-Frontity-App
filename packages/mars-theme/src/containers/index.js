@@ -68,6 +68,7 @@ const Index = ({ state }) => {
         <PrivacyPage when={route === "/privacypolicy/"} />
         <Terms when={route === "/termscondition/"} />
         <SuccessStories when={route === "/successstories/"} />
+        <Successdetail when={route === "/successdetail/"} />
         <IntractiveLearning when={route === "/learning/"} />
         <Blogs when={route === "/blogs/"} />
         <Blogdetail when={route === "/blogdetail/"} />
