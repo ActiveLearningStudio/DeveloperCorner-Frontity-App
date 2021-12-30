@@ -1,6 +1,7 @@
 import React from "react";
 import { Global, css, connect } from "frontity";
 import { createGlobalStyle } from "styled-components";
+import Switch from "@frontity/components/switch";
 import Header from "../components/Header/header.js";
 import IntractiveLearning from "./IntractiveLearning/index";
 import Footer from "../components/footer/index";
@@ -26,8 +27,8 @@ import PressAwards from "./pressawards/pressAwards";
 import Pressdetail from "./pressdetail/pressDetail";
 import ErrorPage from "./404page/index";
 import Webinars from "./webinars/index";
-import NewUi from './new-ui/index';
-import Contribution from './howtocontribute/index';
+import NewUi from "./new-ui/index";
+import Contribution from "./howtocontribute/index";
 const Globalstyle = createGlobalStyle`
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
@@ -45,13 +46,41 @@ a {
 }
 `;
 const Index = ({ state }) => {
+  let route = state.router.link;
+  route = route.split("#")[0];
+  console.log(route);
   return (
     <>
       <Globalstyle />
       <Global styles={css(bootstrapCss)} />
       <Header />
-
-      {state.router.link === "/" && <QuickLinks />}
+      <Switch>
+        <QuickLinks when={route === "/"} />
+        <CurrikiArchitecture when={route === "/architecture/"} />
+        <DatabaseSchema when={route === "/databaseschemas/"} />
+        <CurrikiPLatform when={route === "/deployingthecurrikiplatfrom/"} />
+        <GeneralDiscussion when={route === "/generaldiscussion/"} />
+        <CurrikiForum when={route === "/currikiforum/"} />
+        <BusinessProduct when={route === "/businessproduct/"} />
+        <Providers when={route === "/providers/"} />
+        <Ourmission when={route === "/ourmission/"} />
+        <SupportLearning when={route === "/supportlearning/"} />
+        <PrivacyPage when={route === "/privacypolicy/"} />
+        <Terms when={route === "/termscondition/"} />
+        <SuccessStories when={route === "/successstories/"} />
+        <IntractiveLearning when={route === "/learning/"} />
+        <Blogs when={route === "/blogs/"} />
+        <Blogdetail when={route === "/blogdetail/"} />
+        <Thankyou when={route === "/thankyou/"} />
+        <PressAwards when={route === "/pressawards/"} />
+        <Pressdetail when={route === "/pressdetail/"} />
+        <ErrorPage when={route === "/error/"} />
+        <Webinars when={route === "/webinars/"} />
+        <NewUi when={route === "/newui/"} />
+        <Contribution when={route === "/contribution/"} />
+      </Switch>
+      <Footer />
+      {/* {state.router.link === "/" && <QuickLinks />}
       {state.router.link === "/architecture/" && <CurrikiArchitecture />}
       {state.router.link === "/databaseschemas/" && <DatabaseSchema />}
       {state.router.link === "/deployingthecurrikiplatfrom/" && (
@@ -77,8 +106,7 @@ const Index = ({ state }) => {
       {state.router.link === "/error/" && <ErrorPage />}
       {state.router.link === "/webinars/" && <Webinars />}
       {state.router.link === "/newui/" && <NewUi />}
-      {state.router.link === "/contribution/" && <Contribution />}
-      <Footer />
+      {state.router.link === "/contribution/" && <Contribution />} */}
     </>
   );
 };
