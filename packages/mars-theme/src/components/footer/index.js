@@ -5,8 +5,6 @@ import Logo from "../../assets/images/curriki_new_logo 1.svg";
 import FooterCss from "../Header/styles.css";
 import FooterBackground from "../../assets/images/hero-section.png";
 const Index = ({ state }) => {
-  const hostname = window.location.hostname;
-  console.log(hostname);
   return (
     <>
       <Global styles={css(FooterCss)} />
@@ -24,7 +22,7 @@ const Index = ({ state }) => {
               <a href="https://curriki.org/" target="_blank">
                 About
               </a>
-              <a href={"https://" + hostname + "/blogs/"} target="_blank">
+              <a href={"https://curriki.org/"} target="_blank">
                 Blog
               </a>
               <a href="https://curriki.org/" target="_blank">
