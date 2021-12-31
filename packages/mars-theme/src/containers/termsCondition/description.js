@@ -157,8 +157,11 @@ function Description() {
           <p>
             (a) Default License. All Contributions submitted to the Curriki Site
             are shared under the Creative Commons Attribution 4.0 International
-            license, which can be found at
-            https://creativecommons.org/licenses/by/4.0 (the “Default License”).
+            license, which can be found at{" "}
+            <a className="link-creative">
+              https://creativecommons.org/licenses/by/4.0
+            </a>{" "}
+            (the “Default License”).
           </p>
           <p>
             (b) Incompatible License. If you do not have the necessary rights to
