@@ -2,7 +2,7 @@ import React from "react";
 import ApiSection from "./apiContent";
 import BusinessProduct from "./businessProduct";
 import Technology from "./technology";
-import { Global, css } from "frontity";
+import { Global, css, connect } from "frontity";
 import DeveloperTool from "./developerTool";
 import HelpArea from "./helpSection";
 import GetStarted from "./getStarted";
@@ -10,7 +10,11 @@ import ExternalCss from "./styles.css";
 import heroSectionimg from "../../assets/images/hero-section.png";
 // import Footer from "../../components/footer/index";
 
-const Index = () => {
+const Index = ({ state, libraries }) => {
+  const data = state.source.get(state.router.link);
+  const result = state.source[data.type][data.id];
+  console.log("data", result);
+  const Html2React = libraries.html2react.Component;
   return (
     <>
       <Global styles={css(ExternalCss)} />
@@ -30,27 +34,19 @@ const Index = () => {
             </p>
           </div>
         </div>
+        <div className="container">
+          <Html2React html={result.content.rendered} />
+        </div>
 
-        {/* api content */}
-
-        <ApiSection />
-        {/* bussines product */}
+        {/* <ApiSection />
         <BusinessProduct />
-        {/* technolgy section */}
-
         <Technology />
-        {/* get started */}
         <GetStarted />
-        {/* developer tool */}
-
         <DeveloperTool />
-        {/* help area */}
-        <HelpArea />
-        {/* footer area */}
-        {/* <Footer /> */}
+        <HelpArea /> */}
       </div>
     </>
   );
 };
 
-export default Index;
+export default connect(Index);
