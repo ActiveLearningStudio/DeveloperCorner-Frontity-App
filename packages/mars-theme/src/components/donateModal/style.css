@@ -8,6 +8,7 @@
   background: linear-gradient(90deg, #084892 30.14%, #285aa5 94.74%);
   height: 100px;
   padding-left: 75px;
+  margin-bottom: -5px;
 }
 .modal .modal-content .modal-header .modal-title {
   color: #f8af2c;

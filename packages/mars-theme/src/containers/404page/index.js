@@ -13,13 +13,10 @@ const Index = () => {
           The link you followed may be broken, or the page may have been remove.
         </Paragraph>
         <ErrorButtons>
-          <PrimaryButton>GO home</PrimaryButton>
+          <PrimaryButton>Go home</PrimaryButton>
           <SecondaryButton>Back</SecondaryButton>
         </ErrorButtons>
       </Content>
-      <ImgContent>
-        <img src={DonorImg} alt="" />
-      </ImgContent>
     </Container>
   );
 };
@@ -27,14 +24,25 @@ const Index = () => {
 export default Index;
 const Container = styled.div`
   max-width: 1440px;
-  padding: 100px 0px 0px 146px;
-  display: flex;
-  justify-content: space-between;
-  margin: auto;
+  padding: 131px 146px 0px;
+  margin: 0px auto -16px;
+  background-image: url(${DonorImg});
+  background-size: auto;
+  background-position: right;
+  background-repeat: no-repeat;
+  @media screen and (max-width: 991px) {
+    background: inherit;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0px 40px;
+  }
 `;
 const Content = styled.div`
   max-width: 632px;
-  margin-bottom: 120px;
+  padding-bottom: 120px;
+  @media screen and (max-width: 475px) {
+    padding-bottom: 72px;
+  }
 `;
 const Heading = styled.h2`
   font-style: normal;
@@ -47,7 +55,7 @@ const Heading = styled.h2`
 const Subheading = styled.h2`
   font-style: normal;
   font-weight: 700;
-  width: 597px;
+  max-width: 632px;
   font-size: 32px;
   line-height: 38px;
   font-feature-settings: "case" on;
@@ -63,10 +71,15 @@ const Paragraph = styled.p`
   line-height: 25px;
   font-feature-settings: "case" on;
   margin-bottom: 40px;
-  width: 597px;
+  max-width: 621px;
   color: #515151;
 `;
-const ErrorButtons = styled.div``;
+const ErrorButtons = styled.div`
+  @media screen and (max-width: 475px) {
+    display: flex;
+    flex-direction: column;
+  }
+`;
 
 const PrimaryButton = styled.button`
   align-items: center;
@@ -79,6 +92,9 @@ const PrimaryButton = styled.button`
   color: #ffffff !important;
   text-transform: uppercase;
   margin-right: 40px;
+  @media screen and (max-width: 475px) {
+    margin: 0px 0px 12px;
+  }
 `;
 
 const SecondaryButton = styled.button`
@@ -95,4 +111,3 @@ const SecondaryButton = styled.button`
   text-align: center;
   text-transform: uppercase;
 `;
-const ImgContent = styled.div``;

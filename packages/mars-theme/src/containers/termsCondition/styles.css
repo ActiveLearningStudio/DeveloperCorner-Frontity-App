@@ -6,12 +6,17 @@
   align-items: center;
   margin-bottom: 70px;
 }
-.text-section .heading-content {
-  margin-right: 60px;
-}
 @media screen and (max-width: 768px) {
   .hero-section {
     height: auto;
+  }
+}
+.text-section .heading-content {
+  margin-right: 60px;
+}
+@media screen and (max-width: 991px) {
+  .text-section .heading-content {
+   margin-right: 20px;
   }
 }
 .hero-section .hero-text {
@@ -54,7 +59,7 @@
   height: 650px;
   overflow-y: scroll;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 768px) {
   .text-section .heading-contaner {
     display: none;
   }
@@ -117,7 +122,7 @@
 .text-section .description-contaner .description-text .description-heading {
   display: flex;
   padding-bottom: 21px;
-  width: 600px;
+  width: 100%;
 }
 @media screen and (max-width: 768px) {
   .text-section .description-contaner .description-text .description-heading {
@@ -143,6 +148,14 @@
 .text-section .description-contaner .description-text .sub-heading-content {
   display: flex;
 }
+.text-section .description-contaner .description-text a.link-creative  {
+ color:#515151;
+}
+@media screen and (max-width: 500px) {
+.text-section .description-contaner .description-text a.link-creative {
+  display:none;
+}
+}
 .text-section
   .description-contaner
   .description-text
@@ -165,6 +178,7 @@
   margin-bottom: 0px;
 }
 .text-section .description-contaner .description-text p {
+  max-width: 788px;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
