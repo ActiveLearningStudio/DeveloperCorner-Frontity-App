@@ -23,9 +23,3 @@ const Index = () => {
 };
 
 export default Index;
-
-const Container = styled.div`
-  max-width: 1440px;
-  margin: auto;
-  padding: 0px 110px;
-`;

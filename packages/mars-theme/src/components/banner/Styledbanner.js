@@ -20,26 +20,31 @@ export default Banner;
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
+  margin:auto;
+  @media screen and (max-width: 1200px) {
+    padding: 0px 100px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0px 40px;
+  }
 `;
 const Section = styled.div`
   background: url("${heroImg}");
-  widht: 100%;
+  width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 50px 0px;
 `;
 const Heading = styled.h2`
-  width:830px;
+  max-width: 900px;
   font-weight: 500;
-  font-size:49px;
-  line-height:58px;
-  color:#FFB124;
-  font-family;rubic;
-  margin-bottom:20px;
+  font-size: 36px;
+  line-height: 42px;
+  color: #ffb124;
+  margin-bottom: 20px;
 `;
 
 const Subheading = styled.h4`
-  font-family: Rubik;
   font-style: normal;
   font-weight: 300;
   font-size: 25px;
@@ -48,13 +53,12 @@ const Subheading = styled.h4`
   margin-bottom: 20px;
 `;
 const ParaContent = styled.div`
-  width: 60%;
+  width: 100%;
 `;
 const Paragraph = styled.p`
-  font-family: Rubik;
   font-style: normal;
   font-weight: 300;
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 25px;
+  line-height: 29px;
   color: #ffffff;
 `;

@@ -12,23 +12,48 @@ const settings = {
       name: "@frontity/mars-theme",
       state: {
         theme: {
-          menu: [
-            ["Currikiarchitecture", "/architecture/"],
+          menu:{
+            customers:[
+              ["SuccessStories", "  /successstories/"],
+              ["BusinessProduct", "/businessProduct"],
+            ],
+            community:[
+              ["Blogs", "/blogs/"],
+              ["webinars", "/webinars/"],
+              ["Providers", "/providers"],
+              ["Support Learning", "/supportlearning"],
+            ],
+            company:[
+              ["Ourmission", "/ourmission"],
+              ["Press&awards", "/pressawards/"],
+            ],
+            login:[ 
+              ["Login", "/currikiforum/"],
+            ],
+            donate:[ 
+              ["Ourmission", "/ourmission"],
+            ],
+            currikiterms:[ 
+              ["Privacy Policy", "/privacypolicy"],
+              ["Terms of Services", "/termscondition"],
+              ["Curriki Architecture", "/architecture/"],
+            ],
+            products: [
             ["DatabaseSchema", "/databaseSchemas"],
             ["currikiPlatform", "/deployingthecurrikiplatfrom"],
-            ["BusinessProduct", "/businessProduct"],
-            ["Providers", "/providers"],
-            ["Ourmission", "/ourmission"],
-            ["SupportLearning", "/supportlearning"],
-            ["PrivacyPolicy", "/privacypolicy"],
-            ["TermsCondition", "/termscondition"],
-            ["SuccessStories", "  /successstories/"],
+           
             ["InterativeLearning", "/learning/"],
             ["GeneralDiscussion", "/generaldiscussion/"],
-            ["Success", "/success"],
-            ["Blogs", "/blogs/"],
+            ["SuccessStory", "/successdetail/"],
             ["Blogdetail", "/blogdetail/"],
-          ],
+            ["Thankyou", "/thankyou/"],
+            ["Press&detail", "/pressdetail/"],
+            // ["404page", "/error/"],
+            ["NewUI", "/newui/"],
+            ["howtoContribute", "/contribution/"],
+          ]
+        },
+       
           featured: {
             showOnList: false,
             showOnPost: false,

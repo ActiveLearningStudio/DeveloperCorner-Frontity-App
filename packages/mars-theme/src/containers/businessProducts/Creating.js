@@ -38,6 +38,13 @@ const StyleDiv = styled.div`
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
+  margin: auto;
+  @media screen and (max-width: 1200px) {
+    padding: 0px 100px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0px 40px;
+  }
 `;
 const Content = styled.div`
   display: flex;
@@ -81,7 +88,7 @@ const LeftDiv = styled.div`
 `;
 const RightDiv = styled.div`
   margin-bottom: -12px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 992px) {
     display: none;
   }
 `;

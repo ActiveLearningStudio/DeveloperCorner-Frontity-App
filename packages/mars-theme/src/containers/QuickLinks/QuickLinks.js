@@ -12,7 +12,7 @@ const QuickLinks = () => {
   return (
     <Container>
       <Content>
-        <Linksheading />
+        <Linksheading titlebar="Quick Links" />
         <Cards>
           <Card>
             <CardContent>
@@ -199,11 +199,20 @@ const Container = styled.div`
   max-width: 1200px;
 `;
 const Content = styled.div`
-  padding: 30px 75px 70px 75px;
+  padding: 30px 60px 70px;
+  @media screen and (max-width: 1200px) {
+    padding: 30px 30px 70px;
+  }
+  @media (max-width: 980px) {
+    padding: 30px 20px 70px;
+  }
 `;
 const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
+  @media screen and (max-width: 603px) {
+    justify-content: center;
+  }
 `;
 const Card = styled.div`
   display: flex;
@@ -212,20 +221,25 @@ const Card = styled.div`
   width: 320px;
   margin-right: 10px;
   background: #ffffff;
-
   box-shadow: 0px 2px 8px 1px rgba(81, 81, 81, 0.16);
   border-radius: 8px;
   margin-right: 22px;
   margin-top: 22px;
+  @media screen and (max-width: 723px) {
+    width: 260px;
+  }
+  @media screen and (max-width: 603px) {
+    width: 100%;
+  }
 `;
 const CardHead = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   p {
-    font-family: Rubik;
+    font-family: "Rubik";
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.02em;
@@ -237,8 +251,11 @@ const CardContent = styled.div`
   padding: 14px 14px 30px 14px;
 `;
 const InnerLinks = styled.div`
+ol {
+  padding-left:30px !important;
+}
   li {
-    font-family: Open Sans;
+    font-family: "Open Sans";
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -249,6 +266,7 @@ const InnerLinks = styled.div`
     a {
       color: #2e68bf !important;
       text-decoration: none;
+      font-family:'Open Sans';
     }
     ::marker {
       color: #084892 !important;
@@ -261,13 +279,19 @@ const CardBottom = styled.div`
   width: 320px;
   background: #f1f1f1;
   align-item: right;
+  @media screen and (max-width: 723px) {
+    width: 260px;
+  }
+  @media screen and (max-width: 603px) {
+    width: 100%;
+  }
 `;
 const Link = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
   a {
-    font-family: Rubik;
+    font-family: "Rubik";
     font-style: normal;
     font-weight: normal;
     font-size: 14px;

@@ -4,7 +4,8 @@ import SearchField from "react-search-field";
 import EmailIcon from "../../assets/images/email.png";
 import calenderIcon from "../../assets/images/calender.png";
 import group from "../../assets/images/Group.png";
-const Index = () => {
+const Index = (props) => {
+  const { titlebar } = props;
   return (
     <>
       <Heading>Developers Corner</Heading>
@@ -18,25 +19,32 @@ const Index = () => {
         </Search>
         <RightContent>
           <Link>
+          <div>
             <img src={EmailIcon} alt="" />
             <a href="#">News letter</a>
+            </div>
           </Link>
+          
           <Link>
             {" "}
+            <div className="div-active">
             <img src={group} alt="" />
             <a className="active" href="#">
               Forum
             </a>
+            </div>
           </Link>
           <Link>
             {" "}
+            <div>
             <img src={calenderIcon} alt="" />
             <a href="#">Schedule a demo</a>
+            </div>
           </Link>
         </RightContent>
       </LowerHeading>
       <HeadingBar>
-        <Title>Quick Links</Title>
+        <Title>{titlebar}</Title>
         <Bar></Bar>
       </HeadingBar>
     </>
@@ -49,7 +57,7 @@ const Heading = styled.h3`
   background: #f7faff;
   border-radius: 4px;
   padding: 8px;
-  font-family: Rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: bold;
   font-size: 25px;
@@ -58,8 +66,9 @@ const Heading = styled.h3`
   color: #084892;
 `;
 const LowerHeading = styled.div`
-  width: 1008px;
+  max-width: 1008px;
   display: flex;
+  flex-wrap: wrap !important;
   justify-content: space-between;
   align-items: center;
   background: #f7faff;
@@ -72,7 +81,7 @@ const Search = styled.div`
     border: none !important;
     border-bottom: 2px solid #084892 !important;
     input {
-      font-family: Open Sans;
+      font-family: "Open Sans";
       font-style: normal;
       font-weight: normal;
       font-size: 14px;
@@ -95,14 +104,30 @@ const RightContent = styled.div`
   display: flex;
   align-items: center;
   margin-right: -15px;
+  @media (max-width: 980px) {
+    margin-top: 18px;
+  }
+  @media (max-width: 380px) {
+    flex-wrap: wrap;
+  }
 `;
 const Link = styled.a`
   display: flex;
   align-items: center;
-  margin-right: 15px;
+  margin-right: 24px;
   text-decoration: none;
+  color: #084892 !important;
+  div {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .div-active {
+    background: #E5EEFF;
+    margin-right:4px !important;
+  }
   a {
-    font-family: Rubik;
+    font-family: "Rubik";
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -111,24 +136,31 @@ const Link = styled.a`
     color: #084892 !important;
     text-decoration: none;
   }
+  @media (max-width: 380px) {
+    margin-bottom: 15px;
+  }
 `;
 const HeadingBar = styled.div`
-  width: 1008px;
+  max-width: 1008px;
   justify-content: space-between;
   display: flex;
   align-items: center;
 `;
 const Title = styled.h3`
-  font-family: Rubik;
+  font-family: "Rubik";
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 25px;
   line-height: 30px;
   color: #f8af2c;
+  width: 218px;
+  flex-shrink: 0;
+  max-width: 476px;
+  margin: 0 12px 0 0;
 `;
 const Bar = styled.div`
   border-bottom: 2px solid #f8af2c;
   height: 5px;
-  width: 855px;
+  width: 100%;
   color: #f8af2c;
 `;

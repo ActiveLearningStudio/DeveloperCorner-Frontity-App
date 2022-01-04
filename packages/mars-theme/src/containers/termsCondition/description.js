@@ -157,8 +157,11 @@ function Description() {
           <p>
             (a) Default License. All Contributions submitted to the Curriki Site
             are shared under the Creative Commons Attribution 4.0 International
-            license, which can be found at
-            https://creativecommons.org/licenses/by/4.0 (the “Default License”).
+            license, which can be found at{" "}
+            <a className="link-creative">
+              https://creativecommons.org/licenses/by/4.0
+            </a>{" "}
+            (the “Default License”).
           </p>
           <p>
             (b) Incompatible License. If you do not have the necessary rights to
@@ -299,7 +302,7 @@ function Description() {
             include or incorporate any Contribution;
           </p>
           <p>
-            (c) he sale of access to products or services that either (i)
+            (c) the sale of access to products or services that either (i)
             contain links to the Curriki Site or any Contribution, or (ii) use
             APIs or technology services that contain links to the Curriki Site
             or any Contribution;
@@ -548,17 +551,16 @@ function Description() {
             </h2>
           </div>
           <p>
-            Curriki allows you to make donations or contributions through the
-            Curriki Site to Curriki. If you make such a donation or contribution
-            online, Curriki will bill charges via PayPal using the account
-            information provided by you or as otherwise specified by you, for
-            example a credit card. You authorize PayPal or such credit card
-            account to pay any amounts so donated or contributed by you, and
-            authorize Curriki (or its authorized payment processor) to charge
-            all sums described herein to your PayPal account or such credit card
-            account. You agree to provide Curriki updated information regarding
-            your credit card account upon Curriki’s request and any time the
-            information earlier provided is no longer valid.
+            The Curriki Site may include links or references to other web sites
+            or services solely as a convenience to Users (“Reference Sites”).
+            Curriki does not endorse any such Reference Sites or the
+            information, materials, products, or services contained on or
+            accessible through Reference Sites. In addition, your correspondence
+            or business dealings with, or participation in promotions of,
+            advertisers found on or through the Curriki Site are solely between
+            You and such advertiser. ACCESS AND USE OF REFERENCE SITES,
+            INCLUDING THE INFORMATION, MATERIALS, PRODUCTS, AND SERVICES ON OR
+            AVAILABLE THROUGH REFERENCE SITES IS SOLELY AT YOUR OWN RISK.
           </p>
         </div>
         <div id="headings12" className="description-text">
@@ -695,64 +697,64 @@ function Description() {
             <h5>No warranties</h5>
           </div>
           <p>
-            TO THE FULLEST EXTENT PERMISSIBLE PURSUANT TO APPLICABLE LAW,
-            CURRIKI, AND ITS AFFILIATES, PARTNERS, LICENSORS AND SUPPLIERS
-            DISCLAIM ALL WARRANTIES, STATUTORY, EXPRESS OR IMPLIED, INCLUDING,
-            BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS
-            FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT OF PROPRIETARY
-            RIGHTS. NO ADVICE OR INFORMATION, WHETHER ORAL OR WRITTEN, OBTAINED
-            BY YOU FROM CURRIKI OR THROUGH THE CURRIKI SITE WILL CREATE ANY
-            WARRANTY NOT EXPRESSLY STATED HEREIN. YOU EXPRESSLY ACKNOWLEDGE THAT
-            AS USED IN THIS SECTION 14 THE TERM CURRIKI INCLUDES CURRIKI’S
-            OFFICERS, DIRECTORS, EMPLOYEES, SHAREHOLDERS, AGENTS, LICENSORS AND
-            SUBCONTRACTORS.
+            To the fullest extent permissible pursuant to applicable law,
+            Curriki, and its affiliates, partners, licensors and suppliers
+            disclaim all warranties, statutory, express or implied, including,
+            but not limited to, implied warranties of merchantability, fitness
+            for a particular purpose, and non-infringement of proprietary
+            rights. No advice or information, whether oral or written, obtained
+            by you from Curriki or through the Curriki site will create any
+            warranty not expressly stated herein. You expressly acknowledge that
+            as used in this section 14 the term curriki includes curriki’s
+            officers, directors, employees, shareholders, agents, licensors and
+            subcontractors.
           </p>
           <div className="sub-heading-content">
             <h5>15.2</h5>
             <h5>“As is” and “As available” and “With all faults”</h5>
           </div>
           <p>
-            YOU EXPRESSLY AGREE THAT USE OF THE CURRIKI SITE IS AT YOUR SOLE
-            RISK. THE CURRIKI SITE AND ANY DATA, INFORMATION, THIRD-PARTY
-            SOFTWARE, CONTRIBUTIONS, REFERENCE SITES, SERVICES, OR APPLICATIONS
-            MADE AVAILABLE IN CONJUNCTION WITH OR THROUGH THE CURRIKI SITE ARE
-            PROVIDED ON AN “AS IS” AND “AS AVAILABLE”, “WITH ALL FAULTS” BASIS
-            AND WITHOUT WARRANTIES OR REPRESENTATIONS OF ANY KIND EITHER EXPRESS
-            OR IMPLIED.
+            You expressly agree that use of the Curriki site is at your sole
+            risk. The Curriki site and any data, information, third-party
+            software, contributions, reference sites, services, or applications
+            made available in conjunction with or through the Curriki site are
+            provided on an “As is” and “As available”, “With all faults” basis
+            and without warranties or representations of any kind either express
+            or implied.
           </p>
           <div className="sub-heading-content">
             <h5>15.3</h5>
             <h5>Content</h5>
           </div>
           <p>
-            CURRIKI, ITS SUPPLIERS, LICENSORS, AFFILIATES, AND PARTNERS DO NOT
-            WARRANT THAT THE DATA, CONTRIBUTIONS, FUNCTIONS, OR ANY OTHER
-            INFORMATION OFFERED ON OR THROUGH THE CURRIKI SITE OR ANY REFERENCE
-            SITES WILL BE UNINTERRUPTED, OR FREE OF ERRORS, VIRUSES OR OTHER
-            HARMFUL COMPONENTS AND DO NOT WARRANT THAT ANY OF THE FOREGOING WILL
-            BE CORRECTED.
+            Curriki, its suppliers, licensors, affiliates, and partners do not
+            warrant that the data, contributions, functions, or any other
+            information offered on or through the curriki site or any reference
+            sites will be uninterrupted, or free of errors, viruses or other
+            harmful components and do not warrant that any of the foregoing will
+            be corrected.
           </p>
           <div className="sub-heading-content">
             <h5>15.4</h5>
             <h5>Accuracy</h5>
           </div>
           <p>
-            CURRIKI, ITS SUPPLIERS, LICENSORS, AFFILIATES, AND PARTNERS DO NOT
-            WARRANT OR MAKE ANY REPRESENTATIONS REGARDING THE USE OR THE RESULTS
-            OF THE USE OF THE CURRIKI SITE OR ANY REFERENCE SITES IN TERMS OF
-            CORRECTNESS, ACCURACY, RELIABILITY, OR OTHERWISE.
+            Curriki, its suppliers, licensors, affiliates, and partners do not
+            warrant or make any representations regarding the use or the results
+            of the use of the curriki site or any reference sites in terms of
+            correctness, accuracy, reliability, or otherwise.
           </p>
           <div className="sub-heading-content">
             <h5>15.5</h5>
             <h5>Harm to your computer</h5>
           </div>
           <p>
-            YOU UNDERSTAND AND AGREE THAT YOU USE, ACCESS, DOWNLOAD, OR
-            OTHERWISE OBTAIN INFORMATION, MATERIALS, OR DATA THROUGH THE CURRIKI
-            SITE (INCLUDING RSS FEEDS) OR ANY REFERENCE SITES AT YOUR OWN
-            DISCRETION AND RISK AND THAT YOU WILL BE SOLELY RESPONSIBLE FOR ANY
-            DAMAGE TO YOUR PROPERTY (INCLUDING YOUR COMPUTER SYSTEM) OR LOSS OF
-            DATA THAT RESULTS FROM THE DOWNLOAD OR USE OF SUCH MATERIAL OR DATA.
+            You understand and agree that you use, access, download, or
+            otherwise obtain information, materials, or data through the curriki
+            site (including rss feeds) or any reference sites at your own
+            discretion and risk and that you will be solely responsible for any
+            damage to your property (including your computer system) or loss of
+            data that results from the download or use of such material or data.
           </p>
         </div>
         <div id="headings16" className="description-text">
@@ -1097,21 +1099,20 @@ function Description() {
           </div>
           <p>
             The Curriki Site is hosted in the United States, and the services
-            provided hereunder are offered by Curriki:</p>
-            <p> e-mail: info@curriki.org</p>
-            <p>
-            Address:</p>
-            <p>
-            Curriki 
-            </p>
+            provided hereunder are offered by Curriki:
+          </p>
+          <p> e-mail: info@curriki.org</p>
+          <p>Address:</p>
+          <div className="diclosure-para">
+            <p>Curriki</p>
             <p>20660 Stevens Creek Boulevard #332</p>
             <p>Cupertino, CA 95014 </p>
             <p>Phone: 1-408-655-0233</p>
             <p> Fax:1-408-608-0332 </p>
-            <p>Previous Terms of
-            Service can be found <a href="#">here</a>.
+          </div>
+          <p>
+            Previous Terms of Service can be found <a href="#">here</a>.
           </p>
-         
         </div>
       </div>
     </>

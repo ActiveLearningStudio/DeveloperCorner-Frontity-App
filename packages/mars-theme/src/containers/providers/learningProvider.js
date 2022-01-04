@@ -30,8 +30,8 @@ const LearningProvider = () => {
               deeper into the AWS ecosystem.
             </p>
             <p>
-              <b>Certified Services: </b>Systems Integration, Cloud hosting, Custom
-              Development
+              <b>Certified Services: </b>Systems Integration, Cloud hosting,
+              Custom Development
             </p>
             <p>
               <b>Website:</b> <a href="#"> https://artificial.chat/</a>
@@ -48,21 +48,23 @@ const LearningProvider = () => {
             </Paragraph>
             <p>
               Framework Development Group (Framework) is an Education Consulting
-              company dedicated to providing K-12 professional services, staffing,
-              workforce management, and direct hire support to the Learning services
-              sector. As a Curriki Certified Partner, we help k12 organizations to
-              positively impact the lives of children by empowering some of the 
-              greatest influencers in their lives: their educators.
-              Framework helps empower CurrikiStudio educators to continually improve
-              their skills so our next generation of learners emerges with the skills
-              and confidence necessary to realize their dreams.
+              company dedicated to providing K-12 professional services,
+              staffing, workforce management, and direct hire support to the
+              Learning services sector. As a Curriki Certified Partner, we help
+              k12 organizations to positively impact the lives of children by
+              empowering some of the greatest influencers in their lives: their
+              educators. Framework helps empower CurrikiStudio educators to
+              continually improve their skills so our next generation of
+              learners emerges with the skills and confidence necessary to
+              realize their dreams.
             </p>
             <p>
               <b>Certified Services: </b>Professional Development and Training,
               Program Learning & Design
             </p>
             <p>
-              <b>Website:</b> <a href="#"> https://www.frameworkconsulting.com/</a>
+              <b>Website:</b>{" "}
+              <a href="#"> https://www.frameworkconsulting.com/</a>
             </p>
           </RightCol>
         </Card>
@@ -75,14 +77,14 @@ const LearningProvider = () => {
               <b>iDesign</b>
             </Paragraph>
             <p>
-              iDesign helps colleges and universities harness the potential
-              of emerging technologies to design courses and degrees that 
-              make an impact, whether they're fully online, flipped, adaptive,
-              blended or competency based.
+              iDesign helps colleges and universities harness the potential of
+              emerging technologies to design courses and degrees that make an
+              impact, whether they're fully online, flipped, adaptive, blended
+              or competency based.
             </p>
             <p>
-              <b>Certified Services: </b>Program and Course Design, Learning Design,
-              Systems Integration, Custom Development
+              <b>Certified Services: </b>Program and Course Design, Learning
+              Design, Systems Integration, Custom Development
             </p>
             <p>
               <b>Website:</b> <a href="#"> https://idesignedu.org/</a>
@@ -99,12 +101,12 @@ const LearningProvider = () => {
             </Paragraph>
             <p>
               Connected Life Solutions offers consulting services and support
-              technologies that when integrated together, enable businesses, 
-              and in some cases, their end consumers, to operate or live a
-              'connected life'. By working with Curriki, educational content 
-              can be created and managed by local education partners, and then
-              delivered to the remotest parts of the world using a satellite 
-              as the main distribution median over a large geographic area.
+              technologies that when integrated together, enable businesses, and
+              in some cases, their end consumers, to operate or live a
+              'connected life'. By working with Curriki, educational content can
+              be created and managed by local education partners, and then
+              delivered to the remotest parts of the world using a satellite as
+              the main distribution median over a large geographic area.
             </p>
             <p>
               <b>Certified Services: </b>Systems Integration, Hosting, Custom
@@ -124,13 +126,19 @@ export default LearningProvider;
 
 const Section = styled.div``;
 const Container = styled.div`
-max-width:1440px;
-padding:0px 146px;
+  max-width: 1440px;
+  padding: 0px 146px;
+  margin: auto;
+  @media screen and (max-width: 1200px) {
+    padding: 0px 100px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0px 40px;
+  }
 `;
 const Heading = styled.h2`
-  margin-top: 100px;
   color: #084892;
-  margin-bottom: 60px;
+  margin: 70px 0px;
   font-family: Rubic;
   font-style: normal;
   font-weight: 500;
@@ -144,6 +152,10 @@ const Heading = styled.h2`
   @media screen and (max-width: 768px) {
     margin-top: 350px;
   }
+  @media screen and (max-width: 480px) {
+    margin-bottom: 0px;
+    font-size: 26px;
+  }
 `;
 const Card = styled.div`
   box-shadow: 0px 2px 25px 5px rgba(81, 81, 81, 0.1);
@@ -153,11 +165,15 @@ const Card = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 40px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 992px) {
     flex-direction: column;
   }
 `;
-const LeftCol = styled.div``;
+const LeftCol = styled.div`
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
+`;
 const Paragraph = styled.p`
   font-family: Rubic;
   font-style: normal;
@@ -176,9 +192,12 @@ const RightCol = styled.div`
     font-size: 14px;
     line-height: 19px;
     color: #515151;
-    margin:0px;
+    margin: 0px;
   }
   a {
     color: #084892;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
   }
 `;

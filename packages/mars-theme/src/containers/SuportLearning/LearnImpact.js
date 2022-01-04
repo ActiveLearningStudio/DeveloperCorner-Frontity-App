@@ -1,8 +1,5 @@
 import React from "react";
 import { styled } from "frontity";
-import PrimaryButton from "../../StyledComponent/PrimaryButton";
-import StyledPara from "../../StyledComponent/StyledPara";
-import StyledHeading from "../../StyledComponent/StyledHeading";
 import plusicon from "../../assets/images/PLUS.svg";
 const LearnImpact = () => {
   return (
@@ -47,6 +44,13 @@ export default LearnImpact;
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
+  margin: auto;
+  @media screen and (max-width: 1200px) {
+    padding: 0px 100px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0px 40px;
+  }
 `;
 const Content = styled.div`
   padding: 50px 0px 80px 0px;
@@ -61,7 +65,6 @@ const Topheading = styled.div`
   align-items: center;
 `;
 const Heading = styled.h3`
-  font-family: Rubik;
   font-style: normal;
   font-weight: bold;
   font-size: 32px;
@@ -72,7 +75,7 @@ const Heading = styled.h3`
 `;
 
 const Subheading = styled.span`
-  font-family: Rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -80,7 +83,6 @@ const Subheading = styled.span`
   color: #084892;
 `;
 const Colheading = styled.h3`
-  font-family: Rubik;
   font-style: normal;
   font-weight: 300;
   font-size: 25px;
@@ -93,21 +95,23 @@ const InnerContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     flex-direction: column;
   }
 `;
 const LeftCol = styled.div``;
-const RightCol = styled.div``;
+const RightCol = styled.div`
+  @media screen and (max-width: 1024px) {
+    margin-left: 30px;
+  }
+`;
 const Paragraph = styled.p`
-  width: 500px;
-  font-family: Open Sans;
+  max-width: 500px;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 25px;
   color: #515151;
-  max-width: 99%;
   margin-bottom: 50px;
   @media screen and (max-width: 1200px) {
     margin-bottom: 60px;

@@ -5,6 +5,7 @@ import GlobalCss from "../../assets/css/fonts.css";
 import { Accordion } from "react-bootstrap";
 // import ArrowPath from "../../assets/images/ArrowPath.png";
 import whiteArrow from "../../assets/images/whiteArrow.png";
+import blueArrow from "../../assets/images/blueArrow.png";
 const FrequentlyAsk = () => {
   return (
     <Section>
@@ -86,6 +87,13 @@ const Section = styled.div``;
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
+  margin: auto;
+  @media screen and (max-width: 1200px) {
+    padding: 0px 100px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0px 40px;
+  }
 `;
 const Content = styled.div`
   padding: 35px 0 70px 0px;
@@ -93,14 +101,12 @@ const Content = styled.div`
     color: #084892;
   }
   .accordion {
-    .accordion-item{
-      border:none !important;
-    }
     .accordion-item {
+      border:none !important;
       .accordion-header {
         .accordion-body {
           .item-para{
-            font-family: Open Sans;
+            font-family: 'Open Sans';
             font-style: normal;
             font-weight: normal;
             font-size: 16px;
@@ -111,7 +117,7 @@ const Content = styled.div`
           }
         }
         .accordion-button {
-          font-family: Rubik;
+          font-family: 'Rubik';
           font-style: normal;
           font-weight: 500;
           font-size: 18px;
@@ -130,10 +136,30 @@ const Content = styled.div`
           border-radius: 5px !important;
           color: #fff;
         }
-        accordion-button::after {
+        .accordion-button::after {
+          width:16px;
+          height:8px;
+          background: url(${blueArrow});
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .accordion-button:not(.collapsed)::after{
+          width:21px;
+          height:13px;
           background: url(${whiteArrow});
           background-repeat: no-repeat;
           background-size: cover;
+        }
+      }
+      .accordion-body {
+        .item-para {
+          font-family: 'Open Sans';
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 22px;
+
+color: #515151;
         }
       }
     }
@@ -144,7 +170,7 @@ const HeaderContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     display: block;
   }
 `;
@@ -155,7 +181,7 @@ const AccordionTitle = styled.div`
   border-radius: 5px;
 `;
 const Heading = styled.h2`
-  font-family: Rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-size: 40px;
@@ -165,11 +191,7 @@ const Heading = styled.h2`
 const BottomLine = styled.div`
   width: 100px;
   border-bottom: 2px solid #ffb124;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     display: none;
   }
-`;
-const Paragraph = styled.div`
-  color: #515151;
-  font-family: Open Sans;
 `;

@@ -23,10 +23,13 @@ const Blogdetail = () => {
         <BlogContent>
           <div className="updates-content">
             <Heading>
-              What's New with CurrikiStudio? Updates As of November 2020
+              <h4>
+                {" "}
+                What's New with CurrikiStudio? Updates As of November 2020
+              </h4>
             </Heading>
             <Paragraph>
-              <span>By Lani deguide</span>
+              <span>By Lani deGuia</span>
               <span>Nov 17, 2020</span>
               <span>Blog</span>
               <span>0 Comments</span>
@@ -63,7 +66,7 @@ const Blogdetail = () => {
               get new updates to CurrikiStudio and see what’s coming!
             </DescPara>
             <DescHeading>Enhancements to CurrikiStudio</DescHeading>
-            <SubHeading>Publish and combine with Assets in Your LMS</SubHeading>
+            <SubHeading>Publish and Combine with Assets in Your LMS</SubHeading>
             <DescPara>
               One of our most popular requests from schools and districts is now
               a reality. You can now publish your projects and playlists to your
@@ -172,6 +175,16 @@ const Blogdetail = () => {
                 <DescPara> Collaboration and conferencing </DescPara>
               </div>
             </div>
+            <DescPara>
+              Like the new updates to CurrikiStudio and interested in joining
+              this next innovation in digital learning?{" "}
+              <a href="#" className="none-deco-link">
+                CurrikiStudio
+              </a>{" "}
+              is a FREE digital learning design platform! Sign up for your
+              account and start building today!
+            </DescPara>
+            <button className="link-btn">Get CurrikiStudio for FREE</button>
           </Description>
           <RecentPost>
             <div className="recent-post-content">
@@ -228,6 +241,23 @@ const Blogdetail = () => {
                 </div>
               </div>
             </div>
+            <div className="archives-heading">
+              <h4>archives</h4>
+              <div className="inner-link-div">
+                <a href="#">April 2021</a>
+                <a href="#">February 2021</a>
+                <a href="#">December 2020</a>
+                <a href="#">November 2020</a>
+                <a href="#">September 2020</a>
+                <a href="#">August 2020</a>
+                <a href="#">July 2020</a>
+                <a href="#">June 2020</a>
+                <a href="#">March 2020</a>
+                <a href="#">November 2019</a>
+                <a href="#">September 2019</a>
+                <a href="#">April 2019</a>
+              </div>
+            </div>
           </RecentPost>
         </DescriptionContent>
       </Container>
@@ -239,37 +269,47 @@ export default Blogdetail;
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
+  margin:auto;
+  @media screen and (max-width: 1200px) {
+    padding:0px 100px;
+  }
+  @media screen and (max-width: 768px) {
+    padding:0px 40px;
+  }
 `;
 const BlogContent = styled.div`
-  display: flex;
-
+  display: flex;  
   align-items: center;
   margin-top: 70px;
   margin-bottom: 100px;
   .curriki-updates-image {
-    width: 50%;
-    height: 368px;
+    img{
+      width:100%;
+    }
+    @media screen and (max-width: 767px) {
+     display:none;
+    }
+   
   }
 `;
-const Heading = styled.div`
-  max-width: 450px;
-  font-family: Rubik;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 38px;
-  display: flex;
-  align-items: center;
-  text-transform: capitalize;
-  color: #084892;
-  margin-bottom: 30px;
+const Heading = styled.h4`
+  h4 {
+    
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    text-transform: capitalize;
+    color: #084892;
+    margin-bottom: 30px;
+  }
 `;
 const Paragraph = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
   span {
-    font-family: Rubik;
+    font-family: "Rubik";
     font-style: normal;
     font-weight: 300;
     font-size: 18px;
@@ -291,23 +331,44 @@ const DescriptionContent = styled.div`
   display: flex;
 `;
 const Description = styled.div`
-  width: 787px;
+  margin-bottom: 106px;
   .article-desc-image {
     margin-bottom: 20px;
+    img{
+      width:100%;
+    }
   }
   .updates-list-para {
     .list-item {
       display: flex;
-      align-items: center;
+      align-items: baseline;
       img {
         width: 10px;
         height: 10px;
+        margin-right: 8px;
       }
     }
   }
+  button.link-btn {
+    width: 301px;
+    height: 45px;
+    border: none;
+    font-weight: 700;
+    margin-top: 35px;
+    background: #084892;
+    color: #ffffff;
+    box-shadow: 0px 10px 20px -5px rgba(8, 72, 146, 0.35);
+    border-radius: 25px;
+    @media screen and (max-width: 767px) {
+      width: 250px;
+      height: 35px;
+    }
+  }
+  @media screen and (max-width: 992px) {
+    width:100%;
+  }
 `;
 const DescHeading = styled.h3`
-  font-family: Rubik;
   font-style: normal;
   font-weight: 700;
   font-size: 25px;
@@ -316,7 +377,6 @@ const DescHeading = styled.h3`
 `;
 
 const DescPara = styled.p`
-  font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -331,7 +391,6 @@ const DescPara = styled.p`
   }
 `;
 const SubHeading = styled.h3`
-  font-family: Rubik;
   font-style: normal;
   font-weight: 300;
   font-size: 25px;
@@ -348,7 +407,6 @@ const RecentPost = styled.div`
     width: 300px;
     margin-left: 30px;
     h2 {
-      font-family: Rubik;
       font-style: normal;
       font-weight: 700;
       font-size: 32px;
@@ -366,7 +424,7 @@ const RecentPost = styled.div`
       padding-bottom: 20px;
       margin-top: 20px;
       p {
-        font-family: Rubik;
+        max-width: 255px;
         font-style: normal;
         font-weight: 500;
         font-size: 18px;
@@ -376,16 +434,37 @@ const RecentPost = styled.div`
       }
       .article-link {
         a {
-          font-family: Rubik;
           font-style: normal;
           font-weight: 500;
           font-size: 14.7987px;
           line-height: 18px;
-          text-decoration-line: underline;
-
+          text-decoration: underline;
           color: #084892;
         }
       }
     }
+  }
+  .archives-heading {
+    display-flex;
+    flex-direction:column;
+    margin:30px 0px 0px 30px;
+    h4 {
+      text-transform:uppercase;
+      font-size:25px;
+      font-weight:bold;
+      color:#084892;
+      margin-bottom:25px;
+    }
+    .inner-link-div {
+      display:flex;
+      flex-direction:column;
+      a {
+        margin-bottom:8px;
+        text-decoration:none;
+      }
+    }
+  }
+  @media screen and (max-width: 1300px) {
+    display:none;
   }
 `;

@@ -99,7 +99,7 @@ const Certification = () => {
                     <p className="card-list-item">
                       <img src={plusicon} alt="" />
                       <p>
-                        Led Generation / Bring into deep dive/solutioning calls
+                        Led Generation → Bring into deep dive/solutioning calls
                       </p>
                     </p>
                   </div>
@@ -160,6 +160,13 @@ const Section = styled.div``;
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
+  margin: auto;
+  @media screen and (max-width: 1200px) {
+    padding: 0px 100px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0px 40px;
+  }
 `;
 const Heading = styled.div`
   display: flex;
@@ -176,11 +183,13 @@ const Heading = styled.div`
   }
 `;
 const Content = styled.div`
-  padding: 60px;
-  margin-bottom: 40px;
+  padding: 60px 0px;
   .card-content {
     display: flex;
     align-items: baseline;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0px;
   }
 `;
 const Card = styled.div`
@@ -188,19 +197,21 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  @media screen and (max-width: 991px) {
-    padding: 0 70px;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 40px;
+    align-items: end;
   }
 `;
 const ImageDiv = styled.div`
   text-align: right;
-  @media screen and (max-width: 991px) {
+  @media screen and (max-width: 992px) {
     margin-top:50px
     padding-right:50px;
   }
   @media screen and (max-width: 768px) {
     text-align:center;
     padding:0;
+    margin-top:30px;
     }
 `;
 const Span = styled.span`
@@ -243,7 +254,8 @@ const LeftCol = styled.div`
   justify-content: space-between;
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
+    align-items: center;
   }
 `;
 const RightCol = styled.div`
@@ -251,6 +263,6 @@ const RightCol = styled.div`
   justify-content: space-between;
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
   }
 `;

@@ -63,13 +63,32 @@ export default Features;
 const FeatureSection = styled.div`
   position: relative;
   height: 730px;
+  @media screen and (max-width: 992px) {
+    height: 1200px;
+  }
   @media screen and (max-width: 768px) {
     height: 1150px;
+  }
+  @media screen and (max-width: 600px) {
+    height: 1260px;
+  }
+  @media screen and (max-width: 520px) {
+    height: 1400px;
+  }
+  @media screen and (max-width: 380px) {
+    height: 1620px;
   }
 `;
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
+  margin: auto;
+  @media screen and (max-width: 1200px) {
+    padding: 0px 100px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0px 40px;
+  }
 `;
 
 const StyleDiv = styled.div`
@@ -80,23 +99,34 @@ const StyleDiv = styled.div`
   top: -190px;
   width: 100%;
   z-index: -1;
+  @media screen and (max-width: 1200px) {
+    top: -125px;
+  }
+  @media screen and (max-width: 380px) {
+    top: -180px;
+  }
 `;
 const StyleFeature = styled.div`
   margin-top: 230px;
-  padding: 40px;
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 1024px) {
     margin-top: 140px;
+  }
+  @media screen and (max-width: 380px) {
+    margin-top: 200233px;
   }
 `;
 const OuterDiv = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
   justify-content: between;
 
   div {
     margin-left: 7rem;
     flex-direction: column;
+    @media screen and (max-width: 992px) {
+      margin-left: 0px;
+    }
     h2 {
       font-family: Rubik;
       font-style: normal;
@@ -114,9 +144,10 @@ const OuterDiv = styled.div`
       color: #515151;
     }
   }
-@media screen and (max-width: 768px) {
-  flex-direction:column;
-  img {
-    margin-bottom:30px;
+  @media screen and (max-width: 992px) {
+    flex-direction: column;
+    img {
+      margin-bottom: 30px;
+    }
   }
 `;

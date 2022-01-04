@@ -1,12 +1,10 @@
 import React from "react";
 import { styled } from "frontity";
-import { Container } from "react-bootstrap";
 import image21 from "../../assets/images/image21.png";
 import Arrow from "../../assets/images/Arrow.svg";
 import Group2 from "../../assets/images/Group2.png";
 import Card2 from "../../assets/images/Card2.png";
 import Card3 from "../../assets/images/Card3.png";
-
 const SuccessStories = () => {
   return (
     <Section>
@@ -23,53 +21,60 @@ const SuccessStories = () => {
         </Headercontainer>
         <Cardcontent>
           <Card>
-            <img src={image21} alt="rectangle-image"></img>
             <Cardbody>
-              <p>
-                TCI Education Publishing Company Discovers New Ways to Reach.
-              </p>
-              <Cardtext>
-                <p>Category: </p>
-                <p>Education Publishing</p>
-              </Cardtext>
-              <Cardlink>
-                <a href="#">Read more</a>
-                <img src={Arrow} alt="image"></img>
-              </Cardlink>
+              <img src={image21} alt="rectangle-image"></img>
+              <div className="card-inner-content">
+                <p>
+                  TCI Education Publishing Company Discovers New Ways to Reach
+                  Students.
+                </p>
+                <Cardtext>
+                  <p>Category:&nbsp; </p>
+                  <p>Education Publishing</p>
+                </Cardtext>
+              </div>
             </Cardbody>
+            <Cardlink>
+              <a href="#">Read more</a>
+              <img src={Arrow} alt="image"></img>
+            </Cardlink>
           </Card>
           <Card>
-            <img src={Card2} alt="rectangle-image"></img>
             <Cardbody>
-              <p>
-                LA Opera Brings Interative Civicate Creates iteractive Civics
-                Videos.
-              </p>
-              <Cardtext>
-                <p>Category: </p>
-                <p>Education Publishing</p>
-              </Cardtext>
-              <Cardlink>
-                <a href="#">Read more</a>
-                <img src={Arrow} alt="image"></img>
-              </Cardlink>
+              <img src={Card2} alt="rectangle-image"></img>
+              <div className="card-inner-content">
+                <p>
+                  LA Opera Brings Interactive and User-Friendly Digital
+                  Educational Content to Inspire and Teach the Community
+                </p>
+                <Cardtext>
+                  <p>Category:&nbsp; </p>
+                  <p>Education Publishing</p>
+                </Cardtext>
+              </div>
             </Cardbody>
+            <Cardlink>
+              <a href="#">Read more</a>
+              <img src={Arrow} alt="image"></img>
+            </Cardlink>
           </Card>
           <Card>
-            <img src={Card3} alt="rectangle-image"></img>
             <Cardbody>
-              <p>
-                Civicate Creates iteractive Civics Videos for Remove Learning
-              </p>
-              <Cardtext>
-                <p>Category: </p>
-                <p>K-12 Education</p>
-              </Cardtext>
-              <Cardlink>
-                <a href="#">Read more</a>
-                <img src={Arrow} alt="image"></img>
-              </Cardlink>
+              <img src={Card3} alt="rectangle-image"></img>
+              <div className="card-inner-content">
+                <p>
+                  Civicate Creates Iteractive Civics Videos for Remove Learning
+                </p>
+                <Cardtext>
+                  <p>Category:&nbsp; </p>
+                  <p>K-12 Education</p>
+                </Cardtext>
+              </div>
             </Cardbody>
+            <Cardlink>
+              <a href="#">Read more</a>
+              <img src={Arrow} alt="image"></img>
+            </Cardlink>
           </Card>
         </Cardcontent>
       </Container>
@@ -81,12 +86,26 @@ export default SuccessStories;
 const Section = styled.div`
   margin-top: 85px;
 `;
+const Container = styled.div`
+  max-width: 1440px;
+  padding: 0px 146px;
+  margin: auto;
+  @media screen and (max-width: 1200px) {
+    padding: 0px 100px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0px 40px;
+  }
+`;
 const Headercontainer = styled.div`
-  width: 85%;
+  width: 97%;
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 1024px) {
+    width: 98%;
+  }
 `;
-const Header = styled.div`
+const Header = styled.h4`
         max-width:333px;
         display:flex;
         margin-bottom:50px;
@@ -102,42 +121,65 @@ const Header = styled.div`
 const Cardcontent = styled.div`
   display: flex;
   flex-wrap: wrap;
+  margin-right: -50px;
+  margin-bottom: 73px;
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @media screen and (max-width: 768px) {
+    flex-direction: row;
+  }
 `;
 const Card = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   margin-right: 55px;
   max-width: 333px;
-  margin-bottom: 73px;
+
   background: #ffffff;
   box-shadow: 0px 2px 25px 5px rgba(81, 81, 81, 0.1);
   border-radius: 5px;
+  @media screen and (max-width: 1024px) {
+    margin: 0px 0px 40px 0px;
+    max-width: 300px;
+  }
+  @media screen and (max-width: 768px) {
+    max-width: 620px;
+  }
 `;
-
 const Headerbar = styled.div`
   width: 100px;
   border-bottom: 3px solid #fa8f2c;
   transform: rotate(0deg);
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 `;
-
 const Cardbody = styled.div`
         border-radius:5px;
-        padding-left:20px;
-
+          img{
+            width:100%;
+          }
+        .card-inner-content{
+          padding:14px;
+          margin-bottom:0px;
         p {
-            font family:Open-Sans;
             font-style:normal;
             font-weight-normal;
             font-size:18px;
             color:#515151;
             line-height:25px;
-            margin-top:30px;
-
         }
+      }
       `;
-const Cardtext = styled.div`
+const Cardtext = styled.p`
   display: flex;
 
   p {
-    font-family: Rubik;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -145,6 +187,7 @@ const Cardtext = styled.div`
     color: #285aa5;
     margin-bottom: 0 !important;
     margin-top: 0;
+    color: #084892 !important;
   }
 `;
 const Cardlink = styled.div`
@@ -155,8 +198,8 @@ const Cardlink = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 62px 0 33px;
-
+  width: 100%;
+  padding: 40px 0px 33px;
   a {
     color: #084892;
     font-size: 18px;
@@ -164,6 +207,7 @@ const Cardlink = styled.div`
     font-family: Rubic;
     font-style: normal;
     text-decoration: underline;
+    margin-left: 20px;
   }
   img {
     margin-right: 25px;

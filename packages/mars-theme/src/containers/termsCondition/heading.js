@@ -16,6 +16,7 @@ function Heading({ Scrollspy, state }) {
             "headings8",
             "headings9",
             "headings10",
+            "headings11",
             "headings12",
             "headings13",
             "headings14",

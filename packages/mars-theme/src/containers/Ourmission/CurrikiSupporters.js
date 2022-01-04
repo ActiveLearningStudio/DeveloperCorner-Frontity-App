@@ -57,6 +57,13 @@ const Section = styled.div``;
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
+  margin: auto;
+  @media screen and (max-width: 1200px) {
+    padding: 0px 100px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0px 40px;
+  }
 `;
 const Content = styled.div`
   display: flex;
@@ -83,14 +90,13 @@ const Foundations = styled.div`
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  @media screen and (max-width: 1200px) {
-    padding: 0px 100px;
-  }
-  @media screen and (max-width: 992px) {
-    padding: 0px 150px;
-  }
 `;
 const Div = styled.div`
   margin-right: 30px;
   margin-bottom: 70px;
+  img {
+    @media screen and (max-width: 500px) {
+      width: 150px;
+    }
+  }
 `;
