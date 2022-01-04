@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+a {
+  color: #959595;
+}
 .hero-section {
   height: 140px;
   display: flex;
@@ -17,7 +20,7 @@
 }
 .hero-section .hero-text h1 {
   color: rgb(255, 177, 36);
-  font-family: 'Rubik';
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-size: 49px;
@@ -120,7 +123,7 @@
   border-radius: 5px;
 }
 .main-container .forum-section .forum-table .table thead {
-  background:#E5E5E5;
+  background: #e5e5e5;
   height: 50px;
   border-bottom: hidden;
 }
@@ -205,7 +208,7 @@
   border-radius: 25px;
   font-family: "rubic";
   text-transform: uppercase;
-  font-weight:bold;
+  font-weight: bold;
 }
 .main-container .login-section .login-forum form .form-name {
   padding: 0 0 5px 22px;
@@ -235,8 +238,8 @@
 }
 .main-container .login-section .login-forum form button.login-btn {
   max-width: 143px;
-  height:45px;
-  padding:0px !important;
+  height: 45px;
+  padding: 0px !important;
 }
 .main-container .forum-section .forum-table .table th {
   color: rgb(81, 81, 81);
