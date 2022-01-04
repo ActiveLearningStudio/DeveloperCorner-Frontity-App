@@ -97,7 +97,7 @@
 }
 
 .main-area .api-section .api-content .api-content-detail h3 {
-  max-width: 428px;
+  max-width: 437px;
   font-family: "Rubik";
   font-style: normal;
   font-weight: 300;
@@ -338,6 +338,9 @@
   .tech-step
   .tech-step-card
   .tech-step-card-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   margin-top: 45px;
   margin-left: 30px;
   max-width: 350px;
