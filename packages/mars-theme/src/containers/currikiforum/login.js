@@ -1,15 +1,21 @@
 import React from "react";
-// import Headings from 'curriki-design-system/dist/utils/Headings/headings';
-// import Buttons from 'curriki-design-system/dist/utils/Buttons/buttons';
 import { Formik, Field } from "formik";
-const Login = () => {
+import { connect } from "frontity";
+import Link from "../../components/Header/link";
+const Login = ({ state }) => {
+  const isCurrentPage = state.router.link === "/generaldiscussion/";
   return (
     <>
       <div className="login-section">
         <div className="login-buttons">
           <button className="yellow-btn"> Login</button>
-          <button className="white-btn" disabled>
-            Register
+          <button className="white-btn">
+            <Link
+              link="/generaldiscussion/"
+              aria-current={isCurrentPage ? "page" : undefined}
+            >
+              Register
+            </Link>
           </button>
         </div>
         <div className="login-forum">
@@ -94,4 +100,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default connect(Login);
