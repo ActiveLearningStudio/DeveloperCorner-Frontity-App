@@ -29,7 +29,12 @@ export default Index;
 const Container = styled.div`
   display: flex;
   @media screen and (max-width: 992px) {
-    justify-content: center;
+    width:100%;
+    padding:0px 84px;
+  }
+  @media screen and (max-width: 768px) {
+    width:100%;
+    padding:0px 40px;
   }
   .page-wrapper {
     max-width: 970px;
@@ -39,11 +44,14 @@ const Container = styled.div`
       padding: 60px 0px 30px 60px;
     }
     @media screen and (max-width: 1100px) {
-      max-width: 830px;
       padding: 60px 0px 60px;
     }
+      @media screen and (max-width: 992px) {
+      padding: 60px 0px;
+      width:100%;
+    }
      @media screen and (max-width: 500px) {
-      max-width: 260px;
+     width:100%;
     }
   }
   }
