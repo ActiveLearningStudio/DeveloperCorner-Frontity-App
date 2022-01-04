@@ -17,11 +17,13 @@ const Technology = () => {
             <div className="tech-step-card">
               <span>1</span>
               <div className="tech-step-card-inner">
-                <h3>EXPERIENCE</h3>
-                <p>
-                  See Curriki products in action and learn best practices by
-                  signing up for our free demo envvionment
-                </p>
+                <div>
+                  <h3>EXPERIENCE</h3>
+                  <p>
+                    See Curriki products in action and learn best practices by
+                    signing up for our free demo environment
+                  </p>
+                </div>
                 <div className="tech-step-card-inner-img">
                   <img src={resume1} alt="experience-icon" />
                 </div>
@@ -33,8 +35,10 @@ const Technology = () => {
             <div className="tech-step-card">
               <span>2</span>
               <div className="tech-step-card-inner">
-                <h3>CLICK</h3>
-                <p>Download corressponding code and begin integrating</p>
+                <div>
+                  <h3>CLICK</h3>
+                  <p>Download corresponding code and begin integrating</p>
+                </div>
                 <div className="tech-step-card-inner-img">
                   <img src={resume2} alt="experience-icon" />
                 </div>
@@ -49,8 +53,12 @@ const Technology = () => {
             <div className="tech-step-card">
               <span>3</span>
               <div className="tech-step-card-inner">
-                <h3>ENVIROMENT</h3>
-                <p>Configure a hosting environment from one of our partners</p>
+                <div>
+                  <h3>ENVIRONMENT</h3>
+                  <p>
+                    Configure a hosting environment from one of our partners
+                  </p>
+                </div>
                 <div className="tech-step-card-inner-img">
                   <img src={resume3} alt="experience-icon" />
                 </div>
@@ -62,9 +70,10 @@ const Technology = () => {
             <div className="tech-step-card">
               <span>4</span>
               <div className="tech-step-card-inner">
-                <h3>LAUNCH</h3>
-                <p>COngrats! Start building interactive courses today</p>
-
+                <div>
+                  <h3>LAUNCH</h3>
+                  <p>Congrats! Start building interactive courses today</p>
+                </div>
                 <div className="tech-step-card-inner-img">
                   <img src={resume4} alt="experience-icon" />
                 </div>
