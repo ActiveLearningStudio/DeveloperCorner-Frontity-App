@@ -7,8 +7,8 @@ import { styled, Global, css } from "frontity";
 import Thankyou from "../../containers/thankyoupage/index";
 import externalCss from "./style.css";
 const DonateNow = (props) => {
+  const { show, onHide } = props;
   const [donatesubmit, setdonatesubmit] = useState(false);
-  const [thankyou, setthankyou] = useState(false);
   return (
     <div className="modal-container">
       <Global styles={css(externalCss)} />
@@ -39,7 +39,7 @@ const DonateNow = (props) => {
               <img src={donateImg} />
             </Modal.Body>
           </div>
-        ) : thankyou != true ? (
+        ) : (
           <>
             <Modal.Header closeButton>
               <Modal.Title id="contained-modal-title-vcenter">
@@ -157,7 +157,7 @@ const DonateNow = (props) => {
                           className="login-btn"
                           type="submit"
                           text="Login"
-                          onClick={() => setthankyou(true)}
+                          onClick={() => onHide(true)}
                         >
                           send donation
                         </button>
@@ -168,15 +168,6 @@ const DonateNow = (props) => {
                 </Formik>
               </div>
             </Modal.Body>
-          </>
-        ) : (
-          <>
-            <Modal.Header closeButton>
-              <Modal.Title id="contained-modal-title-vcenter">
-                Donations
-              </Modal.Title>
-            </Modal.Header>
-            <Thankyou />
           </>
         )}
       </Modal>
