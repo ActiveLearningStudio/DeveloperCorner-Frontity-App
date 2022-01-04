@@ -13,7 +13,7 @@ const Index = (props) => {
         <Search>
           <SearchField
             placeholder="Search..."
-            searchText="Search Project"
+            searchText="Search content"
             classNames="test-class"
           />
         </Search>
