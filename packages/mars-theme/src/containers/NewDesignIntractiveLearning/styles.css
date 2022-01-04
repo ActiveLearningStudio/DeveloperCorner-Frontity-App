@@ -44,12 +44,17 @@
 .main-area .api-section {
   margin-top: 23px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
+  .main-area .api-section{
+    max-width: 760px;
+  }
+}
+/* @media screen and (max-width: 767px) {
   .main-area .api-section {
     padding-left: 20px;
     padding-right: 20px;
   }
-}
+} */
 @media screen and (max-width: 768px) {
   .main-area .api-section .flex-reverse {
     display: flex;
@@ -106,7 +111,7 @@
   }
 }
 .main-area .api-section .api-content .api-content-detail p {
-  width: 688px;
+  max-width: 688px;
   font-family: "Open Sans";
   font-style: normal;
   font-weight: normal;
@@ -271,7 +276,7 @@
   color: #fff;
 }
 .main-area .techSection {
- width:800px;
+ max-width:800px;
 }
 @media screen and (max-width: 767px) {
   .main-area .techSection {
@@ -284,12 +289,18 @@
   align-items: baseline;
 }
 .main-area .techSection .tech-heading h2 {
+  max-width: 432px;
   font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-size: 25px;
   line-height: 38px;
   color: #F8AF2C;
+}
+@media screen and (max-width: 1200px) {
+  .main-area .techSection .tech-heading h2 {
+    display: block;
+  }
 }
 .main-area .techSection .tech-heading img {
   margin-left: 37px;
@@ -306,6 +317,12 @@
 .main-area .techSection .tech-content .tech-step .tech-step-card {
   display: flex;
   margin-top: 50px;
+}
+@media screen and (max-width: 500px) {
+  .main-area .techSection .tech-content .tech-step .tech-step-card {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 .main-area .techSection .tech-content .tech-step .tech-step-card span {
   font-family: "Open Sans";
@@ -366,6 +383,17 @@
   .tech-step-card-inner-img {
   text-align: right;
 }
+@media screen and (max-width: 500px) {
+.main-area
+  .techSection
+  .tech-content
+  .tech-step
+  .tech-step-card
+  .tech-step-card-inner
+  .tech-step-card-inner-img {
+   text-align: center;
+  }
+}
 .main-area
   .techSection
   .tech-content
@@ -407,7 +435,7 @@
   margin-top: 20px;
   margin-bottom: 24px;
   font-family: "Open Sans";
-  width:1008px;
+  max-width:1008px;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;

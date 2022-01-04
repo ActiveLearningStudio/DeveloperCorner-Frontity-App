@@ -7,9 +7,12 @@ import Help from "../../components/help/index";
 const Index = () => {
   return (
     <div>
-      <Banner title=" Build Interactive Learning Apps with Currik's API and Developer
-              Tools" subheading=" Developer tools and resources to integrate our authoring tool into
-              your existing learning technology stack."/>
+      <Banner
+        title=" Build Interactive Learning Apps with Currik's API and Developer
+              Tools"
+        subheading=" Developer tools and resources to integrate our authoring tool into
+              your existing learning technology stack."
+      />
 
       <Container>
         <Sidebar />
@@ -25,8 +28,32 @@ const Index = () => {
 export default Index;
 const Container = styled.div`
   display: flex;
+  @media screen and (max-width: 992px) {
+    width:100%;
+    padding:0px 84px;
+  }
+  @media screen and (max-width: 768px) {
+    width:100%;
+    padding:0px 40px;
+  }
   .page-wrapper {
     max-width: 970px;
     padding: 60px;
+    @media screen and (max-width: 1200px) {
+      max-width: 830px;
+      padding: 60px 0px 30px 60px;
+    }
+    @media screen and (max-width: 1100px) {
+      padding: 60px 0px 60px;
+    }
+      @media screen and (max-width: 992px) {
+      padding: 60px 0px;
+      width:100%;
+    }
+     @media screen and (max-width: 500px) {
+     width:100%;
+    }
   }
+  }
+  
 `;
