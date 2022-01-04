@@ -20,7 +20,7 @@ const QuickLinks = () => {
                 <img src={SettingIcon} alt="" />
                 <p>Set up, configure and run Curriki Studio</p>
               </CardHead>
-              <InnerLinks> 
+              <InnerLinks>
                 <ol>
                   <li>Commondo non nulla vel.</li>
                   <li>
@@ -28,7 +28,7 @@ const QuickLinks = () => {
                   </li>
                   <li>Neque consequat elementum.</li>
                   <li>
-                    Velit <a> pellentesque sed tellus.</a>
+                    Velit <a> pellentesque sed vel tellus.</a>
                   </li>
                 </ol>
               </InnerLinks>
@@ -85,7 +85,7 @@ const QuickLinks = () => {
                     Turpis dictum <a href="#">egestas odio sed.</a>
                   </li>
                   <li>
-                    Dictumst <a href="#">tellus ante dui</a>pharetra.
+                    Dictumst <a href="#">tellus ante dui</a> pharetra.
                   </li>
                   <li>
                     <a href="#">Consectetur</a> tristique sodales.

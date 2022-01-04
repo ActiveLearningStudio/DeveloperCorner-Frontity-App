@@ -12,7 +12,7 @@ const Index = () => {
         <Search>
           <SearchField
             placeholder="Search..."
-            searchText="Search Project"
+            searchText="Search content"
             classNames="test-class"
           />
         </Search>
