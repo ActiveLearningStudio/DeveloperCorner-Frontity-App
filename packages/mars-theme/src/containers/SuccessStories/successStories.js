@@ -180,9 +180,6 @@ const Headerbar = styled.div`
 `;
 const Cardbody = styled.div`
         border-radius:5px;
-          img{
-            width:100%;
-          }
         p {
             padding:0px 14px;
             font-style:normal;
