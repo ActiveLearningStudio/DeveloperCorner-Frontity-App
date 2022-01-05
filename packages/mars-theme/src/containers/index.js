@@ -67,7 +67,7 @@ const Index = ({ state }) => {
         <SupportLearning when={route === "/supportlearning/"} />
         <PrivacyPage when={route === "/privacypolicy/"} />
         <Terms when={route === "/termscondition/"} />
-        <SuccessStories when={route === "/successstories/"} />
+        <SuccessStories when={route === "/category/successstories/"} />
         <Successdetail when={route === "/successdetail/"} />
         <IntractiveLearning when={route === "/learning/"} />
         <Blogs when={route === "/blogs/"} />
@@ -78,7 +78,7 @@ const Index = ({ state }) => {
         <Webinars when={route === "/webinars/"} />
         <NewUi when={route === "/newui/"} />
         <Contribution when={route === "/contribution/"} />
-        <ErrorPage when={!(state.theme.menu.products.includes(route))} />
+        <ErrorPage when={!state.theme.menu.products.includes(route)} />
       </Switch>
       <Footer />
       {/* {state.router.link === "/" && <QuickLinks />}
