@@ -18,7 +18,7 @@ const settings = {
               ["BusinessProduct", "/businessProduct"],
             ],
             community: [
-              ["Blogs", "/blogs/"],
+              ["Blogs", "/category/blogs/"],
               ["webinars", "/webinars/"],
               ["Providers", "/providers"],
               ["Support Learning", "/supportlearning"],
