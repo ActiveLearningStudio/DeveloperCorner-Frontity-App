@@ -51,6 +51,7 @@ const Index = ({ state }) => {
   let route = state.router.link;
   route = route.split("#")[0];
   console.log(route);
+  console.log("postype", data.isPostType);
   return (
     <>
       <Globalstyle />
@@ -72,7 +73,7 @@ const Index = ({ state }) => {
         <SuccessStories when={route === "/category/successstories/"} />
         <Successdetail when={route === "/successdetail/"} />
         <IntractiveLearning when={route === "/learning/"} />
-        <Blogs when={route === "/blogs/"} />
+        <Blogs when={route === "/category/blogs/"} />
         <Blogdetail when={route === "/blogdetail/"} />
         <Thankyou when={route === "/thankyou/"} />
         <PressAwards when={route === "/pressawards/"} />

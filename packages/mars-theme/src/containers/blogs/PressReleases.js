@@ -1,6 +1,7 @@
-import { React, useState } from "react";
-import { styled } from "frontity";
+import { React, useState, useEffect } from "react";
+import { styled, connect } from "frontity";
 import Pagination from "react-js-pagination";
+import Loading from "../../components/loading/loading";
 import arrow from "../../assets/images/yellow-arrow.png";
 import currikiupdate from "../../assets/images/currikiupdates.png";
 import press1 from "../../assets/images/PressReleases/press1.png";
@@ -15,7 +16,7 @@ import blogCard9 from "../../assets/images/blogCard9.png";
 import blogCard10 from "../../assets/images/blogCard10.png";
 import blogCard11 from "../../assets/images/blogCard11.png";
 import blogCard12 from "../../assets/images/blogCard12.png";
-const PressReleases = () => {
+const PressReleases = ({ state, libraries }) => {
   const [activePage, setactivePage] = useState(1);
   function handlepagechange() {
     if (activePage == 1) {
@@ -24,29 +25,42 @@ const PressReleases = () => {
       setactivePage(1);
     }
   }
+  const data = state.source.get(state.router.link);
+  console.log("data", data);
+  const { next, previous } = state.source.get(state.router.link);
+  console.log("next", next);
+  console.log("prev", previous);
+  const Html2React = libraries.html2react.Component;
+  // useEffect(() => {
+  //   if (next) actions.source.fetch(next);
+  // }, []);
   return (
     <Container>
       <Heading>Press Releases</Heading>
+      {data.isFetching && <Loading />}
       {activePage == 1 ? (
         <Content>
-          <Article>
-            <div className="blog-image">
-              <img src={currikiupdate} alt="" />
-            </div>
-            <div className="article-text">
-              <BlogHeading>
-                What's New with CurrikiStudio? Updates as of November 2020
-              </BlogHeading>
-              <BlogAuthor>By: Lani deGuia</BlogAuthor>
-              <BlogLink>
-                <Link>
-                  <a href="#">Read article</a>
-                </Link>
-                <img src={arrow} alt="" />
-              </BlogLink>
-            </div>
-          </Article>
-          <Article>
+          {data.items &&
+            data.items.map(({ type, id }) => {
+              const item = state.source[type][id];
+              return (
+                <Article>
+                  <Html2React html={item.content.rendered} />
+                  <div className="article-text">
+                    <BlogAuthor>
+                      By: {state.source.author[item.author].name}
+                    </BlogAuthor>
+                    <BlogLink>
+                      <Link>
+                        <a href="#">Read article</a>
+                      </Link>
+                      <img src={arrow} alt="" />
+                    </BlogLink>
+                  </div>
+                </Article>
+              );
+            })}
+          {/* <Article>
             <div className="blog-image">
               <img src={blogCard2} alt="" />
             </div>
@@ -236,7 +250,7 @@ const PressReleases = () => {
                 <img src={arrow} alt="" />
               </BlogLink>
             </div>
-          </Article>
+          </Article> */}
         </Content>
       ) : (
         <Article>
@@ -257,31 +271,33 @@ const PressReleases = () => {
           </div>
         </Article>
       )}
-      <Pagination
-        itemClass="page-item"
-        linkClass="page-link"
-        linkClassNext="pages-link"
-        firstPageText="false"
-        nextPageText=">"
-        hideDisable="false"
-        itemClassPrev="item-prev"
-        prevPageText="<"
-        itemClassNext="item-next"
-        activePage={activePage}
-        itemsCountPerPage={16}
-        totalItemsCount={17}
-        pageRangeDisplayed={2}
-        onChange={handlepagechange}
-      />
+      {!data.isFetching && (
+        <Pagination
+          itemClass="page-item"
+          linkClass="page-link"
+          linkClassNext="pages-link"
+          firstPageText="false"
+          nextPageText=">"
+          hideDisable="false"
+          itemClassPrev="item-prev"
+          prevPageText="<"
+          itemClassNext="item-next"
+          activePage={activePage}
+          itemsCountPerPage={16}
+          totalItemsCount={17}
+          pageRangeDisplayed={2}
+          onChange={handlepagechange}
+        />
+      )}
     </Container>
   );
 };
 
-export default PressReleases;
+export default connect(PressReleases);
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
-  margin:auto;
+  margin: auto;
   @media screen and (min-width: 768px) and (max-width: 1200px) {
     padding: 0px 70px;
   }
@@ -370,8 +386,22 @@ const Article = styled.div`
   border-radius: 5px;
   margin-right: 36px;
   margin-bottom: 30px;
+  p {
+    width: 220px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    // height: 63px;
+    color: #084892;
+    // margin-bottom: 22px;
+    padding: 0px 20px;
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      width: 100%;
+    }
+  }
   .article-text {
-    padding: 20px 20px;
+    padding: 0px 20px 20px 20px;
   }
   @media screen and (min-width: 320px) and (max-width: 767px) {
     width: 100%;
@@ -382,26 +412,27 @@ const Article = styled.div`
     }
   }
 `;
-const BlogHeading = styled.h3`
-  width: 220px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-  height: 63px;
-  color: #084892;
-  margin-bottom: 22px;
-  @media screen and (min-width: 320px) and (max-width: 767px) {
-    width: 100%;
-  }
-`;
+// const BlogHeading = styled.h3`
+//   width: 220px;
+//   font-style: normal;
+//   font-weight: 500;
+//   font-size: 18px;
+//   line-height: 21px;
+//   height: 63px;
+//   color: #084892;
+//   margin-bottom: 22px;
+//   @media screen and (min-width: 320px) and (max-width: 767px) {
+//     width: 100%;
+//   }
+// `;
 const BlogAuthor = styled.p`
   width: 220px;
   font-style: normal;
   font-weight: 300;
-  font-size: 12px;
+  font-size: 12px !important;
   line-height: 14px;
-  color: #515151;
+  color: #515151 !important;
+  padding: 0px !important;
 `;
 const BlogLink = styled.div`
   width: 220px;
