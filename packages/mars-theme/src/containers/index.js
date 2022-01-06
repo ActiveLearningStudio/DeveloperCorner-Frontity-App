@@ -75,7 +75,7 @@ const Index = ({ state }) => {
         <Blogs when={route === "/blogs/"} />
         <Blogdetail when={route === "/blogdetail/"} />
         <Thankyou when={route === "/thankyou/"} />
-        <PressAwards when={route === "/pressawards/"} />
+        <PressAwards when={route === "/category/pressawards/"} />
         <Pressdetail when={route === "/pressdetail/"} />
         <Webinars when={route === "/webinars/"} />
         <NewUi when={route === "/newui/"} />

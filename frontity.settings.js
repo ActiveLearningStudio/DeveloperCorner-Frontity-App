@@ -25,7 +25,7 @@ const settings = {
             ],
             company: [
               ["Ourmission", "/ourmission"],
-              ["Press&awards", "/pressawards/"],
+              ["Press&awards", "/category/pressawards/"],
             ],
             login: [["Login", "/currikiforum/"]],
             donate: [["Ourmission", "/ourmission"]],
