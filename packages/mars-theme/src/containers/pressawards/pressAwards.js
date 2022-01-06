@@ -438,19 +438,19 @@ const Article = styled.div`
   }
 `;
 
-// const BlogHeading = styled.h3`
-//   width: 220px;
-//   font-style: normal;
-//   font-weight: 500;
-//   font-size: 18px;
-//   line-height: 21px;
-//   height: 147px;
-//   margin-bottom: 10px;
-//   color: #084892;
-//   @media screen and (min-width: 320px) and (max-width: 767px) {
-//     width: 100%;
-//   }
-// `;
+const BlogHeading = styled.h3`
+  width: 220px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  height: 147px;
+  margin-bottom: 10px;
+  color: #084892;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    width: 100%;
+  }
+`;
 const BlogAuthor = styled.p`
   width: 220px;
   font-style: normal;
