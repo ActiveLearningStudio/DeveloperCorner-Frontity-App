@@ -1,5 +1,6 @@
 import React from "react";
 import { styled, connect } from "frontity";
+import Loading from "../../components/loading/loading";
 import image21 from "../../assets/images/image21.png";
 import Arrow from "../../assets/images/Arrow.svg";
 import Group2 from "../../assets/images/Group2.png";
@@ -22,6 +23,7 @@ const SuccessStories = ({ state, libraries }) => {
             <Headerbar></Headerbar>
           </Header>
         </Headercontainer>
+        {data.isFetching && <Loading />}
         <Cardcontent>
           {data.items &&
             data.items.map(({ type, id }) => {
@@ -158,15 +160,15 @@ const Card = styled.div`
   justify-content: space-between;
   margin-right: 55px;
   max-width: 333px;
-
   background: #ffffff;
   box-shadow: 0px 2px 25px 5px rgba(81, 81, 81, 0.1);
   border-radius: 5px;
+  margin-bottom: 50px;
   @media screen and (max-width: 1024px) {
     margin: 0px 0px 40px 0px;
     max-width: 300px;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     max-width: 620px;
   }
 `;
@@ -180,6 +182,11 @@ const Headerbar = styled.div`
 `;
 const Cardbody = styled.div`
         border-radius:5px;
+        img{
+          width:100%;
+          height:196px;
+          border-radius:5px;
+        }
         p {
             padding:0px 14px;
             font-style:normal;
