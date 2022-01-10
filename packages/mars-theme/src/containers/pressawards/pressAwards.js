@@ -1,6 +1,7 @@
 import { React, useState } from "react";
 import { styled, connect } from "frontity";
 import Banner from "../../components/banner/Styledbanner";
+import PressArticle from "./pressArticle";
 import Loading from "../../components/loading/loading";
 import arrow from "../../assets/images/yellow-arrow.png";
 import currikiupdate from "../../assets/images/currikiupdates.png";
@@ -39,19 +40,7 @@ const PressAwards = ({ state, libraries }) => {
             {data.items &&
               data.items.map(({ type, id }) => {
                 const item = state.source[type][id];
-                return (
-                  <Article>
-                    <Html2React html={item.content.rendered} />
-
-                    <div className="article-text">
-                      <BlogAuthor> By: Caroline Benoist</BlogAuthor>
-                      <BlogLink>
-                        <Link>Read article</Link>
-                        <img src={arrow} alt="" />
-                      </BlogLink>
-                    </div>
-                  </Article>
-                );
+                return <PressArticle key={item.id} item={item} />;
               })}
           </Content>
         ) : (

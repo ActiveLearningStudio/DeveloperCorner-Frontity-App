@@ -1,6 +1,7 @@
 import React from "react";
 import { styled, connect } from "frontity";
 import Loading from "../../components/loading/loading";
+import StoryCard from "./storyCard";
 import image21 from "../../assets/images/image21.png";
 import Arrow from "../../assets/images/Arrow.svg";
 import Group2 from "../../assets/images/Group2.png";
@@ -28,75 +29,8 @@ const SuccessStories = ({ state, libraries }) => {
           {data.items &&
             data.items.map(({ type, id }) => {
               const item = state.source[type][id];
-              return (
-                <Card>
-                  <Cardbody>
-                    <Html2React html={item.content.rendered} />
-                  </Cardbody>
-                  <Cardlink>
-                    <a href="#">Read more</a>
-                    <img src={Arrow} alt="image"></img>
-                  </Cardlink>
-                </Card>
-              );
+              return <StoryCard key={item.id} item={item} />;
             })}
-
-          {/* <Card>
-            <Cardbody>
-              <img src={image21} alt="rectangle-image"></img>
-              <div className="card-inner-content">
-                <p>
-                  TCI Education Publishing Company Discovers New Ways to Reach
-                  Students.
-                </p>
-                <Cardtext>
-                  <p>Category:&nbsp; </p>
-                  <p>Education Publishing</p>
-                </Cardtext>
-              </div>
-            </Cardbody>
-            <Cardlink>
-              <a href="#">Read more</a>
-              <img src={Arrow} alt="image"></img>
-            </Cardlink>
-          </Card>
-          <Card>
-            <Cardbody>
-              <img src={Card2} alt="rectangle-image"></img>
-              <div className="card-inner-content">
-                <p>
-                  LA Opera Brings Interactive and User-Friendly Digital
-                  Educational Content to Inspire and Teach the Community
-                </p>
-                <Cardtext>
-                  <p>Category:&nbsp; </p>
-                  <p>Education Publishing</p>
-                </Cardtext>
-              </div>
-            </Cardbody>
-            <Cardlink>
-              <a href="#">Read more</a>
-              <img src={Arrow} alt="image"></img>
-            </Cardlink>
-          </Card>
-          <Card>
-            <Cardbody>
-              <img src={Card3} alt="rectangle-image"></img>
-              <div className="card-inner-content">
-                <p>
-                  Civicate Creates Iteractive Civics Videos for Remove Learning
-                </p>
-                <Cardtext>
-                  <p>Category:&nbsp; </p>
-                  <p>K-12 Education</p>
-                </Cardtext>
-              </div>
-            </Cardbody>
-            <Cardlink>
-              <a href="#">Read more</a>
-              <img src={Arrow} alt="image"></img>
-            </Cardlink>
-          </Card> */}
         </Cardcontent>
       </Container>
     </Section>
