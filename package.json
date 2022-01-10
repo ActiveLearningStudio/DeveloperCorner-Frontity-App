@@ -31,6 +31,7 @@
     "formik": "^2.2.9",
     "frontity": "^1.17.1",
     "history": "^5.0.1",
+    "himalaya": "^1.1.0",
     "react-bootstrap": "^2.0.3",
     "react-dom": "^17.0.2",
     "react-js-pagination": "^3.0.3",

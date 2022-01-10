@@ -15,7 +15,8 @@ import articleimg4 from "../../assets/images/PressReleases/articleimg4.png";
 import articleimg5 from "../../assets/images/PressReleases/articleimg5.png";
 import articleimg6 from "../../assets/images/PressReleases/articleimg6.png";
 import articleimg7 from "../../assets/images/PressReleases/articleimg7.png";
-const Blogdetail = () => {
+const Blogdetail = ({ routelink }) => {
+  // alert(routelink);
   return (
     <>
       <Banner title="Blog" />
@@ -269,32 +270,30 @@ export default Blogdetail;
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
-  margin:auto;
+  margin: auto;
   @media screen and (max-width: 1200px) {
-    padding:0px 100px;
+    padding: 0px 100px;
   }
   @media screen and (max-width: 768px) {
-    padding:0px 40px;
+    padding: 0px 40px;
   }
 `;
 const BlogContent = styled.div`
-  display: flex;  
+  display: flex;
   align-items: center;
   margin-top: 70px;
   margin-bottom: 100px;
   .curriki-updates-image {
-    img{
-      width:100%;
+    img {
+      width: 100%;
     }
     @media screen and (max-width: 767px) {
-     display:none;
+      display: none;
     }
-   
   }
 `;
 const Heading = styled.h4`
   h4 {
-    
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
@@ -334,8 +333,8 @@ const Description = styled.div`
   margin-bottom: 106px;
   .article-desc-image {
     margin-bottom: 20px;
-    img{
-      width:100%;
+    img {
+      width: 100%;
     }
   }
   .updates-list-para {
@@ -365,7 +364,7 @@ const Description = styled.div`
     }
   }
   @media screen and (max-width: 992px) {
-    width:100%;
+    width: 100%;
   }
 `;
 const DescHeading = styled.h3`

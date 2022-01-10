@@ -1,11 +1,16 @@
 import React from "react";
-import { styled } from "frontity";
+import { styled, connect } from "frontity";
+import Loading from "../../components/loading/loading";
+import StoryCard from "./storyCard";
 import image21 from "../../assets/images/image21.png";
 import Arrow from "../../assets/images/Arrow.svg";
 import Group2 from "../../assets/images/Group2.png";
 import Card2 from "../../assets/images/Card2.png";
 import Card3 from "../../assets/images/Card3.png";
-const SuccessStories = () => {
+const SuccessStories = ({ state, libraries }) => {
+  const data = state.source.get(state.router.link);
+  console.log("data", data);
+  const Html2React = libraries.html2react.Component;
   return (
     <Section>
       <Container>
@@ -19,70 +24,20 @@ const SuccessStories = () => {
             <Headerbar></Headerbar>
           </Header>
         </Headercontainer>
+        {data.isFetching && <Loading />}
         <Cardcontent>
-          <Card>
-            <Cardbody>
-              <img src={image21} alt="rectangle-image"></img>
-              <div className="card-inner-content">
-                <p>
-                  TCI Education Publishing Company Discovers New Ways to Reach
-                  Students.
-                </p>
-                <Cardtext>
-                  <p>Category:&nbsp; </p>
-                  <p>Education Publishing</p>
-                </Cardtext>
-              </div>
-            </Cardbody>
-            <Cardlink>
-              <a href="#">Read more</a>
-              <img src={Arrow} alt="image"></img>
-            </Cardlink>
-          </Card>
-          <Card>
-            <Cardbody>
-              <img src={Card2} alt="rectangle-image"></img>
-              <div className="card-inner-content">
-                <p>
-                  LA Opera Brings Interactive and User-Friendly Digital
-                  Educational Content to Inspire and Teach the Community
-                </p>
-                <Cardtext>
-                  <p>Category:&nbsp; </p>
-                  <p>Education Publishing</p>
-                </Cardtext>
-              </div>
-            </Cardbody>
-            <Cardlink>
-              <a href="#">Read more</a>
-              <img src={Arrow} alt="image"></img>
-            </Cardlink>
-          </Card>
-          <Card>
-            <Cardbody>
-              <img src={Card3} alt="rectangle-image"></img>
-              <div className="card-inner-content">
-                <p>
-                  Civicate Creates Iteractive Civics Videos for Remove Learning
-                </p>
-                <Cardtext>
-                  <p>Category:&nbsp; </p>
-                  <p>K-12 Education</p>
-                </Cardtext>
-              </div>
-            </Cardbody>
-            <Cardlink>
-              <a href="#">Read more</a>
-              <img src={Arrow} alt="image"></img>
-            </Cardlink>
-          </Card>
+          {data.items &&
+            data.items.map(({ type, id }) => {
+              const item = state.source[type][id];
+              return <StoryCard key={item.id} item={item} />;
+            })}
         </Cardcontent>
       </Container>
     </Section>
   );
 };
 
-export default SuccessStories;
+export default connect(SuccessStories);
 const Section = styled.div`
   margin-top: 85px;
 `;
@@ -139,15 +94,15 @@ const Card = styled.div`
   justify-content: space-between;
   margin-right: 55px;
   max-width: 333px;
-
   background: #ffffff;
   box-shadow: 0px 2px 25px 5px rgba(81, 81, 81, 0.1);
   border-radius: 5px;
+  margin-bottom: 50px;
   @media screen and (max-width: 1024px) {
     margin: 0px 0px 40px 0px;
     max-width: 300px;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     max-width: 620px;
   }
 `;
@@ -161,35 +116,39 @@ const Headerbar = styled.div`
 `;
 const Cardbody = styled.div`
         border-radius:5px;
-          img{
-            width:100%;
-          }
-        .card-inner-content{
-          padding:14px;
-          margin-bottom:0px;
+        img{
+          width:100%;
+          height:196px;
+          border-radius:5px;
+        }
         p {
+            padding:0px 14px;
             font-style:normal;
             font-weight-normal;
             font-size:18px;
             color:#515151;
             line-height:25px;
+            margin-bottom:10px;
         }
+      p:last-child{
+            font-size: 16px;
+            color: #084892 !important;
       }
       `;
-const Cardtext = styled.p`
-  display: flex;
+// const Cardtext = styled.p`
+//   display: flex;
 
-  p {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 19px;
-    color: #285aa5;
-    margin-bottom: 0 !important;
-    margin-top: 0;
-    color: #084892 !important;
-  }
-`;
+//   p {
+//     font-style: normal;
+//     font-weight: normal;
+//     font-size: 16px;
+//     line-height: 19px;
+//     color: #285aa5;
+//     margin-bottom: 0 !important;
+//     margin-top: 0;
+//     color: #084892 !important;
+//   }
+// `;
 const Cardlink = styled.div`
   background-image: url(${Group2});
   background-size: contain;
