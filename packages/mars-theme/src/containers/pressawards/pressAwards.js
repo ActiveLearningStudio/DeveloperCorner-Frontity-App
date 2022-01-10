@@ -1,6 +1,8 @@
 import { React, useState } from "react";
+import { styled, connect } from "frontity";
 import Banner from "../../components/banner/Styledbanner";
-import { styled } from "frontity";
+import PressArticle from "./pressArticle";
+import Loading from "../../components/loading/loading";
 import arrow from "../../assets/images/yellow-arrow.png";
 import currikiupdate from "../../assets/images/currikiupdates.png";
 import pressCard1 from "../../assets/images/pressCard1.png";
@@ -15,7 +17,10 @@ import pressCard13 from "../../assets/images/pressCard13.png";
 import pressCard14 from "../../assets/images/pressCard14.png";
 import pressCard15 from "../../assets/images/pressCard15.png";
 import Pagination from "react-js-pagination";
-const PressAwards = () => {
+const PressAwards = ({ state, libraries }) => {
+  const data = state.source.get(state.router.link);
+  console.log("data is here", data);
+  const Html2React = libraries.html2react.Component;
   const [activePage, setactivePage] = useState(1);
   function handlepagechange() {
     if (activePage == 1) {
@@ -29,197 +34,205 @@ const PressAwards = () => {
       <Banner title="Press & Awards" />
       <Container>
         <Heading>Press Releases</Heading>
+        {data.isFetching && <Loading />}
         {activePage == 1 ? (
           <Content>
-            <Article>
-              <div className="blog-image">
-                <img src={pressCard1} alt="" />
-              </div>
-              <div className="article-text">
-                <BlogHeading>
-                  “How to Become an Entrepreneur” is Now Available Online as the
-                  First Higher Education Course Designed with CurrikiStudio
-                </BlogHeading>
-                <BlogAuthor> By: Caroline Benoist</BlogAuthor>
-                <BlogLink>
-                  <Link>Read article</Link>
-                  <img src={arrow} alt="" />
-                </BlogLink>
-              </div>
-            </Article>
-            <Article>
-              <div className="blog-image">
-                <img src={pressCard2} alt="" />
-              </div>
-              <div className="article-text">
-                <BlogHeading>
-                  Curriki Launches Interactive Civics Videos for Remote Learning
-                </BlogHeading>
-                <BlogAuthor>By: Caroline Benoist</BlogAuthor>
-                <BlogLink>
-                  <Link>Read article</Link>
-                  <img src={arrow} alt="" />
-                </BlogLink>
-              </div>
-            </Article>
-            <Article>
-              <div className="blog-image">
-                <img src={pressCard3} alt="" />
-              </div>
-              <div className="article-text">
-                <BlogHeading>
-                  Curriki Answers the Call from School Districts, Universities,
-                  and Nonprofits―Launches CurrikiStudio AWS CloudFormation
-                  Template
-                </BlogHeading>
-                <BlogAuthor>By: Caroline Benoist</BlogAuthor>
-                <BlogLink>
-                  <Link>Read article</Link>
-                  <img src={arrow} alt="" />
-                </BlogLink>
-              </div>
-            </Article>
-            <Article>
-              <div className="blog-image">
-                <img src={currikiupdate} alt="" />
-              </div>
-              <div className="article-text">
-                <BlogHeading>
-                  Curriki® Delivers Game-Changing Functionality and Access to
-                  its Free Interactive Authoring Tool, CurrikiStudio, with
-                  Support from Linode
-                </BlogHeading>
-                <BlogAuthor>By: Caroline Benoist</BlogAuthor>
-                <BlogLink>
-                  <Link>Read article</Link>
-                  <img src={arrow} alt="" />
-                </BlogLink>
-              </div>
-            </Article>
-            <Article>
-              <div className="blog-image">
-                <img src={pressCard5} alt="" />
-              </div>
-              <div className="article-text">
-                <BlogHeading>
-                  Curriki® Unveils Multi - platform Publishing for CurrikiStudio
-                </BlogHeading>
-                <BlogAuthor>By: Caroline Benoist</BlogAuthor>
-                <BlogLink>
-                  <Link>Read article</Link>
-                  <img src={arrow} alt="" />
-                </BlogLink>
-              </div>
-            </Article>
-            <Article>
-              <div className="blog-image">
-                <img src={pressCard6} alt="" />
-              </div>
-              <div className="article-text">
-                <BlogHeading>
-                  Curriki Launches CurrikiStudio to Fast-track Digital Content
-                  Authoring and Delivery for Distance Learning
-                </BlogHeading>
-                <BlogAuthor>By: Caroline Benoist</BlogAuthor>
-                <BlogLink>
-                  <Link>Read article</Link>
-                  <img src={arrow} alt="" />
-                </BlogLink>
-              </div>
-            </Article>
-            <Article>
-              <div className="blog-image">
-                <img src={pressCard1} alt="" />
-              </div>
-              <div className="article-text">
-                <BlogHeading>
-                  Curriki Names Keith Kostrzewski as CEO, Succeeding Chairman &
-                  Co-Founder Kim Jones
-                </BlogHeading>
-                <BlogAuthor>By: Caroline Benoist</BlogAuthor>
-                <BlogLink>
-                  <Link>Read article</Link>
-                  <img src={arrow} alt="" />
-                </BlogLink>
-              </div>
-            </Article>
-            <Article>
-              <div className="blog-image">
-                <img src={pressCard8} alt="" />
-              </div>
-              <div className="article-text">
-                <BlogHeading>
-                  Curriki Awarded Grants from Four Technology Giants in 2019
-                </BlogHeading>
-                <BlogAuthor>By: Caroline Benoist</BlogAuthor>
-                <BlogLink>
-                  <Link>Read article</Link>
-                  <img src={arrow} alt="" />
-                </BlogLink>
-              </div>
-            </Article>
-            <Article>
-              <div className="blog-image">
-                <img src={pressCard9} alt="" />
-              </div>
-              <div className="article-text">
-                <BlogHeading>
-                  Curriki Wins EdTech Digest Cool Tool Award for Open
-                  Educational Resources
-                </BlogHeading>
-                <BlogAuthor>By: Caroline Benoist</BlogAuthor>
-                <BlogLink>
-                  <Link>Read article</Link>
-                  <img src={arrow} alt="" />
-                </BlogLink>
-              </div>
-            </Article>
-            <Article>
-              <div className="blog-image">
-                <img src={pressCard10} alt="" />
-              </div>
-              <div className="article-text">
-                <BlogHeading>
-                  Curriki Offers Youth Entrepreneurs® Resources to Middle and
-                  High School Business Educators for Real-World Application
-                </BlogHeading>
-                <BlogAuthor>By: Caroline Benoist</BlogAuthor>
-                <BlogLink>
-                  <Link>Read article</Link>
-                  <img src={arrow} alt="" />
-                </BlogLink>
-              </div>
-            </Article>
-            <Article>
-              <div className="blog-image">
-                <img src={pressCard6} alt="" />
-              </div>
-              <div className="article-text">
-                <BlogHeading>
-                  Curriki Offers Two New Social Studies Collections
-                </BlogHeading>
-                <BlogAuthor>By: Caroline Benoist</BlogAuthor>
-                <BlogLink>
-                  <Link>Read article</Link>
-                  <img src={arrow} alt="" />
-                </BlogLink>
-              </div>
-            </Article>
-            <Article>
-              <div className="blog-image">
-                <img src={pressCard2} alt="" />
-              </div>
-              <div className="article-text">
-                <BlogHeading>Oracle Awards Curriki $20K Grant</BlogHeading>
-                <BlogAuthor>By: Caroline Benoist</BlogAuthor>
-                <BlogLink>
-                  <Link>Read article</Link>
-                  <img src={arrow} alt="" />
-                </BlogLink>
-              </div>
-            </Article>
+            {data.items &&
+              data.items.map(({ type, id }) => {
+                const item = state.source[type][id];
+                return <PressArticle key={item.id} item={item} />;
+              })}
           </Content>
         ) : (
+          // <Content>
+          //   <Article>
+          //     {/* <div className="blog-image">
+          //       <img src={pressCard1} alt="" />
+          //     </div> */}
+          //     <div className="article-text">
+          //       {/* <BlogHeading>
+          //         “How to Become an Entrepreneur” is Now Available Online as the
+          //         First Higher Education Course Designed with CurrikiStudio
+          //       </BlogHeading> */}
+          //       {/* <BlogAuthor> By: Caroline Benoist</BlogAuthor> */}
+          //       <BlogLink>
+          //         <Link>Read article</Link>
+          //         <img src={arrow} alt="" />
+          //       </BlogLink>
+          //     </div>
+          //   </Article>
+          //   <Article>
+          //     <div className="blog-image">
+          //       <img src={pressCard2} alt="" />
+          //     </div>
+          //     <div className="article-text">
+          //       <BlogHeading>
+          //         Curriki Launches Interactive Civics Videos for Remote Learning
+          //       </BlogHeading>
+          //       <BlogAuthor>By: Caroline Benoist</BlogAuthor>
+          //       <BlogLink>
+          //         <Link>Read article</Link>
+          //         <img src={arrow} alt="" />
+          //       </BlogLink>
+          //     </div>
+          //   </Article>
+          //   <Article>
+          //     <div className="blog-image">
+          //       <img src={pressCard3} alt="" />
+          //     </div>
+          //     <div className="article-text">
+          //       <BlogHeading>
+          //         Curriki Answers the Call from School Districts, Universities,
+          //         and Nonprofits―Launches CurrikiStudio AWS CloudFormation
+          //         Template
+          //       </BlogHeading>
+          //       <BlogAuthor>By: Caroline Benoist</BlogAuthor>
+          //       <BlogLink>
+          //         <Link>Read article</Link>
+          //         <img src={arrow} alt="" />
+          //       </BlogLink>
+          //     </div>
+          //   </Article>
+          //   <Article>
+          //     <div className="blog-image">
+          //       <img src={currikiupdate} alt="" />
+          //     </div>
+          //     <div className="article-text">
+          //       <BlogHeading>
+          //         Curriki® Delivers Game-Changing Functionality and Access to
+          //         its Free Interactive Authoring Tool, CurrikiStudio, with
+          //         Support from Linode
+          //       </BlogHeading>
+          //       <BlogAuthor>By: Caroline Benoist</BlogAuthor>
+          //       <BlogLink>
+          //         <Link>Read article</Link>
+          //         <img src={arrow} alt="" />
+          //       </BlogLink>
+          //     </div>
+          //   </Article>
+          //   <Article>
+          //     <div className="blog-image">
+          //       <img src={pressCard5} alt="" />
+          //     </div>
+          //     <div className="article-text">
+          //       <BlogHeading>
+          //         Curriki® Unveils Multi - platform Publishing for CurrikiStudio
+          //       </BlogHeading>
+          //       <BlogAuthor>By: Caroline Benoist</BlogAuthor>
+          //       <BlogLink>
+          //         <Link>Read article</Link>
+          //         <img src={arrow} alt="" />
+          //       </BlogLink>
+          //     </div>
+          //   </Article>
+          //   <Article>
+          //     <div className="blog-image">
+          //       <img src={pressCard6} alt="" />
+          //     </div>
+          //     <div className="article-text">
+          //       <BlogHeading>
+          //         Curriki Launches CurrikiStudio to Fast-track Digital Content
+          //         Authoring and Delivery for Distance Learning
+          //       </BlogHeading>
+          //       <BlogAuthor>By: Caroline Benoist</BlogAuthor>
+          //       <BlogLink>
+          //         <Link>Read article</Link>
+          //         <img src={arrow} alt="" />
+          //       </BlogLink>
+          //     </div>
+          //   </Article>
+          //   <Article>
+          //     <div className="blog-image">
+          //       <img src={pressCard1} alt="" />
+          //     </div>
+          //     <div className="article-text">
+          //       <BlogHeading>
+          //         Curriki Names Keith Kostrzewski as CEO, Succeeding Chairman &
+          //         Co-Founder Kim Jones
+          //       </BlogHeading>
+          //       <BlogAuthor>By: Caroline Benoist</BlogAuthor>
+          //       <BlogLink>
+          //         <Link>Read article</Link>
+          //         <img src={arrow} alt="" />
+          //       </BlogLink>
+          //     </div>
+          //   </Article>
+          //   <Article>
+          //     <div className="blog-image">
+          //       <img src={pressCard8} alt="" />
+          //     </div>
+          //     <div className="article-text">
+          //       <BlogHeading>
+          //         Curriki Awarded Grants from Four Technology Giants in 2019
+          //       </BlogHeading>
+          //       <BlogAuthor>By: Caroline Benoist</BlogAuthor>
+          //       <BlogLink>
+          //         <Link>Read article</Link>
+          //         <img src={arrow} alt="" />
+          //       </BlogLink>
+          //     </div>
+          //   </Article>
+          //   <Article>
+          //     <div className="blog-image">
+          //       <img src={pressCard9} alt="" />
+          //     </div>
+          //     <div className="article-text">
+          //       <BlogHeading>
+          //         Curriki Wins EdTech Digest Cool Tool Award for Open
+          //         Educational Resources
+          //       </BlogHeading>
+          //       <BlogAuthor>By: Caroline Benoist</BlogAuthor>
+          //       <BlogLink>
+          //         <Link>Read article</Link>
+          //         <img src={arrow} alt="" />
+          //       </BlogLink>
+          //     </div>
+          //   </Article>
+          //   <Article>
+          //     <div className="blog-image">
+          //       <img src={pressCard10} alt="" />
+          //     </div>
+          //     <div className="article-text">
+          //       <BlogHeading>
+          //         Curriki Offers Youth Entrepreneurs® Resources to Middle and
+          //         High School Business Educators for Real-World Application
+          //       </BlogHeading>
+          //       <BlogAuthor>By: Caroline Benoist</BlogAuthor>
+          //       <BlogLink>
+          //         <Link>Read article</Link>
+          //         <img src={arrow} alt="" />
+          //       </BlogLink>
+          //     </div>
+          //   </Article>
+          //   <Article>
+          //     <div className="blog-image">
+          //       <img src={pressCard6} alt="" />
+          //     </div>
+          //     <div className="article-text">
+          //       <BlogHeading>
+          //         Curriki Offers Two New Social Studies Collections
+          //       </BlogHeading>
+          //       <BlogAuthor>By: Caroline Benoist</BlogAuthor>
+          //       <BlogLink>
+          //         <Link>Read article</Link>
+          //         <img src={arrow} alt="" />
+          //       </BlogLink>
+          //     </div>
+          //   </Article>
+          //   <Article>
+          //     <div className="blog-image">
+          //       <img src={pressCard2} alt="" />
+          //     </div>
+          //     <div className="article-text">
+          //       <BlogHeading>Oracle Awards Curriki $20K Grant</BlogHeading>
+          //       <BlogAuthor>By: Caroline Benoist</BlogAuthor>
+          //       <BlogLink>
+          //         <Link>Read article</Link>
+          //         <img src={arrow} alt="" />
+          //       </BlogLink>
+          //     </div>
+          //   </Article>
+          // </Content>
           <Content>
             <Article>
               <div className="blog-image">
@@ -270,29 +283,30 @@ const PressAwards = () => {
             </Article>
           </Content>
         )}
-
-        <Pagination
-          itemClass="page-item"
-          linkClass="page-link"
-          linkClassNext="pages-link"
-          firstPageText="false"
-          nextPageText=">"
-          hideDisable="false"
-          itemClassPrev="item-prev"
-          prevPageText="<"
-          itemClassNext="item-next"
-          activePage={activePage}
-          itemsCountPerPage={16}
-          totalItemsCount={17}
-          pageRangeDisplayed={2}
-          onChange={handlepagechange}
-        />
+        {data.isFetching || (
+          <Pagination
+            itemClass="page-item"
+            linkClass="page-link"
+            linkClassNext="pages-link"
+            firstPageText="false"
+            nextPageText=">"
+            hideDisable="false"
+            itemClassPrev="item-prev"
+            prevPageText="<"
+            itemClassNext="item-next"
+            activePage={activePage}
+            itemsCountPerPage={16}
+            totalItemsCount={17}
+            pageRangeDisplayed={2}
+            onChange={handlepagechange}
+          />
+        )}
       </Container>
     </div>
   );
 };
 
-export default PressAwards;
+export default connect(PressAwards);
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
@@ -385,6 +399,21 @@ const Article = styled.div`
   border-radius: 5px;
   margin-right: 36px;
   margin-bottom: 30px;
+
+  p {
+    width: 220px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    // height: 147px;
+    margin-bottom: 10px;
+    color: #084892;
+    padding: 0px 20px;
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      width: 100%;
+    }
+  }
   .article-text {
     padding: 20px 20px;
   }
@@ -415,9 +444,10 @@ const BlogAuthor = styled.p`
   width: 220px;
   font-style: normal;
   font-weight: 300;
-  font-size: 12px;
+  font-size: 12px !important;
   line-height: 14px;
-  color: #515151;
+  color: #515151 !important;
+  padding: 0px !important;
 `;
 const BlogLink = styled.div`
   width: 220px;

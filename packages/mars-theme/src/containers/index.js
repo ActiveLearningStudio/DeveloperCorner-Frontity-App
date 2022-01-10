@@ -3,6 +3,7 @@ import { Global, css, connect } from "frontity";
 import { createGlobalStyle } from "styled-components";
 import Switch from "@frontity/components/switch";
 import Header from "../components/Header/header.js";
+import Loading from "../components/loading/loading";
 import IntractiveLearning from "./IntractiveLearning/index";
 import Footer from "../components/footer/index";
 import bootstrapCss from "bootstrap/dist/css/bootstrap.min.css";
@@ -46,9 +47,11 @@ a {
 }
 `;
 const Index = ({ state }) => {
+  const data = state.source.get(state.router.link);
   let route = state.router.link;
   route = route.split("#")[0];
   console.log(route);
+  console.log("postype", data.isPostType);
   return (
     <>
       <Globalstyle />
@@ -70,10 +73,10 @@ const Index = ({ state }) => {
         <SuccessStories when={route === "/category/successstories/"} />
         <Successdetail when={route === "/successdetail/"} />
         <IntractiveLearning when={route === "/learning/"} />
-        <Blogs when={route === "/blogs/"} />
+        <Blogs when={route === "/category/blogs/"} />
         <Blogdetail when={route === "/blogdetail/"} />
         <Thankyou when={route === "/thankyou/"} />
-        <PressAwards when={route === "/pressawards/"} />
+        <PressAwards when={route === "/category/pressawards/"} />
         <Pressdetail when={route === "/pressdetail/"} />
         <Webinars when={route === "/webinars/"} />
         <NewUi when={route === "/newui/"} />

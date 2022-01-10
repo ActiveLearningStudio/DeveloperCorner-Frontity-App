@@ -18,14 +18,14 @@ const settings = {
               ["BusinessProduct", "/businessProduct"],
             ],
             community: [
-              ["Blogs", "/blogs/"],
+              ["Blogs", "/category/blogs/"],
               ["webinars", "/webinars/"],
               ["Providers", "/providers"],
               ["Support Learning", "/supportlearning"],
             ],
             company: [
               ["Ourmission", "/ourmission"],
-              ["Press&awards", "/pressawards/"],
+              ["Press&awards", "/category/pressawards/"],
             ],
             login: [["Login", "/currikiforum/"]],
             donate: [["Ourmission", "/ourmission"]],
