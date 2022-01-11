@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "frontity";
+import { styled, connect } from "frontity";
 import Banner from "../../components/banner/Styledbanner";
 import facebookicon from "../../assets/images/social-icons/facebook.png";
 import twittericon from "../../assets/images/social-icons/twitter.png";
@@ -15,8 +15,14 @@ import articleimg4 from "../../assets/images/PressReleases/articleimg4.png";
 import articleimg5 from "../../assets/images/PressReleases/articleimg5.png";
 import articleimg6 from "../../assets/images/PressReleases/articleimg6.png";
 import articleimg7 from "../../assets/images/PressReleases/articleimg7.png";
-const Blogdetail = ({ routelink }) => {
-  // alert(routelink);
+const Blogdetail = ({ state }) => {
+  const data = state.source.get(state.router.link);
+  const post = state.source[data.type][data.id];
+  const author = state.source.author[post.author];
+  // Get a human readable date.
+  const date = new Date(post.date);
+  // Get the html2react component.
+  const Html2React = libraries.html2react.Component;
   return (
     <>
       <Banner title="Blog" />
@@ -24,10 +30,11 @@ const Blogdetail = ({ routelink }) => {
         <BlogContent>
           <div className="updates-content">
             <Heading>
-              <h4>
-                {" "}
-                What's New with CurrikiStudio? Updates As of November 2020
-              </h4>
+              {post.excerpt && (
+                <h4
+                  dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
+                />
+              )}
             </Heading>
             <Paragraph>
               <span>By Lani deGuia</span>
@@ -55,7 +62,7 @@ const Blogdetail = ({ routelink }) => {
             </SocialLinks>
           </div>
           <div className="curriki-updates-image">
-            <img src={currikiupdates} alt="" />
+            <img src={post.featured_media} alt="" />
           </div>
         </BlogContent>
         <DescriptionContent>
@@ -266,7 +273,7 @@ const Blogdetail = ({ routelink }) => {
   );
 };
 
-export default Blogdetail;
+export default connect(Blogdetail);
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;

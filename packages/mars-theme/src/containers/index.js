@@ -47,11 +47,13 @@ a {
 }
 `;
 const Index = ({ state }) => {
+  var wpRoute = "";
   const data = state.source.get(state.router.link);
+  if (data.isPostType) {
+    wpRoute = data.route.replace(/[^\d.]/g, "");
+  }
   let route = state.router.link;
   route = route.split("#")[0];
-  console.log(route);
-  console.log("postype", data.isPostType);
   return (
     <>
       <Globalstyle />
@@ -74,7 +76,7 @@ const Index = ({ state }) => {
         <Successdetail when={route === "/successdetail/"} />
         <IntractiveLearning when={route === "/learning/"} />
         <Blogs when={route === "/category/blogs/"} />
-        <Blogdetail when={route === "/blogdetail/"} />
+        <Blogdetail when={route === "/blogs/" + wpRoute + "/"} />
         <Thankyou when={route === "/thankyou/"} />
         <PressAwards when={route === "/category/pressawards/"} />
         <Pressdetail when={route === "/pressdetail/"} />
