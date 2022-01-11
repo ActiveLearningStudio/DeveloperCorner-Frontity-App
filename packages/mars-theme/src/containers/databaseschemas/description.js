@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "frontity";
 const Description = ({ state, libraries }) => {
   const data = state.source.get(state.router.link);
+  const Html2React = libraries.html2react.Component;
   var counter = 0;
   return (
     <>
@@ -23,11 +24,9 @@ const Description = ({ state, libraries }) => {
                   ></h2>
                 </div>
 
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: item.content.rendered,
-                  }}
-                ></p>
+                <p>
+                  <Html2React html={item.content.rendered} />
+                </p>
               </div>
             );
           })}

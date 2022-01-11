@@ -1,25 +1,30 @@
 import React from "react";
-import { Global, css } from "frontity";
+import { Global, css, connect } from "frontity";
 import Banner from "../../components/banner/Styledbanner";
+import Loading from "../../components/loading/loading";
 import HeadingPage from "./heading";
 import Description from "./description";
 import Scrollspy from "react-scrollspy";
 import externalCss from "./style.css";
 
-const Index = () => {
+const Index = ({ state }) => {
+  const data = state.source.get(state.router.link);
   return (
     <>
       <Global styles={css(externalCss)} />
       <Banner title="Database Schema" />
-      <div className="text-section">
-        <div className="heading-content">
-          <HeadingPage Scrollspy={Scrollspy} />
-        </div>
+      {data.isFetching && <Loading />}
+      {data.isReady && (
+        <div className="text-section">
+          <div className="heading-content">
+            <HeadingPage Scrollspy={Scrollspy} />
+          </div>
 
-        <Description />
-      </div>
+          <Description />
+        </div>
+      )}
     </>
   );
 };
 
-export default Index;
+export default connect(Index);
