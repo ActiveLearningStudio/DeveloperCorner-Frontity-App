@@ -10,7 +10,7 @@ const Index = () => {
   return (
     <>
       <Global styles={css(externalCss)} />
-          <Banner title="Database Schema"/>
+      <Banner title="Database Schema" />
       <div className="text-section">
         <div className="heading-content">
           <HeadingPage Scrollspy={Scrollspy} />

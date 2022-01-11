@@ -4,9 +4,6 @@ import arrowIcon from "../../assets/images/yellow-arrow.png";
 import webinar2 from "../../assets/images/webinars/web2.png";
 import playIcon from "../../assets/images/play.png";
 const WebinarArticle = ({ state, item }) => {
-  //   const media = state.source.attachment[item.featured_media];
-  //   const author = state.source.author[item.author];
-  //   const routerlink = item.link;
   return (
     <Card>
       <CardHead
@@ -19,18 +16,8 @@ const WebinarArticle = ({ state, item }) => {
       //     url("${webinar2}");
       // `}
       >
-        <div>
-          <video width="320" height="240" controls>
-            <source
-              src="https://www.youtube.com/watch?v=yxW5yuzVi8w"
-              type="video/mp4"
-            ></source>
-            <source
-              src="https://www.youtube.com/watch?v=yxW5yuzVi8w"
-              type="video/ogg"
-            ></source>
-          </video>
-          <img src={playIcon} alt="" />
+        <div dangerouslySetInnerHTML={{ __html: item.content.rendered }}>
+          {/* <img src={playIcon} alt="" /> */}
         </div>
       </CardHead>
       <div className="card-inner-content">
@@ -76,8 +63,20 @@ const CardHead = styled.div`
   background-repeat: no-repeat;
   background-size: cover !important;
   div {
+    max-width: 273px;
     text-align: center;
-    padding-top: 62px;
+    figure {
+      video {
+        width: 100%;
+        height: 200px;
+      }
+      div {
+        iframe {
+          width: 100%;
+          height: 200px;
+        }
+      }
+    }
   }
   @media screen and (max-width: 1024px) {
     width: 100%;

@@ -16,6 +16,7 @@ import webinar5 from "../../assets/images/webinars/web5.png";
 import webinar6 from "../../assets/images/webinars/web6.png";
 import webinar7 from "../../assets/images/webinars/web7.png";
 import webinar8 from "../../assets/images/webinars/web8.png";
+import Loading from "../../components/loading/loading";
 const Index = ({ state }) => {
   const data = state.source.get(state.router.link);
   return (
@@ -25,6 +26,7 @@ const Index = ({ state }) => {
         <Content>
           <LeftCol>
             <Heading>Dive into CurrikiStudio </Heading>
+            {data.isFetching && <Loading />}
             <Paragraph>Register for monthly webinar demo</Paragraph>
             <PrimaryButton>Register Now</PrimaryButton>
           </LeftCol>
@@ -39,6 +41,7 @@ const Index = ({ state }) => {
             <h2>PAST WEBINARS</h2>
             <img src={plusicon} alt="" />
           </WebinarHeading>
+          {data.isFetching && <Loading />}
           <CardContent>
             {data.items &&
               data.items.map(({ type, id }) => {

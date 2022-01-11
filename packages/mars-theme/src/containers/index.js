@@ -62,7 +62,7 @@ const Index = ({ state }) => {
       <Switch>
         <QuickLinks when={route === "/"} />
         <CurrikiArchitecture when={route === "/architecture/"} />
-        <DatabaseSchema when={route === "/databaseschemas/"} />
+        <DatabaseSchema when={route === "/category/database-schema/"} />
         <CurrikiPLatform when={route === "/deployingthecurrikiplatfrom/"} />
         <GeneralDiscussion when={route === "/generaldiscussion/"} />
         <CurrikiForum when={route === "/currikiforum/"} />
