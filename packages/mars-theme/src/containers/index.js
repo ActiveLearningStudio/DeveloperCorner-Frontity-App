@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Global, css, connect } from "frontity";
 import { createGlobalStyle } from "styled-components";
 import Switch from "@frontity/components/switch";
@@ -46,14 +46,17 @@ a {
    font-family:'Rubik',sans-serif;
 }
 `;
-const Index = ({ state }) => {
+const Index = ({ state, actions }) => {
   var wpRoute = "";
   const data = state.source.get(state.router.link);
+  console.log("csddds ddsi:", data);
   if (data.isPostType) {
-    wpRoute = data.route.replace(/[^\d.]/g, "");
+    // wpRoute = data.route.replace(/[^\d.]/g, "");
+    wpRoute = data.route;
   }
   let route = state.router.link;
   route = route.split("#")[0];
+
   return (
     <>
       <Globalstyle />
@@ -76,14 +79,14 @@ const Index = ({ state }) => {
         <Successdetail when={route === "/successdetail/"} />
         <IntractiveLearning when={route === "/learning/"} />
         <Blogs when={route === "/category/blogs/"} />
-        <Blogdetail when={route === "/blogs/" + wpRoute + "/"} />
+        <Blogdetail when={route === "/blogdetail/"} />
         <Thankyou when={route === "/thankyou/"} />
         <PressAwards when={route === "/category/pressawards/"} />
         <Pressdetail when={route === "/pressdetail/"} />
         <Webinars when={route === "/category/webinars/"} />
         <NewUi when={route === "/newui/"} />
         <Contribution when={route === "/contribution/"} />
-        <ErrorPage when={!state.theme.menu.products.includes(route)} />
+        <ErrorPage when={data.is404} />
       </Switch>
       <Footer />
       {/* {state.router.link === "/" && <QuickLinks />}
