@@ -1,5 +1,6 @@
 import React from "react";
-import { styled, css } from "frontity";
+import { styled, css, connect } from "frontity";
+import WebinarArticle from "./article";
 import webinarhero from "../../assets/images/webinarhero.svg";
 import backgroundPic from "../../assets/images/Group153.png";
 import Banner from "../../components/banner/Styledbanner";
@@ -15,7 +16,9 @@ import webinar5 from "../../assets/images/webinars/web5.png";
 import webinar6 from "../../assets/images/webinars/web6.png";
 import webinar7 from "../../assets/images/webinars/web7.png";
 import webinar8 from "../../assets/images/webinars/web8.png";
-const Index = () => {
+import Loading from "../../components/loading/loading";
+const Index = ({ state }) => {
+  const data = state.source.get(state.router.link);
   return (
     <div>
       <Banner title="Curriki Webinars" />
@@ -23,6 +26,7 @@ const Index = () => {
         <Content>
           <LeftCol>
             <Heading>Dive into CurrikiStudio </Heading>
+            {data.isFetching && <Loading />}
             <Paragraph>Register for monthly webinar demo</Paragraph>
             <PrimaryButton>Register Now</PrimaryButton>
           </LeftCol>
@@ -37,112 +41,90 @@ const Index = () => {
             <h2>PAST WEBINARS</h2>
             <img src={plusicon} alt="" />
           </WebinarHeading>
+          {data.isFetching && <Loading />}
           <CardContent>
-            <Card>
-              <CardHead
-                css={css`
-                  background: linear-gradient(
-                      0deg,
-                      rgba(40, 90, 165, 0.75),
-                      rgba(40, 90, 165, 0.75)
-                    ),
-                    url("${webinar1}");
-                `}
-              >
-                <div>
-                  <img src={playIcon} alt="" />
-                </div>
-              </CardHead>
-              <div className="card-inner-content">
-                <CardHeading>
-                  {" "}
-                  Civicate Transforms Civics Videos Into Interactive Learning
-                  Experience
-                </CardHeading>
-                <CardPara>February 23, 2021</CardPara>
-                <CardBottom>
-                  <a href="#">Watch webinar now</a>
-                  <img src={arrowIcon} alt="" />
-                </CardBottom>
-              </div>
-            </Card>
-            <Card>
-              <CardHead
-                css={css`
-                  background: linear-gradient(
-                      0deg,
-                      rgba(40, 90, 165, 0.75),
-                      rgba(40, 90, 165, 0.75)
-                    ),
-                    url("${webinar2}");
-                `}
-              >
-                <div>
-                  <img src={playIcon} alt="" />
-                </div>
-              </CardHead>
-              <div className="card-inner-content">
-                <CardHeading>
-                  {" "}
-                  Using CurrikiStudio Interactions to Inspire Curiosity and
-                  Critical Thinking
-                </CardHeading>
-                <CardPara>January 27, 2021</CardPara>
-                <CardBottom>
-                  <a href="#">Watch webinar now</a>
-                  <img src={arrowIcon} alt="" />
-                </CardBottom>
-              </div>
-            </Card>
-            <Card>
-              <CardHead
-                css={css`
-                  background: linear-gradient(
-                      0deg,
-                      rgba(40, 90, 165, 0.75),
-                      rgba(40, 90, 165, 0.75)
-                    ),
-                    url("${webinar3}");
-                `}
-              >
-                <div>
-                  <img src={playIcon} alt="" />
-                </div>
-              </CardHead>
-              <div className="card-inner-content">
-                <CardHeading> Dialogue Cards vs. Flash Cards</CardHeading>
-                <CardPara>December 09, 2020</CardPara>
-                <CardBottom>
-                  <a href="#">Watch webinar now</a>
-                  <img src={arrowIcon} alt="" />
-                </CardBottom>
-              </div>
-            </Card>
-            <Card>
-              <CardHead
-                css={css`
-                  background: linear-gradient(
-                      0deg,
-                      rgba(40, 90, 165, 0.75),
-                      rgba(40, 90, 165, 0.75)
-                    ),
-                    url("${webinar4}");
-                `}
-              >
-                <div>
-                  <img src={playIcon} alt="" />
-                </div>
-              </CardHead>
-              <div className="card-inner-content">
-                <CardHeading> Hotspots are HOT!</CardHeading>
-                <CardPara>December 02, 2020</CardPara>
-                <CardBottom>
-                  <a href="#">Watch webinar now</a>
-                  <img src={arrowIcon} alt="" />
-                </CardBottom>
-              </div>
-            </Card>
-            <Card>
+            {data.items &&
+              data.items.map(({ type, id }) => {
+                const item = state.source[type][id];
+                return <WebinarArticle key={item.id} item={item} />;
+              })}
+            {/* // <Card>
+            //   <CardHead
+            //     css={css`
+            //       background: linear-gradient(
+            //           0deg,
+            //           rgba(40, 90, 165, 0.75),
+            //           rgba(40, 90, 165, 0.75)
+            //         ),
+            //         url("${webinar2}");
+            //     `}
+            //   >
+            //     <div>
+            //       <img src={playIcon} alt="" />
+            //     </div>
+            //   </CardHead>
+            //   <div className="card-inner-content">
+            //     <CardHeading>
+            //       {" "}
+            //       Using CurrikiStudio Interactions to Inspire Curiosity and
+            //       Critical Thinking
+            //     </CardHeading>
+            //     <CardPara>January 27, 2021</CardPara>
+            //     <CardBottom>
+            //       <a href="#">Watch webinar now</a>
+            //       <img src={arrowIcon} alt="" />
+            //     </CardBottom>
+            //   </div>
+            // </Card>
+            // <Card>
+            //   <CardHead
+            //     css={css`
+            //       background: linear-gradient(
+            //           0deg,
+            //           rgba(40, 90, 165, 0.75),
+            //           rgba(40, 90, 165, 0.75)
+            //         ),
+            //         url("${webinar3}");
+            //     `}
+            //   >
+            //     <div>
+            //       <img src={playIcon} alt="" />
+            //     </div>
+            //   </CardHead>
+            //   <div className="card-inner-content">
+            //     <CardHeading> Dialogue Cards vs. Flash Cards</CardHeading>
+            //     <CardPara>December 09, 2020</CardPara>
+            //     <CardBottom>
+            //       <a href="#">Watch webinar now</a>
+            //       <img src={arrowIcon} alt="" />
+            //     </CardBottom>
+            //   </div>
+            // </Card>
+            // <Card>
+            //   <CardHead
+            //     css={css`
+            //       background: linear-gradient(
+            //           0deg,
+            //           rgba(40, 90, 165, 0.75),
+            //           rgba(40, 90, 165, 0.75)
+            //         ),
+            //         url("${webinar4}");
+            //     `}
+            //   >
+            //     <div>
+            //       <img src={playIcon} alt="" />
+            //     </div>
+            //   </CardHead>
+            //   <div className="card-inner-content">
+            //     <CardHeading> Hotspots are HOT!</CardHeading>
+            //     <CardPara>December 02, 2020</CardPara>
+            //     <CardBottom>
+            //       <a href="#">Watch webinar now</a>
+            //       <img src={arrowIcon} alt="" />
+            //     </CardBottom>
+            //   </div>
+            // </Card> */}
+            {/* <Card>
               <CardHead
                 css={css`
                   background: linear-gradient(
@@ -250,14 +232,14 @@ const Index = () => {
                   <img src={arrowIcon} alt="" />
                 </CardBottom>
               </div>
-            </Card>
+            </Card> */}
           </CardContent>
         </Container>
       </PastWebinars>
     </div>
   );
 };
-export default Index;
+export default connect(Index);
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
