@@ -40,7 +40,6 @@ const PressReleases = ({ state, libraries }) => {
           {data.items &&
             data.items.map(({ type, id }) => {
               const item = state.source[type][id];
-              const media = state.source.attachment[item.featured_media];
               return <PressArticle key={item.id} item={item} />;
             })}
         </Content>
