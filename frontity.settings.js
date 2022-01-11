@@ -19,7 +19,7 @@ const settings = {
             ],
             community: [
               ["Blogs", "/category/blogs/"],
-              ["webinars", "/webinars/"],
+              ["webinars", "/category/webinars/"],
               ["Providers", "/providers"],
               ["Support Learning", "/supportlearning"],
             ],

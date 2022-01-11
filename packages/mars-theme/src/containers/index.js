@@ -78,7 +78,7 @@ const Index = ({ state }) => {
         <Thankyou when={route === "/thankyou/"} />
         <PressAwards when={route === "/category/pressawards/"} />
         <Pressdetail when={route === "/pressdetail/"} />
-        <Webinars when={route === "/webinars/"} />
+        <Webinars when={route === "/category/webinars/"} />
         <NewUi when={route === "/newui/"} />
         <Contribution when={route === "/contribution/"} />
         <ErrorPage when={!state.theme.menu.products.includes(route)} />
