@@ -1,5 +1,8 @@
 import React from "react";
-const Heading = ({ Scrollspy }) => {
+import { Global, css, connect } from "frontity";
+const Heading = ({ Scrollspy, state }) => {
+  const data = state.source.get(state.router.link);
+  var counter = 0;
   return (
     <>
       <div className="heading-contaner">
@@ -8,13 +11,27 @@ const Heading = ({ Scrollspy }) => {
           style={{ padding: 0 }}
           currentClassName="is-current"
         >
-          <a href="#headings1">
-            <div className="heading">
-              <p>1.</p>
-              <p className="heading-text"> Core platform</p>
-            </div>
-          </a>
-          <a href="#headings2">
+          {data.items &&
+            data.items.map(({ type, id }) => {
+              counter++;
+              const item = state.source[type][id];
+              var link = "#headings" + counter;
+
+              return (
+                <a href={link}>
+                  <div className="heading">
+                    <p>{counter}.</p>
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: item.title.rendered,
+                      }}
+                      className="heading-text"
+                    ></p>
+                  </div>
+                </a>
+              );
+            })}
+          {/* <a href="#headings2">
             <div className="heading">
               <p>2.</p>
               <p className="heading-text">LTI Integration</p>
@@ -31,11 +48,11 @@ const Heading = ({ Scrollspy }) => {
               <p>4.</p>
               <p className="heading-text"> Core B.I. ETLs</p>
             </div>
-          </a>
+          </a> */}
         </Scrollspy>
       </div>
     </>
   );
 };
 
-export default Heading;
+export default connect(Heading);

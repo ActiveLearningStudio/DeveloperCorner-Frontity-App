@@ -19,7 +19,7 @@ const settings = {
             ],
             community: [
               ["Blogs", "/category/blogs/"],
-              ["webinars", "/webinars/"],
+              ["webinars", "/category/webinars/"],
               ["Providers", "/providers"],
               ["Support Learning", "/supportlearning"],
             ],
@@ -35,7 +35,7 @@ const settings = {
               ["Curriki Architecture", "/architecture/"],
             ],
             products: [
-              ["DatabaseSchema", "/databaseSchemas"],
+              ["DatabaseSchema", "/category/database-schema/"],
               ["currikiPlatform", "/deployingthecurrikiplatfrom"],
 
               ["InterativeLearning", "/learning/"],

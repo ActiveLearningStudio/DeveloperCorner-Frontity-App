@@ -1,6 +1,7 @@
-import React from "react";
-import { styled } from "frontity";
+import React, { useEffect } from "react";
+import { styled, connect } from "frontity";
 import Banner from "../../components/banner/Styledbanner";
+import Blogs from "../blogs/index";
 import facebookicon from "../../assets/images/social-icons/facebook.png";
 import twittericon from "../../assets/images/social-icons/twitter.png";
 import linkedicon from "../../assets/images/social-icons/linked-in.png";
@@ -15,20 +16,31 @@ import articleimg4 from "../../assets/images/PressReleases/articleimg4.png";
 import articleimg5 from "../../assets/images/PressReleases/articleimg5.png";
 import articleimg6 from "../../assets/images/PressReleases/articleimg6.png";
 import articleimg7 from "../../assets/images/PressReleases/articleimg7.png";
-const Blogdetail = ({ routelink }) => {
-  // alert(routelink);
+const Blogdetail = ({ state, libraries }) => {
+  const data = state.source.get(state.router.link);
+  const post = state.source[data.type][data.id];
+  const featuredmedia = state.source.attachment[post.featured_media];
+  const author = state.source.author[post.author];
+  // Get a human readable date.
+  const date = new Date(post.date);
+  // Get the html2react component.
+  const Html2React = libraries.html2react.Component;
+  // useEffect(() => {
+  //   actions.source.fetch("/");
+  //   Blogs.preload();
+  // }, [actions.source]);
   return (
     <>
       <Banner title="Blog" />
       <Container>
         <BlogContent>
           <div className="updates-content">
-            <Heading>
-              <h4>
-                {" "}
-                What's New with CurrikiStudio? Updates As of November 2020
-              </h4>
-            </Heading>
+            {post.excerpt && (
+              <Heading
+                dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
+              />
+            )}
+
             <Paragraph>
               <span>By Lani deGuia</span>
               <span>Nov 17, 2020</span>
@@ -55,12 +67,13 @@ const Blogdetail = ({ routelink }) => {
             </SocialLinks>
           </div>
           <div className="curriki-updates-image">
-            <img src={currikiupdates} alt="" />
+            <img src={featuredmedia.source_url} alt="" />
           </div>
         </BlogContent>
         <DescriptionContent>
           <Description>
-            <DescPara>
+            <Html2React html={post.content.rendered} />
+            {/* <DescPara>
               <a>CurrikiStudio</a> is constantly innovating to make the best
               digital learning design platform for educators and learning
               content designers. Exciting things are happening here! Read on to
@@ -185,7 +198,7 @@ const Blogdetail = ({ routelink }) => {
               is a FREE digital learning design platform! Sign up for your
               account and start building today!
             </DescPara>
-            <button className="link-btn">Get CurrikiStudio for FREE</button>
+            <button className="link-btn">Get CurrikiStudio for FREE</button> */}
           </Description>
           <RecentPost>
             <div className="recent-post-content">
@@ -266,7 +279,7 @@ const Blogdetail = ({ routelink }) => {
   );
 };
 
-export default Blogdetail;
+export default connect(Blogdetail);
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
@@ -293,7 +306,7 @@ const BlogContent = styled.div`
   }
 `;
 const Heading = styled.h4`
-  h4 {
+  p {
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
