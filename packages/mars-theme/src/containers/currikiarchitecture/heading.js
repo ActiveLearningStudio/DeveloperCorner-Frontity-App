@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "frontity";
-function Heading({ Scrollspy, state }) {
+function Heading({ Scrollspy, data, state }) {
+  var counter = 0;
   return (
     <>
       <div className="heading-contaner">
@@ -17,95 +18,51 @@ function Heading({ Scrollspy, state }) {
             "headings9",
             "headings10",
             "headings11",
+            "headings12",
+            "headings13",
+            "headings14",
+            "headings15",
+            "headings16",
+            "headings17",
+            "headings18",
+            "headings19",
+            "headings20",
+            "headings21",
+            "headings22",
+            "headings23",
+            "headings24",
+            "headings25",
           ]}
           style={{ padding: 0 }}
           currentClassName="is-current"
         >
-          <a href="#headings1">
-            <div className="heading">
-              <p>1.</p>
+          {data.items &&
+            data.items.map(({ type, id }) => {
+              counter++;
+              const item = state.source[type][id];
+              var link = "#headings" + counter;
+              return (
+                <a href={link}>
+                  <div className="heading">
+                    <p>{counter}.</p>
 
-              <p className="heading-text">
-                How does Curriki’s technology work?
-              </p>
-            </div>
-          </a>
-          <a href="#headings2">
+                    <p
+                      className="heading-text"
+                      dangerouslySetInnerHTML={{
+                        __html: item.title.rendered,
+                      }}
+                    />
+                  </div>
+                </a>
+              );
+            })}
+          {/* <a href="#headings2">
             <div className="heading">
               <p>2. </p>
 
               <p className="heading-text">API </p>
             </div>
-          </a>
-          <a href="#headings3">
-            <div className="heading">
-              <p>3.</p>
-
-              <p  className="heading-text">Reference Implementation/User Interface </p>
-            </div>
-          </a>
-          <a href="#headings4">
-            <div className="heading">
-              <p>4.</p>
-
-              <p className="heading-text">
-                {" "}
-                Search Infrastructure (Elastic Stack)
-              </p>
-            </div>
-          </a>
-          <a href="#headings5">
-            <div className="heading">
-              <p>5.</p>
-
-              <p className="heading-text"> Identity Framework</p>
-            </div>
-          </a>
-          <a href="#headings6">
-            <div className="heading">
-              <p>6.</p>
-
-              <p className="heading-text"> Active Learning Framework (H5P)</p>
-            </div>
-          </a>
-          <a href="#headings7">
-            <div className="heading">
-              <p>7.</p>
-
-              <p className="heading-text">
-                {" "}
-                Learning Tools Integration (LTI/Tsugi)
-              </p>
-            </div>
-          </a>
-          <a href="#headings8">
-            <div className="heading">
-              <p>8.</p>
-
-              <p className="heading-text">Learning Record Store (xAPI/Trax)</p>
-            </div>
-          </a>
-          <a href="#headings9">
-            <div className="heading">
-              <p>9.</p>
-
-              <p className="heading-text">Multi tenancy</p>
-            </div>
-          </a>
-          <a href="#headings10">
-            <div className="heading">
-              <p>10.</p>
-
-              <p className="heading-text" style={{margin:'0px 0px 0px 16px'}}>Security Framework</p>
-            </div>
-          </a>
-          <a href="#headings11">
-            <div className="heading">
-              <p>11.</p>
-
-              <p className="heading-text" style={{margin:'0px 0px 0px 16px'}}>Business Intelligence/Data Mining</p>
-            </div>
-          </a>
+          </a> */}
         </Scrollspy>
       </div>
     </>
