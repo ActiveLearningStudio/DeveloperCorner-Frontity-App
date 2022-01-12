@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "frontity";
-function Heading({ Scrollspy, state }) {
+function Heading({ Scrollspy, data, state }) {
+  var counter = 0;
   return (
     <>
       <div className="heading-contaner">
@@ -21,14 +22,28 @@ function Heading({ Scrollspy, state }) {
           style={{ padding: 0 }}
           currentClassName="is-current"
         >
-          <a href="#headings1">
-            <div className="heading">
-              <p>1.</p>
+          {data.items &&
+            data.items.map(({ type, id }) => {
+              counter++;
+              const item = state.source[type][id];
+              var link = "#headings" + counter;
+              return (
+                <a href={link}>
+                  <div className="heading">
+                    <p>{counter}.</p>
 
-              <p className="heading-text">Scope of this privacy policy</p>
-            </div>
-          </a>
-          <a href="#headings2">
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: item.title.rendered,
+                      }}
+                      className="heading-text"
+                    />
+                  </div>
+                </a>
+              );
+            })}
+
+          {/* <a href="#headings2">
             <div className="heading">
               <p>2. </p>
 
@@ -62,7 +77,7 @@ function Heading({ Scrollspy, state }) {
 
               <p className="heading-text">Other</p>
             </div>
-          </a>
+          </a> */}
         </Scrollspy>
       </div>
     </>

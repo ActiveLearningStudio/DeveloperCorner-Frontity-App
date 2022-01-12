@@ -75,7 +75,7 @@ const Index = ({ state, actions }) => {
         <Providers when={route === "/providers/"} />
         <Ourmission when={route === "/ourmission/"} />
         <SupportLearning when={route === "/supportlearning/"} />
-        <PrivacyPage when={route === "/privacypolicy/"} />
+        <PrivacyPage when={route === "/category/privacy-policy/"} />
         <Terms when={route === "/termscondition/"} />
         <SuccessStories when={route === "/category/successstories/"} />
         <Successdetail when={route === "/successdetail/"} />

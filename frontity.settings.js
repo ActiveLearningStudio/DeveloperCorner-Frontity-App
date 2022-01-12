@@ -30,7 +30,7 @@ const settings = {
             login: [["Login", "/currikiforum/"]],
             donate: [["Ourmission", "/ourmission"]],
             currikiterms: [
-              ["Privacy Policy", "/privacypolicy"],
+              ["Privacy Policy", "/category/privacy-policy/"],
               ["Terms of Services", "/termscondition"],
               ["Curriki Architecture", "/architecture/"],
             ],
