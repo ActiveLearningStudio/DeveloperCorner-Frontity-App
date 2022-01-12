@@ -31,8 +31,8 @@ const settings = {
             donate: [["Ourmission", "/ourmission"]],
             currikiterms: [
               ["Privacy Policy", "/privacypolicy"],
-              ["Terms of Services", "/termscondition"],
-              ["Curriki Architecture", "/architecture/"],
+              ["Terms of Services", "/category/termscondition"],
+              ["Curriki Architecture", "/category/architecture/"],
             ],
             products: [
               ["DatabaseSchema", "/category/database-schema/"],

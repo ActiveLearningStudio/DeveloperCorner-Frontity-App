@@ -16,6 +16,22 @@ const Heading = ({ Scrollspy, data, state }) => {
             "headings7",
             "headings8",
             "headings9",
+            "headings10",
+            "headings11",
+            "headings12",
+            "headings13",
+            "headings14",
+            "headings15",
+            "headings16",
+            "headings17",
+            "headings18",
+            "headings19",
+            "headings20",
+            "headings21",
+            "headings22",
+            "headings23",
+            "headings24",
+            "headings25",
           ]}
           style={{ padding: 0 }}
           currentClassName="is-current"

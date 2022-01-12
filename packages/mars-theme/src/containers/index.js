@@ -64,7 +64,7 @@ const Index = ({ state, actions }) => {
       <Header />
       <Switch>
         <QuickLinks when={route === "/"} />
-        <CurrikiArchitecture when={route === "/architecture/"} />
+        <CurrikiArchitecture when={route === "/category/architecture/"} />
         <DatabaseSchema when={route === "/category/database-schema/"} />
         <CurrikiPLatform
           when={route === "/category/deployingthecurrikiplatfrom/"}
@@ -76,7 +76,7 @@ const Index = ({ state, actions }) => {
         <Ourmission when={route === "/ourmission/"} />
         <SupportLearning when={route === "/supportlearning/"} />
         <PrivacyPage when={route === "/privacypolicy/"} />
-        <Terms when={route === "/termscondition/"} />
+        <Terms when={route === "/category/termscondition/"} />
         <SuccessStories when={route === "/category/successstories/"} />
         <Successdetail when={route === "/successdetail/"} />
         <IntractiveLearning when={route === "/learning/"} />
