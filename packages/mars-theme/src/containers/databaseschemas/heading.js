@@ -1,7 +1,6 @@
 import React from "react";
 import { Global, css, connect } from "frontity";
-const Heading = ({ Scrollspy, state }) => {
-  const data = state.source.get(state.router.link);
+const Heading = ({ Scrollspy, data, state }) => {
   var counter = 0;
   return (
     <>
@@ -16,7 +15,6 @@ const Heading = ({ Scrollspy, state }) => {
               counter++;
               const item = state.source[type][id];
               var link = "#headings" + counter;
-
               return (
                 <a href={link}>
                   <div className="heading">
@@ -37,22 +35,10 @@ const Heading = ({ Scrollspy, state }) => {
               <p className="heading-text">LTI Integration</p>
             </div>
           </a>
-          <a href="#headings3">
-            <div className="heading">
-              <p>3.</p>
-              <p className="heading-text"> Learning Record Store</p>
-            </div>
-          </a>
-          <a href="#headings4">
-            <div className="heading">
-              <p>4.</p>
-              <p className="heading-text"> Core B.I. ETLs</p>
-            </div>
-          </a> */}
+          */}
         </Scrollspy>
       </div>
     </>
   );
 };
-
 export default connect(Heading);

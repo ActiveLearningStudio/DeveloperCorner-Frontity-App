@@ -36,7 +36,7 @@ const settings = {
             ],
             products: [
               ["DatabaseSchema", "/category/database-schema/"],
-              ["currikiPlatform", "/deployingthecurrikiplatfrom"],
+              ["currikiPlatform", "/category/deployingthecurrikiplatfrom/"],
 
               ["InterativeLearning", "/learning/"],
               ["GeneralDiscussion", "/generaldiscussion/"],
