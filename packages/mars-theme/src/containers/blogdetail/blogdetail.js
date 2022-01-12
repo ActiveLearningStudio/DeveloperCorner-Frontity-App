@@ -16,7 +16,7 @@ import articleimg4 from "../../assets/images/PressReleases/articleimg4.png";
 import articleimg5 from "../../assets/images/PressReleases/articleimg5.png";
 import articleimg6 from "../../assets/images/PressReleases/articleimg6.png";
 import articleimg7 from "../../assets/images/PressReleases/articleimg7.png";
-const Blogdetail = ({ state, libraries }) => {
+const Blogdetail = ({ state, actions, libraries }) => {
   const data = state.source.get(state.router.link);
   const post = state.source[data.type][data.id];
   const featuredmedia = state.source.attachment[post.featured_media];
@@ -26,7 +26,7 @@ const Blogdetail = ({ state, libraries }) => {
   // Get the html2react component.
   const Html2React = libraries.html2react.Component;
   // useEffect(() => {
-  //   actions.source.fetch("/");
+  //   actions.source.fetch(state.router.link);
   //   Blogs.preload();
   // }, [actions.source]);
   return (
@@ -72,7 +72,11 @@ const Blogdetail = ({ state, libraries }) => {
         </BlogContent>
         <DescriptionContent>
           <Description>
-            <Html2React html={post.content.rendered} />
+            {post.content ? (
+              <Html2React html={post.content.rendered} />
+            ) : (
+              <p>Details are not avaialable for this post</p>
+            )}
             {/* <DescPara>
               <a>CurrikiStudio</a> is constantly innovating to make the best
               digital learning design platform for educators and learning
@@ -298,7 +302,7 @@ const BlogContent = styled.div`
   margin-bottom: 100px;
   .curriki-updates-image {
     img {
-      width: 100%;
+      width: 410px;
     }
     @media screen and (max-width: 767px) {
       display: none;
@@ -306,6 +310,7 @@ const BlogContent = styled.div`
   }
 `;
 const Heading = styled.h4`
+  max-width: 700px;
   p {
     font-style: normal;
     font-weight: 700;
@@ -343,6 +348,8 @@ const DescriptionContent = styled.div`
   display: flex;
 `;
 const Description = styled.div`
+  width: 780px;
+  max-width: 780px;
   margin-bottom: 106px;
   .article-desc-image {
     margin-bottom: 20px;
