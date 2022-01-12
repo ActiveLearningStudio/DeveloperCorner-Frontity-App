@@ -2,6 +2,7 @@ import React from "react";
 import { Global, css, connect } from "frontity";
 // import Headings from "curriki-design-system/dist/utils/Headings/headings";
 import Heading from "./heading";
+import Loading from "../../components/loading/loading";
 import Description from "./description";
 import Scrollspy from "react-scrollspy";
 import Banner from "../../components/banner/Styledbanner";
