@@ -30,13 +30,13 @@ const settings = {
             login: [["Login", "/currikiforum/"]],
             donate: [["Ourmission", "/ourmission"]],
             currikiterms: [
-              ["Privacy Policy", "/privacypolicy"],
-              ["Terms of Services", "/termscondition"],
-              ["Curriki Architecture", "/architecture/"],
+              ["Privacy Policy", "/category/privacy-policy/"],
+              ["Terms of Services", "/category/termscondition"],
+              ["Curriki Architecture", "/category/architecture/"],
             ],
             products: [
               ["DatabaseSchema", "/category/database-schema/"],
-              ["currikiPlatform", "/deployingthecurrikiplatfrom"],
+              ["currikiPlatform", "/category/deployingthecurrikiplatfrom/"],
 
               ["InterativeLearning", "/learning/"],
               ["GeneralDiscussion", "/generaldiscussion/"],

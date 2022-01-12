@@ -1,5 +1,7 @@
 import React from "react";
-const Heading = ({ Scrollspy }) => {
+import { Global, css, connect } from "frontity";
+const Heading = ({ Scrollspy, data, state }) => {
+  var counter = 0;
   return (
     <>
       <div className="heading-contaner">
@@ -14,68 +16,57 @@ const Heading = ({ Scrollspy }) => {
             "headings7",
             "headings8",
             "headings9",
+            "headings10",
+            "headings11",
+            "headings12",
+            "headings13",
+            "headings14",
+            "headings15",
+            "headings16",
+            "headings17",
+            "headings18",
+            "headings19",
+            "headings20",
+            "headings21",
+            "headings22",
+            "headings23",
+            "headings24",
+            "headings25",
           ]}
           style={{ padding: 0 }}
           currentClassName="is-current"
         >
-          <a href="#headings1">
-            <div className="heading">
-              <p>1.</p>
-              <p className="heading-text"> Docker/Terraform</p>
-            </div>
-          </a>
-          <a href="#headings2">
+          {data.items &&
+            data.items.map(({ type, id }) => {
+              counter++;
+              const item = state.source[type][id];
+              var link = "#headings" + counter;
+
+              return (
+                <a href={link}>
+                  <div className="heading">
+                    <p>{counter}.</p>
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: item.title.rendered,
+                      }}
+                      className="heading-text"
+                    />
+                  </div>
+                </a>
+              );
+            })}
+          {/* <a href="#headings2">
             <div className="heading">
               <p>2.</p>
               <p className="heading-text"> AWS</p>
             </div>
           </a>
-          <a href="#headings3">
-            <div className="heading">
-              <p>3.</p>
-              <p className="heading-text"> Oracle Cloud</p>
-            </div>
-          </a>
-          <a href="#headings4">
-            <div className="heading">
-              <p>4.</p>
-              <p className="heading-text"> Azure</p>
-            </div>
-          </a>
-          <a href="#headings5">
-            <div className="heading">
-              <p>5.</p>
-              <p className="heading-text">Linode</p>
-            </div>
-          </a>
-          <a href="#headings6">
-            <div className="heading">
-              <p>6.</p>
-              <p className="heading-text">Red Hat OpenShift</p>
-            </div>
-          </a>
-          <a href="#headings7">
-            <div className="heading">
-              <p>7.</p>
-              <p className="heading-text">Other cloud environments</p>
-            </div>
-          </a>
-          <a href="#headings8">
-            <div className="heading">
-              <p>8.</p>
-              <p className="heading-text">On premise deployments</p>
-            </div>
-          </a>
-          <a href="#headings9">
-            <div className="heading">
-              <p>9.</p>
-              <p className="heading-text">Noovo MAP (Satellite distribution)</p>
-            </div>
-          </a>
+          */}
         </Scrollspy>
       </div>
     </>
   );
 };
 
-export default Heading;
+export default connect(Heading);

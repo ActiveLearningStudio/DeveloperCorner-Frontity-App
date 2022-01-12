@@ -1,13 +1,38 @@
 import React from "react";
 import { Global, css, connect } from "frontity";
-const Heading = ({ Scrollspy, state }) => {
-  const data = state.source.get(state.router.link);
+const Heading = ({ Scrollspy, data, state }) => {
   var counter = 0;
   return (
     <>
       <div className="heading-contaner">
         <Scrollspy
-          items={["headings1", "headings2", "headings3", "headings4"]}
+          items={[
+            "headings1",
+            "headings2",
+            "headings3",
+            "headings4",
+            "headings5",
+            "headings6",
+            "headings7",
+            "headings8",
+            "headings9",
+            "headings10",
+            "headings11",
+            "headings12",
+            "headings13",
+            "headings14",
+            "headings15",
+            "headings16",
+            "headings17",
+            "headings18",
+            "headings19",
+            "headings20",
+            "headings21",
+            "headings22",
+            "headings23",
+            "headings24",
+            "headings25",
+          ]}
           style={{ padding: 0 }}
           currentClassName="is-current"
         >
@@ -16,7 +41,6 @@ const Heading = ({ Scrollspy, state }) => {
               counter++;
               const item = state.source[type][id];
               var link = "#headings" + counter;
-
               return (
                 <a href={link}>
                   <div className="heading">
@@ -37,22 +61,10 @@ const Heading = ({ Scrollspy, state }) => {
               <p className="heading-text">LTI Integration</p>
             </div>
           </a>
-          <a href="#headings3">
-            <div className="heading">
-              <p>3.</p>
-              <p className="heading-text"> Learning Record Store</p>
-            </div>
-          </a>
-          <a href="#headings4">
-            <div className="heading">
-              <p>4.</p>
-              <p className="heading-text"> Core B.I. ETLs</p>
-            </div>
-          </a> */}
+          */}
         </Scrollspy>
       </div>
     </>
   );
 };
-
 export default connect(Heading);

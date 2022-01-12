@@ -6,7 +6,6 @@ import HeadingPage from "./heading";
 import Description from "./description";
 import Scrollspy from "react-scrollspy";
 import externalCss from "./style.css";
-
 const Index = ({ state }) => {
   const data = state.source.get(state.router.link);
   return (
@@ -17,10 +16,9 @@ const Index = ({ state }) => {
       {data.isReady && (
         <div className="text-section">
           <div className="heading-content">
-            <HeadingPage Scrollspy={Scrollspy} />
+            <HeadingPage Scrollspy={Scrollspy} data={data} />
           </div>
-
-          <Description />
+          <Description data={data} />
         </div>
       )}
     </>
