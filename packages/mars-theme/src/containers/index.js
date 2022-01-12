@@ -51,12 +51,14 @@ const Index = ({ state, actions }) => {
   const data = state.source.get(state.router.link);
   console.log("csddds ddsi:", data);
   if (data.isPostType) {
-    // wpRoute = data.route.replace(/[^\d.]/g, "");
-    wpRoute = data.route;
+    wpRoute = data.route.replace(/[^\d.]/g, "");
   }
   let route = state.router.link;
   route = route.split("#")[0];
-
+  // useEffect(() => {
+  //   actions.source.fetch("/");
+  //   // List.preload();
+  // }, [actions.source]);
   return (
     <>
       <Globalstyle />
@@ -78,13 +80,13 @@ const Index = ({ state, actions }) => {
         <PrivacyPage when={route === "/category/privacy-policy/"} />
         <Terms when={route === "/category/termscondition/"} />
         <SuccessStories when={route === "/category/successstories/"} />
-        <Successdetail when={route === "/successdetail/"} />
+        <Successdetail when={route === "/successstories/" + wpRoute + "/"} />
         <IntractiveLearning when={route === "/learning/"} />
         <Blogs when={route === "/category/blogs/"} />
-        <Blogdetail when={route === "/blogdetail/"} />
+        <Blogdetail when={route === "/blogs/" + wpRoute + "/"} />
         <Thankyou when={route === "/thankyou/"} />
         <PressAwards when={route === "/category/pressawards/"} />
-        <Pressdetail when={route === "/pressdetail/"} />
+        <Pressdetail when={route === "/pressawards/" + wpRoute + "/"} />
         <Webinars when={route === "/category/webinars/"} />
         <NewUi when={route === "/newui/"} />
         <Contribution when={route === "/contribution/"} />
