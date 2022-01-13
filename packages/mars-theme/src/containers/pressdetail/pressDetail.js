@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "../../components/banner/Styledbanner";
-import { styled } from "frontity";
+import { styled, connect } from "frontity";
 import facebookicon from "../../assets/images/social-icons/facebook.png";
 import twittericon from "../../assets/images/social-icons/twitter.png";
 import linkedicon from "../../assets/images/social-icons/linked-in.png";
@@ -9,20 +9,26 @@ import plusicon from "../../assets/images/PLUS.svg";
 import pressBackground from "../../assets/images/pressBackground.png";
 import heroImg from "../../assets/images/heroImg.png";
 import arrowicon from "../../assets/images/yellow-arrow.png";
-const PressDetail = () => {
+const PressDetail = ({ state, libraries }) => {
+  const data = state.source.get(state.router.link);
+  const post = state.source[data.type][data.id];
+  const featuredmedia = state.source.attachment[post.featured_media];
+  const author = state.source.author[post.author];
+  // Get a human readable date.
+  const date = new Date(post.date);
+  // Get the html2react component.
+  const Html2React = libraries.html2react.Component;
   return (
     <div>
       <Banner title="Press" />
       <Container>
         <BlogContent>
           <div className="updates-content">
-            <Heading>
-              <h4>
-                {" "}
-                Curriki Launches Interactive Civics
-                <span> Videos for Remote Learning</span>{" "}
-              </h4>
-            </Heading>
+            {post.excerpt && (
+              <Heading
+                dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
+              />
+            )}
             <Paragraph>
               <span>By Caroline Benoist</span>
               <span>Feb 8, 2021</span>
@@ -49,7 +55,7 @@ const PressDetail = () => {
             </SocialLinks>
           </div>
           <div className="curriki-updates-image">
-            <img src={heroImg} alt="" />
+            <img src={featuredmedia.source_url} alt="" />
           </div>
         </BlogContent>
       </Container>
@@ -57,7 +63,12 @@ const PressDetail = () => {
         <Container>
           <DescriptionContent>
             <Description>
-              <DescHeading>
+              {post.content ? (
+                <Html2React html={post.content.rendered} />
+              ) : (
+                <p>Details are not avaialable for this post</p>
+              )}
+              {/* <DescHeading>
                 CurrikiStudio Platform Used to Transform Civics Videos into
                 Student-Centered Online Learning Experiences
               </DescHeading>
@@ -197,7 +208,7 @@ const PressDetail = () => {
                 <a className="none-deco-link" href="#">
                   https://www.curriki.org/
                 </a>
-              </DescPara>
+              </DescPara> */}
             </Description>
             <RecentPost>
               <div className="recent-post-content">
@@ -281,7 +292,7 @@ const PressDetail = () => {
   );
 };
 
-export default PressDetail;
+export default connect(PressDetail);
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
@@ -317,7 +328,7 @@ const BlogContent = styled.div`
   margin-bottom: 100px;
   .curriki-updates-image {
     img {
-      width: 100%;
+      width: 410px;
     }
     @media screen and (max-width: 767px) {
       display: none;
@@ -325,8 +336,8 @@ const BlogContent = styled.div`
   }
 `;
 const Heading = styled.h4`
-  h4 {
-    max-width: 450px;
+  p {
+    max-width: 700px;
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
