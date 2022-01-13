@@ -49,16 +49,20 @@ a {
 const Index = ({ state, actions }) => {
   var wpRoute = "";
   const data = state.source.get(state.router.link);
+  // Get the total posts to be displayed based for the current link
+  const { next, previous } = state.source.get(state.router.link);
   console.log("csddds ddsi:", data);
   if (data.isPostType) {
     wpRoute = data.route.replace(/[^\d.]/g, "");
   }
+  if (data.isTaxonomy) {
+    wpRoute = data.link.replace(/[^\d.]/g, "");
+  }
   let route = state.router.link;
   route = route.split("#")[0];
   // useEffect(() => {
-  //   actions.source.fetch("/");
-  //   // List.preload();
-  // }, [actions.source]);
+  //   if (next) actions.source.fetch(next);
+  // }, []);
   return (
     <>
       <Globalstyle />
@@ -83,6 +87,7 @@ const Index = ({ state, actions }) => {
         <Successdetail when={route === "/successstories/" + wpRoute + "/"} />
         <IntractiveLearning when={route === "/learning/"} />
         <Blogs when={route === "/category/blogs/"} />
+        <Blogs when={route === "/category/blogs/page/" + wpRoute + "/"} />
         <Blogdetail when={route === "/blogs/" + wpRoute + "/"} />
         <Thankyou when={route === "/thankyou/"} />
         <PressAwards when={route === "/category/pressawards/"} />

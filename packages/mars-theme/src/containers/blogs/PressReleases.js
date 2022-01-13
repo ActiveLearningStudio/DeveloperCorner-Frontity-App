@@ -1,25 +1,21 @@
 import { React, useState, useEffect } from "react";
 import { styled, connect } from "frontity";
 import Pagination from "react-js-pagination";
+import Paginate from "./pagination";
 import PressArticle from "./article";
 import Loading from "../../components/loading/loading";
+// import history from "../../../src/history";
 import arrow from "../../assets/images/yellow-arrow.png";
 import press13 from "../../assets/images/press13.png";
 import { parse } from "himalaya";
 const PressReleases = ({ state, libraries }) => {
   const [activePage, setactivePage] = useState(1);
   function handlepagechange() {
-    if (activePage == 1) {
-      setactivePage(2);
-    } else {
-      setactivePage(1);
-    }
+    // history.push("/");
   }
   const data = state.source.get(state.router.link);
+  // alert(state.router.link);
   console.log("posts", data);
-  const { next, previous } = state.source.get(state.router.link);
-  console.log("next", next);
-  console.log("prev", previous);
   const Html2React = libraries.html2react.Component;
   // console.log("******************************************");
   // console.log("HTML content - Normal content");
@@ -28,58 +24,18 @@ const PressReleases = ({ state, libraries }) => {
   // console.log("JSON content");
   // console.log(parse(state.source["post"][273].content.rendered));
   // console.log("******************************************");
-  // useEffect(() => {
-  //   if (next) actions.source.fetch(next);
-  // }, []);
   return (
     <Container>
       <Heading>Press Releases</Heading>
       {data.isFetching && <Loading />}
-      {activePage == 1 ? (
-        <Content>
-          {data.items &&
-            data.items.map(({ type, id }) => {
-              const item = state.source[type][id];
-              return <PressArticle key={item.id} item={item} />;
-            })}
-        </Content>
-      ) : (
-        <Article>
-          <div className="blog-image">
-            <img src={press13} alt="" />
-          </div>
-          <div className="article-text">
-            <BlogHeading>
-              Letter to Parents During the Pandemic: YOUR best IS the best.
-            </BlogHeading>
-            <BlogAuthor>By: Curriki</BlogAuthor>
-            <BlogLink>
-              <Link>
-                <a href="#">Read article</a>
-              </Link>
-              <img src={arrow} alt="" />
-            </BlogLink>
-          </div>
-        </Article>
-      )}
-      {!data.isFetching && (
-        <Pagination
-          itemClass="page-item"
-          linkClass="page-link"
-          linkClassNext="pages-link"
-          firstPageText="false"
-          nextPageText=">"
-          hideDisable="false"
-          itemClassPrev="item-prev"
-          prevPageText="<"
-          itemClassNext="item-next"
-          activePage={activePage}
-          itemsCountPerPage={16}
-          totalItemsCount={17}
-          pageRangeDisplayed={2}
-          onChange={handlepagechange}
-        />
-      )}
+      <Content>
+        {data.items &&
+          data.items.map(({ type, id }) => {
+            const item = state.source[type][id];
+            return <PressArticle key={item.id} item={item} />;
+          })}
+      </Content>
+      {!data.isFetching && <Paginate />}
     </Container>
   );
 };
@@ -141,13 +97,6 @@ const Container = styled.div`
       :focus {
         box-shadow: none;
       }
-    }
-    .page-item:first-child {
-      display: none;
-      color: #fff !important;
-    }
-    .page-item:last-child {
-      display: none;
     }
   }
 `;
