@@ -37,13 +37,9 @@ const settings = {
             products: [
               ["DatabaseSchema", "/category/database-schema/"],
               ["currikiPlatform", "/category/deployingthecurrikiplatfrom/"],
-
               ["InterativeLearning", "/learning/"],
               ["GeneralDiscussion", "/generaldiscussion/"],
-              ["SuccessStory", "/successdetail/"],
-              ["Blogdetail", "/blogdetail/"],
               ["Thankyou", "/thankyou/"],
-              ["Press&detail", "/pressdetail/"],
               // ["404page", "/error/"],
               ["NewUI", "/newui/"],
               ["howtoContribute", "/contribution/"],
