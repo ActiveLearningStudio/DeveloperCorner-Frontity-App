@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from "react";
 import { styled, connect } from "frontity";
 import Pagination from "react-js-pagination";
-import Paginate from "./pagination";
+import Paginate from "../../components/pagination/pagination";
 import PressArticle from "./article";
 import Loading from "../../components/loading/loading";
 // import history from "../../../src/history";
@@ -73,17 +73,15 @@ const Container = styled.div`
         }
       }
     }
-    .item-prev .page-link {
-      background: none !important;
-      color: #084892 !important;
-    }
-    .item-next .page-link {
-      background: none !important;
-      color: #084892 !important;
-    }
     .page-item.active .page-link {
       color: #fff !important;
-      background-color: #285aa6 !important;
+      background: rgba(40, 19, 166) !important;
+      a {
+        color: #fff;
+      }
+    }
+    .page-item.disabled .page-link.disabled {
+      background: none !important;
     }
     span.page-link {
       border-radius: 25px;
@@ -97,6 +95,19 @@ const Container = styled.div`
       :focus {
         box-shadow: none;
       }
+      :disabled {
+        background: none;
+      }
+    }
+    .page-item:first-child .page-link {
+      background: none !important;
+      border: none;
+      font-size: 20px;
+    }
+    .page-item:last-child .page-link {
+      background: none !important;
+      border: none;
+      font-size: 20px;
     }
   }
 `;

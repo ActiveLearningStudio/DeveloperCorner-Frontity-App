@@ -1,11 +1,11 @@
-import React from "react";
-import { useEffect } from "react";
+import { React, useEffect } from "react";
 import { connect, styled } from "frontity";
 import { Pagination } from "react-bootstrap";
-import Link from "../../components/Header/link";
+import Link from "../Header/link";
 
 const Paginate = ({ state, actions }) => {
   // Get the total posts to be displayed based for the current link
+
   const { next, previous, page, totalPages } = state.source.get(
     state.router.link
   );
@@ -22,16 +22,16 @@ const Paginate = ({ state, actions }) => {
       <Pagination.Item disabled={!previous ? true : false}>
         <Link link={previous}>&lt;</Link>
       </Pagination.Item>
-      {pages.map((page) => {
-        const link = "/category/blogs/page/" + page + "/";
+      {pages.map((pageNum) => {
+        const link = "/category/blogs/page/" + pageNum + "/";
         return (
-          <Pagination.Item>
-            <Link link={link}>{page}</Link>
+          <Pagination.Item active={page === pageNum ? true : false}>
+            <Link link={link}>{pageNum}</Link>
           </Pagination.Item>
         );
       })}
       <Pagination.Item disabled={!next ? true : false}>
-        <Link link={previous}>&gt;</Link>
+        <Link link={next}>&gt;</Link>
       </Pagination.Item>
     </Pagination>
   );
