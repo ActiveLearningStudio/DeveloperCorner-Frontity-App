@@ -2,7 +2,6 @@ import React from "react";
 import { styled, connect } from "frontity";
 import Linked from "../../components/Header/link";
 import arrow from "../../assets/images/yellow-arrow.png";
-import currikiupdate from "../../assets/images/currikiupdates.png";
 const PressArticle = ({ state, item }) => {
   const media = state.source.attachment[item.featured_media];
   const author = state.source.author[item.author];
@@ -47,6 +46,11 @@ const Article = styled.div`
   margin-bottom: 30px;
   .article-text {
     padding: 20px 20px;
+  }
+  .blog-image {
+    img {
+      width: 100%;
+    }
   }
   @media screen and (min-width: 320px) and (max-width: 767px) {
     width: 100%;

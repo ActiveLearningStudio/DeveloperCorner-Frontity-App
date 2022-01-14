@@ -1,12 +1,8 @@
 import React from "react";
 import { styled, connect } from "frontity";
+import Paginate from "../../components/pagination/pagination";
 import Loading from "../../components/loading/loading";
 import StoryCard from "./storyCard";
-import image21 from "../../assets/images/image21.png";
-import Arrow from "../../assets/images/Arrow.svg";
-import Group2 from "../../assets/images/Group2.png";
-import Card2 from "../../assets/images/Card2.png";
-import Card3 from "../../assets/images/Card3.png";
 const SuccessStories = ({ state, libraries }) => {
   const data = state.source.get(state.router.link);
   console.log("data", data);
@@ -32,6 +28,7 @@ const SuccessStories = ({ state, libraries }) => {
               return <StoryCard key={item.id} item={item} />;
             })}
         </Cardcontent>
+        {!data.isFetching && <Paginate link="/category/successstories/page/" />}
       </Container>
     </Section>
   );
@@ -50,6 +47,72 @@ const Container = styled.div`
   }
   @media screen and (max-width: 768px) {
     padding: 0px 40px;
+  }
+  .pagination {
+    justify-content: center;
+    align-items: baseline;
+    margin-bottom: 40px;
+    li.page-item {
+      a.page-link {
+        background: #e5e5e5;
+        border-radius: 25px;
+        border: none;
+        margin-left: 8px;
+        color: #fff;
+        font-family: "Rubik";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        text-align: center;
+        width: 35px;
+        :focus {
+          box-shadow: none;
+        }
+      }
+    }
+    .page-item.active .page-link {
+      color: #fff !important;
+      border: none;
+      background: rgba(40, 19, 166) !important;
+      a {
+        color: #fff;
+      }
+    }
+    .page-item.disabled .page-link.disabled {
+      background: none !important;
+    }
+    span.page-link {
+      border-radius: 25px;
+      background: #285aa5;
+      margin-left: 8px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      :focus {
+        box-shadow: none;
+      }
+      :disabled {
+        background: none;
+      }
+    }
+    .page-item:first-child .page-link {
+      background: none !important;
+      border: none;
+      font-size: 20px;
+      a {
+        color: #084892;
+      }
+    }
+    .page-item:last-child .page-link {
+      background: none !important;
+      border: none;
+      font-size: 20px;
+    }
+    a {
+      color: #084892;
+    }
   }
 `;
 const Headercontainer = styled.div`
@@ -87,88 +150,11 @@ const Cardcontent = styled.div`
     flex-direction: row;
   }
 `;
-const Card = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  margin-right: 55px;
-  max-width: 333px;
-  background: #ffffff;
-  box-shadow: 0px 2px 25px 5px rgba(81, 81, 81, 0.1);
-  border-radius: 5px;
-  margin-bottom: 50px;
-  @media screen and (max-width: 1024px) {
-    margin: 0px 0px 40px 0px;
-    max-width: 300px;
-  }
-  @media screen and (max-width: 767px) {
-    max-width: 620px;
-  }
-`;
 const Headerbar = styled.div`
   width: 100px;
   border-bottom: 3px solid #fa8f2c;
   transform: rotate(0deg);
   @media screen and (max-width: 767px) {
     display: none;
-  }
-`;
-const Cardbody = styled.div`
-        border-radius:5px;
-        img{
-          width:100%;
-          height:196px;
-          border-radius:5px;
-        }
-        p {
-            padding:0px 14px;
-            font-style:normal;
-            font-weight-normal;
-            font-size:18px;
-            color:#515151;
-            line-height:25px;
-            margin-bottom:10px;
-        }
-      p:last-child{
-            font-size: 16px;
-            color: #084892 !important;
-      }
-      `;
-// const Cardtext = styled.p`
-//   display: flex;
-
-//   p {
-//     font-style: normal;
-//     font-weight: normal;
-//     font-size: 16px;
-//     line-height: 19px;
-//     color: #285aa5;
-//     margin-bottom: 0 !important;
-//     margin-top: 0;
-//     color: #084892 !important;
-//   }
-// `;
-const Cardlink = styled.div`
-  background-image: url(${Group2});
-  background-size: contain;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 40px 0px 33px;
-  a {
-    color: #084892;
-    font-size: 18px;
-    line-height: 21px;
-    font-family: Rubic;
-    font-style: normal;
-    text-decoration: underline;
-    margin-left: 20px;
-  }
-  img {
-    margin-right: 25px;
   }
 `;
