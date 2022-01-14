@@ -3,7 +3,7 @@ import { connect, styled } from "frontity";
 import { Pagination } from "react-bootstrap";
 import Link from "../Header/link";
 
-const Paginate = ({ state, actions }) => {
+const Paginate = ({ link, state, actions }) => {
   // Get the total posts to be displayed based for the current link
 
   const { next, previous, page, totalPages } = state.source.get(
@@ -23,10 +23,10 @@ const Paginate = ({ state, actions }) => {
         <Link link={previous}>&lt;</Link>
       </Pagination.Item>
       {pages.map((pageNum) => {
-        const link = "/category/blogs/page/" + pageNum + "/";
+        const pagelink = link + pageNum + "/";
         return (
           <Pagination.Item active={page === pageNum ? true : false}>
-            <Link link={link}>{pageNum}</Link>
+            <Link link={pagelink}>{pageNum}</Link>
           </Pagination.Item>
         );
       })}
