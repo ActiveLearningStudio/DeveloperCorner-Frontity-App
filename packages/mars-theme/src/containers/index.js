@@ -84,6 +84,9 @@ const Index = ({ state, actions }) => {
         <PrivacyPage when={route === "/category/privacy-policy/"} />
         <Terms when={route === "/category/termscondition/"} />
         <SuccessStories when={route === "/category/successstories/"} />
+        <SuccessStories
+          when={route === "/category/successstories/page/" + wpRoute + "/"}
+        />
         <Successdetail when={route === "/successstories/" + wpRoute + "/"} />
         <IntractiveLearning when={route === "/learning/"} />
         <Blogs when={route === "/category/blogs/"} />
@@ -91,6 +94,9 @@ const Index = ({ state, actions }) => {
         <Blogdetail when={route === "/blogs/" + wpRoute + "/"} />
         <Thankyou when={route === "/thankyou/"} />
         <PressAwards when={route === "/category/pressawards/"} />
+        <PressAwards
+          when={route === "/category/pressawards/page/" + wpRoute + "/"}
+        />
         <Pressdetail when={route === "/pressawards/" + wpRoute + "/"} />
         <Webinars when={route === "/category/webinars/"} />
         <NewUi when={route === "/newui/"} />

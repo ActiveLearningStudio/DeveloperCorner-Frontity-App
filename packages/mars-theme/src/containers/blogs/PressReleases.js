@@ -1,7 +1,6 @@
 import { React, useState, useEffect } from "react";
 import { styled, connect } from "frontity";
-import Pagination from "react-js-pagination";
-import Paginate from "./pagination";
+import Paginate from "../../components/pagination/pagination";
 import PressArticle from "./article";
 import Loading from "../../components/loading/loading";
 // import history from "../../../src/history";
@@ -35,7 +34,7 @@ const PressReleases = ({ state, libraries }) => {
             return <PressArticle key={item.id} item={item} />;
           })}
       </Content>
-      {!data.isFetching && <Paginate />}
+      {!data.isFetching && <Paginate link="/category/blogs/page/" />}
     </Container>
   );
 };
@@ -73,17 +72,16 @@ const Container = styled.div`
         }
       }
     }
-    .item-prev .page-link {
-      background: none !important;
-      color: #084892 !important;
-    }
-    .item-next .page-link {
-      background: none !important;
-      color: #084892 !important;
-    }
     .page-item.active .page-link {
       color: #fff !important;
-      background-color: #285aa6 !important;
+      border: none;
+      background: rgba(40, 19, 166) !important;
+      a {
+        color: #fff;
+      }
+    }
+    .page-item.disabled .page-link.disabled {
+      background: none !important;
     }
     span.page-link {
       border-radius: 25px;
@@ -97,6 +95,25 @@ const Container = styled.div`
       :focus {
         box-shadow: none;
       }
+      :disabled {
+        background: none;
+      }
+    }
+    .page-item:first-child .page-link {
+      background: none !important;
+      border: none;
+      font-size: 20px;
+    }
+    a {
+      color: #084892;
+    }
+    .page-item:last-child .page-link {
+      background: none !important;
+      border: none;
+      font-size: 20px;
+    }
+    a {
+      color: #084892;
     }
   }
 `;
@@ -115,71 +132,7 @@ const Content = styled.div`
   flex-wrap: wrap;
   margin-right: -36px;
   margin-bottom: 50px;
-`;
-const Article = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 260px;
-  background: #ffffff;
-  box-shadow: 0px 2px 25px 5px rgba(81, 81, 81, 0.1);
-  border-radius: 5px;
-  margin-right: 36px;
-  margin-bottom: 30px;
-  .article-text {
-    padding: 20px;
-  }
-  @media screen and (min-width: 320px) and (max-width: 767px) {
-    width: 100%;
-    .blog-image {
-      img {
-        width: 100%;
-      }
-    }
-  }
-`;
-const BlogHeading = styled.div`
-  p {
-    width: 220px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 21px;
-    height: 90px;
-    color: #084892;
-    // margin-bottom: 22px;
-    @media screen and (min-width: 320px) and (max-width: 767px) {
-      width: 100%;
-    }
-  }
-`;
-const BlogAuthor = styled.p`
-  width: 220px;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 12px !important;
-  line-height: 14px;
-  color: #515151 !important;
-  // padding: 0px !important;
-`;
-const BlogLink = styled.div`
-  width: 220px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  @media screen and (min-width: 320px) and (max-width: 767px) {
-    width: 100%;
-  }
-`;
-const Link = styled.a`
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14.7987px;
-  line-height: 18px;
-  text-decoration-line: underline;
-  color: #084892;
-  img {
-    width: 36px;
-    height: 36px;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
   }
 `;

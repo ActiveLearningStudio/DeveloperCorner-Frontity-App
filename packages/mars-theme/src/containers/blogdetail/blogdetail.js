@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import react from "react";
 import { styled, connect } from "frontity";
 import Banner from "../../components/banner/Styledbanner";
 import Blogs from "../blogs/index";
@@ -7,16 +7,7 @@ import facebookicon from "../../assets/images/social-icons/facebook.png";
 import twittericon from "../../assets/images/social-icons/twitter.png";
 import linkedicon from "../../assets/images/social-icons/linked-in.png";
 import moreicon from "../../assets/images/social-icons/more-icon.png";
-import plusicon from "../../assets/images/PLUS.svg";
-import currikiupdates from "../../assets/images/updates.png";
 import arrowicon from "../../assets/images/yellow-arrow.png";
-import articleimg1 from "../../assets/images/PressReleases/articleimg1.png";
-import articleimg2 from "../../assets/images/PressReleases/articleimg2.png";
-import articleimg3 from "../../assets/images/PressReleases/articleimg3.png";
-import articleimg4 from "../../assets/images/PressReleases/articleimg4.png";
-import articleimg5 from "../../assets/images/PressReleases/articleimg5.png";
-import articleimg6 from "../../assets/images/PressReleases/articleimg6.png";
-import articleimg7 from "../../assets/images/PressReleases/articleimg7.png";
 const Blogdetail = ({ state, actions, libraries }) => {
   const RecentPosts = state.source.get("/category/blogs/");
   console.log("recent posts:", RecentPosts);
@@ -80,132 +71,6 @@ const Blogdetail = ({ state, actions, libraries }) => {
             ) : (
               <p>Details are not avaialable for this post</p>
             )}
-            {/* <DescPara>
-              <a>CurrikiStudio</a> is constantly innovating to make the best
-              digital learning design platform for educators and learning
-              content designers. Exciting things are happening here! Read on to
-              get new updates to CurrikiStudio and see what’s coming!
-            </DescPara>
-            <DescHeading>Enhancements to CurrikiStudio</DescHeading>
-            <SubHeading>Publish and Combine with Assets in Your LMS</SubHeading>
-            <DescPara>
-              One of our most popular requests from schools and districts is now
-              a reality. You can now publish your projects and playlists to your
-              LMS (Canvas LMS, Google Classroom, and Moodle) AND combine it with
-              other elements of your existing curriculum within the LMS.
-            </DescPara>
-            <div className="article-desc-image">
-              <img src={articleimg1} alt="" />
-            </div>
-            <SubHeading>Duplicate Projects and Playlists</SubHeading>
-            <DescPara>
-              In CurrikiStudio you can now create identical copies of your
-              projects, playlists, and activities to customize and repurpose.
-              This will save time in creating alternative versions of something
-              you want to reuse again and again.
-            </DescPara>
-            <div className="article-desc-image">
-              <img src={articleimg2} alt="" />
-            </div>
-            <div className="article-desc-image">
-              <img src={articleimg3} alt="" />
-            </div>
-            <SubHeading>Sample Projects for Inspection</SubHeading>
-            <DescPara>
-              For inspiration, sample projects are now available! You can also
-              “favorite” projects for easy access!
-            </DescPara>
-            <div className="article-desc-image">
-              <img src={articleimg4} alt="" />
-            </div>
-            <DescPara>
-              You can submit your projects and playlists to the Project Showcase
-              for review and contribution to the CurrikiStudio Showcase.
-            </DescPara>
-            <div className="article-desc-image">
-              <img src={articleimg5} alt="" />
-            </div>
-            <DescPara>
-              Plus, you can easily see the status of what you have shared
-              (projects/playlists/activities).
-            </DescPara>
-            <div className="article-desc-image">
-              <img src={articleimg6} alt="" />
-            </div>
-            <SubHeading>Administration Portal (for institutions)</SubHeading>
-            <DescPara>
-              We have created a management portal for administrators of
-              institutions to manage users, assets, and pull usage reports.
-            </DescPara>
-            <div className="article-desc-image">
-              <img src={articleimg7} alt="" />
-            </div>
-            <SubHeading>CurrikiOne Community</SubHeading>
-            <DescPara>
-              We are excited that we have over 3,000 CurrikiStudio users and
-              have built a page just for this community. The{" "}
-              <a className="none-deco-link" href="#">
-                CurrikiOne
-              </a>{" "}
-              portal provides key{" "}
-              <a href="#" className="none-deco-link">
-                Curriki
-              </a>{" "}
-              resources, forums, and examples of success of our growing
-              community of content authors.
-            </DescPara>
-            <DescHeading>Managed Service Providers</DescHeading>
-            <DescPara>
-              We are actively working on allowing CurrikiStudio institutions to
-              upgrade from demo access to full access by signing up for storage
-              and bandwidth on their provider of choice. Our partnership with
-              Amazon Web Services is nearly complete. Our next focus after
-              completing our launch with AWS we will be ready for review with
-              Linode. A partnership with Microsoft Azure is being planned in the
-              future.
-            </DescPara>
-            <DescHeading>
-              Other updates planned for the rest of 2020
-            </DescHeading>
-            <DescPara>
-              In the coming months, watch for some really exciting additions to
-              CurrikiStudio!
-            </DescPara>
-            <div className="updates-list-para">
-              <div className="list-item">
-                <img src={plusicon} alt="" />
-                <DescPara>Google Classroom Grade Passback</DescPara>
-              </div>
-              <div className="list-item">
-                <img src={plusicon} alt="" />
-                <DescPara> Publishing to the CurrikiLibrary</DescPara>
-              </div>
-              <div className="list-item">
-                <img src={plusicon} alt="" />
-                <DescPara>
-                  {" "}
-                  Enabling self-contained libraries for institutions
-                </DescPara>
-              </div>
-              <div className="list-item">
-                <img src={plusicon} alt="" />
-                <DescPara> Project Templates</DescPara>
-              </div>
-              <div className="list-item">
-                <img src={plusicon} alt="" />
-                <DescPara> Collaboration and conferencing </DescPara>
-              </div>
-            </div>
-            <DescPara>
-              Like the new updates to CurrikiStudio and interested in joining
-              this next innovation in digital learning?{" "}
-              <a href="#" className="none-deco-link">
-                CurrikiStudio
-              </a>{" "}
-              is a FREE digital learning design platform! Sign up for your
-              account and start building today!
-            </DescPara>
-            <button className="link-btn">Get CurrikiStudio for FREE</button> */}
           </Description>
           <RecentPost>
             <div className="recent-post-content">
@@ -282,6 +147,7 @@ const Container = styled.div`
 `;
 const BlogContent = styled.div`
   display: flex;
+  justify-content: space-between;
   align-items: center;
   margin-top: 70px;
   margin-bottom: 100px;
@@ -372,38 +238,6 @@ const Description = styled.div`
   @media screen and (max-width: 992px) {
     width: 100%;
   }
-`;
-const DescHeading = styled.h3`
-  font-style: normal;
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 30px;
-  color: #084892;
-`;
-
-const DescPara = styled.p`
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 25px;
-  color: #515151;
-
-  a {
-    color: #2e8dff !important;
-  }
-  .none-deco-link {
-    text-decoration: none;
-  }
-`;
-const SubHeading = styled.h3`
-  font-style: normal;
-  font-weight: 300;
-  font-size: 25px;
-  line-height: 30px;
-  display: flex;
-  align-items: center;
-  margin-top: 20px;
-  color: #084892;
 `;
 const RecentPost = styled.div`
   border-left: 1px solid #084892;
