@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { styled, connect } from "frontity";
 import Banner from "../../components/banner/Styledbanner";
 import Blogs from "../blogs/index";
+import Linked from "../../components/Header/link";
 import facebookicon from "../../assets/images/social-icons/facebook.png";
 import twittericon from "../../assets/images/social-icons/twitter.png";
 import linkedicon from "../../assets/images/social-icons/linked-in.png";
@@ -17,6 +18,8 @@ import articleimg5 from "../../assets/images/PressReleases/articleimg5.png";
 import articleimg6 from "../../assets/images/PressReleases/articleimg6.png";
 import articleimg7 from "../../assets/images/PressReleases/articleimg7.png";
 const Blogdetail = ({ state, actions, libraries }) => {
+  const RecentPosts = state.source.get("/category/blogs/");
+  console.log("recent posts:", RecentPosts);
   const data = state.source.get(state.router.link);
   const post = state.source[data.type][data.id];
   const featuredmedia = state.source.attachment[post.featured_media];
@@ -42,8 +45,8 @@ const Blogdetail = ({ state, actions, libraries }) => {
             )}
 
             <Paragraph>
-              <span>By Lani deGuia</span>
-              <span>Nov 17, 2020</span>
+              <span>{author.name}</span>
+              <span>{date.toDateString()}</span>
               <span>Blog</span>
               <span>0 Comments</span>
             </Paragraph>
@@ -207,17 +210,29 @@ const Blogdetail = ({ state, actions, libraries }) => {
           <RecentPost>
             <div className="recent-post-content">
               <h2>Recent Posts</h2>
-              <div className="recent-post-detail">
-                <p>
-                  “How to Become an Entrepreneur” is Now Available Online as the
-                  First Higher Education Course Designed with CurrikiStudio
-                </p>
-                <div className="article-link">
-                  <a>Read article</a>
-                  <img src={arrowicon} alt="" />
-                </div>
-              </div>
-              <div className="recent-post-detail">
+              {RecentPosts.items.map(({ type, id }) => {
+                const item = state.source[type][id];
+                return (
+                  <div className="recent-post-detail">
+                    <Linked link={item.link}>
+                      <p
+                        dangerouslySetInnerHTML={{
+                          __html: item.excerpt.rendered,
+                        }}
+                      />
+                    </Linked>
+                    <div className="article-link">
+                      <Linked link={item.link}>
+                        <a>Read article</a>
+                      </Linked>
+                      <Linked link={item.link}>
+                        <img src={arrowicon} alt="" />
+                      </Linked>
+                    </div>
+                  </div>
+                );
+              })}
+              {/* <div className="recent-post-detail">
                 <p>
                   Curriki Answers the Call from School Districts, Universities,
                   and Nonprofits―Launches CurrikiStudio AWS CloudFormation
@@ -227,37 +242,7 @@ const Blogdetail = ({ state, actions, libraries }) => {
                   <a>Read article</a>
                   <img src={arrowicon} alt="" />
                 </div>
-              </div>
-              <div className="recent-post-detail">
-                <p>
-                  Curriki® Delivers Game-Changing Functionality and Access to
-                  its Free Interactive Authoring Tool, CurrikiStudio, with
-                  Support from Linode
-                </p>
-                <div className="article-link">
-                  <a>Read article</a>
-                  <img src={arrowicon} alt="" />
-                </div>
-              </div>
-              <div className="recent-post-detail">
-                <p>
-                  Curriki® Unveils Multi - platform Publishing for CurrikiStudio
-                </p>
-                <div className="article-link">
-                  <a>Read article</a>
-                  <img src={arrowicon} alt="" />
-                </div>
-              </div>
-              <div className="recent-post-detail">
-                <p>
-                  Curriki Launches CurrikiStudio to Fast-track Digital Content
-                  Authoring and Delivery for Distance Learning
-                </p>
-                <div className="article-link">
-                  <a>Read article</a>
-                  <img src={arrowicon} alt="" />
-                </div>
-              </div>
+              </div> */}
             </div>
             <div className="archives-heading">
               <h4>archives</h4>
@@ -310,6 +295,7 @@ const BlogContent = styled.div`
   }
 `;
 const Heading = styled.h4`
+  width: 700px;
   max-width: 700px;
   p {
     font-style: normal;

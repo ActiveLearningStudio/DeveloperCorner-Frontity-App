@@ -51,9 +51,9 @@ const Index = ({ state, actions }) => {
   const data = state.source.get(state.router.link);
   // Get the total posts to be displayed based for the current link
   const { next, previous } = state.source.get(state.router.link);
-  console.log("csddds ddsi:", data);
   if (data.isPostType) {
     wpRoute = data.route.replace(/[^\d.]/g, "");
+    // aler(wpRoute);
   }
   if (data.isTaxonomy) {
     wpRoute = data.link.replace(/[^\d.]/g, "");
