@@ -42,7 +42,7 @@ const settings = {
               ["Thankyou", "/thankyou/"],
               // ["404page", "/error/"],
               ["NewUI", "/newui/"],
-              ["howtoContribute", "/contribution/"],
+              ["howtoContribute", "/category/contribution/"],
             ],
           },
 

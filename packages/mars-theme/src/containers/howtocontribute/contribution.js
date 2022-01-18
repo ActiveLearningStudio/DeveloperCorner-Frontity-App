@@ -1,27 +1,70 @@
 import React from "react";
-import { styled, css } from "frontity";
+import { styled, css, connect } from "frontity";
+import Alert from "react-bootstrap/Alert";
+import Loading from "../../components/loading/loading";
 import Linksheading from "../../components/QuickLinksHeading/index";
 import Unsplash from "../../assets/images/unsplash.png";
 import Unsplash1 from "../../assets/images/unsplash1.png";
-const Contribution = () => {
+const Contribution = ({ state, libraries }) => {
+  const data = state.source.get(state.router.link);
+  const Html2React = libraries.html2react.Component;
   return (
     <Container>
       <Content>
         <Linksheading titlebar="How to contribute" />
-        <ContributeArticle>
-          <div className="article-content">
-            <Heading>Cursus neque eget a bibendum.</Heading>
-            <Paragraph>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus
-              convallis integer viverra ut. Auctor faucibus eu pellentesque arcu
-              tortor, porttitor. Blandit non dolor suscipit mauris.
-            </Paragraph>
-          </div>
-          <div className="article-img">
-            <img src={Unsplash} alt="" />
-          </div>
-        </ContributeArticle>
-        <ContributeArticle>
+        {data.isFetching && <Loading />}
+        {data.items ? (
+          data.items.map(({ type, id }) => {
+            const item = state.source[type][id];
+            const media = state.source.attachment[item.featured_media];
+            return (
+              <ContributeArticle>
+                <div className="article-content">
+                  {item?.title && (
+                    <Heading
+                      dangerouslySetInnerHTML={{
+                        __html: item.title.rendered,
+                      }}
+                    />
+                  )}
+                  {item?.excerpt && (
+                    <Paragraph
+                      dangerouslySetInnerHTML={{
+                        __html: item.excerpt.rendered,
+                      }}
+                    />
+                  )}
+                </div>
+                <div className="article-img">
+                  <img src={media.source_url} alt="" />
+                </div>
+              </ContributeArticle>
+            );
+          })
+        ) : (
+          <ContributeArticle>
+            <div className="article-content">
+              <Alert variant="success">
+                <Alert.Heading>
+                  Hey there, No article found for the contribution{" "}
+                </Alert.Heading>
+                <p>
+                  Aww yeah, you successfully read this important alert message.
+                  Please go to admin panel and create blogs for contribution
+                  category. When you will create any blog that will be render
+                  here.
+                </p>
+                <hr />
+                <p className="mb-0">
+                  Whenever you need to, be sure to use margin utilities to keep
+                  things nice and tidy.
+                </p>
+              </Alert>
+            </div>
+          </ContributeArticle>
+        )}
+
+        {/* <ContributeArticle>
           <div className="article-content">
             <Heading>Cursus neque eget a bibendum.</Heading>
             <Paragraph>
@@ -37,30 +80,13 @@ const Contribution = () => {
           <div className="article-img">
             <img src={Unsplash1} alt="" />
           </div>
-        </ContributeArticle>
-        <ContributeArticle>
-          <div className="article-content">
-            <Heading>Cursus neque eget a bibendum.</Heading>
-            <Paragraph>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus
-              convallis integer viverra ut. Auctor faucibus eu pellentesque arcu
-              tortor, porttitor. Blandit non dolor suscipit mauris. Vulputate ut
-              est sed interdum in sodales. Consequat a neque lacinia consequat
-              arcu diam eu pulvinar. Purus morbi nisl nec nulla ultricies
-              faucibus mauris. Nam cursus auctor velit quisque dignissim
-              pulvinar id quam. Odio.
-            </Paragraph>
-          </div>
-          <div className="article-img">
-            <button>CTA button</button>
-          </div>
-        </ContributeArticle>
+        </ContributeArticle> */}
       </Content>
     </Container>
   );
 };
 
-export default Contribution;
+export default connect(Contribution);
 
 const Container = styled.div`
   max-width: 1200px;
@@ -83,10 +109,13 @@ const ContributeArticle = styled.div`
     @media (max-width: 600px) {
       width: 100%;
     }
+    // img {
+    //   @media (max-width: 600px) {
+    //     width: 100%;
+    //   }
+    // }
     img {
-      @media (max-width: 600px) {
-        width: 100%;
-      }
+      width: 100%;
     }
   }
   .article-img {
