@@ -19,26 +19,26 @@ const Index = (props) => {
         </Search>
         <RightContent>
           <Link>
-          <div>
-            <img src={EmailIcon} alt="" />
-            <a href="#">News letter</a>
+            <div>
+              <img src={EmailIcon} alt="" />
+              <a href="#">News letter</a>
             </div>
           </Link>
-          
+
           <Link>
             {" "}
             <div className="div-active">
-            <img src={group} alt="" />
-            <a className="active" href="#">
-              Forum
-            </a>
+              <img src={group} alt="" />
+              <a className="active" href="#">
+                Forum
+              </a>
             </div>
           </Link>
           <Link>
             {" "}
             <div>
-            <img src={calenderIcon} alt="" />
-            <a href="#">Schedule a demo</a>
+              <img src={calenderIcon} alt="" />
+              <a href="#">Schedule a demo</a>
             </div>
           </Link>
         </RightContent>
@@ -118,13 +118,13 @@ const Link = styled.a`
   text-decoration: none;
   color: #084892 !important;
   div {
-    display:flex;
+    display: flex;
     flex-direction: row;
     align-items: center;
   }
   .div-active {
-    background: #E5EEFF;
-    margin-right:4px !important;
+    background: #e5eeff;
+    margin-right: 4px !important;
   }
   a {
     font-family: "Rubik";
@@ -141,6 +141,7 @@ const Link = styled.a`
   }
 `;
 const HeadingBar = styled.div`
+  width: 1008px;
   max-width: 1008px;
   justify-content: space-between;
   display: flex;
