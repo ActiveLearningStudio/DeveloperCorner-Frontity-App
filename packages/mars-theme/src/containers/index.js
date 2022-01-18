@@ -100,7 +100,7 @@ const Index = ({ state, actions }) => {
         <Pressdetail when={route === "/pressawards/" + wpRoute + "/"} />
         <Webinars when={route === "/category/webinars/"} />
         <NewUi when={route === "/newui/"} />
-        <Contribution when={route === "/contribution/"} />
+        <Contribution when={route === "/category/contribution/"} />
         <ErrorPage when={data.is404} />
       </Switch>
       <Footer />
