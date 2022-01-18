@@ -1,12 +1,14 @@
 import React from "react";
-import { styled } from "frontity";
+import { styled, connect } from "frontity";
 
 import plusicon from "../../assets/images/PLUS.svg";
 import image1 from "../../assets/images/image1.png";
 import image2 from "../../assets/images/image2.png";
 import Arrow from "../../assets/images/Arrow.svg";
 import laopera from "../../assets/images/laopera.png";
-const Courses = () => {
+const Courses = ({ state }) => {
+  const Courses = state.source.get("/category/example-courses/");
+  console.log("courses", Courses);
   return (
     <Section>
       <Container>
@@ -58,7 +60,7 @@ const Courses = () => {
   );
 };
 
-export default Courses;
+export default connect(Courses);
 const Section = styled.div`
   margin-top: 50px;
 `;
