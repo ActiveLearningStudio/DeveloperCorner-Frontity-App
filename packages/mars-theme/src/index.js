@@ -4,6 +4,8 @@ import iframe from "@frontity/html2react/processors/iframe";
 import link from "@frontity/html2react/processors/link";
 // import Theme from "./raja";
 import Theme from "../src/App/App";
+import { categoriesWidgetsHome } from "./components/PostbyCategory/config";
+// import {getCategoriesIds, getPostsGroupedByCategory} from './helpers'
 const marsTheme = {
   name: "@frontity/mars-theme",
   roots: {
@@ -41,6 +43,17 @@ const marsTheme = {
       closeMobileMenu: ({ state }) => {
         state.theme.isMobileMenuOpen = false;
       },
+      // beforeSSR: async ({ state, actions }) => {
+      //   if (state.router.link === "/") {
+      //     console.log(state.router.link);
+      //     console.log("getting data from beforeSSR...");
+      //     await Promise.all(
+      //       Object.values(categoriesWidgetsHome).map((category) =>
+      //         actions.source.fetch(`/category/${category}/`)
+      //       )
+      //     );
+      //   }
+      // },
     },
   },
   libraries: {

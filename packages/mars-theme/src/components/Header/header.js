@@ -125,21 +125,25 @@ const Header = ({ state }) => {
                   </Dropdown>{" "}
                 </div>
                 <div className="link-btn">
-                  {state.theme.menu.login.map(([name, link]) => {
+                  {/* {state.theme.menu.login.map(([name, link]) => {
                     const isCurrentPage = state.router.link === link;
                     return (
                       <Link
                         link={link}
                         aria-current={isCurrentPage ? "page" : undefined}
-                      >
-                        <Nav.Link href={link} className="header-login">
-                          <img src={usericon} alt="user icon" />
-                          <a href="/currikiforum">Login </a>
-                          {/* <a href="/generaldiscussion">Signup</a> */}
-                        </Nav.Link>
-                      </Link>
+                      > */}
+                  <Nav.Link
+                    href="https://www.currikistudio.org/login/"
+                    target="_blank"
+                    className="header-login"
+                  >
+                    <img src={usericon} alt="user icon" />
+                    <a>Login </a>
+                    {/* <a href="/generaldiscussion">Signup</a> */}
+                  </Nav.Link>
+                  {/* </Link>
                     );
-                  })}
+                  })} */}
                   <Button className="donate-btn" variant="primary">
                     {state.theme.menu.donate.map(([name, link]) => {
                       const isCurrentPage = state.router.link === link;
