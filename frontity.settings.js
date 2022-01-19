@@ -2,7 +2,7 @@ const settings = {
   name: "curriki-developer-corner-frontity-app",
   state: {
     frontity: {
-      url: "https://developer-wp.curriki.org/",
+      url: "https://developer-wp.curriki.org",
       title: "Test Frontity Blog",
       description: "WordPress installation for Frontity development",
     },
@@ -57,7 +57,7 @@ const settings = {
       name: "@frontity/wp-source",
       state: {
         source: {
-          url: "https://developer-wp.curriki.org/",
+          url: "https://developer-wp.curriki.org",
         },
       },
     },
