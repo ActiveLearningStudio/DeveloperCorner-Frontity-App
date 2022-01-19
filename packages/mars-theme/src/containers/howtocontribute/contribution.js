@@ -1,5 +1,7 @@
 import React from "react";
 import { styled, css, connect } from "frontity";
+import Alert from "react-bootstrap/Alert";
+import Loading from "../../components/loading/loading";
 import Linksheading from "../../components/QuickLinksHeading/index";
 import Unsplash from "../../assets/images/unsplash.png";
 import Unsplash1 from "../../assets/images/unsplash1.png";
@@ -10,7 +12,8 @@ const Contribution = ({ state, libraries }) => {
     <Container>
       <Content>
         <Linksheading titlebar="How to contribute" />
-        {data.items &&
+        {data.isFetching && <Loading />}
+        {data.items ? (
           data.items.map(({ type, id }) => {
             const item = state.source[type][id];
             const media = state.source.attachment[item.featured_media];
@@ -37,7 +40,29 @@ const Contribution = ({ state, libraries }) => {
                 </div>
               </ContributeArticle>
             );
-          })}
+          })
+        ) : (
+          <ContributeArticle>
+            <div className="article-content">
+              <Alert variant="success">
+                <Alert.Heading>
+                  Hey there, No article found for the contribution{" "}
+                </Alert.Heading>
+                <p>
+                  Aww yeah, you successfully read this important alert message.
+                  Please go to admin panel and create blogs for contribution
+                  category. When you will create any blog that will be render
+                  here.
+                </p>
+                <hr />
+                <p className="mb-0">
+                  Whenever you need to, be sure to use margin utilities to keep
+                  things nice and tidy.
+                </p>
+              </Alert>
+            </div>
+          </ContributeArticle>
+        )}
 
         {/* <ContributeArticle>
           <div className="article-content">
