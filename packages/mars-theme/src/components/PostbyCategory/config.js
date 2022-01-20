@@ -1,3 +1,6 @@
 export const categoriesWidgetsHome = {
-  30: "Get Involved",
+  32: "Get Started",
+  33: "Business Product Features",
+  35: "Try Curriki studio",
+  36: "Example Courses",
 };
