@@ -50,8 +50,6 @@ a {
 const Index = ({ state, actions }) => {
   var wpRoute = "";
   const data = state.source.get(state.router.link);
-  const postsPerCategory = getPostsGroupedByCategory(state.source);
-  console.log("postbycategory", postsPerCategory);
   // Get the total posts to be displayed based for the current link
   const { next, previous } = state.source.get(state.router.link);
   if (data.isPostType) {
