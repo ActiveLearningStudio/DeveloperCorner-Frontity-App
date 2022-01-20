@@ -6,7 +6,7 @@ import image1 from "../../assets/images/image1.png";
 import image2 from "../../assets/images/image2.png";
 import Arrow from "../../assets/images/Arrow.svg";
 import laopera from "../../assets/images/laopera.png";
-const Courses = ({ state }) => {
+const Courses = ({ state, exampleCoursesposts }) => {
   const Courses = state.source.get("/category/example-courses/");
   console.log("courses", Courses);
   return (

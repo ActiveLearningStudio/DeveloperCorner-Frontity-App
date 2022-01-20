@@ -15,7 +15,7 @@ const settings = {
           menu: {
             customers: [
               ["SuccessStories", "  /category/successstories/"],
-              ["BusinessProduct", "/businessProduct"],
+              ["BusinessProduct", "/category/businessProduct/"],
             ],
             community: [
               ["Blogs", "/category/blogs/"],

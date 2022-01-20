@@ -1,8 +1,8 @@
-import React from "react";
+import { React, useState } from "react";
 import { styled, connect } from "frontity";
 import PrimaryButton from "../../StyledComponent/PrimaryButton";
 import GetPic from "../../assets/images/Companies.png";
-const GetStarted = () => {
+const GetStarted = ({ getstarted }) => {
   return (
     <Container>
       <StyleDiv>

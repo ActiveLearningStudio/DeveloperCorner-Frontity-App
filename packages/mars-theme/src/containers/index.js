@@ -6,6 +6,7 @@ import Header from "../components/Header/header.js";
 import Loading from "../components/loading/loading";
 import IntractiveLearning from "./IntractiveLearning/index";
 import { getPostsGroupedByCategory } from "../components/PostbyCategory/posbycategory";
+import { categoriesWidgetsHome } from "../components/PostbyCategory/config";
 import Footer from "../components/footer/index";
 import bootstrapCss from "bootstrap/dist/css/bootstrap.min.css";
 import GeneralDiscussion from "./generaldiscussion/index";
@@ -51,6 +52,8 @@ const Index = ({ state, actions }) => {
   var wpRoute = "";
   const data = state.source.get(state.router.link);
   // Get the total posts to be displayed based for the current link
+  const postsPerCategory = getPostsGroupedByCategory(state.source);
+  console.log("postbycategory", postsPerCategory);
   const { next, previous } = state.source.get(state.router.link);
   if (data.isPostType) {
     wpRoute = data.route.replace(/[^\d.]/g, "");
@@ -64,6 +67,18 @@ const Index = ({ state, actions }) => {
   // useEffect(() => {
   //   if (next) actions.source.fetch(next);
   // }, []);
+  // useEffect(() => {
+  //   const attachExtraDataToState = async () => {
+  //     console.log(state.router.link);
+  //     console.log("getting data from useEffect...");
+  //     await Promise.all(
+  //       Object.values(categoriesWidgetsHome).map((category) =>
+  //         actions.source.fetch(`/category/${category}/`)
+  //       )
+  //     );
+  //   };
+  //   attachExtraDataToState();
+  // });
   return (
     <>
       <Globalstyle />
@@ -78,7 +93,10 @@ const Index = ({ state, actions }) => {
         />
         <GeneralDiscussion when={route === "/generaldiscussion/"} />
         <CurrikiForum when={route === "/currikiforum/"} />
-        <BusinessProduct when={route === "/businessproduct/"} />
+        <BusinessProduct
+          businessCategory={postsPerCategory}
+          when={route === "/category/businessproduct/"}
+        />
         <Providers when={route === "/providers/"} />
         <Ourmission when={route === "/ourmission/"} />
         <SupportLearning when={route === "/supportlearning/"} />

@@ -3,7 +3,7 @@ import { styled } from "frontity";
 
 import StartedImg from "../../assets/images/Trynow1.svg";
 import backimage from "../../assets/images/backimage.png";
-const Creating = () => {
+const Creating = ({ trycurrikiposts }) => {
   return (
     <StyleDiv>
       <Container>

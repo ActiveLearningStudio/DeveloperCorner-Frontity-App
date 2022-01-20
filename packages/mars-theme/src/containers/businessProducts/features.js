@@ -4,7 +4,7 @@ import featurePic from "../../assets/images/Group153.png";
 import MoneyPic from "../../assets/images/Group29.png";
 import tabletpic from "../../assets/images/tabletpic.svg";
 import searchpic from "../../assets/images/searchpic.svg";
-const Features = () => {
+const Features = ({ features }) => {
   return (
     <FeatureSection>
       <StyleDiv>
