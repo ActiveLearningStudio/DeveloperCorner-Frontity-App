@@ -9,6 +9,7 @@ import externalCss from "./style.css";
 const DonateNow = (props) => {
   const { show, onHide } = props;
   const [donatesubmit, setdonatesubmit] = useState(false);
+  const [sendDonate, setSendDonate] = useState(false);
   return (
     <div className="modal-container">
       <Global styles={css(externalCss)} />
@@ -39,7 +40,7 @@ const DonateNow = (props) => {
               <img src={donateImg} />
             </Modal.Body>
           </div>
-        ) : (
+        ) : sendDonate != true ? (
           <>
             <Modal.Header closeButton>
               <Modal.Title id="contained-modal-title-vcenter">
@@ -157,7 +158,7 @@ const DonateNow = (props) => {
                           className="login-btn"
                           type="submit"
                           text="Login"
-                          onClick={() => onHide(true)}
+                          onClick={() => setSendDonate(true)}
                         >
                           send donation
                         </button>
@@ -168,6 +169,15 @@ const DonateNow = (props) => {
                 </Formik>
               </div>
             </Modal.Body>
+          </>
+        ) : (
+          <>
+            <Modal.Header closeButton>
+              <Modal.Title id="contained-modal-title-vcenter">
+                Donations
+              </Modal.Title>
+            </Modal.Header>
+            <Thankyou />
           </>
         )}
       </Modal>

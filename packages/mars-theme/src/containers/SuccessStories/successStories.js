@@ -22,29 +22,32 @@ const SuccessStories = ({ state, libraries }) => {
           </Header>
         </Headercontainer>
         {data.isFetching && <Loading />}
-        <Cardcontent>
-          {data.items ? (
-            data.items.map(({ type, id }) => {
-              const item = state.source[type][id];
-              return <StoryCard key={item.id} item={item} />;
-            })
-          ) : (
-            <Alert variant="success">
-              <Alert.Heading>No data found for this page</Alert.Heading>
-              <p>
-                Aww yeah, you successfully read this important alert message.
-                Please go to admin panel and create blogs for contribution
-                category. When you will create any blog that will be render
-                here.
-              </p>
-              <hr />
-              <p className="mb-0">
-                Whenever you need to, be sure to use margin utilities to keep
-                things nice and tidy.
-              </p>
-            </Alert>
-          )}
-        </Cardcontent>
+        {!data.isFetching && (
+          <Cardcontent>
+            {data.items ? (
+              data.items.map(({ type, id }) => {
+                const item = state.source[type][id];
+                return <StoryCard key={item.id} item={item} />;
+              })
+            ) : (
+              <Alert variant="success">
+                <Alert.Heading>No data found for this page</Alert.Heading>
+                <p>
+                  Aww yeah, you successfully read this important alert message.
+                  Please go to admin panel and create blogs for contribution
+                  category. When you will create any blog that will be render
+                  here.
+                </p>
+                <hr />
+                <p className="mb-0">
+                  Whenever you need to, be sure to use margin utilities to keep
+                  things nice and tidy.
+                </p>
+              </Alert>
+            )}
+          </Cardcontent>
+        )}
+
         {!data.isFetching && data.items && (
           <Paginate link="/category/successstories/page/" />
         )}
