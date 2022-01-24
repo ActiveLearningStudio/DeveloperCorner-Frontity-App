@@ -49,9 +49,9 @@ const Index = ({ interactiveCategory }) => {
         <ApiSection apidata={apidata} />
         {/* bussines product */}
 
-        <Technology />
+        <Technology techdata={techdata} />
         {/* get started */}
-        <GetStarted />
+        <GetStarted getStartedpost={getStartedpost} />
       </div>
     </>
   );
