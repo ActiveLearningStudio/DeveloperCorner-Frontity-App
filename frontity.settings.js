@@ -15,13 +15,13 @@ const settings = {
           menu: {
             customers: [
               ["SuccessStories", "  /category/successstories/"],
-              ["BusinessProduct", "/businessProduct"],
+              ["BusinessProduct", "/category/businessProduct/"],
             ],
             community: [
               ["Blogs", "/category/blogs/"],
               ["webinars", "/category/webinars/"],
-              ["Providers", "/providers"],
-              ["Support Learning", "/supportlearning"],
+              ["Providers", "/category/providers"],
+              ["Support Learning", "/category/supportlearning"],
             ],
             company: [
               ["Ourmission", "/ourmission"],
@@ -37,11 +37,8 @@ const settings = {
             products: [
               ["DatabaseSchema", "/category/database-schema/"],
               ["currikiPlatform", "/category/deployingthecurrikiplatfrom/"],
-              ["InterativeLearning", "/learning/"],
               ["GeneralDiscussion", "/generaldiscussion/"],
-              ["Thankyou", "/thankyou/"],
-              // ["404page", "/error/"],
-              ["NewUI", "/newui/"],
+              ["Interactive Learning", "/category/interactive-learning/"],
               ["howtoContribute", "/category/contribution/"],
             ],
           },

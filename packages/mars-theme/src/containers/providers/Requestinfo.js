@@ -1,7 +1,8 @@
 import React from "react";
-import { styled } from "frontity";
+import { styled, connect } from "frontity";
 import globeImg from "../../assets/images/providers.png";
-const Requestinfo = () => {
+const Requestinfo = ({ requestedinfoposts }) => {
+  console.log("requestedinfoposts", requestedinfoposts);
   return (
     <Section>
       <Container>

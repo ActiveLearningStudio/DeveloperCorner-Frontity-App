@@ -1,5 +1,6 @@
 import { React, useState, useEffect } from "react";
 import { styled, connect } from "frontity";
+import Alert from "react-bootstrap/Alert";
 import Paginate from "../../components/pagination/pagination";
 import PressArticle from "./article";
 import Loading from "../../components/loading/loading";
@@ -13,6 +14,8 @@ const PressReleases = ({ state, libraries }) => {
     // history.push("/");
   }
   const data = state.source.get(state.router.link);
+  // console.log("data is", data.items.length); {"error is here"}
+  // const itemlength = data.items.length;
   // alert(state.router.link);
   console.log("posts", data);
   const Html2React = libraries.html2react.Component;
@@ -27,14 +30,34 @@ const PressReleases = ({ state, libraries }) => {
     <Container>
       <Heading>Press Releases</Heading>
       {data.isFetching && <Loading />}
-      <Content>
-        {data.items &&
-          data.items.map(({ type, id }) => {
-            const item = state.source[type][id];
-            return <PressArticle key={item.id} item={item} />;
-          })}
-      </Content>
-      {!data.isFetching && <Paginate link="/category/blogs/page/" />}
+      {!data.isFetching && (
+        <Content>
+          {data.items ? (
+            data.items.map(({ type, id }) => {
+              const item = state.source[type][id];
+              return <PressArticle key={item.id} item={item} />;
+            })
+          ) : (
+            <Alert variant="success">
+              <Alert.Heading>No data found for this page</Alert.Heading>
+              <p>
+                Aww yeah, you successfully read this important alert message.
+                Please go to admin panel and create blogs for contribution
+                category. When you will create any blog that will be render
+                here.
+              </p>
+              <hr />
+              <p className="mb-0">
+                Whenever you need to, be sure to use margin utilities to keep
+                things nice and tidy.
+              </p>
+            </Alert>
+          )}
+        </Content>
+      )}
+      {!data.isFetching && data.items && (
+        <Paginate link="/category/blogs/page/" />
+      )}
     </Container>
   );
 };

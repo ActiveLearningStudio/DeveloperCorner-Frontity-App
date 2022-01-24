@@ -4,8 +4,8 @@ import { createGlobalStyle } from "styled-components";
 import Switch from "@frontity/components/switch";
 import Header from "../components/Header/header.js";
 import Loading from "../components/loading/loading";
-import IntractiveLearning from "./IntractiveLearning/index";
 import { getPostsGroupedByCategory } from "../components/PostbyCategory/posbycategory";
+import { categoriesWidgetsHome } from "../components/PostbyCategory/config";
 import Footer from "../components/footer/index";
 import bootstrapCss from "bootstrap/dist/css/bootstrap.min.css";
 import GeneralDiscussion from "./generaldiscussion/index";
@@ -29,7 +29,7 @@ import PressAwards from "./pressawards/pressAwards";
 import Pressdetail from "./pressdetail/pressDetail";
 import ErrorPage from "./404page/index";
 import Webinars from "./webinars/index";
-import NewUi from "./new-ui/index";
+import InterativeLearning from "./new-ui/index";
 import Contribution from "./howtocontribute/index";
 const Globalstyle = createGlobalStyle`
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
@@ -50,9 +50,9 @@ a {
 const Index = ({ state, actions }) => {
   var wpRoute = "";
   const data = state.source.get(state.router.link);
+  // Get the total posts to be displayed based for the current link
   const postsPerCategory = getPostsGroupedByCategory(state.source);
   console.log("postbycategory", postsPerCategory);
-  // Get the total posts to be displayed based for the current link
   const { next, previous } = state.source.get(state.router.link);
   if (data.isPostType) {
     wpRoute = data.route.replace(/[^\d.]/g, "");
@@ -66,6 +66,18 @@ const Index = ({ state, actions }) => {
   // useEffect(() => {
   //   if (next) actions.source.fetch(next);
   // }, []);
+  // useEffect(() => {
+  //   const attachExtraDataToState = async () => {
+  //     console.log(state.router.link);
+  //     console.log("getting data from useEffect...");
+  //     await Promise.all(
+  //       Object.values(categoriesWidgetsHome).map((category) =>
+  //         actions.source.fetch(`/category/${category}/`)
+  //       )
+  //     );
+  //   };
+  //   attachExtraDataToState();
+  // });
   return (
     <>
       <Globalstyle />
@@ -80,10 +92,16 @@ const Index = ({ state, actions }) => {
         />
         <GeneralDiscussion when={route === "/generaldiscussion/"} />
         <CurrikiForum when={route === "/currikiforum/"} />
-        <BusinessProduct when={route === "/businessproduct/"} />
-        <Providers when={route === "/providers/"} />
+        <BusinessProduct
+          businessCategory={postsPerCategory}
+          when={route === "/category/businessproduct/"}
+        />
+        <Providers
+          when={route === "/category/providers/"}
+          providerCategory={postsPerCategory}
+        />
         <Ourmission when={route === "/ourmission/"} />
-        <SupportLearning when={route === "/supportlearning/"} />
+        <SupportLearning when={route === "/category/supportlearning/"} />
         <PrivacyPage when={route === "/category/privacy-policy/"} />
         <Terms when={route === "/category/termscondition/"} />
         <SuccessStories when={route === "/category/successstories/"} />
@@ -91,7 +109,6 @@ const Index = ({ state, actions }) => {
           when={route === "/category/successstories/page/" + wpRoute + "/"}
         />
         <Successdetail when={route === "/successstories/" + wpRoute + "/"} />
-        <IntractiveLearning when={route === "/learning/"} />
         <Blogs when={route === "/category/blogs/"} />
         <Blogs when={route === "/category/blogs/page/" + wpRoute + "/"} />
         <Blogdetail when={route === "/blogs/" + wpRoute + "/"} />
@@ -102,7 +119,10 @@ const Index = ({ state, actions }) => {
         />
         <Pressdetail when={route === "/pressawards/" + wpRoute + "/"} />
         <Webinars when={route === "/category/webinars/"} />
-        <NewUi when={route === "/newui/"} />
+        <InterativeLearning
+          when={route === "/category/interactive-learning/"}
+          interactiveCategory={postsPerCategory}
+        />
         <Contribution when={route === "/category/contribution/"} />
         <ErrorPage when={data.is404} />
       </Switch>
@@ -132,7 +152,7 @@ const Index = ({ state, actions }) => {
       {state.router.link === "/pressdetail/" && <Pressdetail />}
       {state.router.link === "/error/" && <ErrorPage />}
       {state.router.link === "/webinars/" && <Webinars />}
-      {state.router.link === "/newui/" && <NewUi />}
+      {state.router.link === "/InterativeLearning/" && <InterativeLearning />}
       {state.router.link === "/contribution/" && <Contribution />} */}
     </>
   );

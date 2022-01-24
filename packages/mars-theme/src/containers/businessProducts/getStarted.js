@@ -1,21 +1,36 @@
-import React from "react";
+import { React, useState } from "react";
 import { styled, connect } from "frontity";
 import PrimaryButton from "../../StyledComponent/PrimaryButton";
 import GetPic from "../../assets/images/Companies.png";
-const GetStarted = () => {
+const GetStarted = ({ getstartedposts, state }) => {
+  console.log("getstart", getstartedposts);
+  const posttitle = getstartedposts[0]?.title;
+  const media = state?.source?.attachment[getstartedposts[0]?.featured_media];
   return (
     <Container>
       <StyleDiv>
         <LeftDiv>
-          <h2>
-            Curriki has turnkey tools for you to{" "}
-            <span> create, manage and deliver </span>
-            interactive training content to employees, at scale.
-          </h2>
+          {posttitle && posttitle ? (
+            <h2
+              dangerouslySetInnerHTML={{
+                __html: posttitle.rendered,
+              }}
+            />
+          ) : (
+            <h2>
+              Curriki has turnkey tools for you to{" "}
+              <span> create, manage and deliver </span>
+              interactive training content to employees, at scale.
+            </h2>
+          )}
+
           <Button title="Get Started">Get Started</Button>
         </LeftDiv>
         <RightDiv>
-          <img src={GetPic} alt="Get started picture" />
+          <img
+            src={media ? media?.source_url : GetPic}
+            alt="Get started picture"
+          />
         </RightDiv>
       </StyleDiv>
     </Container>

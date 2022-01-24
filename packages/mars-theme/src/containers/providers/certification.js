@@ -1,12 +1,13 @@
 import React from "react";
-import { styled } from "frontity";
+import { styled, connect } from "frontity";
 import plusicon from "../../assets/images/PLUS.svg";
 import resume1 from "../../assets/images/resume1.svg";
 import resume2 from "../../assets/images/resume2.svg";
 import resume3 from "../../assets/images/resume3.svg";
 import resume4 from "../../assets/images/resume4.svg";
 
-const Certification = () => {
+const Certification = ({ certificationposts, state, libraries }) => {
+  const Html2React = libraries.html2react.Component;
   return (
     <Section>
       <Container>
@@ -16,145 +17,177 @@ const Certification = () => {
         </Heading>
         <Content>
           <LeftCol>
-            <Card>
-              <div className="card-content">
-                <div>
-                  <Span>1</Span>
-                </div>
-                <Cardbody>
-                  <h3> Application</h3>
-                  <div>
-                    <p className="card-list-item">
-                      <img src={plusicon} alt="" />
-                      <p> Application Submission</p>
-                    </p>
-                    <p className="card-list-item">
-                      <img src={plusicon} alt="" />
-                      <p> Technology / Learning Portfolio Review</p>
-                    </p>
-                    <p className="card-list-item">
-                      <img src={plusicon} alt="" />
-                      <p>Reference Check</p>
-                    </p>
-                    <p className="card-list-item">
-                      <img src={plusicon} alt="" />
-                      <p> Performance-Based Project Assignment</p>
-                    </p>
-                    <p className="card-list-item">
-                      <img src={plusicon} alt="" />
-                      <p> Partnership Agreement</p>
-                    </p>
+            {certificationposts && certificationposts.length > 0 ? (
+              certificationposts?.map((postitem, key) => {
+                const featuremedia =
+                  state.source.attachment[postitem?.featured_media];
+                return (
+                  <Card>
+                    <div className="card-content">
+                      <div>
+                        <Span>{++key}</Span>
+                      </div>
+                      <Cardbody>
+                        <h3
+                          dangerouslySetInnerHTML={{
+                            __html: postitem.title.rendered,
+                          }}
+                        />
+                        <div>
+                          <Html2React html={postitem.content.rendered} />
+                        </div>
+                      </Cardbody>
+                    </div>
+                    <ImageDiv>
+                      <img src={featuremedia.source_url} alt="" />
+                    </ImageDiv>
+                  </Card>
+                );
+              })
+            ) : (
+              <>
+                <Card>
+                  <div className="card-content">
+                    <div>
+                      <Span>1</Span>
+                    </div>
+                    <Cardbody>
+                      <h3> Application</h3>
+                      <div>
+                        <p className="card-list-item">
+                          <img src={plusicon} alt="" />
+                          <p> Application Submission</p>
+                        </p>
+                        <p className="card-list-item">
+                          <img src={plusicon} alt="" />
+                          <p> Technology / Learning Portfolio Review</p>
+                        </p>
+                        <p className="card-list-item">
+                          <img src={plusicon} alt="" />
+                          <p>Reference Check</p>
+                        </p>
+                        <p className="card-list-item">
+                          <img src={plusicon} alt="" />
+                          <p> Performance-Based Project Assignment</p>
+                        </p>
+                        <p className="card-list-item">
+                          <img src={plusicon} alt="" />
+                          <p> Partnership Agreement</p>
+                        </p>
+                      </div>
+                    </Cardbody>
                   </div>
-                </Cardbody>
-              </div>
-              <ImageDiv>
-                <img src={resume1} alt="" />
-              </ImageDiv>
-            </Card>
-            <Card>
-              <div className="card-content">
-                <div>
-                  <Span>2</Span>
-                </div>
-                <Cardbody>
-                  <h3>Certification</h3>
-                  <div>
-                    <p className="card-list-item">
-                      <img src={plusicon} alt="" />
-                      <p>Kickoff and Account Manager Introduction</p>
-                    </p>
-                    <p className="card-list-item">
-                      <img src={plusicon} alt="" />
-                      <p>Self tour of Resources</p>
-                    </p>
-                    <p className="card-list-item">
-                      <img src={plusicon} alt="" />
-                      <p>Course Completion</p>
-                    </p>
-                    <p className="card-list-item">
-                      <img src={plusicon} alt="" />
-                      <p>Support Hours</p>
-                    </p>
+                  <ImageDiv>
+                    <img src={resume1} alt="" />
+                  </ImageDiv>
+                </Card>
+                <Card>
+                  <div className="card-content">
+                    <div>
+                      <Span>2</Span>
+                    </div>
+                    <Cardbody>
+                      <h3>Certification</h3>
+                      <div>
+                        <p className="card-list-item">
+                          <img src={plusicon} alt="" />
+                          <p>Kickoff and Account Manager Introduction</p>
+                        </p>
+                        <p className="card-list-item">
+                          <img src={plusicon} alt="" />
+                          <p>Self tour of Resources</p>
+                        </p>
+                        <p className="card-list-item">
+                          <img src={plusicon} alt="" />
+                          <p>Course Completion</p>
+                        </p>
+                        <p className="card-list-item">
+                          <img src={plusicon} alt="" />
+                          <p>Support Hours</p>
+                        </p>
+                      </div>
+                    </Cardbody>
                   </div>
-                </Cardbody>
-              </div>
-              <ImageDiv>
-                <img src={resume2} alt="" />
-              </ImageDiv>
-            </Card>
+                  <ImageDiv>
+                    <img src={resume2} alt="" />
+                  </ImageDiv>
+                </Card>
+                <Card>
+                  <div className="card-content">
+                    <div>
+                      <Span>3</Span>
+                    </div>
+                    <Cardbody>
+                      <h3>Launch</h3>
+                      <div>
+                        <p className="card-list-item">
+                          <img src={plusicon} alt="" />
+                          <p>Co-branded Pitch</p>
+                        </p>
+                        <p className="card-list-item">
+                          <img src={plusicon} alt="" />
+                          <p>
+                            Led Generation → Bring into deep dive/solutioning
+                            calls
+                          </p>
+                        </p>
+                      </div>
+                    </Cardbody>
+                  </div>
+                  <ImageDiv>
+                    <img src={resume3} alt="" />
+                  </ImageDiv>
+                </Card>
+                <Card>
+                  <div className="card-content">
+                    <div>
+                      <Span>4</Span>
+                    </div>
+                    <Cardbody>
+                      <h3>Success</h3>
+                      <div>
+                        <p className="card-list-item">
+                          <img src={plusicon} alt="" />
+                          <p>Bi-monthly Check-ins</p>
+                        </p>
+                        <p className="card-list-item">
+                          <img src={plusicon} alt="" />
+                          <p>Project and Pipeline Reviews</p>
+                        </p>
+                        <p className="card-list-item">
+                          <img src={plusicon} alt="" />
+                          <p>
+                            Co-Marketing (Webinars, Newsletters, Press
+                            Releases), Social Media
+                          </p>
+                        </p>
+                        <p className="card-list-item">
+                          <img src={plusicon} alt="" />
+                          <p> Performance base Project</p>
+                        </p>
+                        <p className="card-list-item">
+                          <img src={plusicon} alt="" />
+                          <p>
+                            Compatibility testing for New Releases and Features
+                          </p>
+                        </p>
+                      </div>
+                    </Cardbody>
+                  </div>
+                  <ImageDiv>
+                    <img src={resume4} alt="" />
+                  </ImageDiv>
+                </Card>
+              </>
+            )}
           </LeftCol>
-          <RightCol>
-            <Card>
-              <div className="card-content">
-                <div>
-                  <Span>3</Span>
-                </div>
-                <Cardbody>
-                  <h3>Launch</h3>
-                  <div>
-                    <p className="card-list-item">
-                      <img src={plusicon} alt="" />
-                      <p>Co-branded Pitch</p>
-                    </p>
-                    <p className="card-list-item">
-                      <img src={plusicon} alt="" />
-                      <p>
-                        Led Generation → Bring into deep dive/solutioning calls
-                      </p>
-                    </p>
-                  </div>
-                </Cardbody>
-              </div>
-              <ImageDiv>
-                <img src={resume3} alt="" />
-              </ImageDiv>
-            </Card>
-            <Card>
-              <div className="card-content">
-                <div>
-                  <Span>4</Span>
-                </div>
-                <Cardbody>
-                  <h3>Success</h3>
-                  <div>
-                    <p className="card-list-item">
-                      <img src={plusicon} alt="" />
-                      <p>Bi-monthly Check-ins</p>
-                    </p>
-                    <p className="card-list-item">
-                      <img src={plusicon} alt="" />
-                      <p>Project and Pipeline Reviews</p>
-                    </p>
-                    <p className="card-list-item">
-                      <img src={plusicon} alt="" />
-                      <p>
-                        Co-Marketing (Webinars, Newsletters, Press Releases),
-                        Social Media
-                      </p>
-                    </p>
-                    <p className="card-list-item">
-                      <img src={plusicon} alt="" />
-                      <p> Performance base Project</p>
-                    </p>
-                    <p className="card-list-item">
-                      <img src={plusicon} alt="" />
-                      <p>Compatibility testing for New Releases and Features</p>
-                    </p>
-                  </div>
-                </Cardbody>
-              </div>
-              <ImageDiv>
-                <img src={resume4} alt="" />
-              </ImageDiv>
-            </Card>
-          </RightCol>
         </Content>
       </Container>
     </Section>
   );
 };
 
-export default Certification;
+export default connect(Certification);
 
 const Section = styled.div``;
 const Container = styled.div`
