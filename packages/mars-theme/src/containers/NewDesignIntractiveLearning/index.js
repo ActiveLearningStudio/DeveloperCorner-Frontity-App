@@ -2,15 +2,28 @@ import React from "react";
 import ApiSection from "./apiContent";
 import BusinessProduct from "./businessProduct";
 import Technology from "./technology";
-import { Global, css } from "frontity";
+import { Global, css, connect } from "frontity";
 import DeveloperTool from "./developerTool";
 import HelpArea from "./helpSection";
 import GetStarted from "./getStarted";
 import ExternalCss from "./styles.css";
 import heroSectionimg from "../../assets/images/hero-section.png";
-// import Footer from "../../components/footer/index";
 
-const Index = () => {
+const Index = ({ interactiveCategory }) => {
+  let { apidata, techdata, getStartedpost } = [];
+  interactiveCategory.map(({ category, posts }) => {
+    if (category) {
+      if (category.id === 66) {
+        return (apidata = posts);
+      }
+      if (category.id === 67) {
+        return (techdata = posts);
+      }
+      if (category.id === 68) {
+        return (getStartedpost = posts);
+      }
+    }
+  });
   return (
     <>
       <Global styles={css(ExternalCss)} />
@@ -33,16 +46,15 @@ const Index = () => {
 
         {/* api content */}
 
-        <ApiSection />
+        <ApiSection apidata={apidata} />
         {/* bussines product */}
-      
 
         <Technology />
         {/* get started */}
-        <GetStarted/>
+        <GetStarted />
       </div>
     </>
   );
 };
 
-export default Index;
+export default connect(Index);

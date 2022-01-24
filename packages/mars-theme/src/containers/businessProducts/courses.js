@@ -1,14 +1,12 @@
 import React from "react";
 import { styled, connect } from "frontity";
-
 import plusicon from "../../assets/images/PLUS.svg";
 import image1 from "../../assets/images/image1.png";
 import image2 from "../../assets/images/image2.png";
 import Arrow from "../../assets/images/Arrow.svg";
 import laopera from "../../assets/images/laopera.png";
 const Courses = ({ state, exampleCoursesposts }) => {
-  const Courses = state.source.get("/category/example-courses/");
-  console.log("courses", Courses);
+  console.log("courses", exampleCoursesposts);
   return (
     <Section>
       <Container>
@@ -17,43 +15,71 @@ const Courses = ({ state, exampleCoursesposts }) => {
           <img src={plusicon} alt="plus icon" />
         </SectionTitle>
         <CardContent>
-          <Card>
-            <img src={laopera} alt="" />
+          {exampleCoursesposts && exampleCoursesposts.length > 0 ? (
+            exampleCoursesposts?.map((examplecourse) => {
+              const featuremedia =
+                state.source.attachment[examplecourse?.featured_media];
+              return (
+                <Card>
+                  <img src={featuremedia.source_url} alt="" />
+                  <h3
+                    dangerouslySetInnerHTML={{
+                      __html: examplecourse.title.rendered,
+                    }}
+                  />
+                  <h5
+                    dangerouslySetInnerHTML={{
+                      __html: examplecourse.excerpt.rendered,
+                    }}
+                  />
+                  <Footer>
+                    <a href="#">See Project</a>
+                    <img src={Arrow} alt="" />
+                  </Footer>
+                </Card>
+              );
+            })
+          ) : (
+            <>
+              <Card>
+                <img src={laopera} alt="" />
 
-            <h3>LA Opera</h3>
-            <p>
-              The LA Opera is committed to providing access to quality opera
-              music for all. Learning is a passion, and so is opera …
-            </p>
-            <Footer>
-              <a href="#">See Project</a>
-              <img src={Arrow} alt="" />
-            </Footer>
-          </Card>
-          <Card>
-            <img src={image1} alt="" />
-            <h3>ORACLE</h3>
-            <p>
-              Lorem ipsum dolor sit amet, adipiscing consectetur adipiscing
-              elit.
-            </p>
-            <Footer>
-              <a href="#">See Project</a>
-              <img src={Arrow} alt="" />
-            </Footer>
-          </Card>
-          <Card>
-            <img src={image2} alt="" />
-            <h3>DEJU</h3>
-            <p>
-              Lorem ipsum dolor sit amet, adipiscing consectetur adipiscing
-              elit.
-            </p>
-            <Footer>
-              <a href="#">See Project</a>
-              <img src={Arrow} alt="" />
-            </Footer>
-          </Card>
+                <h3>LA Opera</h3>
+                <p>
+                  The LA Opera is committed to providing access to quality opera
+                  music for all. Learning is a passion, and so is opera …
+                </p>
+                <Footer>
+                  <a href="#">See Project</a>
+                  <img src={Arrow} alt="" />
+                </Footer>
+              </Card>
+              <Card>
+                <img src={image1} alt="" />
+                <h3>ORACLE</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, adipiscing consectetur adipiscing
+                  elit.
+                </p>
+                <Footer>
+                  <a href="#">See Project</a>
+                  <img src={Arrow} alt="" />
+                </Footer>
+              </Card>
+              <Card>
+                <img src={image2} alt="" />
+                <h3>DEJU</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, adipiscing consectetur adipiscing
+                  elit.
+                </p>
+                <Footer>
+                  <a href="#">See Project</a>
+                  <img src={Arrow} alt="" />
+                </Footer>
+              </Card>
+            </>
+          )}
         </CardContent>
       </Container>
     </Section>
@@ -106,7 +132,7 @@ const Card = styled.div`
   h3 {
     color: #084892;
   }
-  p {
+  h5 {
     font-family: Open Sans;
     font-style: normal;
     font-weight: normal;
