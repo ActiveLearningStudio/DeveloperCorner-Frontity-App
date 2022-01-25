@@ -4,7 +4,7 @@ import Banner from "../../components/banner/Styledbanner";
 import Sidebar from "../../components/Sidebar/index";
 import InteractiveLearning from "../NewDesignIntractiveLearning/index";
 import Help from "../../components/help/index";
-const Index = ({ interactiveCategory }) => {
+const Index = ({ interactiveCategory, data }) => {
   return (
     <div>
       <Banner
@@ -17,7 +17,10 @@ const Index = ({ interactiveCategory }) => {
       <Container>
         <Sidebar />
         <div className="page-wrapper">
-          <InteractiveLearning interactiveCategory={interactiveCategory} />
+          <InteractiveLearning
+            interactiveCategory={interactiveCategory}
+            data={data}
+          />
         </div>
         {/* <Help /> */}
       </Container>

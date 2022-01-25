@@ -110,7 +110,7 @@ const Innerdiv = styled.div`
     }
   }
   p {
-    margin-left: 38px;
+    // margin-left: 38px;
     font-family: "Open Sans";
   }
 `;

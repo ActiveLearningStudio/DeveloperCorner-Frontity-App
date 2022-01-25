@@ -19,8 +19,6 @@ const FrequentlyAsk = ({ FrequentlyAskposts, state, libraries }) => {
           <Accordion defaultActiveKey="0">
             {FrequentlyAskposts && FrequentlyAskposts.length > 0 ? (
               FrequentlyAskposts?.map((postitem, key) => {
-                const featuremedia =
-                  state.source.attachment[postitem?.featured_media];
                 return (
                   <Accordion.Item eventKey={key}>
                     <Accordion.Header>

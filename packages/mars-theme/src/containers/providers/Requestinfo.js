@@ -1,8 +1,13 @@
 import React from "react";
 import { styled, connect } from "frontity";
 import globeImg from "../../assets/images/providers.png";
-const Requestinfo = ({ requestedinfoposts }) => {
+const Requestinfo = ({ requestedinfoposts, state, libraries }) => {
   console.log("requestedinfoposts", requestedinfoposts);
+  const posttitle = requestedinfoposts[0]?.excerpt;
+  const postdesc = requestedinfoposts[0]?.content;
+  const featureimage =
+    state.source.attachment[requestedinfoposts[0]?.featured_media];
+  const Html2React = libraries.html2react.Component;
   return (
     <Section>
       <Container>
@@ -11,22 +16,20 @@ const Requestinfo = ({ requestedinfoposts }) => {
             <h2>
               Amplifying our collective <span>impact in education</span>
             </h2>
-            <h3>
-              JOIN US IN BUILDING THE NEXT GENERATION OF TOOLS THAT SUPPORT FREE
-              AND OPEN EDUCATION
-            </h3>
-            <p>
-              Curriki provides organizations from around the world with the
-              tools to create next-generation learning experiences. To support
-              our customers, we are growing a network of professional service
-              providers with strong leadership, technology expertise, and a
-              commitment to scaling open, free, and quality education across the
-              globe.
-            </p>
-            <button>REQUEST MORE INFORMATION</button>
+            <h3
+              dangerouslySetInnerHTML={{
+                __html: posttitle.rendered,
+              }}
+            />
+            {postdesc && <Html2React html={postdesc?.rendered} />}
+
+            {requestedinfoposts && <button>REQUEST MORE INFORMATION</button>}
           </Leftcol>
           <Rightcol>
-            <img src={globeImg} alt="" />
+            <img
+              src={featureimage ? featureimage.source_url : globeImg}
+              alt=""
+            />
           </Rightcol>
         </Content>
       </Container>
@@ -34,7 +37,7 @@ const Requestinfo = ({ requestedinfoposts }) => {
   );
 };
 
-export default Requestinfo;
+export default connect(Requestinfo);
 const Section = styled.div``;
 const Container = styled.div`
   max-width: 1440px;

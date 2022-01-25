@@ -3,9 +3,10 @@ import Header from "../../components/Header/header";
 import Banner from "../../components/banner/Styledbanner";
 import Requestinfo from "./Requestinfo";
 import AboutProgram from "./aboutProgram";
+import Loading from "../../components/loading/loading";
 import LearningProvider from "./learningProvider";
 import Certification from "./certification";
-const Index = ({ providerCategory }) => {
+const Index = ({ providerCategory, data }) => {
   let {
     requestedinfoposts,
     aboutprogramposts,
@@ -14,7 +15,7 @@ const Index = ({ providerCategory }) => {
   } = [];
   providerCategory.map(({ category, posts }) => {
     if (category) {
-      if (category.id === 57) {
+      if (category.id === 75) {
         return (requestedinfoposts = posts);
       }
       if (category.id === 58) {
@@ -31,11 +32,15 @@ const Index = ({ providerCategory }) => {
   return (
     <>
       <Banner title="Providers" subheading="" para="" />
-      <Requestinfo requestedinfoposts={requestedinfoposts} />
-      <AboutProgram aboutprogramposts={aboutprogramposts} />
-      )
-      <LearningProvider learningposts={learningposts} />
-      <Certification certificationposts={certificationposts} />
+      {data.isFetching && <Loading />}
+      {data.isReady && (
+        <>
+          <Requestinfo requestedinfoposts={requestedinfoposts} />
+          <AboutProgram aboutprogramposts={aboutprogramposts} />
+          <LearningProvider learningposts={learningposts} />
+          <Certification certificationposts={certificationposts} />
+        </>
+      )}
     </>
   );
 };

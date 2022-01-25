@@ -2,11 +2,12 @@ import React from "react";
 import Banner from "../../components/banner/Styledbanner";
 import Donation from "./donation";
 import InnerBanner from "./InnerrBanner";
+import Loading from "../../components/loading/loading";
 import BirdiesforEducation from "./BirdiesforEducation";
 import CurrikiSupporters from "./CurrikiSupporters";
 import FrequentlyAsk from "./FrequentlyAsk";
 const Index = (props) => {
-  const { ourmissionCategory } = props;
+  const { ourmissionCategory, data } = props;
   let {
     FrequentlyAskposts,
     CurrikiSupportersposts,
@@ -32,11 +33,16 @@ const Index = (props) => {
   return (
     <>
       <Banner title="Support our mission" subheading="" para="" />
-      <Donation donationposts={donationposts} />
-      <InnerBanner />
-      <BirdiesforEducation birdiesposts={birdiesposts} />
-      <CurrikiSupporters supporterPosts={CurrikiSupportersposts} />
-      <FrequentlyAsk FrequentlyAskposts={FrequentlyAskposts} />
+      {data.isFetching && <Loading />}
+      {data.isReady && (
+        <>
+          <Donation donationposts={donationposts} />
+          <InnerBanner />
+          <BirdiesforEducation birdiesposts={birdiesposts} />
+          <CurrikiSupporters supporterPosts={CurrikiSupportersposts} />
+          <FrequentlyAsk FrequentlyAskposts={FrequentlyAskposts} />
+        </>
+      )}
     </>
   );
 };
