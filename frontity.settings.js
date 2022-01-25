@@ -24,7 +24,7 @@ const settings = {
               ["Support Learning", "/category/supportlearning"],
             ],
             company: [
-              ["Ourmission", "/ourmission"],
+              ["Ourmission", "/category/ourmission/"],
               ["Press&awards", "/category/pressawards/"],
             ],
             login: [["Login", "/currikiforum/"]],
