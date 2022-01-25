@@ -1,44 +1,43 @@
 import { React, useState } from "react";
-import { styled } from "frontity";
+import { styled, connect } from "frontity";
 import plusicon from "../../assets/images/PLUS.svg";
 import DonorImg from "../../assets/images/ourMission/Donors3.png";
 import DonateNow from "../../components/donateModal/donateNow";
-const Donation = () => {
+const Donation = ({ donationposts, state, libraries }) => {
   const [modalshow, setModalShow] = useState(false);
+  const postexcerpt = donationposts[0]?.excerpt;
+  const postdesc = donationposts[0]?.content;
+  const featureimage =
+    state.source.attachment[donationposts[0]?.featured_media];
+  const Html2React = libraries.html2react.Component;
   return (
     <Container>
       <Content>
         <LeftCol>
-          <Heading>
-            Your donation <span>supports our non-profit mission,</span> which is
-            to bring free and open technology tools into every school, college
-            and nonprofit organization.
-          </Heading>
-
+          <Heading
+            dangerouslySetInnerHTML={{
+              __html: postexcerpt.rendered,
+            }}
+          />
           <Innerdiv>
             <div className="para-content">
-              <img src={plusicon} alt="" />
-              <div>
-                <Paragraph>
-                  If contributing by check please send your tax exept donation
-                  ot Curriki, 20660 Stevens Creek blvd #332, Cupertino, CA 95014
-                </Paragraph>
-                <p>Curriki non profit taX ID#203478467</p>
-              </div>
+              {postdesc && <Html2React html={postdesc?.rendered} />}
             </div>
           </Innerdiv>
-          <Innerdiv>
+          {/* <Innerdiv>
             <div className="para-content">
               <img src={plusicon} alt="" />
               <div>
                 <Paragraph>If you would like to pay by credit card</Paragraph>
               </div>
             </div>
-          </Innerdiv>
-          <button onClick={() => setModalShow(true)}>CLICK HERE</button>
+          </Innerdiv> */}
+          {donationposts && (
+            <button onClick={() => setModalShow(true)}>CLICK HERE</button>
+          )}
         </LeftCol>
         <RightCol>
-          <img src={DonorImg} alt="" />
+          <img src={featureimage ? featureimage.source_url : DonorImg} alt="" />
         </RightCol>
       </Content>
       <DonateNow show={modalshow} onHide={() => setModalShow(false)} />
@@ -46,7 +45,7 @@ const Donation = () => {
   );
 };
 
-export default Donation;
+export default connect(Donation);
 
 const Container = styled.div`
   max-width: 1440px;
@@ -104,13 +103,14 @@ const Innerdiv = styled.div`
   .para-content {
     display: flex;
     align-items: flex-start;
+    flex-direction: column;
     div {
       display: flex;
       flex-direction: column;
     }
   }
   p {
-    margin-left: 38px;
+    // margin-left: 38px;
     font-family: "Open Sans";
   }
 `;

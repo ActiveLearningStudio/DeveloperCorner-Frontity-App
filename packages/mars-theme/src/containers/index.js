@@ -95,13 +95,24 @@ const Index = ({ state, actions }) => {
         <BusinessProduct
           businessCategory={postsPerCategory}
           when={route === "/category/businessproduct/"}
+          data={data}
         />
         <Providers
           when={route === "/category/providers/"}
           providerCategory={postsPerCategory}
+          data={data}
         />
-        <Ourmission when={route === "/ourmission/"} />
-        <SupportLearning when={route === "/category/supportlearning/"} />
+        <Ourmission
+          when={route === "/category/ourmission/"}
+          ourmissionCategory={postsPerCategory}
+          data={data}
+        />
+
+        <SupportLearning
+          when={route === "/category/supportlearning/"}
+          learningCategory={postsPerCategory}
+          data={data}
+        />
         <PrivacyPage when={route === "/category/privacy-policy/"} />
         <Terms when={route === "/category/termscondition/"} />
         <SuccessStories when={route === "/category/successstories/"} />
@@ -122,6 +133,7 @@ const Index = ({ state, actions }) => {
         <InterativeLearning
           when={route === "/category/interactive-learning/"}
           interactiveCategory={postsPerCategory}
+          data={data}
         />
         <Contribution when={route === "/category/contribution/"} />
         <ErrorPage when={data.is404} />

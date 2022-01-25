@@ -1,5 +1,5 @@
 import React from "react";
-import { styled, css } from "frontity";
+import { styled, css, connect } from "frontity";
 import backgroundPic from "../../assets/images/Group153.png";
 import plusicon from "../../assets/images/PLUS.svg";
 import CardImg from "../../assets/images/Rectangle10.png";
@@ -21,7 +21,8 @@ import AnnouncmentImg from "../../assets/images/Group563.png";
 import RectImg from "../../assets/images/Rectangle110.png";
 import Cardbackground from "../../assets/images/Rectangle09.png";
 
-const Roadmap = () => {
+const Roadmap = ({ roadMapposts, state, libraries }) => {
+  const Html2React = libraries.html2react.Component;
   return (
     <Section>
       <Container>
@@ -33,44 +34,35 @@ const Roadmap = () => {
           <Subheading>CONTRIBUTE TO THE FUTURE OF EDUCATION</Subheading>
         </HeadingContent>
         <CardContent>
-          <Card>
-            <CardHead
-              css={css`
-                background: linear-gradient(
-                    0deg,
-                    rgba(40, 90, 165, 0.75),
-                    rgba(40, 90, 165, 0.75)
-                  ),
-                  url("${pcimage}");
-              `}
-            >
-              <div>
-                <img src={vector1} alt="" />
-              </div>
-            </CardHead>
-            <CardHeading>CONTENT CLEARING HOUSE</CardHeading>
-            <Paragraph>
-              The web is full of high-quality content – but it’s stuck in static
-              PDFs. We want to launch an industry-changing hub for content
-              providers to create distributing activated content for educational
-              systems to license. Implementing this vision provides Curriki with
-              a sustainable model.
-            </Paragraph>
-            <CardBottom>
-              <AskHeading>Asks:</AskHeading>
-              <Bottom>
-                <img src={plusicon} alt="" />
-
-                <Para>Introductions to content publishers.</Para>
-              </Bottom>
-              <Bottom>
-                <img src={plusicon} alt="" />
-
-                <Para>$250,000 in development funds.</Para>
-              </Bottom>
-            </CardBottom>
-          </Card>
-          <Card>
+          {roadMapposts &&
+            roadMapposts.length > 0 &&
+            roadMapposts?.map((postitem) => {
+              const featuremedia =
+                state.source.attachment[postitem?.featured_media];
+              return (
+                <Card>
+                  {featuremedia && (
+                    <CardHead>
+                      <img src={featuremedia.source_url} alt="" />
+                    </CardHead>
+                  )}
+                  <CardHeading
+                    dangerouslySetInnerHTML={{
+                      __html: postitem.title.rendered,
+                    }}
+                  />
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: postitem.excerpt.rendered,
+                    }}
+                  />
+                  <CardBottom>
+                    <Html2React html={postitem.content.rendered} />
+                  </CardBottom>
+                </Card>
+              );
+            })}
+          {/* <Card>
             <CardHead
               css={css`
                 background: linear-gradient(
@@ -416,14 +408,14 @@ const Roadmap = () => {
                 <Para>$250,000 in development funds.</Para>
               </Bottom>
             </CardBottom>
-          </Card>
+          </Card> */}
         </CardContent>
       </Container>
     </Section>
   );
 };
 
-export default Roadmap;
+export default connect(Roadmap);
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
@@ -483,6 +475,13 @@ const Card = styled.div`
   background: #fff;
   margin-right: 25px;
   margin-bottom: 25px;
+  p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #515151;
+  }
   @media screen and (max-width: 992px) {
     width: 278px;
   }
@@ -497,7 +496,9 @@ const CardHead = styled.div`
   border-radius: 5px;
   background-repeat: no-repeat;
   background-size: cover !important;
-
+  img {
+    width: 100%;
+  }
   div {
     text-align: center;
     padding-top: 120px;

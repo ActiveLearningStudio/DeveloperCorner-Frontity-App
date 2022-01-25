@@ -4,12 +4,13 @@ import GetStarted from "./getStarted";
 import Features from "./features";
 import Creating from "./Creating";
 import ContactUs from "./contactUs";
+import Loading from "../../components/loading/loading";
 import Courses from "./courses";
 import Banner from "../../components/banner/Styledbanner";
 import featurePic from "../../assets/images/Group153.png";
 import externalCss from "./style.css";
 const Index = (props) => {
-  const { businessCategory } = props;
+  const { businessCategory, data } = props;
   let {
     getstartedpostdata,
     businessfeatureposts,
@@ -36,11 +37,16 @@ const Index = (props) => {
     <>
       <Global styles={css(externalCss)} />
       <Banner title="Businesses" subheading="" para="" />
-      <GetStarted getstartedposts={getstartedpostdata} />
-      <Features featureposts={businessfeatureposts} />
-      <Creating trycurrikiposts={trycurrikiposts} />
-      <Courses exampleCoursesposts={exampleCoursesposts} />
-      <ContactUs />
+      {data.isFetching && <Loading />}
+      {data.isReady && (
+        <>
+          <GetStarted getstartedposts={getstartedpostdata} />
+          <Features featureposts={businessfeatureposts} />
+          <Creating trycurrikiposts={trycurrikiposts} />
+          <Courses exampleCoursesposts={exampleCoursesposts} />
+          <ContactUs />
+        </>
+      )}
     </>
   );
 };

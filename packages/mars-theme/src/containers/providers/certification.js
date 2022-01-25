@@ -216,6 +216,7 @@ const Heading = styled.div`
   }
 `;
 const Content = styled.div`
+  max-width: 1000px;
   padding: 60px 0px;
   .card-content {
     display: flex;
@@ -285,6 +286,7 @@ const Cardbody = styled.div`
 const LeftCol = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   @media screen and (max-width: 768px) {
     flex-direction: column;
     text-align: left;
