@@ -101,7 +101,12 @@ const Index = ({ state, actions }) => {
           providerCategory={postsPerCategory}
         />
         <Ourmission when={route === "/category/ourmission/"} />
-        <SupportLearning when={route === "/category/supportlearning/"} />
+
+        <SupportLearning
+          when={route === "/category/supportlearning/"}
+          learningCategory={postsPerCategory}
+          data={data}
+        />
         <PrivacyPage when={route === "/category/privacy-policy/"} />
         <Terms when={route === "/category/termscondition/"} />
         <SuccessStories when={route === "/category/successstories/"} />
