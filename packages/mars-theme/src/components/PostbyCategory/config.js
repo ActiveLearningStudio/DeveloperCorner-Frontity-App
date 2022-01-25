@@ -14,7 +14,7 @@ export const categoriesWidgetsHome = {
   66: "Curriki API(interactive learning)",
   67: "curiki tech(interactive)",
   68: "Get started now(interacive learning)",
-  70: "donation (ourmission)",
+  74: "donation (ourmission)",
   71: "Birdies Education (ourmission)",
   72: "Curriki suporters (ourmission)",
   73: "Frequently Questions (ourmission)",

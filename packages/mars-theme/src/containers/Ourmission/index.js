@@ -5,15 +5,38 @@ import InnerBanner from "./InnerrBanner";
 import BirdiesforEducation from "./BirdiesforEducation";
 import CurrikiSupporters from "./CurrikiSupporters";
 import FrequentlyAsk from "./FrequentlyAsk";
-const Index = () => {
+const Index = (props) => {
+  const { ourmissionCategory } = props;
+  let {
+    FrequentlyAskposts,
+    CurrikiSupportersposts,
+    birdiesposts,
+    donationposts,
+  } = [];
+  ourmissionCategory.map(({ category, posts }) => {
+    if (category) {
+      if (category.id === 74) {
+        return (donationposts = posts);
+      }
+      if (category.id === 71) {
+        return (birdiesposts = posts);
+      }
+      if (category.id === 72) {
+        return (CurrikiSupportersposts = posts);
+      }
+      if (category.id === 73) {
+        return (FrequentlyAskposts = posts);
+      }
+    }
+  });
   return (
     <>
       <Banner title="Support our mission" subheading="" para="" />
-      <Donation />
+      <Donation donationposts={donationposts} />
       <InnerBanner />
-      <BirdiesforEducation />
-      <CurrikiSupporters />
-      <FrequentlyAsk />
+      <BirdiesforEducation birdiesposts={birdiesposts} />
+      <CurrikiSupporters supporterPosts={CurrikiSupportersposts} />
+      <FrequentlyAsk FrequentlyAskposts={FrequentlyAskposts} />
     </>
   );
 };

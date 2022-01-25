@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "frontity";
+import { styled, connect } from "frontity";
 import Oracle from "../../assets/images/ourMission/oracle.svg";
 import SusanImg from "../../assets/images/ourMission/susandel.svg";
 import Charles from "../../assets/images/ourMission/charles.svg";
@@ -9,7 +9,7 @@ import AWS from "../../assets/images/ourMission/aws.svg";
 import amgenpic from "../../assets/images/amgenpic.png";
 import Attpic from "../../assets/images/Attpic.png";
 import Birdies from "../../assets/images/Birdies.png";
-const CurrikiSupporters = () => {
+const CurrikiSupporters = ({ supporterPosts, state }) => {
   return (
     <Section>
       <Container>
@@ -21,10 +21,17 @@ const CurrikiSupporters = () => {
             <Heading> technology companies and foundations.</Heading>
           </HeadingContent>
           <Foundations>
-            <Div>
-              <img src={SusanImg} alt="" />
-            </Div>
-            <Div>
+            {supporterPosts &&
+              supporterPosts?.map((postitem, key) => {
+                const featuremedia =
+                  state.source.attachment[postitem?.featured_media];
+                return (
+                  <Div>
+                    <img src={featuremedia.source_url} alt="" />
+                  </Div>
+                );
+              })}
+            {/* <Div>
               <img src={Attpic} alt="" />
             </Div>
             <Div>
@@ -44,7 +51,7 @@ const CurrikiSupporters = () => {
             </Div>
             <Div>
               <img src={AWS} alt="" />
-            </Div>
+            </Div> */}
           </Foundations>
         </Content>
       </Container>
@@ -52,7 +59,7 @@ const CurrikiSupporters = () => {
   );
 };
 
-export default CurrikiSupporters;
+export default connect(CurrikiSupporters);
 const Section = styled.div``;
 const Container = styled.div`
   max-width: 1440px;
@@ -94,7 +101,9 @@ const Foundations = styled.div`
 const Div = styled.div`
   margin-right: 30px;
   margin-bottom: 70px;
+  max-width: 208px;
   img {
+    width: 100%;
     @media screen and (max-width: 500px) {
       width: 150px;
     }

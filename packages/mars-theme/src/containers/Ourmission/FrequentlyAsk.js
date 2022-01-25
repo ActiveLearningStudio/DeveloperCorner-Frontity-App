@@ -1,12 +1,13 @@
 import React from "react";
-import { styled } from "frontity";
+import { styled, connect } from "frontity";
 import GlobalCss from "../../assets/css/fonts.css";
 // import { Accordion, Card } from "react-bootstrap";
 import { Accordion } from "react-bootstrap";
 // import ArrowPath from "../../assets/images/ArrowPath.png";
 import whiteArrow from "../../assets/images/whiteArrow.png";
 import blueArrow from "../../assets/images/blueArrow.png";
-const FrequentlyAsk = () => {
+const FrequentlyAsk = ({ FrequentlyAskposts, state, libraries }) => {
+  const Html2React = libraries.html2react.Component;
   return (
     <Section>
       <Container>
@@ -16,65 +17,91 @@ const FrequentlyAsk = () => {
         </HeaderContent>
         <Content>
           <Accordion defaultActiveKey="0">
-            <Accordion.Item eventKey="0">
-              <Accordion.Header>
-                Is my donation tax deductible?
-              </Accordion.Header>
-              <Accordion.Body>
-                <p className="item-para">
-                  All donations are 100% tax-deductible. Curriki is a U.S. tax
-                  exempt organization under Internal Revenue Service Act Section
-                  501(c)(3). Our Tax ID number is 20-3478467.
-                </p>
-              </Accordion.Body>
-            </Accordion.Item>
-            <Accordion.Item eventKey="1">
-              <Accordion.Header>
-                Can I speak with someone about a wire transfer or other type of
-                gift?
-              </Accordion.Header>
-              <Accordion.Body>
-                <p className="item-para">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
-                </p>
-              </Accordion.Body>
-            </Accordion.Item>
-            <Accordion.Item eventKey="2">
-              <Accordion.Header>
-                Is my donation tax deductible?
-              </Accordion.Header>
-              <Accordion.Body>
-                <p className="item-para">
-                  All donations are 100% tax-deductible. Curriki is a U.S. tax
-                  exempt organization under Internal Revenue Service Act Section
-                  501(c)(3). Our Tax ID number is 20-3478467.
-                </p>
-              </Accordion.Body>
-            </Accordion.Item>
-            <Accordion.Item eventKey="3">
-              <Accordion.Header>
-                Is my donation tax deductible?
-              </Accordion.Header>
-              <Accordion.Body>
-                <p className="item-para">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
-                </p>
-              </Accordion.Body>
-            </Accordion.Item>
+            {FrequentlyAskposts && FrequentlyAskposts.length > 0 ? (
+              FrequentlyAskposts?.map((postitem, key) => {
+                const featuremedia =
+                  state.source.attachment[postitem?.featured_media];
+                return (
+                  <Accordion.Item eventKey={key}>
+                    <Accordion.Header>
+                      <h4
+                        dangerouslySetInnerHTML={{
+                          __html: postitem.title.rendered,
+                        }}
+                      />
+                    </Accordion.Header>
+                    <Accordion.Body>
+                      <Html2React
+                        className="item-para"
+                        html={postitem.content.rendered}
+                      />
+                    </Accordion.Body>
+                  </Accordion.Item>
+                );
+              })
+            ) : (
+              <>
+                <Accordion.Item eventKey="0">
+                  <Accordion.Header>
+                    Is my donation tax deductible?
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    <p className="item-para">
+                      All donations are 100% tax-deductible. Curriki is a U.S.
+                      tax exempt organization under Internal Revenue Service Act
+                      Section 501(c)(3). Our Tax ID number is 20-3478467.
+                    </p>
+                  </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="1">
+                  <Accordion.Header>
+                    Can I speak with someone about a wire transfer or other type
+                    of gift?
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    <p className="item-para">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui
+                      officia deserunt mollit anim id est laborum.
+                    </p>
+                  </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="2">
+                  <Accordion.Header>
+                    Is my donation tax deductible?
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    <p className="item-para">
+                      All donations are 100% tax-deductible. Curriki is a U.S.
+                      tax exempt organization under Internal Revenue Service Act
+                      Section 501(c)(3). Our Tax ID number is 20-3478467.
+                    </p>
+                  </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="3">
+                  <Accordion.Header>
+                    Is my donation tax deductible?
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    <p className="item-para">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui
+                      officia deserunt mollit anim id est laborum.
+                    </p>
+                  </Accordion.Body>
+                </Accordion.Item>
+              </>
+            )}
           </Accordion>
         </Content>
       </Container>
@@ -82,7 +109,7 @@ const FrequentlyAsk = () => {
   );
 };
 
-export default FrequentlyAsk;
+export default connect(FrequentlyAsk);
 const Section = styled.div``;
 const Container = styled.div`
   max-width: 1440px;
@@ -116,7 +143,7 @@ const Content = styled.div`
             color: #515151;
           }
         }
-        .accordion-button {
+        .accordion-button  {
           font-family: 'Rubik';
           font-style: normal;
           font-weight: 500;
@@ -129,12 +156,24 @@ const Content = styled.div`
           background-color: #ffffff;
           box-shadow: 0px 10px 20px -5px rgba(8, 72, 146, 0.35);
           border-radius: 5px;
+          h4{
+            font-family: 'Rubik';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 21px;
+
+          color: #084892;
+          }
+
         }
         .accordion-button:not(.collapsed) {
           box-shadow: 0px 10px 20px -5px rgba(8, 72, 146, 0.35) !important;
           background: linear-gradient(0deg, #084892, #084892) !important;
           border-radius: 5px !important;
-          color: #fff;
+          h4{
+            color: #fff;
+          }
         }
         .accordion-button::after {
           width:16px;
