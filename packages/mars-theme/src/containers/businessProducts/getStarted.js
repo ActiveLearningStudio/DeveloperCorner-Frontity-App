@@ -3,9 +3,10 @@ import { styled, connect } from "frontity";
 import PrimaryButton from "../../StyledComponent/PrimaryButton";
 import GetPic from "../../assets/images/Companies.png";
 const GetStarted = ({ getstartedposts, state }) => {
-  console.log("getstart", getstartedposts);
-  const posttitle = getstartedposts[0]?.title;
-  const media = state?.source?.attachment[getstartedposts[0]?.featured_media];
+  const posttitle = getstartedposts && getstartedposts[0]?.title;
+  const media =
+    getstartedposts &&
+    state?.source?.attachment[getstartedposts[0]?.featured_media];
   return (
     <Container>
       <StyleDiv>
