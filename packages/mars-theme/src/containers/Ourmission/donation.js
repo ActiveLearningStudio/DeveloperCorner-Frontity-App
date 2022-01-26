@@ -5,7 +5,7 @@ import DonorImg from "../../assets/images/ourMission/Donors3.png";
 import DonateNow from "../../components/donateModal/donateNow";
 const Donation = ({ donationposts, state, libraries }) => {
   const [modalshow, setModalShow] = useState(false);
-  const postexcerpt = donationposts[0]?.excerpt;
+  const posttitle = donationposts[0]?.title;
   const postdesc = donationposts[0]?.content;
   const featureimage =
     state.source.attachment[donationposts[0]?.featured_media];
@@ -16,7 +16,7 @@ const Donation = ({ donationposts, state, libraries }) => {
         <LeftCol>
           <Heading
             dangerouslySetInnerHTML={{
-              __html: postexcerpt.rendered,
+              __html: posttitle.rendered,
             }}
           />
           <Innerdiv>
