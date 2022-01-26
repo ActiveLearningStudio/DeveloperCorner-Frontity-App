@@ -3,7 +3,7 @@ import { styled, connect } from "frontity";
 import globeImg from "../../assets/images/providers.png";
 const Requestinfo = ({ requestedinfoposts, state, libraries }) => {
   console.log("requestedinfoposts", requestedinfoposts);
-  const posttitle = requestedinfoposts[0]?.excerpt;
+  const posttitle = requestedinfoposts[0]?.title;
   const postdesc = requestedinfoposts[0]?.content;
   const featureimage =
     state.source.attachment[requestedinfoposts[0]?.featured_media];

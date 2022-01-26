@@ -1,7 +1,10 @@
 import React from "react";
 import { Global, css, connect } from "frontity";
+import Alert from "react-bootstrap/Alert";
 import Banner from "../../components/banner/Styledbanner";
 import Loading from "../../components/loading/loading";
+import ServerError from "../../components/error/server";
+import FetchError from "../../components/error/fetchError";
 import HeadingPage from "./heading";
 import Description from "./description";
 import Scrollspy from "react-scrollspy";
@@ -13,12 +16,23 @@ const Index = ({ state }) => {
       <Global styles={css(externalCss)} />
       <Banner title="Database Schema" />
       {data.isFetching && <Loading />}
-      {data.isReady && (
+      {!data.isFetching && (
         <div className="text-section">
-          <div className="heading-content">
-            <HeadingPage Scrollspy={Scrollspy} data={data} />
-          </div>
-          <Description data={data} />
+          {!data.isError ? (
+            data.isReady && data.items.length ? (
+              <>
+                {" "}
+                <div className="heading-content">
+                  <HeadingPage Scrollspy={Scrollspy} data={data} />
+                </div>
+                <Description data={data} />
+              </>
+            ) : (
+              <FetchError categoryName="database Schema" />
+            )
+          ) : (
+            <ServerError />
+          )}
         </div>
       )}
     </>

@@ -6,6 +6,8 @@ import Description from "./description";
 import Scrollspy from "react-scrollspy";
 import Banner from "../../components/banner/Styledbanner";
 import externalCss from "./styles.css";
+import FetchError from "../../components/error/fetchError";
+import ServerError from "../../components/error/server";
 function index({ state }) {
   const data = state.source.get(state.router.link);
   return (
@@ -13,13 +15,23 @@ function index({ state }) {
       <Global styles={css(externalCss)} />
       <Banner title="Curriki’s Architecture/Components" />
       {data.isFetching && <Loading />}
-      {data.isReady && (
+      {!data.isFetching && (
         <div className="text-section">
-          <div className="heading-content">
-            <Heading Scrollspy={Scrollspy} data={data} />
-          </div>
+          {!data.isError ? (
+            data.isReady && data.items.length ? (
+              <>
+                <div className="heading-content">
+                  <Heading Scrollspy={Scrollspy} data={data} />
+                </div>
 
-          <Description data={data} />
+                <Description data={data} />
+              </>
+            ) : (
+              <FetchError categoryName="Curriki Architecture" />
+            )
+          ) : (
+            <ServerError />
+          )}
         </div>
       )}
     </>

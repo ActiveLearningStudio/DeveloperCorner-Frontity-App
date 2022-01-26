@@ -4,7 +4,7 @@ import ApiImg1 from "../../assets/images/image28.png";
 import ApiImg2 from "../../assets/images/Group353.png";
 import ApiImg3 from "../../assets/images/api3.svg";
 import ApiImg4 from "../../assets/images/image29.svg";
-const ApiSection = ({ apidata, state, libraries }) => {
+const ApiSection = ({ apidata, data, state, libraries }) => {
   const Html2React = libraries.html2react.Component;
   return (
     <div className="container api-section">
