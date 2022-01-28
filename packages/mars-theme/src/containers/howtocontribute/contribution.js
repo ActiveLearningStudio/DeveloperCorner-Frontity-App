@@ -13,58 +13,60 @@ const Contribution = ({ state, libraries }) => {
       <Content>
         <Linksheading titlebar="How to contribute" />
         {data.isFetching && <Loading />}
-        {data.items ? (
-          data.items.map(({ type, id }) => {
-            const item = state.source[type][id];
-            const media = state.source.attachment[item.featured_media];
-            return (
+        {!data.isFetching && (
+          <Content>
+            {data.items ? (
+              data.items.map(({ type, id }) => {
+                const item = state.source[type][id];
+                const media = state.source.attachment[item.featured_media];
+                return (
+                  <ContributeArticle>
+                    <div className="article-content">
+                      {item?.title && (
+                        <Heading
+                          dangerouslySetInnerHTML={{
+                            __html: item.title.rendered,
+                          }}
+                        />
+                      )}
+                      {item?.excerpt && (
+                        <Paragraph
+                          dangerouslySetInnerHTML={{
+                            __html: item.excerpt.rendered,
+                          }}
+                        />
+                      )}
+                    </div>
+                    <div className="article-img">
+                      <img src={media.source_url} alt="" />
+                    </div>
+                  </ContributeArticle>
+                );
+              })
+            ) : (
               <ContributeArticle>
                 <div className="article-content">
-                  {item?.title && (
-                    <Heading
-                      dangerouslySetInnerHTML={{
-                        __html: item.title.rendered,
-                      }}
-                    />
-                  )}
-                  {item?.excerpt && (
-                    <Paragraph
-                      dangerouslySetInnerHTML={{
-                        __html: item.excerpt.rendered,
-                      }}
-                    />
-                  )}
-                </div>
-                <div className="article-img">
-                  <img src={media.source_url} alt="" />
+                  <Alert variant="success">
+                    <Alert.Heading>
+                      Hey there, No article found for the contribution{" "}
+                    </Alert.Heading>
+                    <p>
+                      Aww yeah, you successfully read this important alert
+                      message. Please go to admin panel and create blogs for
+                      contribution category. When you will create any blog that
+                      will be render here.
+                    </p>
+                    <hr />
+                    <p className="mb-0">
+                      Whenever you need to, be sure to use margin utilities to
+                      keep things nice and tidy.
+                    </p>
+                  </Alert>
                 </div>
               </ContributeArticle>
-            );
-          })
-        ) : (
-          <ContributeArticle>
-            <div className="article-content">
-              <Alert variant="success">
-                <Alert.Heading>
-                  Hey there, No article found for the contribution{" "}
-                </Alert.Heading>
-                <p>
-                  Aww yeah, you successfully read this important alert message.
-                  Please go to admin panel and create blogs for contribution
-                  category. When you will create any blog that will be render
-                  here.
-                </p>
-                <hr />
-                <p className="mb-0">
-                  Whenever you need to, be sure to use margin utilities to keep
-                  things nice and tidy.
-                </p>
-              </Alert>
-            </div>
-          </ContributeArticle>
-        )}
+            )}
 
-        {/* <ContributeArticle>
+            {/* <ContributeArticle>
           <div className="article-content">
             <Heading>Cursus neque eget a bibendum.</Heading>
             <Paragraph>
@@ -81,6 +83,8 @@ const Contribution = ({ state, libraries }) => {
             <img src={Unsplash1} alt="" />
           </div>
         </ContributeArticle> */}
+          </Content>
+        )}
       </Content>
     </Container>
   );

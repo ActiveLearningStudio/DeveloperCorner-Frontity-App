@@ -1,9 +1,11 @@
 import { React, useState } from "react";
 import { styled, connect } from "frontity";
+import Alert from "react-bootstrap/Alert";
 import Paginate from "../../components/pagination/pagination";
 import Banner from "../../components/banner/Styledbanner";
 import PressArticle from "./pressArticle";
 import Loading from "../../components/loading/loading";
+import FetchError from "../../components/error/fetchError";
 const PressAwards = ({ state, libraries }) => {
   const data = state.source.get(state.router.link);
   console.log("data is here", data);
@@ -22,14 +24,21 @@ const PressAwards = ({ state, libraries }) => {
       <Container>
         <Heading>Press Releases</Heading>
         {data.isFetching && <Loading />}
-        <Content>
-          {data.items &&
-            data.items.map(({ type, id }) => {
-              const item = state.source[type][id];
-              return <PressArticle key={item.id} item={item} />;
-            })}
-        </Content>
-        {!data.isFetching && <Paginate link="/category/pressawards/page/" />}
+        {!data.isFetching && (
+          <Content>
+            {data.items ? (
+              data.items.map(({ type, id }) => {
+                const item = state.source[type][id];
+                return <PressArticle key={item.id} item={item} />;
+              })
+            ) : (
+              <FetchError categoryName="Press &  Awards" />
+            )}
+          </Content>
+        )}
+        {!data.isFetching && data.items && (
+          <Paginate link="/category/pressawards/page/" />
+        )}
       </Container>
     </div>
   );

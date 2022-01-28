@@ -1,21 +1,37 @@
 import React from "react";
+import { Global, css, connect } from "frontity";
 import ApiSection from "./apiContent";
 import BusinessProduct from "./businessProduct";
 import Technology from "./technology";
-import { Global, css } from "frontity";
+import Loading from "../../components/loading/loading";
 import DeveloperTool from "./developerTool";
 import HelpArea from "./helpSection";
 import GetStarted from "./getStarted";
 import ExternalCss from "./styles.css";
 import heroSectionimg from "../../assets/images/hero-section.png";
-// import Footer from "../../components/footer/index";
 
-const Index = () => {
+const Index = ({ interactiveCategory, data }) => {
+  let { apidata, techdata, getStartedpost } = [];
+  interactiveCategory.map(({ category, posts }) => {
+    if (category) {
+      if (category.id === 66) {
+        return (apidata = posts);
+      }
+      if (category.id === 67) {
+        return (techdata = posts);
+      }
+      if (category.id === 68) {
+        return (getStartedpost = posts);
+      }
+    }
+  });
   return (
     <>
       <Global styles={css(ExternalCss)} />
-      <div className="main-area">
-        {/* <div
+      {data && data.isFetching && <Loading />}
+      {data.isReady && (
+        <div className="main-area">
+          {/* <div
           style={{ backgroundImage: "url(" + heroSectionimg + ")" }}
           className="heroSection"
         >
@@ -31,18 +47,18 @@ const Index = () => {
           </div>
         </div> */}
 
-        {/* api content */}
+          {/* api content */}
 
-        <ApiSection />
-        {/* bussines product */}
-      
+          <ApiSection apidata={apidata} />
+          {/* bussines product */}
 
-        <Technology />
-        {/* get started */}
-        <GetStarted/>
-      </div>
+          <Technology techdata={techdata} />
+          {/* get started */}
+          <GetStarted getStartedpost={getStartedpost} />
+        </div>
+      )}
     </>
   );
 };
 
-export default Index;
+export default connect(Index);

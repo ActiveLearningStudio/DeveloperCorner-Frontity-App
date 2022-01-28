@@ -1,14 +1,16 @@
 import React from "react";
-import { styled } from "frontity";
+import { styled, connect } from "frontity";
 import BirdiesImg from "../../assets/images/ourMission/birdies.svg";
 import HeartIcon from "../../assets/images/ourMission/heart1.svg";
 import amazonpic from "../../assets/images/amazonpic.png";
-const BirdiesforEducation = () => {
+const BirdiesforEducation = ({ birdiesposts, state, libraries }) => {
+  const Html2React = libraries.html2react.Component;
+  console.log("birdies", birdiesposts);
   return (
     <Section>
       <Container>
         <Content>
-          <UpperRow>
+          {/* <UpperRow>
             <LeftCol>
               <TopHeading>Birdies for Education</TopHeading>
               <Paragraph>
@@ -25,43 +27,95 @@ const BirdiesforEducation = () => {
                 width="550px"
               />
             </RightCol>
-          </UpperRow>
-          <BottomRow>
-            <LeftCol>
-              <img src={HeartIcon} alt="" />
-              <HeaderContent>
-                <h6>Donate Offline</h6>
-                <BottomLine></BottomLine>
-              </HeaderContent>
-              <Paragraph>
-                <p>
-                  Send your tax-deductible contribution directly to us by
-                  mailing it to: 20660 Stevens Creek Blvd/332 Cupertino, CA
-                  95014
-                </p>
-              </Paragraph>
-            </LeftCol>
-            <RightCol>
-              <img src={amazonpic} className="amazonPic" alt="" />
-              <HeaderContent>
-                <h6>Alternative ways to contribute</h6>
-                <BottomLine></BottomLine>
-              </HeaderContent>
+          </UpperRow> */}
 
-              <Paragraph>
-                AmazonSmile is a simple and automatic way for you to support
-                Curriki every time you shop, at no cost to you.
-                <Link>AmazonSmile</Link>
-              </Paragraph>
-            </RightCol>
-          </BottomRow>
+          {birdiesposts && birdiesposts.length > 0 ? (
+            birdiesposts?.map((postitem) => {
+              const featuremedia =
+                state.source.attachment[postitem?.featured_media];
+              // alert(featured_media);
+              return (
+                <BottomRow>
+                  <LeftCol>
+                    {featuremedia && (
+                      <img src={featuremedia.source_url} alt="" />
+                    )}
+                    <HeaderContent>
+                      <h6
+                        dangerouslySetInnerHTML={{
+                          __html: postitem.title.rendered,
+                        }}
+                      />
+                      <BottomLine></BottomLine>
+                    </HeaderContent>
+                    <Paragraph>
+                      <Html2React
+                        className="item-para"
+                        html={postitem.content.rendered}
+                      />
+                    </Paragraph>
+                  </LeftCol>
+                </BottomRow>
+              );
+            })
+          ) : (
+            <>
+              <UpperRow>
+                <LeftCol>
+                  <TopHeading>Birdies for Education</TopHeading>
+                  <Paragraph>
+                    Contribute through Birdies for Education – Maverick
+                    McNealy’s golf fundraiser for Curriki.
+                  </Paragraph>
+                  <Button>TAKE ME TO BIRDIES</Button>
+                </LeftCol>
+                <RightCol>
+                  <img
+                    src={BirdiesImg}
+                    className="birdiesImg"
+                    alt=""
+                    width="550px"
+                  />
+                </RightCol>{" "}
+              </UpperRow>
+              <BottomRow>
+                <LeftCol>
+                  <img src={HeartIcon} alt="" />
+                  <HeaderContent>
+                    <h6>Donate Offline</h6>
+                    <BottomLine></BottomLine>
+                  </HeaderContent>
+                  <Paragraph>
+                    <p>
+                      Send your tax-deductible contribution directly to us by
+                      mailing it to: 20660 Stevens Creek Blvd/332 Cupertino, CA
+                      95014
+                    </p>
+                  </Paragraph>
+                </LeftCol>
+                <RightCol>
+                  <img src={amazonpic} className="amazonPic" alt="" />
+                  <HeaderContent>
+                    <h6>Alternative ways to contribute</h6>
+                    <BottomLine></BottomLine>
+                  </HeaderContent>
+
+                  <Paragraph>
+                    AmazonSmile is a simple and automatic way for you to support
+                    Curriki every time you shop, at no cost to you.
+                    <Link>AmazonSmile</Link>
+                  </Paragraph>
+                </RightCol>
+              </BottomRow>
+            </>
+          )}
         </Content>
       </Container>
     </Section>
   );
 };
 
-export default BirdiesforEducation;
+export default connect(BirdiesforEducation);
 const Section = styled.div``;
 const Container = styled.div`
   max-width: 1440px;

@@ -1,7 +1,8 @@
 import React from "react";
-import { styled } from "frontity";
+import { styled, connect } from "frontity";
 import plusicon from "../../assets/images/PLUS.svg";
-const LearnImpact = () => {
+const LearnImpact = ({ learnposts, state, libraries }) => {
+  const Html2React = libraries.html2react.Component;
   return (
     <Container>
       <Content>
@@ -14,33 +15,51 @@ const LearnImpact = () => {
           <Subheading>OUR IMPACT</Subheading>
         </HeadingContent>
         <InnerContent>
-          <LeftCol>
-            <Colheading>Curriki suites release notes</Colheading>
-            <Paragraph>
-              Curious as to what we’ve already built, how we are building it,
-              and what is next? Our publish product roadmap and documentation
-              provides our planned path towards what our team is working on and
-              the value it brings to education.
-            </Paragraph>
-            <Button>See public jira roadmap</Button>
-          </LeftCol>
-          <RightCol>
-            <Colheading>See the impact we make</Colheading>
-            <Paragraph>
-              We’re proud of the impact we’ve made in education but we’re only
-              doing so because of our great partners. Check out our reference
-              implementations to see how Curriki and our suite of tools are
-              driving innovation in education.
-            </Paragraph>
-            <Button>Success stories</Button>
-          </RightCol>
+          {learnposts && learnposts.length > 0 ? (
+            learnposts?.map((postitem) => {
+              return (
+                <LeftCol>
+                  <Colheading
+                    dangerouslySetInnerHTML={{
+                      __html: postitem.title.rendered,
+                    }}
+                  />
+                  <Html2React html={postitem.content.rendered} />
+                  <Button>See public jira roadmap</Button>
+                </LeftCol>
+              );
+            })
+          ) : (
+            <>
+              <RightCol>
+                <Colheading>Curriki suites release notes</Colheading>
+                <Paragraph>
+                  Curious as to what we’ve already built, how we are building
+                  it, and what is next? Our publish product roadmap and
+                  documentation provides our planned path towards what our team
+                  is working on and the value it brings to education.
+                </Paragraph>
+                <Button>See public jira roadmap</Button>
+              </RightCol>
+              <RightCol>
+                <Colheading>See the impact we make</Colheading>
+                <Paragraph>
+                  We’re proud of the impact we’ve made in education but we’re
+                  only doing so because of our great partners. Check out our
+                  reference implementations to see how Curriki and our suite of
+                  tools are driving innovation in education.
+                </Paragraph>
+                <Button>Success stories</Button>
+              </RightCol>
+            </>
+          )}
         </InnerContent>
       </Content>
     </Container>
   );
 };
 
-export default LearnImpact;
+export default connect(LearnImpact);
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
@@ -99,7 +118,23 @@ const InnerContent = styled.div`
     flex-direction: column;
   }
 `;
-const LeftCol = styled.div``;
+const LeftCol = styled.div`
+  p {
+    max-width: 500px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #515151;
+    margin-bottom: 50px;
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 60px;
+    }
+    @media screen and (max-width: 992px) {
+      margin-bottom: 40px;
+    }
+  }
+`;
 const RightCol = styled.div`
   @media screen and (max-width: 1024px) {
     margin-left: 30px;
@@ -113,12 +148,6 @@ const Paragraph = styled.p`
   line-height: 25px;
   color: #515151;
   margin-bottom: 50px;
-  @media screen and (max-width: 1200px) {
-    margin-bottom: 60px;
-  }
-  @media screen and (max-width: 992px) {
-    margin-bottom: 40px;
-  }
 `;
 const Button = styled.button`
   padding: 8px 80px;

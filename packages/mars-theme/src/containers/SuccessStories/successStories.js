@@ -1,7 +1,9 @@
 import React from "react";
 import { styled, connect } from "frontity";
+import Alert from "react-bootstrap/Alert";
 import Paginate from "../../components/pagination/pagination";
 import Loading from "../../components/loading/loading";
+import FetchError from "../../components/error/fetchError";
 import StoryCard from "./storyCard";
 const SuccessStories = ({ state, libraries }) => {
   const data = state.source.get(state.router.link);
@@ -21,14 +23,22 @@ const SuccessStories = ({ state, libraries }) => {
           </Header>
         </Headercontainer>
         {data.isFetching && <Loading />}
-        <Cardcontent>
-          {data.items &&
-            data.items.map(({ type, id }) => {
-              const item = state.source[type][id];
-              return <StoryCard key={item.id} item={item} />;
-            })}
-        </Cardcontent>
-        {!data.isFetching && <Paginate link="/category/successstories/page/" />}
+        {!data.isFetching && (
+          <Cardcontent>
+            {data.items ? (
+              data.items.map(({ type, id }) => {
+                const item = state.source[type][id];
+                return <StoryCard key={item.id} item={item} />;
+              })
+            ) : (
+              <FetchError categoryName="Success Stories" />
+            )}
+          </Cardcontent>
+        )}
+
+        {!data.isFetching && data.items && (
+          <Paginate link="/category/successstories/page/" />
+        )}
       </Container>
     </Section>
   );

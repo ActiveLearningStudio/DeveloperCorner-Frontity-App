@@ -17,22 +17,55 @@ import webinar6 from "../../assets/images/webinars/web6.png";
 import webinar7 from "../../assets/images/webinars/web7.png";
 import webinar8 from "../../assets/images/webinars/web8.png";
 import Loading from "../../components/loading/loading";
-const Index = ({ state }) => {
+const Index = ({ webinarsCategory, state, libraries }) => {
+  let { divingPosts, webinarsPosts } = [];
+  webinarsCategory.map(({ category, posts }) => {
+    if (category) {
+      if (category.id === 76) {
+        return (divingPosts = posts);
+      }
+      if (category.id === 77) {
+        return (webinarsPosts = posts);
+      }
+    }
+  });
+  const posttitle = divingPosts && divingPosts[0]?.title;
+  const postdesc = divingPosts && divingPosts[0]?.content;
+  const featureimage =
+    divingPosts && state.source.attachment[divingPosts[0]?.featured_media];
+  const Html2React = libraries.html2react.Component;
   const data = state.source.get(state.router.link);
   return (
     <div>
       <Banner title="Curriki Webinars" />
       <Container>
+        {data.isFetching && <Loading />}
         <Content>
-          <LeftCol>
-            <Heading>Dive into CurrikiStudio </Heading>
-            {data.isFetching && <Loading />}
-            <Paragraph>Register for monthly webinar demo</Paragraph>
-            <PrimaryButton>Register Now</PrimaryButton>
-          </LeftCol>
-          <RightCol>
-            <img src={webinarhero} alt="" />
-          </RightCol>
+          {!data.isFetching && (
+            <>
+              {" "}
+              <LeftCol>
+                {posttitle ? (
+                  <Heading>{posttitle?.rendered} </Heading>
+                ) : (
+                  <Heading>Dive into CurrikiStudio </Heading>
+                )}
+                {postdesc ? (
+                  <Html2React html={postdesc?.rendered} />
+                ) : (
+                  <Paragraph>Register for monthly webinar demo</Paragraph>
+                )}
+
+                <PrimaryButton>Register Now</PrimaryButton>
+              </LeftCol>
+              <RightCol>
+                <img
+                  src={featureimage ? featureimage.source_url : webinarhero}
+                  alt=""
+                />
+              </RightCol>
+            </>
+          )}
         </Content>
       </Container>
       <PastWebinars>
@@ -41,198 +74,200 @@ const Index = ({ state }) => {
             <h2>PAST WEBINARS</h2>
             <img src={plusicon} alt="" />
           </WebinarHeading>
-          {data.isFetching && <Loading />}
           <CardContent>
-            {data.items &&
-              data.items.map(({ type, id }) => {
-                const item = state.source[type][id];
-                return <WebinarArticle key={item.id} item={item} />;
-              })}
-            {/* // <Card>
-            //   <CardHead
-            //     css={css`
-            //       background: linear-gradient(
-            //           0deg,
-            //           rgba(40, 90, 165, 0.75),
-            //           rgba(40, 90, 165, 0.75)
-            //         ),
-            //         url("${webinar2}");
-            //     `}
-            //   >
-            //     <div>
-            //       <img src={playIcon} alt="" />
-            //     </div>
-            //   </CardHead>
-            //   <div className="card-inner-content">
-            //     <CardHeading>
-            //       {" "}
-            //       Using CurrikiStudio Interactions to Inspire Curiosity and
-            //       Critical Thinking
-            //     </CardHeading>
-            //     <CardPara>January 27, 2021</CardPara>
-            //     <CardBottom>
-            //       <a href="#">Watch webinar now</a>
-            //       <img src={arrowIcon} alt="" />
-            //     </CardBottom>
-            //   </div>
-            // </Card>
-            // <Card>
-            //   <CardHead
-            //     css={css`
-            //       background: linear-gradient(
-            //           0deg,
-            //           rgba(40, 90, 165, 0.75),
-            //           rgba(40, 90, 165, 0.75)
-            //         ),
-            //         url("${webinar3}");
-            //     `}
-            //   >
-            //     <div>
-            //       <img src={playIcon} alt="" />
-            //     </div>
-            //   </CardHead>
-            //   <div className="card-inner-content">
-            //     <CardHeading> Dialogue Cards vs. Flash Cards</CardHeading>
-            //     <CardPara>December 09, 2020</CardPara>
-            //     <CardBottom>
-            //       <a href="#">Watch webinar now</a>
-            //       <img src={arrowIcon} alt="" />
-            //     </CardBottom>
-            //   </div>
-            // </Card>
-            // <Card>
-            //   <CardHead
-            //     css={css`
-            //       background: linear-gradient(
-            //           0deg,
-            //           rgba(40, 90, 165, 0.75),
-            //           rgba(40, 90, 165, 0.75)
-            //         ),
-            //         url("${webinar4}");
-            //     `}
-            //   >
-            //     <div>
-            //       <img src={playIcon} alt="" />
-            //     </div>
-            //   </CardHead>
-            //   <div className="card-inner-content">
-            //     <CardHeading> Hotspots are HOT!</CardHeading>
-            //     <CardPara>December 02, 2020</CardPara>
-            //     <CardBottom>
-            //       <a href="#">Watch webinar now</a>
-            //       <img src={arrowIcon} alt="" />
-            //     </CardBottom>
-            //   </div>
-            // </Card> */}
-            {/* <Card>
-              <CardHead
-                css={css`
-                  background: linear-gradient(
-                      0deg,
-                      rgba(40, 90, 165, 0.75),
-                      rgba(40, 90, 165, 0.75)
-                    ),
-                    url("${webinar5}");
-                `}
-              >
-                <div>
-                  <img src={playIcon} alt="" />
-                </div>
-              </CardHead>
-              <div className="card-inner-content">
-                <CardHeading>
-                  {" "}
-                  Creating Learning Activities with Drag and Drop
-                </CardHeading>
-                <CardPara>November 18, 2020</CardPara>
-                <CardBottom>
-                  <a href="#">Watch webinar now</a>
-                  <img src={arrowIcon} alt="" />
-                </CardBottom>
-              </div>
-            </Card>
-            <Card>
-              <CardHead
-                css={css`
-                  background: linear-gradient(
-                      0deg,
-                      rgba(40, 90, 165, 0.75),
-                      rgba(40, 90, 165, 0.75)
-                    ),
-                    url("${webinar6}");
-                `}
-              >
-                <div>
-                  <img src={playIcon} alt="" />
-                </div>
-              </CardHead>
-              <div className="card-inner-content">
-                <CardHeading>
-                  {" "}
-                  Making Interactive Videos that Engage Like Never Before
-                </CardHeading>
-                <CardPara>November 11, 2020</CardPara>
-                <CardBottom>
-                  <a href="#">Watch webinar now</a>
-                  <img src={arrowIcon} alt="" />
-                </CardBottom>
-              </div>
-            </Card>
-            <Card>
-              <CardHead
-                css={css`
-                  background: linear-gradient(
-                      0deg,
-                      rgba(40, 90, 165, 0.75),
-                      rgba(40, 90, 165, 0.75)
-                    ),
-                    url("${webinar7}");
-                `}
-              >
-                <div>
-                  <img src={playIcon} alt="" />
-                </div>
-              </CardHead>
-              <div className="card-inner-content">
-                <CardHeading>
-                  {" "}
-                  How to Create Interactive Experiences to Excite, Engage, and
-                  Inspire Your Students
-                </CardHeading>
-                <CardPara>August 27, 2020</CardPara>
-                <CardBottom>
-                  <a href="#">Watch webinar now</a>
-                  <img src={arrowIcon} alt="" />
-                </CardBottom>
-              </div>
-            </Card>
-            <Card>
-              <CardHead
-                css={css`
-                  background: linear-gradient(
-                      0deg,
-                      rgba(40, 90, 165, 0.75),
-                      rgba(40, 90, 165, 0.75)
-                    ),
-                    url("${webinar8}");
-                `}
-              >
-                <div>
-                  <img src={playIcon} alt="" />
-                </div>
-              </CardHead>
-              <div className="card-inner-content">
-                <CardHeading>
-                  {" "}
-                  Publishing Interactive Content with CurrikiGo
-                </CardHeading>
-                <CardPara>July 30, 2020</CardPara>
-                <CardBottom>
-                  <a href="#">Watch webinar now</a>
-                  <img src={arrowIcon} alt="" />
-                </CardBottom>
-              </div>
-            </Card> */}
+            {webinarsPosts && webinarsPosts.length > 0 ? (
+              webinarsPosts.map((postitem, key) => {
+                return <WebinarArticle key={key} postitem={postitem} />;
+              })
+            ) : (
+              <>
+                <Card>
+                  <CardHead
+                    css={css`
+                      background: linear-gradient(
+                          0deg,
+                          rgba(40, 90, 165, 0.75),
+                          rgba(40, 90, 165, 0.75)
+                        ),
+                        url("${webinar2}");
+                    `}
+                  >
+                    <div>
+                      <img src={playIcon} alt="" />
+                    </div>
+                  </CardHead>
+                  <div className="card-inner-content">
+                    <CardHeading>
+                      {" "}
+                      Using CurrikiStudio Interactions to Inspire Curiosity and
+                      Critical Thinking
+                    </CardHeading>
+                    <CardPara>January 27, 2021</CardPara>
+                    <CardBottom>
+                      <a href="#">Watch webinar now</a>
+                      <img src={arrowIcon} alt="" />
+                    </CardBottom>
+                  </div>
+                </Card>
+                <Card>
+                  <CardHead
+                    css={css`
+                      background: linear-gradient(
+                          0deg,
+                          rgba(40, 90, 165, 0.75),
+                          rgba(40, 90, 165, 0.75)
+                        ),
+                        url("${webinar3}");
+                    `}
+                  >
+                    <div>
+                      <img src={playIcon} alt="" />
+                    </div>
+                  </CardHead>
+                  <div className="card-inner-content">
+                    <CardHeading> Dialogue Cards vs. Flash Cards</CardHeading>
+                    <CardPara>December 09, 2020</CardPara>
+                    <CardBottom>
+                      <a href="#">Watch webinar now</a>
+                      <img src={arrowIcon} alt="" />
+                    </CardBottom>
+                  </div>
+                </Card>
+                <Card>
+                  <CardHead
+                    css={css`
+                      background: linear-gradient(
+                          0deg,
+                          rgba(40, 90, 165, 0.75),
+                          rgba(40, 90, 165, 0.75)
+                        ),
+                        url("${webinar4}");
+                    `}
+                  >
+                    <div>
+                      <img src={playIcon} alt="" />
+                    </div>
+                  </CardHead>
+                  <div className="card-inner-content">
+                    <CardHeading> Hotspots are HOT!</CardHeading>
+                    <CardPara>December 02, 2020</CardPara>
+                    <CardBottom>
+                      <a href="#">Watch webinar now</a>
+                      <img src={arrowIcon} alt="" />
+                    </CardBottom>
+                  </div>
+                </Card>
+                <Card>
+                  <CardHead
+                    css={css`
+                      background: linear-gradient(
+                          0deg,
+                          rgba(40, 90, 165, 0.75),
+                          rgba(40, 90, 165, 0.75)
+                        ),
+                        url("${webinar5}");
+                    `}
+                  >
+                    <div>
+                      <img src={playIcon} alt="" />
+                    </div>
+                  </CardHead>
+                  <div className="card-inner-content">
+                    <CardHeading>
+                      {" "}
+                      Creating Learning Activities with Drag and Drop
+                    </CardHeading>
+                    <CardPara>November 18, 2020</CardPara>
+                    <CardBottom>
+                      <a href="#">Watch webinar now</a>
+                      <img src={arrowIcon} alt="" />
+                    </CardBottom>
+                  </div>
+                </Card>
+                <Card>
+                  <CardHead
+                    css={css`
+                      background: linear-gradient(
+                          0deg,
+                          rgba(40, 90, 165, 0.75),
+                          rgba(40, 90, 165, 0.75)
+                        ),
+                        url("${webinar6}");
+                    `}
+                  >
+                    <div>
+                      <img src={playIcon} alt="" />
+                    </div>
+                  </CardHead>
+                  <div className="card-inner-content">
+                    <CardHeading>
+                      {" "}
+                      Making Interactive Videos that Engage Like Never Before
+                    </CardHeading>
+                    <CardPara>November 11, 2020</CardPara>
+                    <CardBottom>
+                      <a href="#">Watch webinar now</a>
+                      <img src={arrowIcon} alt="" />
+                    </CardBottom>
+                  </div>
+                </Card>
+                <Card>
+                  <CardHead
+                    css={css`
+                      background: linear-gradient(
+                          0deg,
+                          rgba(40, 90, 165, 0.75),
+                          rgba(40, 90, 165, 0.75)
+                        ),
+                        url("${webinar7}");
+                    `}
+                  >
+                    <div>
+                      <img src={playIcon} alt="" />
+                    </div>
+                  </CardHead>
+                  <div className="card-inner-content">
+                    <CardHeading>
+                      {" "}
+                      How to Create Interactive Experiences to Excite, Engage,
+                      and Inspire Your Students
+                    </CardHeading>
+                    <CardPara>August 27, 2020</CardPara>
+                    <CardBottom>
+                      <a href="#">Watch webinar now</a>
+                      <img src={arrowIcon} alt="" />
+                    </CardBottom>
+                  </div>
+                </Card>
+                <Card>
+                  <CardHead
+                    css={css`
+                      background: linear-gradient(
+                          0deg,
+                          rgba(40, 90, 165, 0.75),
+                          rgba(40, 90, 165, 0.75)
+                        ),
+                        url("${webinar8}");
+                    `}
+                  >
+                    <div>
+                      <img src={playIcon} alt="" />
+                    </div>
+                  </CardHead>
+                  <div className="card-inner-content">
+                    <CardHeading>
+                      {" "}
+                      Publishing Interactive Content with CurrikiGo
+                    </CardHeading>
+                    <CardPara>July 30, 2020</CardPara>
+                    <CardBottom>
+                      <a href="#">Watch webinar now</a>
+                      <img src={arrowIcon} alt="" />
+                    </CardBottom>
+                  </div>
+                </Card>
+              </>
+            )}
           </CardContent>
         </Container>
       </PastWebinars>
@@ -356,7 +391,7 @@ const CardHeading = styled.h5`
   line-height: 21px;
   color: #084892;
   margin-top: 20px;
-  // width: 220px;
+  width: 220px;
   height: 84px;
   margin-bottom: 10px;
 `;

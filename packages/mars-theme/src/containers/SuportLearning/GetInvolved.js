@@ -1,7 +1,9 @@
 import React from "react";
-import { styled } from "frontity";
+import { styled, connect } from "frontity";
 import plusicon from "../../assets/images/PLUS.svg";
-const GetInvolved = () => {
+const GetInvolved = ({ gettingInvlovedpost, state, libraries }) => {
+  const Html2React = libraries.html2react.Component;
+  console.log("getting data is here", gettingInvlovedpost);
   return (
     <Container>
       <Content>
@@ -14,35 +16,55 @@ const GetInvolved = () => {
           <Subheading>Fund an initative</Subheading>
         </HeadingContent>
         <InnerContent>
-          <LeftCol>
-            <Colheading>In-Kind Services</Colheading>
-            <Paragraph>
-              As a small but mighty nonprofit, we allocate most of our resources
-              towards building the most high priority items that support our
-              core technology. See our roadmap plans here. Our open source
-              approach is so that organizations with technology talent can
-              contribute to our ecosystem and advance the mission.
-            </Paragraph>
-            <Button>contact us</Button>
-          </LeftCol>
-          <RightCol>
-            <Colheading>Making a donation</Colheading>
-            <Paragraph>
-              Do you want to support innovation in education but don’t know
-              where to start? Our partners are exploding with ideas to innovate
-              but we alone don’t have the resources. Supporting our roadmap
-              means that you are helping learners and educators innovate and
-              access interactive learning experiences like never before.
-            </Paragraph>
-            <Button>Donate</Button>
-          </RightCol>
+          {gettingInvlovedpost && gettingInvlovedpost.length > 0 ? (
+            gettingInvlovedpost?.map((postitem) => {
+              return (
+                <LeftCol>
+                  <Colheading
+                    dangerouslySetInnerHTML={{
+                      __html: postitem.title.rendered,
+                    }}
+                  />
+                  <Html2React html={postitem.content.rendered} />
+                  <Button>contact us</Button>
+                </LeftCol>
+              );
+            })
+          ) : (
+            <>
+              <LeftCol>
+                <Colheading>In-Kind Services</Colheading>
+                <Paragraph>
+                  As a small but mighty nonprofit, we allocate most of our
+                  resources towards building the most high priority items that
+                  support our core technology. See our roadmap plans here. Our
+                  open source approach is so that organizations with technology
+                  talent can contribute to our ecosystem and advance the
+                  mission.
+                </Paragraph>
+                <Button>Donate</Button>
+              </LeftCol>
+              <LeftCol>
+                <Colheading>Making a donation</Colheading>
+                <Paragraph>
+                  Do you want to support innovation in education but don’t know
+                  where to start? Our partners are exploding with ideas to
+                  innovate but we alone don’t have the resources. Supporting our
+                  roadmap means that you are helping learners and educators
+                  innovate and access interactive learning experiences like
+                  never before.
+                </Paragraph>
+                <Button>Donate</Button>
+              </LeftCol>
+            </>
+          )}
         </InnerContent>
       </Content>
     </Container>
   );
 };
 
-export default GetInvolved;
+export default connect(GetInvolved);
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
@@ -102,27 +124,29 @@ const InnerContent = styled.div`
     flex-direction: column;
   }
 `;
-const LeftCol = styled.div``;
+const LeftCol = styled.div`
+  p {
+    max-width: 500px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #515151;
+    margin-bottom: 40px;
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 60px;
+    }
+    @media screen and (max-width: 992px) {
+      margin-bottom: 40px;
+    }
+  }
+`;
 const RightCol = styled.div`
   @media screen and (max-width: 1024px) {
     margin-left: 30px;
   }
 `;
-const Paragraph = styled.p`
-  max-width: 500px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 25px;
-  color: #515151;
-  margin-bottom: 40px;
-  @media screen and (max-width: 1200px) {
-    margin-bottom: 60px;
-  }
-  @media screen and (max-width: 992px) {
-    margin-bottom: 40px;
-  }
-`;
+const Paragraph = styled.p``;
 const Button = styled.button`
   padding: 5px 40px;
   background: #084892;

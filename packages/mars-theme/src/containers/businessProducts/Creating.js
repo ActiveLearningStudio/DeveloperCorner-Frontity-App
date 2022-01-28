@@ -1,25 +1,46 @@
 import React from "react";
-import { styled } from "frontity";
+import { styled, connect } from "frontity";
 
 import StartedImg from "../../assets/images/Trynow1.svg";
 import backimage from "../../assets/images/backimage.png";
-const Creating = () => {
+const Creating = ({ trycurrikiposts, state, libraries }) => {
+  const posttitle = trycurrikiposts && trycurrikiposts[0]?.title;
+  const postdesc = trycurrikiposts && trycurrikiposts[0]?.content;
+  const featureimage =
+    trycurrikiposts &&
+    state.source.attachment[trycurrikiposts[0]?.featured_media];
+  const Html2React = libraries.html2react.Component;
   return (
     <StyleDiv>
       <Container>
         <Content>
           <LeftDiv>
-            <h2>Try CurrikiStudio now</h2>
-            <p>
-              CurrikiStudio demo environment is meant to give you a preview of
-              how your organization can use our technology. It is completely
-              free. For information on how to integrate with your LMS, contact
-              us using the form below.
-            </p>
+            {posttitle ? (
+              <h2
+                dangerouslySetInnerHTML={{
+                  __html: posttitle.rendered,
+                }}
+              />
+            ) : (
+              <h2>Try CurrikiStudio now</h2>
+            )}
+            {postdesc ? (
+              <Html2React html={postdesc?.rendered} />
+            ) : (
+              <p>
+                CurrikiStudio demo environment is meant to give you a preview of
+                how your organization can use our technology. It is completely
+                free. For information on how to integrate with your LMS, contact
+                us using the form below.
+              </p>
+            )}
             <button>START CREATING</button>
           </LeftDiv>
           <RightDiv>
-            <img src={StartedImg} alt="" />
+            <img
+              src={featureimage ? featureimage.source_url : StartedImg}
+              alt=""
+            />
           </RightDiv>
         </Content>
       </Container>
@@ -27,7 +48,7 @@ const Creating = () => {
   );
 };
 
-export default Creating;
+export default connect(Creating);
 
 const StyleDiv = styled.div`
   background-image: url(${backimage});

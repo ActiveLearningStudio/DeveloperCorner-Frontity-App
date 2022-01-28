@@ -1,10 +1,11 @@
 import React from "react";
-import { styled } from "frontity";
+import { styled, connect } from "frontity";
 import backgroundPic from "../../assets/images/Group153.png";
 import plusicon from "../../assets/images/PLUS.svg";
 import HandImg from "../../assets/images/Group330.png";
 import handiconPic from "../../assets/images/handiconPic.png";
-const AboutProgram = () => {
+const AboutProgram = ({ aboutprogramposts, state, libraries }) => {
+  const Html2React = libraries.html2react.Component;
   return (
     <Section>
       <Background>
@@ -14,66 +15,90 @@ const AboutProgram = () => {
             <img src={plusicon} alt="" />
           </Heading>
           <Content>
-            <InnerDIv>
-              <LeftCol>
-                <img src={HandImg} alt="" />
-              </LeftCol>
-              <RightCol>
-                <h3>Why become a provider</h3>
-                <p>
-                  <img src={plusicon} alt="" />
-                  <span>Expanded your existing offerings.</span>
-                </p>
-                <p>
-                  <img src={plusicon} alt="" />
-                  <span>Unlock new revenue stream(s).</span>
-                </p>
-                <p>
-                  <img src={plusicon} alt="" />
-                  <span>Lead generation from Curriki.</span>
-                </p>
-                <p>
-                  <img src={plusicon} alt="" />
-                  <span>Co-marketing/promotion.</span>
-                </p>
-              </RightCol>
-            </InnerDIv>
-            <InnerDIv>
-              <LeftCol>
-                <img src={handiconPic} alt="" />
-              </LeftCol>
-              <RightCol>
-                <h3>Benefits of being a provider</h3>
-                <p>
-                  <img src={plusicon} alt="" />
-                  <span>Dedicated point of contact.</span>
-                </p>
-                <p>
-                  <img src={plusicon} alt="" />
-                  <span>Priority support & ticketing.</span>
-                </p>
-                <p>
-                  <img src={plusicon} alt="" />
-                  <span>Invited to present to partners/prospects.</span>
-                </p>
-                <p>
-                  <img src={plusicon} alt="" />
-                  <span>Training - Tech & Learning Design.</span>
-                </p>
-                <p>
-                  <img src={plusicon} alt="" />
-                  <span>Centralized Certified Knowledge Base.</span>
-                </p>
-                <p>
-                  <img src={plusicon} alt="" />
-                  <span>Badge & promotion/listing on site.</span>
-                </p>
-                <p>
-                  <img src={plusicon} alt="" />
-                  <span>Certified Partner Slack Channel.</span>
-                </p>
-              </RightCol>
-            </InnerDIv>
+            {aboutprogramposts && aboutprogramposts.length > 0 ? (
+              aboutprogramposts?.map((postitem) => {
+                const featuremedia =
+                  state.source.attachment[postitem?.featured_media];
+                return (
+                  <InnerDIv>
+                    <LeftCol>
+                      <img src={featuremedia.source_url} alt="" />
+                    </LeftCol>
+                    <RightCol>
+                      <h3
+                        dangerouslySetInnerHTML={{
+                          __html: postitem.title.rendered,
+                        }}
+                      />
+                      <Html2React html={postitem.content.rendered} />
+                    </RightCol>
+                  </InnerDIv>
+                );
+              })
+            ) : (
+              <>
+                <InnerDIv>
+                  <LeftCol>
+                    <img src={HandImg} alt="" />
+                  </LeftCol>
+                  <RightCol>
+                    <h3>Why become a provider</h3>
+                    <p>
+                      <img src={plusicon} alt="" />
+                      <span>Expanded your existing offerings.</span>
+                    </p>
+                    <p>
+                      <img src={plusicon} alt="" />
+                      <span>Unlock new revenue stream(s).</span>
+                    </p>
+                    <p>
+                      <img src={plusicon} alt="" />
+                      <span>Lead generation from Curriki.</span>
+                    </p>
+                    <p>
+                      <img src={plusicon} alt="" />
+                      <span>Co-marketing/promotion.</span>
+                    </p>
+                  </RightCol>
+                </InnerDIv>
+                <InnerDIv>
+                  <LeftCol>
+                    <img src={handiconPic} alt="" />
+                  </LeftCol>
+                  <RightCol>
+                    <h3>Benefits of being a provider</h3>
+                    <p>
+                      <img src={plusicon} alt="" />
+                      <span>Dedicated point of contact.</span>
+                    </p>
+                    <p>
+                      <img src={plusicon} alt="" />
+                      <span>Priority support & ticketing.</span>
+                    </p>
+                    <p>
+                      <img src={plusicon} alt="" />
+                      <span>Invited to present to partners/prospects.</span>
+                    </p>
+                    <p>
+                      <img src={plusicon} alt="" />
+                      <span>Training - Tech & Learning Design.</span>
+                    </p>
+                    <p>
+                      <img src={plusicon} alt="" />
+                      <span>Centralized Certified Knowledge Base.</span>
+                    </p>
+                    <p>
+                      <img src={plusicon} alt="" />
+                      <span>Badge & promotion/listing on site.</span>
+                    </p>
+                    <p>
+                      <img src={plusicon} alt="" />
+                      <span>Certified Partner Slack Channel.</span>
+                    </p>
+                  </RightCol>
+                </InnerDIv>
+              </>
+            )}
           </Content>
         </Container>
       </Background>
@@ -81,12 +106,12 @@ const AboutProgram = () => {
   );
 };
 
-export default AboutProgram;
+export default connect(AboutProgram);
 
 const Section = styled.div`
   position: relative;
   width: 100%;
-  height: 600px;
+  min-height: 600px;
   @media screen and (max-width: 992px) {
     height: 682px;
   }
@@ -140,6 +165,7 @@ const Heading = styled.div`
 `;
 const Content = styled.div`
   margin-left: 80px;
+  padding-bottom: 100px;
   @media screen and (max-width: 480px) {
     margin: 0px;
   }

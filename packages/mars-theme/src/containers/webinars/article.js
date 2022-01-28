@@ -3,7 +3,7 @@ import { styled, css, connect } from "frontity";
 import arrowIcon from "../../assets/images/yellow-arrow.png";
 import webinar2 from "../../assets/images/webinars/web2.png";
 import playIcon from "../../assets/images/play.png";
-const WebinarArticle = ({ state, item }) => {
+const WebinarArticle = ({ state, postitem }) => {
   return (
     <Card>
       <CardHead
@@ -16,17 +16,17 @@ const WebinarArticle = ({ state, item }) => {
       //     url("${webinar2}");
       // `}
       >
-        <div dangerouslySetInnerHTML={{ __html: item.content.rendered }}>
+        <div dangerouslySetInnerHTML={{ __html: postitem.content.rendered }}>
           {/* <img src={playIcon} alt="" /> */}
         </div>
       </CardHead>
       <div className="card-inner-content">
-        {item.excerpt && (
+        {postitem.excerpt && (
           <CardHeading
-            dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}
+            dangerouslySetInnerHTML={{ __html: postitem.excerpt.rendered }}
           />
         )}
-        <CardPara>{item.date}</CardPara>
+        <CardPara>{postitem.date}</CardPara>
         <CardBottom>
           <a href="#">Watch webinar now</a>
           <img src={arrowIcon} alt="" />

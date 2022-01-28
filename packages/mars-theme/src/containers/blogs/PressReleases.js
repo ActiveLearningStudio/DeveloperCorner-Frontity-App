@@ -1,40 +1,39 @@
 import { React, useState, useEffect } from "react";
 import { styled, connect } from "frontity";
+import Alert from "react-bootstrap/Alert";
 import Paginate from "../../components/pagination/pagination";
 import PressArticle from "./article";
 import Loading from "../../components/loading/loading";
+import FetchError from "../../components/error/fetchError";
 // import history from "../../../src/history";
 import arrow from "../../assets/images/yellow-arrow.png";
 import press13 from "../../assets/images/press13.png";
 import { parse } from "himalaya";
 const PressReleases = ({ state, libraries }) => {
   const [activePage, setactivePage] = useState(1);
-  function handlepagechange() {
-    // history.push("/");
-  }
   const data = state.source.get(state.router.link);
-  // alert(state.router.link);
   console.log("posts", data);
   const Html2React = libraries.html2react.Component;
-  // console.log("******************************************");
-  // console.log("HTML content - Normal content");
-  // console.log(state.source["post"][273].content.rendered);
-  // console.log("******************************************");
-  // console.log("JSON content");
-  // console.log(parse(state.source["post"][273].content.rendered));
-  // console.log("******************************************");
+
   return (
     <Container>
       <Heading>Press Releases</Heading>
       {data.isFetching && <Loading />}
-      <Content>
-        {data.items &&
-          data.items.map(({ type, id }) => {
-            const item = state.source[type][id];
-            return <PressArticle key={item.id} item={item} />;
-          })}
-      </Content>
-      {!data.isFetching && <Paginate link="/category/blogs/page/" />}
+      {!data.isFetching && (
+        <Content>
+          {data.items ? (
+            data.items.map(({ type, id }) => {
+              const item = state.source[type][id];
+              return <PressArticle key={item.id} item={item} />;
+            })
+          ) : (
+            <FetchError categoryName="Blogs" />
+          )}
+        </Content>
+      )}
+      {!data.isFetching && data.items && (
+        <Paginate link="/category/blogs/page/" />
+      )}
     </Container>
   );
 };
