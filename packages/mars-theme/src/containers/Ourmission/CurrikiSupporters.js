@@ -21,7 +21,7 @@ const CurrikiSupporters = ({ supporterPosts, state }) => {
             <Heading> technology companies and foundations.</Heading>
           </HeadingContent>
           <Foundations>
-            {supporterPosts &&
+            {supporterPosts && supporterPosts.length > 0 ? (
               supporterPosts?.map((postitem, key) => {
                 const featuremedia =
                   state.source.attachment[postitem?.featured_media];
@@ -30,28 +30,32 @@ const CurrikiSupporters = ({ supporterPosts, state }) => {
                     <img src={featuremedia.source_url} alt="" />
                   </Div>
                 );
-              })}
-            {/* <Div>
-              <img src={Attpic} alt="" />
-            </Div>
-            <Div>
-              <img src={Foundation} alt="" />
-            </Div>
-            <Div>
-              <img src={Birdies} alt="" width="208px" />
-            </Div>
-            <Div>
-              <img src={Charles} alt="" />
-            </Div>
-            <Div>
-              <img src={amgenpic} alt="" />
-            </Div>
-            <Div>
-              <img src={Oracle} alt="" />
-            </Div>
-            <Div>
-              <img src={AWS} alt="" />
-            </Div> */}
+              })
+            ) : (
+              <>
+                <Div>
+                  <img src={Attpic} alt="" />
+                </Div>
+                <Div>
+                  <img src={Foundation} alt="" />
+                </Div>
+                <Div>
+                  <img src={Birdies} alt="" width="208px" />
+                </Div>
+                <Div>
+                  <img src={Charles} alt="" />
+                </Div>
+                <Div>
+                  <img src={amgenpic} alt="" />
+                </Div>
+                <Div>
+                  <img src={Oracle} alt="" />
+                </Div>
+                <Div>
+                  <img src={AWS} alt="" />
+                </Div>{" "}
+              </>
+            )}
           </Foundations>
         </Content>
       </Container>

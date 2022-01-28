@@ -18,4 +18,6 @@ export const categoriesWidgetsHome = {
   71: "Birdies Education (ourmission)",
   72: "Curriki suporters (ourmission)",
   73: "Frequently Questions (ourmission)",
+  76: "Dive into curriki (Webinars)",
+  77: "past webinars (Webinars)",
 };

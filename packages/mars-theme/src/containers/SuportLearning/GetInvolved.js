@@ -16,8 +16,7 @@ const GetInvolved = ({ gettingInvlovedpost, state, libraries }) => {
           <Subheading>Fund an initative</Subheading>
         </HeadingContent>
         <InnerContent>
-          {gettingInvlovedpost &&
-            gettingInvlovedpost.length > 0 &&
+          {gettingInvlovedpost && gettingInvlovedpost.length > 0 ? (
             gettingInvlovedpost?.map((postitem) => {
               return (
                 <LeftCol>
@@ -30,18 +29,35 @@ const GetInvolved = ({ gettingInvlovedpost, state, libraries }) => {
                   <Button>contact us</Button>
                 </LeftCol>
               );
-            })}
-          {/* <RightCol>
-            <Colheading>Making a donation</Colheading>
-            <Paragraph>
-              Do you want to support innovation in education but don’t know
-              where to start? Our partners are exploding with ideas to innovate
-              but we alone don’t have the resources. Supporting our roadmap
-              means that you are helping learners and educators innovate and
-              access interactive learning experiences like never before.
-            </Paragraph>
-            <Button>Donate</Button>
-          </RightCol> */}
+            })
+          ) : (
+            <>
+              <LeftCol>
+                <Colheading>In-Kind Services</Colheading>
+                <Paragraph>
+                  As a small but mighty nonprofit, we allocate most of our
+                  resources towards building the most high priority items that
+                  support our core technology. See our roadmap plans here. Our
+                  open source approach is so that organizations with technology
+                  talent can contribute to our ecosystem and advance the
+                  mission.
+                </Paragraph>
+                <Button>Donate</Button>
+              </LeftCol>
+              <LeftCol>
+                <Colheading>Making a donation</Colheading>
+                <Paragraph>
+                  Do you want to support innovation in education but don’t know
+                  where to start? Our partners are exploding with ideas to
+                  innovate but we alone don’t have the resources. Supporting our
+                  roadmap means that you are helping learners and educators
+                  innovate and access interactive learning experiences like
+                  never before.
+                </Paragraph>
+                <Button>Donate</Button>
+              </LeftCol>
+            </>
+          )}
         </InnerContent>
       </Content>
     </Container>

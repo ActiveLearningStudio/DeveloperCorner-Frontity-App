@@ -5,6 +5,7 @@ import Paginate from "../../components/pagination/pagination";
 import Banner from "../../components/banner/Styledbanner";
 import PressArticle from "./pressArticle";
 import Loading from "../../components/loading/loading";
+import FetchError from "../../components/error/fetchError";
 const PressAwards = ({ state, libraries }) => {
   const data = state.source.get(state.router.link);
   console.log("data is here", data);
@@ -31,20 +32,7 @@ const PressAwards = ({ state, libraries }) => {
                 return <PressArticle key={item.id} item={item} />;
               })
             ) : (
-              <Alert variant="success">
-                <Alert.Heading>No data found for this page</Alert.Heading>
-                <p>
-                  Aww yeah, you successfully read this important alert message.
-                  Please go to admin panel and create blogs for contribution
-                  category. When you will create any blog that will be render
-                  here.
-                </p>
-                <hr />
-                <p className="mb-0">
-                  Whenever you need to, be sure to use margin utilities to keep
-                  things nice and tidy.
-                </p>
-              </Alert>
+              <FetchError categoryName="Press &  Awards" />
             )}
           </Content>
         )}

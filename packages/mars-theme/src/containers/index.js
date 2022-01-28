@@ -115,7 +115,11 @@ const Index = ({ state, actions }) => {
           when={route === "/category/pressawards/page/" + wpRoute + "/"}
         />
         <Pressdetail when={route === "/pressawards/" + wpRoute + "/"} />
-        <Webinars when={route === "/category/webinars/"} />
+        <Webinars
+          when={route === "/category/webinars/"}
+          webinarsCategory={postsPerCategory}
+          data={data}
+        />
         <InterativeLearning
           when={route === "/category/interactive-learning/"}
           interactiveCategory={postsPerCategory}
