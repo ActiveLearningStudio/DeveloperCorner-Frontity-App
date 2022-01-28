@@ -3,7 +3,7 @@ import Alert from "react-bootstrap/Alert";
 const FetchError = ({ categoryName }) => {
   return (
     <Alert variant="success">
-      <Alert.Heading>No article found for this page</Alert.Heading>
+      <Alert.Heading>No Article Found For this Page</Alert.Heading>
       <p>
         Aww yeah, you successfully read this important alert message. Please go
         to admin panel and create blogs for {categoryName} category. When you

@@ -28,14 +28,14 @@ const BirdiesforEducation = ({ birdiesposts, state, libraries }) => {
               />
             </RightCol>
           </UpperRow> */}
-          <BottomRow>
-            {birdiesposts &&
-              birdiesposts.length > 0 &&
-              birdiesposts?.map((postitem) => {
-                const featuremedia =
-                  state.source.attachment[postitem?.featured_media];
-                // alert(featured_media);
-                return (
+
+          {birdiesposts && birdiesposts.length > 0 ? (
+            birdiesposts?.map((postitem) => {
+              const featuremedia =
+                state.source.attachment[postitem?.featured_media];
+              // alert(featured_media);
+              return (
+                <BottomRow>
                   <LeftCol>
                     {featuremedia && (
                       <img src={featuremedia.source_url} alt="" />
@@ -55,9 +55,60 @@ const BirdiesforEducation = ({ birdiesposts, state, libraries }) => {
                       />
                     </Paragraph>
                   </LeftCol>
-                );
-              })}
-          </BottomRow>
+                </BottomRow>
+              );
+            })
+          ) : (
+            <>
+              <UpperRow>
+                <LeftCol>
+                  <TopHeading>Birdies for Education</TopHeading>
+                  <Paragraph>
+                    Contribute through Birdies for Education – Maverick
+                    McNealy’s golf fundraiser for Curriki.
+                  </Paragraph>
+                  <Button>TAKE ME TO BIRDIES</Button>
+                </LeftCol>
+                <RightCol>
+                  <img
+                    src={BirdiesImg}
+                    className="birdiesImg"
+                    alt=""
+                    width="550px"
+                  />
+                </RightCol>{" "}
+              </UpperRow>
+              <BottomRow>
+                <LeftCol>
+                  <img src={HeartIcon} alt="" />
+                  <HeaderContent>
+                    <h6>Donate Offline</h6>
+                    <BottomLine></BottomLine>
+                  </HeaderContent>
+                  <Paragraph>
+                    <p>
+                      Send your tax-deductible contribution directly to us by
+                      mailing it to: 20660 Stevens Creek Blvd/332 Cupertino, CA
+                      95014
+                    </p>
+                  </Paragraph>
+                </LeftCol>
+                <RightCol>
+                  <img src={amazonpic} className="amazonPic" alt="" />
+                  <HeaderContent>
+                    <h6>Alternative ways to contribute</h6>
+                    <BottomLine></BottomLine>
+                  </HeaderContent>
+
+                  <Paragraph>
+                    AmazonSmile is a simple and automatic way for you to support
+                    Curriki every time you shop, at no cost to you.
+                    <Link>AmazonSmile</Link>
+                  </Paragraph>
+                </RightCol>
+              </BottomRow>
+            </>
+          )}
         </Content>
       </Container>
     </Section>

@@ -5,36 +5,58 @@ import DonorImg from "../../assets/images/ourMission/Donors3.png";
 import DonateNow from "../../components/donateModal/donateNow";
 const Donation = ({ donationposts, state, libraries }) => {
   const [modalshow, setModalShow] = useState(false);
-  const posttitle = donationposts[0]?.title;
-  const postdesc = donationposts[0]?.content;
+  const posttitle = donationposts && donationposts[0]?.title;
+  const postdesc = donationposts && donationposts[0]?.content;
   const featureimage =
-    state.source.attachment[donationposts[0]?.featured_media];
+    donationposts && state.source.attachment[donationposts[0]?.featured_media];
   const Html2React = libraries.html2react.Component;
   return (
     <Container>
       <Content>
         <LeftCol>
-          <Heading
-            dangerouslySetInnerHTML={{
-              __html: posttitle.rendered,
-            }}
-          />
-          <Innerdiv>
-            <div className="para-content">
-              {postdesc && <Html2React html={postdesc?.rendered} />}
-            </div>
-          </Innerdiv>
-          {/* <Innerdiv>
-            <div className="para-content">
-              <img src={plusicon} alt="" />
-              <div>
-                <Paragraph>If you would like to pay by credit card</Paragraph>
-              </div>
-            </div>
-          </Innerdiv> */}
-          {donationposts && (
-            <button onClick={() => setModalShow(true)}>CLICK HERE</button>
+          {posttitle ? (
+            <Heading
+              dangerouslySetInnerHTML={{
+                __html: posttitle.rendered,
+              }}
+            />
+          ) : (
+            <Heading>
+              Your donation <span>supports our non-profit mission,</span> which
+              is to bring free and open technology tools into every school,
+              college and nonprofit organization.
+            </Heading>
           )}
+          <Innerdiv>
+            {postdesc ? (
+              <div className="para-content">
+                <Html2React html={postdesc?.rendered} />
+              </div>
+            ) : (
+              <>
+                <div className="para-content">
+                  <img src={plusicon} alt="" />
+                  <div>
+                    <Paragraph>
+                      If contributing by check please send your tax exept
+                      donation ot Curriki, 20660 Stevens Creek blvd #332,
+                      Cupertino, CA 95014
+                    </Paragraph>
+                    <p>Curriki non profit taX ID#203478467</p>
+                  </div>
+                </div>
+                <div className="para-content">
+                  <img src={plusicon} alt="" />
+                  <div>
+                    <Paragraph>
+                      If you would like to pay by credit card
+                    </Paragraph>
+                  </div>
+                </div>
+              </>
+            )}
+          </Innerdiv>
+          <button onClick={() => setModalShow(true)}>CLICK HERE</button>
         </LeftCol>
         <RightCol>
           <img src={featureimage ? featureimage.source_url : DonorImg} alt="" />

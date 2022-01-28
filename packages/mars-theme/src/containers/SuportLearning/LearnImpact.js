@@ -15,8 +15,7 @@ const LearnImpact = ({ learnposts, state, libraries }) => {
           <Subheading>OUR IMPACT</Subheading>
         </HeadingContent>
         <InnerContent>
-          {learnposts &&
-            learnposts.length > 0 &&
+          {learnposts && learnposts.length > 0 ? (
             learnposts?.map((postitem) => {
               return (
                 <LeftCol>
@@ -29,17 +28,31 @@ const LearnImpact = ({ learnposts, state, libraries }) => {
                   <Button>See public jira roadmap</Button>
                 </LeftCol>
               );
-            })}
-          {/* <RightCol>
-            <Colheading>See the impact we make</Colheading>
-            <Paragraph>
-              We’re proud of the impact we’ve made in education but we’re only
-              doing so because of our great partners. Check out our reference
-              implementations to see how Curriki and our suite of tools are
-              driving innovation in education.
-            </Paragraph>
-            <Button>Success stories</Button>
-          </RightCol> */}
+            })
+          ) : (
+            <>
+              <RightCol>
+                <Colheading>Curriki suites release notes</Colheading>
+                <Paragraph>
+                  Curious as to what we’ve already built, how we are building
+                  it, and what is next? Our publish product roadmap and
+                  documentation provides our planned path towards what our team
+                  is working on and the value it brings to education.
+                </Paragraph>
+                <Button>See public jira roadmap</Button>
+              </RightCol>
+              <RightCol>
+                <Colheading>See the impact we make</Colheading>
+                <Paragraph>
+                  We’re proud of the impact we’ve made in education but we’re
+                  only doing so because of our great partners. Check out our
+                  reference implementations to see how Curriki and our suite of
+                  tools are driving innovation in education.
+                </Paragraph>
+                <Button>Success stories</Button>
+              </RightCol>
+            </>
+          )}
         </InnerContent>
       </Content>
     </Container>
@@ -127,7 +140,15 @@ const RightCol = styled.div`
     margin-left: 30px;
   }
 `;
-const Paragraph = styled.p``;
+const Paragraph = styled.p`
+  max-width: 500px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  color: #515151;
+  margin-bottom: 50px;
+`;
 const Button = styled.button`
   padding: 8px 80px;
   background: #084892;
