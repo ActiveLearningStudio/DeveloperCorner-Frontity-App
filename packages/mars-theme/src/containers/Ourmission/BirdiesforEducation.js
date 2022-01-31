@@ -5,7 +5,6 @@ import HeartIcon from "../../assets/images/ourMission/heart1.svg";
 import amazonpic from "../../assets/images/amazonpic.png";
 const BirdiesforEducation = ({ birdiesposts, state, libraries }) => {
   const Html2React = libraries.html2react.Component;
-  console.log("birdies", birdiesposts);
   return (
     <Section>
       <Container>

@@ -67,7 +67,10 @@ const Blogdetail = ({ state, actions, libraries }) => {
         <DescriptionContent>
           <Description>
             {post.content ? (
-              <Html2React html={post.content.rendered} />
+              <>
+                <Html2React html={post.content.rendered} />
+                <button className="link-btn">Get CurrikiStudio for FREE</button>
+              </>
             ) : (
               <p>Details are not avaialable for this post</p>
             )}
@@ -223,6 +226,8 @@ const Description = styled.div`
   button.link-btn {
     width: 301px;
     height: 45px;
+    display: flex;
+    justify-content: center;
     border: none;
     font-weight: 700;
     margin-top: 35px;

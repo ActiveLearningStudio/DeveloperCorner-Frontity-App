@@ -3,7 +3,6 @@ import { styled, connect } from "frontity";
 import plusicon from "../../assets/images/PLUS.svg";
 const GetInvolved = ({ gettingInvlovedpost, state, libraries }) => {
   const Html2React = libraries.html2react.Component;
-  console.log("getting data is here", gettingInvlovedpost);
   return (
     <Container>
       <Content>

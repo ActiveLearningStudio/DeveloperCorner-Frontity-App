@@ -6,7 +6,6 @@ import tabletpic from "../../assets/images/tabletpic.svg";
 import searchpic from "../../assets/images/searchpic.svg";
 const Features = ({ featureposts, state, libraries }) => {
   const Html2React = libraries.html2react.Component;
-  console.log("features", featureposts);
   return (
     <FeatureSection>
       <StyleDiv>

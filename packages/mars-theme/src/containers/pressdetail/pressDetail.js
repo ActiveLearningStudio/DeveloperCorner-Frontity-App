@@ -145,9 +145,9 @@ const Container = styled.div`
   @media screen and (max-width: 380px) {
     padding: 0px 20px;
   }
-  img {
-    width: 100%;
-  }
+  // img {
+  //   width: 100%;
+  // }
 `;
 const BlogSection = styled.div`
   width: 100%;

@@ -14,7 +14,7 @@
 .hero-section .hero-text {
   max-width: 1440px;
   padding: 0px 170px;
-  margin:auto;
+  margin: auto;
 }
 .hero-section .hero-text h1 {
   font-style: normal;
@@ -107,7 +107,7 @@
 
 .text-section .description-contaner .description-text .description-heading h2 {
   color: #084892;
-  font-weight: 700;
+  font-weight: 500;
   font-family: "Rubik";
   font-size: 36px;
   line-height: 43px;

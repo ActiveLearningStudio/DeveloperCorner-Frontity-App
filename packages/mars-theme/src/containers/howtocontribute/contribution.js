@@ -30,7 +30,7 @@ const Contribution = ({ state, libraries }) => {
                         />
                       )}
                       {item?.excerpt && (
-                        <Paragraph
+                        <h4
                           dangerouslySetInnerHTML={{
                             __html: item.excerpt.rendered,
                           }}
@@ -136,6 +136,26 @@ const ContributeArticle = styled.div`
   @media (max-width: 600px) {
     flex-direction: column;
   }
+  .article-content {
+    h4 {
+      width: 833px;
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+      color: #515151;
+      @media (max-width: 1350px) {
+        width: 100%;
+      }
+      @media (max-width: 1024px) {
+        padding-right: 20px;
+      }
+      @media (max-width: 992px) {
+        text-align: justify;
+      }
+    }
+  }
 `;
 const Heading = styled.h3`
   font-family: "Open Sans";
@@ -144,22 +164,4 @@ const Heading = styled.h3`
   font-size: 16px;
   line-height: 22px;
   color: #084892;
-`;
-const Paragraph = styled.p`
-  width: 833px;
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 22px;
-  color: #515151;
-  @media (max-width: 1350px) {
-    width: 100%;
-  }
-  @media (max-width: 1024px) {
-    padding-right: 20px;
-  }
-  @media (max-width: 992px) {
-    text-align: justify;
-  }
 `;
