@@ -422,7 +422,7 @@
   .get-started-btn {
   background-color: #084892 !important;
   color: #fff !important;
-  border-color: #fff;
+  /* border-color: #fff; */
   font-weight: bold !important;
   height: 45px;
   width: 199px;

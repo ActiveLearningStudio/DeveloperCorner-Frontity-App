@@ -60,6 +60,11 @@
 .text-section .heading-content {
   margin-right: 20px;
 }
+@media screen and (max-width:400px) {
+  .text-section .heading-content {
+    margin-right: 0px;
+  }
+}
 .text-section .heading-contaner .is-current .heading .curriki-utility-headings {
   color: #084892 !important;
   font-weight: 700;
