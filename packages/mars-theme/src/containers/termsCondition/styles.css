@@ -16,7 +16,7 @@
 }
 @media screen and (max-width: 991px) {
   .text-section .heading-content {
-   margin-right: 20px;
+    margin-right: 20px;
   }
 }
 .hero-section .hero-text {
@@ -131,7 +131,7 @@
 }
 .text-section .description-contaner .description-text .description-heading h2 {
   color: rgb(8, 72, 146);
-  font-weight: bold;
+  font-weight: 500;
   font-family: "Rubik";
   line-height: normal;
   font-style: normal;
@@ -148,13 +148,13 @@
 .text-section .description-contaner .description-text .sub-heading-content {
   display: flex;
 }
-.text-section .description-contaner .description-text a.link-creative  {
- color:#515151;
+.text-section .description-contaner .description-text a.link-creative {
+  color: #515151;
 }
 @media screen and (max-width: 500px) {
-.text-section .description-contaner .description-text a.link-creative {
-  display:none;
-}
+  .text-section .description-contaner .description-text a.link-creative {
+    display: none;
+  }
 }
 .text-section
   .description-contaner

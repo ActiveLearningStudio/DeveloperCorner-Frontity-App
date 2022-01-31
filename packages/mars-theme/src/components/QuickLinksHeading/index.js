@@ -141,8 +141,8 @@ const Link = styled.a`
   }
 `;
 const HeadingBar = styled.div`
-  width: 1008px;
   max-width: 1008px;
+  // width: 1008px;
   justify-content: space-between;
   display: flex;
   align-items: center;

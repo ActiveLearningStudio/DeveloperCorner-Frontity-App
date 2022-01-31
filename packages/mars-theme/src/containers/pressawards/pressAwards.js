@@ -8,7 +8,6 @@ import Loading from "../../components/loading/loading";
 import FetchError from "../../components/error/fetchError";
 const PressAwards = ({ state, libraries }) => {
   const data = state.source.get(state.router.link);
-  console.log("data is here", data);
   const Html2React = libraries.html2react.Component;
   const [activePage, setactivePage] = useState(1);
   function handlepagechange() {
