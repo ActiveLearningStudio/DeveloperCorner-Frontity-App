@@ -6,7 +6,6 @@ import image2 from "../../assets/images/image2.png";
 import Arrow from "../../assets/images/Arrow.svg";
 import laopera from "../../assets/images/laopera.png";
 const Courses = ({ state, exampleCoursesposts }) => {
-  console.log("courses", exampleCoursesposts);
   return (
     <Section>
       <Container>
