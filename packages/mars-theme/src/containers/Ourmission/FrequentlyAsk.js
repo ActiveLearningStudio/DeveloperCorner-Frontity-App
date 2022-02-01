@@ -169,6 +169,7 @@ const Content = styled.div`
           box-shadow: 0px 10px 20px -5px rgba(8, 72, 146, 0.35) !important;
           background: linear-gradient(0deg, #084892, #084892) !important;
           border-radius: 5px !important;
+          color: #fff;
           h4{
             color: #fff;
           }
