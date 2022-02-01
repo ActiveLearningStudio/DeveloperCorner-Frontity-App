@@ -137,7 +137,6 @@ const InnerDiv = styled.div`
     margin-bottom: 10px;
   }
   p {
-    font-family: Open Sans;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -173,7 +172,7 @@ const FormDiv = styled.div`
       background: #084892;
       border: 1px solid #084892;
       color: #fff;
-      font-family: rubic;
+      font-family: "Rubik";
       box-shadow: 0px 10px 20px -5px rgba (8, 72, 146, 0.35);
       border-radius: 25px;
       margin-bottom: 4rem;

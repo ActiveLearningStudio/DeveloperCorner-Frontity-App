@@ -127,6 +127,7 @@ const LeftCol = styled.div`
   p {
     max-width: 500px;
     font-style: normal;
+    font-family: "Open Sans";
     font-weight: normal;
     font-size: 18px;
     line-height: 25px;

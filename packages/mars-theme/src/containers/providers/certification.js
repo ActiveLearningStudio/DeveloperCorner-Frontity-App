@@ -273,13 +273,11 @@ const Cardbody = styled.div`
         width: 12px;
         height: 12px;
       }
-      p {
-        margin-left: 10px;
-        font-family: Open Sans;
-        color: #515151;
-        margin-left: 20px;
-        margin-bottom: 0px !important;
-      }
+    }
+    p {
+      font-family: "Open Sans";
+      color: #515151;
+      margin: 0px 0px 0px 20px !important;
     }
   }
 `;

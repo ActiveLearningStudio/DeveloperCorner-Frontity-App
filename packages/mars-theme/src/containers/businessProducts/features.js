@@ -160,7 +160,6 @@ const OuterDiv = styled.div`
       color: #084892;
     }
     p {
-      font-family: Open Sans;
       font-style: normal;
       font-weight: normal;
       font-size: 16px;

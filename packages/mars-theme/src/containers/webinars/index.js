@@ -293,6 +293,9 @@ const Content = styled.div`
 `;
 const LeftCol = styled.div`
   width: 100%;
+  p {
+    color: #515151;
+  }
 `;
 const RightCol = styled.div`
   @media screen and (max-width: 991px) {
