@@ -5,9 +5,7 @@ import Paginate from "../../components/pagination/pagination";
 import Loading from "../../components/loading/loading";
 import FetchError from "../../components/error/fetchError";
 import StoryCard from "./storyCard";
-const SuccessStories = ({ state, libraries }) => {
-  const data = state.source.get(state.router.link);
-  console.log("data", data);
+const SuccessStories = ({ data, state, libraries }) => {
   const Html2React = libraries.html2react.Component;
   return (
     <Section>

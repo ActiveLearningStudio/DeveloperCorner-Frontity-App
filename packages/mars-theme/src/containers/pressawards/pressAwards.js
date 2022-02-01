@@ -1,5 +1,5 @@
 import { React, useState } from "react";
-import { styled, connect } from "frontity";
+import { styled, connect, decode } from "frontity";
 import Alert from "react-bootstrap/Alert";
 import Paginate from "../../components/pagination/pagination";
 import Banner from "../../components/banner/Styledbanner";
@@ -8,6 +8,8 @@ import Loading from "../../components/loading/loading";
 import FetchError from "../../components/error/fetchError";
 const PressAwards = ({ state, libraries }) => {
   const data = state.source.get(state.router.link);
+  const categoryName =
+    data.isTaxonomy && decode(state.source[data.taxonomy][data.id].name);
   const Html2React = libraries.html2react.Component;
   const [activePage, setactivePage] = useState(1);
   function handlepagechange() {
@@ -19,7 +21,7 @@ const PressAwards = ({ state, libraries }) => {
   }
   return (
     <div>
-      <Banner title="Press & Awards" />
+      <Banner title={data.isTaxonomy ? categoryName : "Press & Awards"} />
       <Container>
         <Heading>Press Releases</Heading>
         {data.isFetching && <Loading />}

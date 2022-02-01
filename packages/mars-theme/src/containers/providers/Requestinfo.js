@@ -42,7 +42,7 @@ const Requestinfo = ({ requestedinfoposts, state, libraries }) => {
               </p>
             )}
 
-            {requestedinfoposts && <button>REQUEST MORE INFORMATION</button>}
+            <button>REQUEST MORE INFORMATION</button>
           </Leftcol>
           <Rightcol>
             <img
