@@ -1,5 +1,5 @@
 import React from "react";
-import { Global, css, connect } from "frontity";
+import { Global, css, connect, decode } from "frontity";
 import Banner from "../../components/banner/Styledbanner";
 import Loading from "../../components/loading/loading";
 import HeadingPage from "./heading";
@@ -10,10 +10,16 @@ import FetchError from "../../components/error/fetchError";
 import ServerError from "../../components/error/server";
 const Index = ({ state }) => {
   const data = state.source.get(state.router.link);
+  const categoryName =
+    data.isTaxonomy && decode(state.source[data.taxonomy][data.id].name);
   return (
     <>
       <Global styles={css(externalCss)} />
-      <Banner title="Deploying the Curriki Platform" />
+      <Banner
+        title={
+          data.isTaxonomy ? categoryName : "Deploying the Curriki Platform"
+        }
+      />
       {data.isFetching && <Loading />}
       {!data.isFetching && (
         <div className="text-section">

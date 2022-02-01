@@ -1,5 +1,5 @@
 import React from "react";
-import { Global, css, connect } from "frontity";
+import { Global, css, connect, decode } from "frontity";
 import Alert from "react-bootstrap/Alert";
 import Banner from "../../components/banner/Styledbanner";
 import Loading from "../../components/loading/loading";
@@ -11,10 +11,12 @@ import Scrollspy from "react-scrollspy";
 import externalCss from "./style.css";
 const Index = ({ state }) => {
   const data = state.source.get(state.router.link);
+  const categoryName =
+    data.isTaxonomy && decode(state.source[data.taxonomy][data.id].name);
   return (
     <>
       <Global styles={css(externalCss)} />
-      <Banner title="Database Schema" />
+      <Banner title={data.isTaxonomy ? categoryName : "Database Schema"} />
       {data.isFetching && <Loading />}
       {!data.isFetching && (
         <div className="text-section">

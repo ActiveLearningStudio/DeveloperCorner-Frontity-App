@@ -8,11 +8,9 @@ import FetchError from "../../components/error/fetchError";
 // import history from "../../../src/history";
 import arrow from "../../assets/images/yellow-arrow.png";
 import press13 from "../../assets/images/press13.png";
-import { parse } from "himalaya";
-const PressReleases = ({ state, libraries }) => {
+// import { parse } from "himalaya";
+const PressReleases = ({ data, state, libraries }) => {
   const [activePage, setactivePage] = useState(1);
-  const data = state.source.get(state.router.link);
-  console.log("posts", data);
   const Html2React = libraries.html2react.Component;
 
   return (
