@@ -97,7 +97,7 @@ const Leftcol = styled.div`
     margin-bottom: 1rem;
   }
   p {
-    font-family: Open Sans;
+    font-family: "Open Sans";
     font-style: normal;
     font-weight: normal;
     font-size: 18px;

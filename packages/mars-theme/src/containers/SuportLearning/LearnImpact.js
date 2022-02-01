@@ -123,6 +123,7 @@ const LeftCol = styled.div`
     max-width: 500px;
     font-style: normal;
     font-weight: normal;
+    font-family: "Open Sans";
     font-size: 18px;
     line-height: 25px;
     color: #515151;

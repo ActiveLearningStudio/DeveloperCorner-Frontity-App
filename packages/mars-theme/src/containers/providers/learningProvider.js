@@ -166,7 +166,7 @@ const Container = styled.div`
 const Heading = styled.h2`
   color: #084892;
   margin: 70px 0px;
-  font-family: Rubic;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-size: 36px;
@@ -202,7 +202,7 @@ const LeftCol = styled.div`
   }
 `;
 const Paragraph = styled.p`
-  font-family: Rubic;
+  font-family: "Rubik";
   font-style: normal;
   font-size: 18px;
   line-height: 21px;
@@ -213,7 +213,6 @@ const Paragraph = styled.p`
 const RightCol = styled.div`
   margin-left: 20px;
   p {
-    font-family: Open Sans;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;

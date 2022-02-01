@@ -158,7 +158,7 @@ const ContributeArticle = styled.div`
   }
 `;
 const Heading = styled.h3`
-  font-family: "Open Sans";
+  font-family: "Rubik";
   font-style: normal;
   font-weight: normal;
   font-size: 16px;

@@ -194,6 +194,8 @@ const RightCol = styled.div`
     color: #084892;
   }
   p {
+    color: #515151;
+    font-family: "Open Sans";
     img {
       width: 12px;
       hight: 12px;
