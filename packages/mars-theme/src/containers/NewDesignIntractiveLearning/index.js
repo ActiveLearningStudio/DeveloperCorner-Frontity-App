@@ -28,7 +28,7 @@ const Index = ({ interactiveCategory, data }) => {
   return (
     <>
       <Global styles={css(ExternalCss)} />
-      {data && data.isFetching && <Loading />}
+      <div className="container">{data && data.isFetching && <Loading />}</div>
       {data.isReady && (
         <div className="main-area">
           {/* <div

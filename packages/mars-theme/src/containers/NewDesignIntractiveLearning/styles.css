@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+.container{
+  max-width: 970px;
+  margin: 0px auto;
+}
 .main-area .heroSection {
   background-image: url("../../assets/images/hero-section.png");
   background-repeat: no-repeat;
@@ -285,6 +289,11 @@
     padding-right: 10px;
   }
 }
+@media screen and (max-width: 400px) {
+  .main-area .techSection {
+   padding: 0px;
+  }
+}
 .main-area .techSection .tech-heading {
   display: flex;
   align-items: baseline;
@@ -375,7 +384,7 @@
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
-  width: 280px;
+  max-width: 280px;
   line-height: 21px;
   color: #515151;
 }
@@ -452,11 +461,11 @@
   .get-started-content
   .get-started
   .get-started-btn {
-    background: #084892;
-    box-shadow: 0px 10px 20px -5px rgba(8, 72, 146, 0.35);
-    border-radius: 25px;
+  background: #084892;
+  box-shadow: 0px 10px 20px -5px rgba(8, 72, 146, 0.35);
+  border-radius: 25px;
   color: #fff !important;
-  border-color: #fff;
+  border:none;
   text-transform: uppercase;
   font-weight: bold !important;
   height: 45px;
