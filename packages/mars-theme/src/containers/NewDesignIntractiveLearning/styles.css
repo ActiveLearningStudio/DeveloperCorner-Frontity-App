@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
-.container{
-  max-width: 970px;
+.contaner{
+  width: 750px;
   margin: 0px auto;
 }
 .main-area .heroSection {
@@ -47,6 +47,11 @@
 }
 .main-area .api-section {
   margin-top: 23px;
+}
+@media screen and (max-width: 1024px) {
+  .main-area .api-section{
+   padding: 0px 40px;
+  }
 }
 @media screen and (max-width: 768px) {
   .main-area .api-section{
@@ -111,7 +116,7 @@
 }
 @media screen and (max-width: 768px) {
   .main-area .api-section .api-content .api-content-detail h3 {
-    max-width: 100%;
+    width: 100%;
   }
 }
 .main-area .api-section .api-content .api-content-detail p {
@@ -125,7 +130,7 @@
 }
 @media screen and (max-width: 768px) {
   .main-area .api-section .api-content .api-content-detail p {
-    max-width: 100%;
+    width: 100%;
   }
 }
 .main-area .api-section .api-content .api-content-detail a {
@@ -281,7 +286,12 @@
   color: #fff;
 }
 .main-area .techSection {
- max-width:800px;
+ max-width: 1008px;
+}
+@media screen and (max-width: 1024px) {
+  .main-area .techSection {
+   padding: 0px 16px;
+  }
 }
 @media screen and (max-width: 767px) {
   .main-area .techSection {
@@ -423,6 +433,11 @@
   /* background-image: url("../../assets/images/Rectangle21.svg"); */
   background-size: cover;
   background-repeat: no-repeat;
+}
+@media screen and (max-width: 1024px) {
+  .main-area .developer-get-started {
+   padding: 0px 40px;
+  }
 }
 @media screen and (max-width: 768px) {
   .main-area .developer-get-started {

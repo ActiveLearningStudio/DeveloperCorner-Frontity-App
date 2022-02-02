@@ -40,7 +40,7 @@ const Container = styled.div`
     padding:0px 40px;
   }
   .page-wrapper {
-    max-width: 970px;
+    max-width: 1090px;
     padding: 60px;
     @media screen and (max-width: 1200px) {
       max-width: 830px;
