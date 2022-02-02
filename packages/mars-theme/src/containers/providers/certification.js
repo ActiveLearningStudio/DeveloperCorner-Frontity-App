@@ -221,6 +221,10 @@ const Content = styled.div`
   .card-content {
     display: flex;
     align-items: baseline;
+    @media screen and (max-width: 500px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   @media screen and (max-width: 768px) {
     padding: 0px;
@@ -234,6 +238,9 @@ const Card = styled.div`
   @media screen and (max-width: 768px) {
     margin-bottom: 40px;
     align-items: end;
+  }
+  @media screen and (max-width: 500px) {
+    align-items: center;
   }
 `;
 const ImageDiv = styled.div`
@@ -265,19 +272,18 @@ const Cardbody = styled.div`
     text-transform: uppercase;
   }
   div {
-    .card-list-item {
-      margin: 0px;
-      display: flex;
-      align-items: baseline;
-      img {
-        width: 12px;
-        height: 12px;
-      }
-    }
     p {
       font-family: "Open Sans";
       color: #515151;
       margin: 0px 0px 0px 20px !important;
+      .card-list-item {
+        margin: 0px;
+        display: flex;
+        align-items: baseline;
+      }
+      img {
+        width: 12px;
+      }
     }
   }
 `;

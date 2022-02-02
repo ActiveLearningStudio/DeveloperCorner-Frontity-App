@@ -97,10 +97,10 @@ const FeatureSection = styled.div`
     height: 1260px;
   }
   @media screen and (max-width: 520px) {
-    height: 1400px;
+    height: 1550px;
   }
   @media screen and (max-width: 380px) {
-    height: 1620px;
+    height: 1680px;
   }
 `;
 const Container = styled.div`
@@ -127,7 +127,7 @@ const StyleDiv = styled.div`
     top: -125px;
   }
   @media screen and (max-width: 380px) {
-    top: -180px;
+    top: -70px;
   }
 `;
 const StyleFeature = styled.div`
@@ -136,7 +136,7 @@ const StyleFeature = styled.div`
     margin-top: 140px;
   }
   @media screen and (max-width: 380px) {
-    margin-top: 200233px;
+    margin-top: 20px;
   }
 `;
 const OuterDiv = styled.div`
