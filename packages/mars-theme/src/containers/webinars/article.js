@@ -1,32 +1,43 @@
 import React from "react";
 import { styled, css, connect } from "frontity";
+import Alert from "react-bootstrap/Alert";
+import Loading from "../../components/loading/loading";
 import arrowIcon from "../../assets/images/yellow-arrow.png";
 import webinar2 from "../../assets/images/webinars/web2.png";
 import playIcon from "../../assets/images/play.png";
 const WebinarArticle = ({ state, postitem }) => {
+  const media = state.source.attachment[postitem.featured_media];
+  const date = new Date(postitem.date);
+  const routerlink = postitem.link;
+
   return (
     <Card>
-      <CardHead
-      // css={css`
-      //   background: linear-gradient(
-      //       0deg,
-      //       rgba(40, 90, 165, 0.75),
-      //       rgba(40, 90, 165, 0.75)
-      //     ),
-      //     url("${webinar2}");
-      // `}
-      >
-        <div dangerouslySetInnerHTML={{ __html: postitem.content.rendered }}>
-          {/* <img src={playIcon} alt="" /> */}
-        </div>
-      </CardHead>
+      {media && (
+        <CardHead
+          css={css`
+            background: linear-gradient(
+                0deg,
+                rgba(40, 90, 165, 0.75),
+                rgba(40, 90, 165, 0.75)
+              ),
+              url("${media.source_url}");
+          `}
+        >
+          <div>
+            <img src={playIcon} alt="" />
+          </div>
+        </CardHead>
+      )}
       <div className="card-inner-content">
         {postitem.excerpt && (
           <CardHeading
-            dangerouslySetInnerHTML={{ __html: postitem.excerpt.rendered }}
+            dangerouslySetInnerHTML={{
+              __html: postitem.excerpt.rendered,
+            }}
           />
         )}
-        <CardPara>{postitem.date}</CardPara>
+
+        <CardPara>{date.toDateString()}</CardPara>
         <CardBottom>
           <a href="#">Watch webinar now</a>
           <img src={arrowIcon} alt="" />
@@ -36,7 +47,7 @@ const WebinarArticle = ({ state, postitem }) => {
   );
 };
 
-export default WebinarArticle;
+export default connect(WebinarArticle);
 
 const Card = styled.div`
   display: flex;
@@ -63,20 +74,8 @@ const CardHead = styled.div`
   background-repeat: no-repeat;
   background-size: cover !important;
   div {
-    max-width: 273px;
     text-align: center;
-    figure {
-      video {
-        width: 100%;
-        height: 200px;
-      }
-      div {
-        iframe {
-          width: 100%;
-          height: 200px;
-        }
-      }
-    }
+    padding-top: 62px;
   }
   @media screen and (max-width: 1024px) {
     width: 100%;

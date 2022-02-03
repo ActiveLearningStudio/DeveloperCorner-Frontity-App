@@ -500,7 +500,7 @@ const Card = styled.div`
   p {
     font-style: normal;
     font-weight: normal;
-    font-family: "Open-Sans";
+    font-family: "Open Sans";
     font-size: 18px;
     line-height: 25px;
     color: #515151;
