@@ -20,7 +20,7 @@ export default Banner;
 const Container = styled.div`
   max-width: 1440px;
   padding: 0px 146px;
-  margin:auto;
+  margin: auto;
   @media screen and (max-width: 1200px) {
     padding: 0px 100px;
   }
@@ -58,7 +58,8 @@ const ParaContent = styled.div`
 const Paragraph = styled.p`
   font-style: normal;
   font-weight: 300;
-  font-size: 25px;
-  line-height: 29px;
+  max-width: 726px;
+  font-size: 18px;
+  line-height: 21px;
   color: #ffffff;
 `;

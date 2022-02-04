@@ -154,14 +154,14 @@ const OuterDiv = styled.div`
     h2 {
       font-family: Rubik;
       font-style: normal;
-      font-weight: bold;
+      font-weight: 500;
       font-size: 25px;
       line-height: 30px;
       color: #084892;
     }
     p {
       font-style: normal;
-      font-weight: normal;
+      font-weight: 400;
       font-size: 16px;
       line-height: 22px;
       color: #515151;

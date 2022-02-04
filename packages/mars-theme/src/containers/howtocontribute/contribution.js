@@ -141,7 +141,7 @@ const ContributeArticle = styled.div`
       width: 833px;
       font-family: "Open Sans";
       font-style: normal;
-      font-weight: normal;
+      font-weight: 400;
       font-size: 16px;
       line-height: 22px;
       color: #515151;
@@ -160,7 +160,7 @@ const ContributeArticle = styled.div`
 const Heading = styled.h3`
   font-family: "Rubik";
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 16px;
   line-height: 22px;
   color: #084892;

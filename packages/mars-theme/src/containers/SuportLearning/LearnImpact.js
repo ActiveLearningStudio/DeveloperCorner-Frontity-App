@@ -85,7 +85,7 @@ const Topheading = styled.div`
 `;
 const Heading = styled.h3`
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 32px;
   line-height: 38px;
   color: #084892;
@@ -96,8 +96,8 @@ const Heading = styled.h3`
 const Subheading = styled.span`
   font-family: "Rubik";
   font-style: normal;
-  font-weight: 500;
-  font-size: 32px;
+  font-weight: 300;
+  font-size: 25px;
   line-height: 38px;
   color: #084892;
 `;
@@ -151,18 +151,18 @@ const Paragraph = styled.p`
   margin-bottom: 50px;
 `;
 const Button = styled.button`
-  padding: 8px 80px;
+  padding: 13px 45px;
   background: #084892;
   box-shadow: 0px 10px 20px -5px rgb(8 72 146 / 35%);
   border-radius: 25px;
-  font-weight: bold;
+  font-weight: 700;
   color: #fff;
   border: 1px solid #084892;
   text-transform: uppercase;
   @media screen and (max-width: 768px) {
-    padding: 8px 60px;
+    padding: 13px 35px;
   }
   @media screen and (max-width: 576px) {
-    padding: 8px 40px;
+    padding: 13px 25px;
   }
 `;

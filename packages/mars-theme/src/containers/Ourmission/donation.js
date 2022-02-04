@@ -132,8 +132,11 @@ const Innerdiv = styled.div`
     }
   }
   p {
-    // margin-left: 38px;
     font-family: "Open Sans";
+    color: #515151;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
   }
 `;
 const Heading = styled.h2`

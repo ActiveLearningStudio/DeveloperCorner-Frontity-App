@@ -190,14 +190,13 @@ const Content = styled.div`
         }
       }
       .accordion-body {
-        .item-para {
+          p {
           font-family: 'Open Sans';
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 22px;
-
-color: #515151;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 22px;
+          color: #515151;
         }
       }
     }
@@ -222,8 +221,8 @@ const Heading = styled.h2`
   font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
-  font-size: 40px;
-  line-height: 58px;
+  font-size: 32px;
+  line-height: 38px;
   color: #084892;
 `;
 const BottomLine = styled.div`

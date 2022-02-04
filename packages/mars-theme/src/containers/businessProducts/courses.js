@@ -133,11 +133,14 @@ const Card = styled.div`
   justify-content: space-between;
   h3 {
     color: #084892;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.33px;
   }
   h5 {
     font-family: Open Sans;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 16px;
     line-height: 22px;
     color: #515151;
