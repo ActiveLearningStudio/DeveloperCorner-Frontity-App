@@ -49,20 +49,25 @@ a {
 `;
 const Index = ({ state, actions }) => {
   var wpRoute = "";
+  var routewithoutint = "";
+  const splitafterint = /\d+/g;
   const data = state.source.get(state.router.link);
   const source_address = state.source.url;
   // Get the total posts to be displayed based for the current link
   const postsPerCategory = getPostsGroupedByCategory(state.source);
   const { next, previous } = state.source.get(state.router.link);
-  if (data.isPostType) {
-    wpRoute = data.route.replace(/[^\d.]/g, "");
-    // alert(wpRoute);
-  }
+  let route = state.router.link;
+  route = route.split("#")[0];
   if (data.isTaxonomy) {
     wpRoute = data.link.replace(/[^\d.]/g, "");
   }
-  let route = state.router.link;
-  route = route.split("#")[0];
+  if (data.isPostType) {
+    routewithoutint = data.link.split(splitafterint)[0];
+    wpRoute = data.route.replace(/[^\d.]/g, "");
+    console.log("withno digits", routewithoutint);
+    route = route.split(splitafterint)[0];
+    route = route + wpRoute + "/";
+  }
   return (
     <>
       <Globalstyle />
