@@ -69,6 +69,7 @@ const Article = styled.div`
 const BlogHeading = styled.div`
   p {
     width: 220px;
+    font-family: "Rubik";
     font-style: normal;
     font-weight: 500;
     font-size: 18px;

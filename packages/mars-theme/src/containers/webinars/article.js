@@ -82,15 +82,16 @@ const CardHead = styled.div`
   }
 `;
 const CardHeading = styled.h5`
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-  color: #084892;
-  margin-top: 20px;
-  // width: 220px;
-  height: 84px;
-  margin-bottom: 10px;
+  p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #084892;
+    margin-top: 20px;
+    height: 84px;
+    margin-bottom: 10px;
+  }
 `;
 const CardPara = styled.p`
   font-style: normal;
