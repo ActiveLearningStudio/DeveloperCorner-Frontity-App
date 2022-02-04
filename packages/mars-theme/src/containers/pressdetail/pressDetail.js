@@ -10,6 +10,7 @@ import pressBackground from "../../assets/images/pressBackground.png";
 import arrowicon from "../../assets/images/yellow-arrow.png";
 const PressDetail = ({ state, libraries }) => {
   const RecentPosts = state.source.get("/category/pressawards/");
+  console.log("recent posts", RecentPosts);
   const data = state.source.get(state.router.link);
   const post = state.source[data.type][data.id];
   const featuredmedia = state.source.attachment[post.featured_media];
@@ -72,29 +73,18 @@ const PressDetail = ({ state, libraries }) => {
             <RecentPost>
               <div className="recent-post-content">
                 <h2>Recent Posts</h2>
-                {RecentPosts.items.map(({ type, id }) => {
-                  const item = state.source[type][id];
-                  return (
-                    <div className="recent-post-detail">
-                      <Linked link={item.link}>
-                        <p
-                          dangerouslySetInnerHTML={{
-                            __html: item.excerpt.rendered,
-                          }}
-                        />
-                      </Linked>
-                      <div className="article-link">
-                        <Linked link={item.link}>
-                          <a>Read article</a>
-                        </Linked>
-                        <Linked link={item.link}>
-                          <img src={arrowicon} alt="" />
-                        </Linked>
-                      </div>
-                    </div>
-                  );
-                })}
-                {/* <div className="recent-post-detail">
+                <div className="recent-post-detail">
+                  <p>
+                    “How to Become an Entrepreneur” is Now Available Online as
+                    the First Higher Education Course Designed with
+                    CurrikiStudio
+                  </p>
+                  <div className="article-link">
+                    <a>Read article</a>
+                    <img src={arrowicon} alt="" />
+                  </div>
+                </div>
+                <div className="recent-post-detail">
                   <p>
                     Curriki Answers the Call from School Districts,
                     Universities, and Nonprofits―Launches CurrikiStudio AWS
@@ -104,7 +94,38 @@ const PressDetail = ({ state, libraries }) => {
                     <a>Read article</a>
                     <img src={arrowicon} alt="" />
                   </div>
-                </div> */}
+                </div>
+                <div className="recent-post-detail">
+                  <p>
+                    Curriki® Delivers Game-Changing Functionality and Access to
+                    its Free Interactive Authoring Tool, CurrikiStudio, with
+                    Support from Linode
+                  </p>
+                  <div className="article-link">
+                    <a>Read article</a>
+                    <img src={arrowicon} alt="" />
+                  </div>
+                </div>
+                <div className="recent-post-detail">
+                  <p>
+                    Curriki® Unveils Multi - platform Publishing for
+                    CurrikiStudio
+                  </p>
+                  <div className="article-link">
+                    <a>Read article</a>
+                    <img src={arrowicon} alt="" />
+                  </div>
+                </div>
+                <div className="recent-post-detail">
+                  <p>
+                    Curriki Launches CurrikiStudio to Fast-track Digital Content
+                    Authoring and Delivery for Distance Learning
+                  </p>
+                  <div className="article-link">
+                    <a>Read article</a>
+                    <img src={arrowicon} alt="" />
+                  </div>
+                </div>
               </div>
               <div className="archives-heading">
                 <h4>archives</h4>
