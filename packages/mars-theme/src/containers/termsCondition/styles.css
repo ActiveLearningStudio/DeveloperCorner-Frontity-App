@@ -72,13 +72,12 @@
   font-weight: 700;
 }
 .text-section .heading-contaner .heading p {
-  color: rgb(118, 118, 118);
+  color: #767676;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 22px;
 }
-
 .text-section .heading-contaner .heading .heading-text {
   margin-left: 20px;
   max-width: 250px;
@@ -87,7 +86,7 @@
   color: #084892 !important;
   font-family: "Rubik";
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 22px;
 }
 .text-section .heading-contaner .heading {

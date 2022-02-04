@@ -38,7 +38,7 @@ const Globalstyle = createGlobalStyle`
     font-family:'Rubik',sans-serif;
 }
 p {
-  font-family:'Open-Sans',sans-serif;
+  font-family:'Open Sans',sans-serif;
 }
 button {
   font-family:'Rubik',sans-serif;
