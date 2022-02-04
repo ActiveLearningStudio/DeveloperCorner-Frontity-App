@@ -29,6 +29,7 @@ const LearningProvider = ({ learningposts, state, libraries }) => {
                     dangerouslySetInnerHTML={{
                       __html: postitem.title.rendered,
                     }}
+                    className="sub-head"
                   />
                   <Html2React html={postitem.content.rendered} />
                 </RightCol>
@@ -43,7 +44,7 @@ const LearningProvider = ({ learningposts, state, libraries }) => {
               </LeftCol>
               <RightCol>
                 <Paragraph>
-                  <b>ArticialChart</b>
+                  <b className="sub-head">ArticialChart</b>
                 </Paragraph>
                 <p>ArticialChart</p>
                 <p>
@@ -67,7 +68,7 @@ const LearningProvider = ({ learningposts, state, libraries }) => {
               </LeftCol>
               <RightCol>
                 <Paragraph>
-                  <b>Framework</b>
+                  <b className="sub-head">Framework</b>
                 </Paragraph>
                 <p>
                   Framework Development Group (Framework) is an Education
@@ -97,8 +98,8 @@ const LearningProvider = ({ learningposts, state, libraries }) => {
                 <img src={idesignpic} alt="" />
               </LeftCol>
               <RightCol>
-                <Paragraph>
-                  <b>iDesign</b>
+                <Paragraph className="sub-head">
+                  <b className="sub-head">iDesign</b>
                 </Paragraph>
                 <p>
                   iDesign helps colleges and universities harness the potential
@@ -120,7 +121,7 @@ const LearningProvider = ({ learningposts, state, libraries }) => {
                 <img src={xconnect} alt="" />
               </LeftCol>
               <RightCol>
-                <Paragraph>
+                <Paragraph className="sub-head">
                   <b>Connected Life Solutions</b>
                 </Paragraph>
                 <p>
@@ -153,7 +154,7 @@ export default connect(LearningProvider);
 
 const Section = styled.div``;
 const Container = styled.div`
-  max-width: 1440px;
+  max-width: 1440px;className="sub-head"
   padding: 0px 146px;
   margin: auto;
   @media screen and (max-width: 1200px) {
@@ -209,9 +210,13 @@ const Paragraph = styled.p`
   color: #515151;
   margin-bottom: 18px !important;
   font-weight: 700;
+  .sub-head {
+    font-size: 18px;
+  }
 `;
 const RightCol = styled.div`
   margin-left: 20px;
+
   p {
     font-style: normal;
     font-weight: normal;
@@ -219,6 +224,10 @@ const RightCol = styled.div`
     line-height: 19px;
     color: #515151;
     margin: 0px;
+  }
+  .sub-head {
+    font-size: 16px;
+    font-weight: 700;
   }
   a {
     color: #084892;
