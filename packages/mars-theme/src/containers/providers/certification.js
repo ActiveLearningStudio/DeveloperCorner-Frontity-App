@@ -209,7 +209,7 @@ const Heading = styled.div`
     color: #084892;
     font-family: Rubik;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 32px;
     line-height: 38px;
     color: #084892;
@@ -256,10 +256,11 @@ const ImageDiv = styled.div`
     }
 `;
 const Span = styled.span`
-  color: rgb(255, 177, 36);
+  color: #f8af2c;
   font-size: 100px;
-  font-weight: bold;
+  font-weight: 700;
   margin-right: 30px;
+  line-height: 136px;
 `;
 const Cardbody = styled.div`
   h3 {

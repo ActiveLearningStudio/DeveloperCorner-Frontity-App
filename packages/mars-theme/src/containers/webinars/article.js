@@ -95,7 +95,7 @@ const CardHeading = styled.h5`
 const CardPara = styled.p`
   font-style: normal;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 30px;
   color: #515151;
 `;

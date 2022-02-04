@@ -107,12 +107,13 @@ const Leftcol = styled.div`
   button {
     width: 359px;
     height: 38px;
+    padding: 11px 45px;
     background: #084892;
     box-shadow: 0px 10px 20px -5px rgba(8, 72, 146, 0.35);
     border-radius: 25px;
     font-family: Rubik;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 18px;
     line-height: 21px;
     border: none;

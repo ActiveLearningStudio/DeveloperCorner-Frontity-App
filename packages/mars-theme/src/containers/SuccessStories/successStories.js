@@ -10,7 +10,7 @@ const SuccessStories = ({ data, state, libraries }) => {
   return (
     <Section>
       <Container>
-        <Headercontainer>
+        {/* <Headercontainer>
           <Header>
             <h4>Educators</h4>
             <Headerbar></Headerbar>
@@ -19,7 +19,7 @@ const SuccessStories = ({ data, state, libraries }) => {
             <h4>Businesses</h4>
             <Headerbar></Headerbar>
           </Header>
-        </Headercontainer>
+        </Headercontainer> */}
         {data.isFetching && <Loading />}
         {!data.isFetching && (
           <Cardcontent>

@@ -227,6 +227,9 @@ const Paragraph = styled.p`
   p {
     max-width: 400px;
     color: #515151;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
   }
   @media screen and (max-width: 1024px) {
     max-width: 306px;

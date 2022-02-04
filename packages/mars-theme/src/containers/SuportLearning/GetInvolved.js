@@ -89,7 +89,7 @@ const Topheading = styled.div`
 `;
 const Heading = styled.h3`
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 32px;
   line-height: 38px;
   color: #084892;
@@ -100,9 +100,9 @@ const Heading = styled.h3`
 const Subheading = styled.span`
   font-family: "Rubik";
   font-style: normal;
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 38px;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 30px;
   color: #084892;
   text-transform: uppercase;
 `;
@@ -128,7 +128,7 @@ const LeftCol = styled.div`
     max-width: 500px;
     font-style: normal;
     font-family: "Open Sans";
-    font-weight: normal;
+    font-weight: 400;
     font-size: 18px;
     line-height: 25px;
     color: #515151;
@@ -148,15 +148,16 @@ const RightCol = styled.div`
 `;
 const Paragraph = styled.p``;
 const Button = styled.button`
-  padding: 5px 40px;
+  padding: 13px 40px;
   background: #084892;
+  font-size: 18px;
+  line-height: 21.33px;
   color: #fff;
-
   text-transform: uppercase;
   border: 1px solid #084892;
   box-shadow: 0px 10px 20px -5px rgb(8 72 146 / 35%);
   border-radius: 25px;
-  font-weight: bold;
+  font-weight: 700;
   @media screen and (max-width: 576px) {
     margin-bottom: 30px;
   }

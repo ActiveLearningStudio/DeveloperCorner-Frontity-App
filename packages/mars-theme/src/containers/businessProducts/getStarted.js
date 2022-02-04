@@ -75,13 +75,14 @@ const LeftDiv = styled.div`
 const Button = styled.button`
   width: 212px;
   height: 45px;
+  padding: 8px 45px;
   background: #084892;
-  font-family: rubik;
   color: #fff;
   border: 1px solid #084892;
   box-shadow: 0px 10px 20px -5px rgb(8 72 146 / 35%);
   border-radius: 25px;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 18px;
   text-transform: uppercase;
   @media screen and (max-width: 1200px) {
     margin-bottom: 70px;

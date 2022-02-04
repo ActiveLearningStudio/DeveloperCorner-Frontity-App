@@ -19,10 +19,6 @@ const Blogdetail = ({ state, actions, libraries }) => {
   const date = new Date(post.date);
   // Get the html2react component.
   const Html2React = libraries.html2react.Component;
-  // useEffect(() => {
-  //   actions.source.fetch(state.router.link);
-  //   Blogs.preload();
-  // }, [actions.source]);
   return (
     <>
       <Banner title="Blog" />
@@ -78,29 +74,17 @@ const Blogdetail = ({ state, actions, libraries }) => {
           <RecentPost>
             <div className="recent-post-content">
               <h2>Recent Posts</h2>
-              {RecentPosts.items.map(({ type, id }) => {
-                const item = state.source[type][id];
-                return (
-                  <div className="recent-post-detail">
-                    <Linked link={item.link}>
-                      <p
-                        dangerouslySetInnerHTML={{
-                          __html: item.excerpt.rendered,
-                        }}
-                      />
-                    </Linked>
-                    <div className="article-link">
-                      <Linked link={item.link}>
-                        <a>Read article</a>
-                      </Linked>
-                      <Linked link={item.link}>
-                        <img src={arrowicon} alt="" />
-                      </Linked>
-                    </div>
-                  </div>
-                );
-              })}
-              {/* <div className="recent-post-detail">
+              <div className="recent-post-detail">
+                <p>
+                  “How to Become an Entrepreneur” is Now Available Online as the
+                  First Higher Education Course Designed with CurrikiStudio
+                </p>
+                <div className="article-link">
+                  <a>Read article</a>
+                  <img src={arrowicon} alt="" />
+                </div>
+              </div>
+              <div className="recent-post-detail">
                 <p>
                   Curriki Answers the Call from School Districts, Universities,
                   and Nonprofits―Launches CurrikiStudio AWS CloudFormation
@@ -110,7 +94,37 @@ const Blogdetail = ({ state, actions, libraries }) => {
                   <a>Read article</a>
                   <img src={arrowicon} alt="" />
                 </div>
-              </div> */}
+              </div>
+              <div className="recent-post-detail">
+                <p>
+                  Curriki® Delivers Game-Changing Functionality and Access to
+                  its Free Interactive Authoring Tool, CurrikiStudio, with
+                  Support from Linode
+                </p>
+                <div className="article-link">
+                  <a>Read article</a>
+                  <img src={arrowicon} alt="" />
+                </div>
+              </div>
+              <div className="recent-post-detail">
+                <p>
+                  Curriki® Unveils Multi - platform Publishing for CurrikiStudio
+                </p>
+                <div className="article-link">
+                  <a>Read article</a>
+                  <img src={arrowicon} alt="" />
+                </div>
+              </div>
+              <div className="recent-post-detail">
+                <p>
+                  Curriki Launches CurrikiStudio to Fast-track Digital Content
+                  Authoring and Delivery for Distance Learning
+                </p>
+                <div className="article-link">
+                  <a>Read article</a>
+                  <img src={arrowicon} alt="" />
+                </div>
+              </div>
             </div>
             <div className="archives-heading">
               <h4>archives</h4>

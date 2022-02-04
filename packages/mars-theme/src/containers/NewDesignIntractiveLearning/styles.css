@@ -81,7 +81,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 25px;
-  line-height: 38px;
+  line-height: 29px;
   color: #ffb124;
 }
 .main-area .api-section .api-content {
@@ -109,9 +109,9 @@
   max-width: 437px;
   font-family: "Rubik";
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
-  line-height: 30px;
+  line-height: 22px;
   color: #084892;
 }
 @media screen and (max-width: 768px) {
@@ -137,8 +137,8 @@
   font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
-  font-size: 14.7987px;
-  line-height: 18px;
+  font-size: 14px;
+  line-height: 17px;
   color: #084892;
 }
 .main-area .api-section .api-content .api-img {
@@ -314,7 +314,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 25px;
-  line-height: 38px;
+  line-height: 30px;
   color: #F8AF2C;
 }
 @media screen and (max-width: 1200px) {
@@ -348,8 +348,8 @@
 .main-area .techSection .tech-content .tech-step .tech-step-card span {
   font-family: "Open Sans";
   font-style: normal;
-  font-weight: bold;
-  font-size: 67px;
+  font-weight: 700;
+  font-size: 64px;
   line-height: 136px;
   color: #f8af2c;
 }
@@ -466,7 +466,7 @@
   font-family: "Open Sans";
   max-width:1008px;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 16px;
   line-height: 22px;
   color: #515151;
@@ -482,7 +482,7 @@
   color: #fff !important;
   border:none;
   text-transform: uppercase;
-  font-weight: bold !important;
+  font-weight: 700 !important;
   height: 45px;
   width: 199px;
 }

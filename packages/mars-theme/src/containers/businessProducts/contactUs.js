@@ -138,9 +138,9 @@ const InnerDiv = styled.div`
   }
   p {
     font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 22px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24.51px;
     color: #515151;
   }
 `;
@@ -149,13 +149,15 @@ const FormDiv = styled.div`
     display: flex;
     flex-direction: column;
     p {
-      color: #084862;
+      color: #515151;
+      font-size: 16px;
+      line-height: 19px;
     }
     input {
-      border-radius: 20px;
-      width: 50%;
-      border: 1px solid #084862;
-      height: 25px;
+      border-radius: 25px;
+      width: 500px;
+      border: 1px solid #515151;
+      height: 45px;
       padding: 20px;
       margin-bottom: 10px;
       @media screen and (max-width: 767px) {

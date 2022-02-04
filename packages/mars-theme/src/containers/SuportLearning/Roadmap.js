@@ -469,7 +469,7 @@ const TopHeading = styled.div`
 `;
 const Heading = styled.h2`
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 32px;
   line-height: 38px;
   color: #084892;
@@ -538,7 +538,7 @@ const CardHead = styled.div`
 `;
 const CardHeading = styled.h5`
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 18px;
   line-height: 21px;
   color: #084892;
@@ -548,7 +548,7 @@ const CardHeading = styled.h5`
 `;
 const AskHeading = styled.h5`
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 18px;
   line-height: 21px;
   color: #084892;
