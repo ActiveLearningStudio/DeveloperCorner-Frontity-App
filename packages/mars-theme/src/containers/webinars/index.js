@@ -26,7 +26,7 @@ const Index = ({ webinarsCategory, state, libraries }) => {
       if (category.id === 76) {
         return (divingPosts = posts);
       }
-      if (category.id === 77) {
+      if (category.id === 78) {
         return (webinarsPosts = posts);
       }
     }
