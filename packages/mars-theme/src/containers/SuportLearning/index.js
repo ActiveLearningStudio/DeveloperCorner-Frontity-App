@@ -31,7 +31,12 @@ const Index = (props) => {
   });
   return (
     <>
-      <Banner title="Support Learning" subheading="" para="" />
+      <Banner
+        title="Support Learning"
+        subheading="IMPACTING EDUCATION THROUGH TECHNOLOGY"
+        para="Curriki is dedicated to making interactive learning experiences accessible for everyone.
+      by providing free and open tools to design, customize and publish content."
+      />
       {data.isFetching && <Loading />}
       {data.isReady && (
         <>

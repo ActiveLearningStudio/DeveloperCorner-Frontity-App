@@ -69,24 +69,23 @@ const Cardbody = styled.div`
   }
 `;
 const Paragraph = styled.p`
-    font-style:normal;
-    font-weight-normal;
-    font-size:18px;
-    color:#515151;
-    line-height:25px;
-    margin-bottom:10px;
-    `;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #515151;
+  line-height: 25px;
+  margin-bottom: 10px;
+`;
 const Cardtext = styled.p`
   display: flex;
   p {
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 16px;
     line-height: 19px;
     color: #285aa5;
     margin-bottom: 0 !important;
     margin-top: 0;
-    color: #084892 !important;
   }
 `;
 const Cardlink = styled.div`
@@ -103,7 +102,6 @@ const Cardlink = styled.div`
     color: #084892;
     font-size: 18px;
     line-height: 21px;
-    font-family: Rubic;
     font-style: normal;
     text-decoration: underline;
     margin-left: 12px;

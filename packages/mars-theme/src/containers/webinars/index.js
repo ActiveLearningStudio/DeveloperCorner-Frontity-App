@@ -56,7 +56,7 @@ const Index = ({ webinarsCategory, state, libraries }) => {
                 {postdesc ? (
                   <Html2React html={postdesc?.rendered} />
                 ) : (
-                  <Paragraph>Register for monthly webinar demo</Paragraph>
+                  <p>Register for monthly webinar demo</p>
                 )}
 
                 <PrimaryButton>Register Now</PrimaryButton>
@@ -301,6 +301,12 @@ const LeftCol = styled.div`
   width: 100%;
   p {
     color: #515151;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 30px;
+    color: #515151;
+    margin-bottom: 40px;
   }
 `;
 const RightCol = styled.div`
@@ -316,20 +322,13 @@ const Heading = styled.h2`
   color: #084892;
   margin-bottom: 20px;
 `;
-const Paragraph = styled.p`
-  font-style: normal;
-  font-weight: 300;
-  font-size: 25px;
-  line-height: 30px;
-  color: #515151;
-  margin-bottom: 40px;
-`;
 const PrimaryButton = styled.button`
-  padding: 10px 45px;
+  padding: 13px 45px;
   background: #084892;
   border-radius: 25px;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 16px;
   border: none;
   color: #ffffff;
 `;
@@ -349,7 +348,7 @@ const WebinarHeading = styled.div`
   margin-bottom: 60px;
   h2 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 32px;
     line-height: 38px;
     color: #084892;

@@ -88,7 +88,7 @@ const LeftDiv = styled.div`
   }
   p {
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 16px;
     line-height: 22px;
     color: #ffffff;
@@ -98,9 +98,10 @@ const LeftDiv = styled.div`
     background: transparent;
     border: 1px solid #fff;
     color: #fff;
-    padding: 5px 40px;
+    padding: 14px 40px;
     border-radius: 25px;
-    font-weight: bold;
+    font-weight: 700;
+    line-height: 19px;
     @media screen and (max-width: 991px) {
       margin-bottom: 20px;
     }
