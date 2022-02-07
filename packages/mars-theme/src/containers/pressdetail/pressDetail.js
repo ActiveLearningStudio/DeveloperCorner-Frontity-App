@@ -192,6 +192,7 @@ const BlogContent = styled.div`
   .curriki-updates-image {
     img {
       width: 410px;
+      border-radius: 25px;
     }
     @media screen and (max-width: 767px) {
       display: none;
@@ -203,7 +204,8 @@ const Heading = styled.h4`
   max-width: 700px;
   p {
     font-style: normal;
-    font-weight: 700;
+    font-family: "Rubik";
+    font-weight: 500;
     font-size: 32px;
     line-height: 38px;
     text-transform: capitalize;
@@ -252,6 +254,28 @@ const DescriptionContent = styled.div`
 const Description = styled.div`
   width: 787px;
   margin-bottom: 106px;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  h7 {
+    font-size: 25px;
+    font-style: normal;
+    line-height: 30px;
+    color: #084892;
+    font-weight: 500;
+  }
+  p {
+    color: #515151;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 25px;
+    a {
+      color: #2e8dff;
+    }
+  }
   .article-desc-image {
     margin-bottom: 20px;
     img {
@@ -284,7 +308,7 @@ const RecentPost = styled.div`
     margin-left: 30px;
     h2 {
       font-style: normal;
-      font-weight: 700;
+      font-weight: 500;
       font-size: 32px;
       line-height: 38px;
       text-transform: uppercase;
@@ -301,6 +325,7 @@ const RecentPost = styled.div`
       margin-top: 20px;
       p {
         font-style: normal;
+        font-family:'Rubik';
         font-weight: 500;
         font-size: 18px;
         line-height: 21px;
@@ -311,10 +336,9 @@ const RecentPost = styled.div`
         a {
           font-style: normal;
           font-weight: 500;
-          font-size: 14.7987px;
+          font-size: 14.8px;
           line-height: 18px;
           text-decoration-line: underline;
-
           color: #084892;
         }
       }

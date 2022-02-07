@@ -171,6 +171,7 @@ const BlogContent = styled.div`
   .curriki-updates-image {
     img {
       width: 410px;
+      border-radius: 25px;
     }
     @media screen and (max-width: 767px) {
       display: none;
@@ -182,7 +183,8 @@ const Heading = styled.h4`
   max-width: 700px;
   p {
     font-style: normal;
-    font-weight: 700;
+    font-family: "Rubik";
+    font-weight: 500;
     font-size: 32px;
     line-height: 38px;
     text-transform: capitalize;
@@ -200,7 +202,6 @@ const Paragraph = styled.div`
     font-weight: 300;
     font-size: 18px;
     line-height: 21px;
-
     color: #084892;
   }
 `;
@@ -220,6 +221,30 @@ const Description = styled.div`
   width: 780px;
   max-width: 780px;
   margin-bottom: 106px;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  h7 {
+    font-size: 25px;
+    line-height: 30px;
+    color: #084892;
+    font-weight: 500;
+  }
+  p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    color: #515151;
+  }
+  a {
+    color: #2e8dff;
+    span {
+      color: #2e8dff;
+    }
+  }
   .article-desc-image {
     margin-bottom: 20px;
     img {
@@ -238,8 +263,9 @@ const Description = styled.div`
     }
   }
   button.link-btn {
-    width: 301px;
+    width: 285px;
     height: 45px;
+    padding: 13px 45px;
     display: flex;
     justify-content: center;
     border: none;
@@ -266,7 +292,7 @@ const RecentPost = styled.div`
     margin-left: 30px;
     h2 {
       font-style: normal;
-      font-weight: 700;
+      font-weight: 500;
       font-size: 32px;
       line-height: 38px;
       text-transform: uppercase;
@@ -283,18 +309,18 @@ const RecentPost = styled.div`
       margin-top: 20px;
       p {
         max-width: 255px;
+        font-family:'Rubik';
         font-style: normal;
         font-weight: 500;
         font-size: 18px;
         line-height: 21px;
-
         color: #084892;
       }
       .article-link {
         a {
           font-style: normal;
           font-weight: 500;
-          font-size: 14.7987px;
+          font-size: 14.8px;
           line-height: 18px;
           text-decoration: underline;
           color: #084892;
