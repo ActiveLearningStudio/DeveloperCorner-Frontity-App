@@ -4,7 +4,7 @@ import iframe from "@frontity/html2react/processors/iframe";
 import link from "@frontity/html2react/processors/link";
 // import Theme from "./raja";
 import Theme from "../src/App/App";
-import { categoriesWidgetsHome } from "./components/PostbyCategory/config";
+import { categoriesWidgetsHome } from "./containers/config";
 // import {getCategoriesIds, getPostsGroupedByCategory} from './helpers'
 const marsTheme = {
   name: "@frontity/mars-theme",
