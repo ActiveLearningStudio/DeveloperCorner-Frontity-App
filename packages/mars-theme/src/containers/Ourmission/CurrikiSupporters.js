@@ -26,7 +26,7 @@ const CurrikiSupporters = ({ supporterPosts, state }) => {
                 const featuremedia =
                   state.source.attachment[postitem?.featured_media];
                 return (
-                  <Div>
+                  <Div id={key}>
                     <img src={featuremedia.source_url} alt="" />
                   </Div>
                 );
