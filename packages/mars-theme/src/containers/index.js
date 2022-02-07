@@ -5,7 +5,7 @@ import Switch from "@frontity/components/switch";
 import Header from "../components/Header/header.js";
 import Loading from "../components/loading/loading";
 import { getPostsGroupedByCategory } from "../components/PostbyCategory/posbycategory";
-import { categoriesWidgetsHome } from "../components/PostbyCategory/config";
+import { categoriesWidgetsHome } from "./config.js";
 import Footer from "../components/footer/index";
 import bootstrapCss from "bootstrap/dist/css/bootstrap.min.css";
 import GeneralDiscussion from "./generaldiscussion/index";
