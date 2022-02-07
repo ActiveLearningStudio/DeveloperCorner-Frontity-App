@@ -186,10 +186,11 @@ const Heading = styled.h2`
   }
 `;
 const Card = styled.div`
+  max-width: 1141px;
+  margin: auto;
   box-shadow: 0px 2px 25px 5px rgba(81, 81, 81, 0.1);
   border-radius: 5px;
   padding: 25px;
-  width: 100%;
   display: flex;
   align-items: center;
   margin-bottom: 40px;
@@ -223,7 +224,7 @@ const RightCol = styled.div`
     font-size: 14px;
     line-height: 19px;
     color: #515151;
-    margin: 0px;
+    margin: 5px 0px;
   }
   .sub-head {
     font-size: 16px;
