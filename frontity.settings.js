@@ -28,7 +28,7 @@ const settings = {
               ["Press&awards", "/category/pressawards/"],
             ],
             login: [["Login", "/currikiforum/"]],
-            donate: [["Ourmission", "/ourmission"]],
+            donate: [["Ourmission", "/category/ourmission"]],
             currikiterms: [
               ["Privacy Policy", "/category/privacy-policy/"],
               ["Terms of Services", "/category/termscondition"],
