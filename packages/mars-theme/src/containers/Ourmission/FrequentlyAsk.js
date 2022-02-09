@@ -20,7 +20,7 @@ const FrequentlyAsk = ({ FrequentlyAskposts, state, libraries }) => {
             {FrequentlyAskposts && FrequentlyAskposts.length > 0 ? (
               FrequentlyAskposts?.map((postitem, key) => {
                 return (
-                  <Accordion.Item eventKey={key}>
+                  <Accordion.Item eventKey={key} id={key}>
                     <Accordion.Header>
                       <h4
                         dangerouslySetInnerHTML={{

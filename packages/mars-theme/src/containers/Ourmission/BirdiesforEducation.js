@@ -29,12 +29,12 @@ const BirdiesforEducation = ({ birdiesposts, state, libraries }) => {
           </UpperRow> */}
 
           {birdiesposts && birdiesposts.length > 0 ? (
-            birdiesposts?.map((postitem) => {
+            birdiesposts?.map((postitem, key) => {
               const featuremedia =
                 state.source.attachment[postitem?.featured_media];
               // alert(featured_media);
               return (
-                <BottomRow>
+                <BottomRow id={key}>
                   <LeftCol>
                     {featuremedia && (
                       <img src={featuremedia.source_url} alt="" />
