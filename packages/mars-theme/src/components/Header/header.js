@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Global, css, connect } from "frontity";
 import bootstrapCss from "bootstrap/dist/css/bootstrap.min.css";
-import { Button } from "react-bootstrap";
+import { Button, Modal } from "react-bootstrap";
 import { Navbar, Container, Nav, NavDropdown, Dropdown } from "react-bootstrap";
 import Brand from "../../assets/images/Logos/Currikistudio-logo.png";
 import usericon from "../../assets/images/UserCircle1.png";
@@ -10,6 +10,7 @@ import dropdownImg from "../../assets/images/dropdownImg.png";
 import Link from "./link";
 import HeaderCss from "./styles.css";
 const Header = ({ state }) => {
+  const [closebtn, setclosebtn] = useState(false);
   console.log(state.theme.menu);
   const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
     <a
@@ -29,14 +30,29 @@ const Header = ({ state }) => {
       <Global styles={css(HeaderCss)} />
       <Global styles={css(bootstrapCss)} />
       <div className="header">
-        <Navbar collapseOnSelect expand="xl" className="Navbar">
+        <Navbar
+          collapseOnSelect
+          expanded={closebtn ? true : false}
+          expand="xl"
+          className="Navbar"
+        >
           <Container>
             <Navbar.Brand href="/">
               <img src={Brand} alt="developer-hub-brand" />
             </Navbar.Brand>
             {/* <div className="navbar-dropdown"> */}
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Collapse id="responsive-navbar-nav">
+            {closebtn === false ? (
+              <Navbar.Toggle
+                aria-controls="responsive-navbar-nav"
+                onClick={() => setclosebtn(true)}
+              />
+            ) : (
+              <Modal.Header
+                closeButton
+                onClick={() => setclosebtn(false)}
+              ></Modal.Header>
+            )}
+            <Navbar.Collapse expand={true} id="responsive-navbar-nav">
               <Nav>
                 <div className="centered-menu">
                   <Dropdown>

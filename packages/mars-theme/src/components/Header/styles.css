@@ -43,6 +43,9 @@
   display: none;
   }
 }
+.modal-header {
+  border: none;
+}
 .Navbar .navbar-collapse .navbar-nav .centered-menu .dropdown p {
 font-family: 'Rubik';
 font-style: normal;

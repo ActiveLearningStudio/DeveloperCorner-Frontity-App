@@ -4,9 +4,15 @@
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
 }
+@media screen and (max-width: 1199px) {
+  .modal-dialog-centered {
+    max-width: 960px;
+  }
+}
 .modal .modal-content .modal-header {
   background: linear-gradient(90deg, #084892 30.14%, #285aa5 94.74%);
   height: 100px;
+  color:#ffffff !important;
   padding-left: 75px;
   margin-bottom: -5px;
 }
@@ -17,6 +23,7 @@
   background-image: url("../../assets/images/x.png");
 } */
 .modal-body {
+  max-width: 960px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,6 +35,11 @@
   width: 945px;
   display: flex;
   flex-direction: column;
+}
+@media screen and (max-width: 991px) {
+  .model-body-2 .body-donation {
+    max-width: 945px;
+  }
 }
 .model-body-2 .body-donation a {
   text-align: left;
@@ -51,6 +63,11 @@
   display: flex;
   width: 945px;
   justify-content: space-between;
+}
+@media screen and (max-width: 991px) {
+  .model-body-2 .form-donation form {
+    max-width: 945px;
+  }
 }
 .model-body-2 .form-donation .left-donation h4 {
   font-size: 25px;
