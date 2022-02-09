@@ -1,4 +1,4 @@
-import { categoriesWidgetsHome } from "./config.js";
+import { categoriesWidgetsHome } from "../../containers/config";
 
 // export const getCategoriesIds = categories => Object.keys(categories)
 // export const getCategoriesValues = categories => Object.keys(categories)
