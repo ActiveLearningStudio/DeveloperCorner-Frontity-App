@@ -277,6 +277,8 @@ const Cardbody = styled.div`
       font-family: "Open Sans";
       color: #515151;
       margin: 0px 0px 0px 20px !important;
+      display: flex;
+      align-items: baseline;
       .card-list-item {
         margin: 0px;
         display: flex;

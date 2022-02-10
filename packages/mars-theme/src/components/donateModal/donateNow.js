@@ -22,10 +22,16 @@ const DonateNow = (props) => {
       >
         {donatesubmit != true ? (
           <div className="donation-container">
-            <Modal.Header closeButton>
+            <Modal.Header>
               <Modal.Title id="contained-modal-title-vcenter">
                 Donations
               </Modal.Title>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                aria-label="CloseButton"
+                onClick={() => onHide(true)}
+              />
             </Modal.Header>
             <Modal.Body>
               <h4>Make a donation</h4>
@@ -42,10 +48,16 @@ const DonateNow = (props) => {
           </div>
         ) : sendDonate != true ? (
           <>
-            <Modal.Header closeButton>
+            <Modal.Header>
               <Modal.Title id="contained-modal-title-vcenter">
                 Donations
               </Modal.Title>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                aria-label="CloseButton"
+                onClick={() => onHide(true)}
+              />
             </Modal.Header>
             <Modal.Body className="model-body-2">
               <div className="body-donation">
@@ -172,10 +184,16 @@ const DonateNow = (props) => {
           </>
         ) : (
           <>
-            <Modal.Header closeButton>
+            <Modal.Header>
               <Modal.Title id="contained-modal-title-vcenter">
                 Donations
               </Modal.Title>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                aria-label="CloseButton"
+                onClick={() => onHide(true)}
+              />
             </Modal.Header>
             <Thankyou />
           </>
