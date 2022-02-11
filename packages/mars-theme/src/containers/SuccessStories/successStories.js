@@ -53,6 +53,9 @@ const Container = styled.div`
   @media screen and (max-width: 1200px) {
     padding: 0px 100px;
   }
+  @media screen and (max-width: 1024px) {
+    padding: 0px 70px;
+  }
   @media screen and (max-width: 768px) {
     padding: 0px 40px;
   }
@@ -151,8 +154,9 @@ const Cardcontent = styled.div`
   margin-bottom: 73px;
   @media screen and (max-width: 1024px) {
     width: 100%;
+    max-width: 875px;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   @media screen and (max-width: 768px) {
     flex-direction: row;

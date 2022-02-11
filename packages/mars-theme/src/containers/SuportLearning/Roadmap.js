@@ -489,6 +489,7 @@ const CardContent = styled.div`
   flex-wrap: wrap;
   @media screen and (max-width: 768px) {
     padding: 0px !important;
+    justify-content: center;
   }
 `;
 const Card = styled.div`
@@ -510,6 +511,7 @@ const Card = styled.div`
   }
   @media screen and (max-width: 767px) {
     width: 100%;
+    margin-right: 0px;
   }
 `;
 

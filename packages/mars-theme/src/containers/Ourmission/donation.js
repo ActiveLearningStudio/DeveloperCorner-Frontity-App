@@ -143,6 +143,13 @@ const Innerdiv = styled.div`
     font-weight: 400;
     img {
       margin-right: 12px;
+      @media screen and (max-width: 413px) {
+        margin: 0px 0px 0px -16px;
+        display: none;
+      }
+    }
+    @media screen and (max-width: 413px) {
+      max-width: 280px;
     }
   }
 `;

@@ -163,6 +163,6 @@ const Button = styled.button`
     padding: 13px 35px;
   }
   @media screen and (max-width: 576px) {
-    padding: 13px 25px;
+    padding: 13px 14px;
   }
 `;

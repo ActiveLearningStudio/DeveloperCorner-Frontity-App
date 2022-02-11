@@ -120,7 +120,9 @@ const Leftcol = styled.div`
     color: #fff;
     border-radius: 25px;
     @media screen and (max-width: 480px) {
-      width: 270px;
+      width: 100%;
+      height: 45px;
+      padding: 3px 10px;
     }
   }
 `;

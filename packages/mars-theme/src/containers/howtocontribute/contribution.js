@@ -100,6 +100,12 @@ const Content = styled.div`
   @media (max-width: 980px) {
     padding: 30px 20px 70px;
   }
+  @media (max-width: 768px) {
+    padding: 30px 20px 40px;
+  }
+  @media (max-width: 413px) {
+    max-width: 375px;
+  }
 `;
 const ContributeArticle = styled.div`
   display: flex;
@@ -110,16 +116,19 @@ const ContributeArticle = styled.div`
   border-bottom: 1px solid #e5e5e5;
   padding-bottom: 20px;
   .article-img {
+    max-width: 260px;
     @media (max-width: 600px) {
       width: 100%;
+      max-width: inherit;
     }
-    // img {
-    //   @media (max-width: 600px) {
-    //     width: 100%;
-    //   }
-    // }
     img {
-      width: 100%;
+      width: inherit;
+      max-width: 260px;
+      border-radius: 6px;
+      @media (max-width: 600px) {
+        width: 100%;
+        max-width: inherit;
+      }
     }
   }
   .article-img {
